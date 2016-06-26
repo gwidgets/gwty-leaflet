@@ -30,6 +30,13 @@ the gwty-leaflet dependency depends on gwt-user, version 2.8-beta. So, in case y
                      </dependency>
 ```
 
+Also, do not forget to include gwty-leaflet in your .gwt.xml module definition file: 
+
+```xml
+ <inherits name='com.gwidgets.api.GwtyLeaflet' />
+                  
+```
+
 
 ##Initializing objects
 
