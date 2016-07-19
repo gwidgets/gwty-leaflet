@@ -45,9 +45,6 @@
 			<resource>
 				<directory>src/main/java</directory>
 				<filtering>true</filtering>
-				<excludes>
-					<exclude>**/*.java</exclude>
-				</excludes>
 			</resource>
 		</resources>
 		<plugins>
@@ -57,18 +54,13 @@
 				<version>1.0-rc-6</version>
 				<extensions>true</extensions>
 				<configuration>
-					<moduleName>org.gwidgets.api.GwtyLeaflet</moduleName>
+					<moduleName>com.gwidgets.api.GwtyLeaflet</moduleName>
 				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
 				<version>3.0.1</version>
-				<configuration>
-					<excludes>
-						<exclude>**/*.java</exclude>
-					</excludes>
-				</configuration>
 			</plugin>
 		</plugins>
 	</build>

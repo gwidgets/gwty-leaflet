@@ -94,6 +94,7 @@ map.on("click", new Function(){
                         }
                         
                 });
+```
 
 Events explained in details Leaflet's documentation. 
 
