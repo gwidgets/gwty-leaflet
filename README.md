@@ -9,7 +9,7 @@ gwty-leaflet is wrapper for the famous maps javascript library [Leaflet](http://
                      <dependency>
                         <groupId>com.gwidgets</groupId>
                         <artifactId>gwty-leaflet</artifactId>
-                        <version>0.1</version>
+                        <version>0.2</version>
                      </dependency>
 
 ```
@@ -21,7 +21,7 @@ the gwty-leaflet dependency depends on gwt-user, version 2.8-beta. So, in case y
                     <dependency>
                         <groupId>com.gwidgets</groupId>
                         <artifactId>gwty-leaflet</artifactId>
-                        <version>0.1</version>
+                        <version>0.2</version>
                          <exclusions>
                               <exclusion>
                                 <groupId>com.google.gwt</groupId>
