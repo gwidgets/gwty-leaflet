@@ -11,30 +11,23 @@ gwty-leaflet is wrapper for the famous maps javascript library [Leaflet](http://
                         <artifactId>gwty-leaflet</artifactId>
                         <version>0.2</version>
                      </dependency>
-
 ```
 
-the gwty-leaflet dependency depends on gwt-user, version 2.8-beta. So, in case you want to add gwt-user to your project, you can exclude it from the dependency:
-
-
-```xml
-                    <dependency>
-                        <groupId>com.gwidgets</groupId>
-                        <artifactId>gwty-leaflet</artifactId>
-                        <version>0.2</version>
-                         <exclusions>
-                              <exclusion>
-                                <groupId>com.google.gwt</groupId>
-                                <artifactId>gwt-user</artifactId>
-                              </exclusion>
-                     </dependency>
-```
 
 Also, do not forget to include gwty-leaflet in your .gwt.xml module definition file: 
 
 ```xml
  <inherits name='com.gwidgets.api.GwtyLeaflet' />
                   
+```
+
+##Leaflet javascript files:
+
+As in any JsInterop wrapper, you need to refer to Js leaflet from your .html app file. You can either download the Js files from [Leaflet website](http://leafletjs.com/download.html), or refer to them directly using their cdn (there are performance implications off course!).
+
+```html
+<link rel="stylesheet" href="https://npmcdn.com/leaflet@1.0.0-rc.2/dist/leaflet.css" />
+<script src="https://npmcdn.com/leaflet@1.0.0-rc.2/dist/leaflet.js"></script> 
 ```
 
 
