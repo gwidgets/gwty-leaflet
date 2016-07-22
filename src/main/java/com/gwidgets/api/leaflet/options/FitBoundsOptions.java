@@ -11,10 +11,10 @@ public class FitBoundsOptions {
 
 	// fitBounds options
 	@JsProperty
-	Point paddingTopLeft = L.point(0, 0, true);
+	public Point paddingTopLeft = L.point(0, 0, true);
 	@JsProperty
-	Point paddingBottomRight = L.point(0, 0, true);
+	public Point paddingBottomRight = L.point(0, 0, true);
 	@JsProperty
-	Point padding = L.point(0, 0, true);
+	public Point padding = L.point(0, 0, true);
 
 }

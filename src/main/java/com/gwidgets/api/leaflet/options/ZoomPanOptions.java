@@ -8,12 +8,12 @@ public class ZoomPanOptions {
 
 	// Zoom/pan options
 	@JsProperty
-	Boolean reset = false;
+	public Boolean reset = false;
 	@JsProperty
-	PanOptions pan = null;
+	public PanOptions pan = null;
 	@JsProperty
-	ZoomOptions zoom = null;
+	public ZoomOptions zoom = null;
 	@JsProperty
-	Boolean animate = true;
+	public Boolean animate = true;
 
 }

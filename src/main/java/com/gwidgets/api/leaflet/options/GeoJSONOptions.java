@@ -13,14 +13,14 @@ import com.gwidgets.api.leaflet.elemental.Function;
 @JsType
 public interface GeoJSONOptions {
 
-	Function pointToLayer(JavaScriptObject featureData, LatLng latlng);
+	public Function pointToLayer(JavaScriptObject featureData, LatLng latlng);
 
-	Function style(JavaScriptObject featureData);
+	public Function style(JavaScriptObject featureData);
 
-	Function onEachFeature(JavaScriptObject featureData, ILayer layer);
+	public Function onEachFeature(JavaScriptObject featureData, ILayer layer);
 
-	Function filter(JavaScriptObject featureData, ILayer layer);
+	public Function filter(JavaScriptObject featureData, ILayer layer);
 
-	Function coordsToLatLng(JsArray<JavaScriptObject> coords);
+	public Function coordsToLatLng(JsArray<JavaScriptObject> coords);
 
 }

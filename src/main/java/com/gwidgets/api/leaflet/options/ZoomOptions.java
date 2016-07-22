@@ -8,6 +8,6 @@ public class ZoomOptions {
 
 	// Zoom options
 	@JsProperty
-	Boolean animate = true;
+	public Boolean animate = true;
 
 }

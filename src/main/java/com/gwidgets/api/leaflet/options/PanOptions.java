@@ -8,12 +8,12 @@ public class PanOptions {
 
 	// Pan options
 	@JsProperty
-	Boolean animate = true;
+	public Boolean animate = true;
 	@JsProperty
-	Number duration = 0.25;
+	public Number duration = 0.25;
 	@JsProperty
-	Number easeLinearity = 0.25;
+	public Number easeLinearity = 0.25;
 	@JsProperty
-	Boolean noMoveStart = false;
+	public Boolean noMoveStart = false;
 
 }

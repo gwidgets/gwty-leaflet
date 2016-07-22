@@ -7,16 +7,16 @@ import jsinterop.annotations.JsType;
 public class LocateOptions {
 	
 	@JsProperty
-	Boolean watch = false;
+	public Boolean watch = false;
 	@JsProperty
-	Boolean setView = false;
+	public Boolean setView = false;
 	@JsProperty
-	Number maxZoomLocate = Double.POSITIVE_INFINITY;
+	public Number maxZoomLocate = Double.POSITIVE_INFINITY;
 	@JsProperty
-	Number timeout = 10000;
+	public Number timeout = 10000;
 	@JsProperty
-	Number maximumAge = 0;
+	public Number maximumAge = 0;
 	@JsProperty
-	Boolean enableHighAccuracy = false;
+	public Boolean enableHighAccuracy = false;
 
 }

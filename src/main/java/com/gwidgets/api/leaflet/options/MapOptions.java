@@ -12,75 +12,75 @@ public class MapOptions {
 
 	// Map State Options
 	@JsProperty
-	LatLng center = null;
+	public LatLng center = null;
 	@JsProperty
-	Number zoom = null;
+	public Number zoom = null;
 	@JsProperty
-	ILayer[] layers = null;
+	public ILayer[] layers = null;
 	@JsProperty
-	Number minZoom = null;
+	public Number minZoom = null;
 	@JsProperty
-	Number maxZoom = null;
+	public Number maxZoom = null;
 	@JsProperty
-	LatLngBounds maxBounds = null;
+	public LatLngBounds maxBounds = null;
 	// @JsProperty
 	// CRS crs = L.CRS.EPSG3857;
 
 	// Interaction Options
 	@JsProperty
-	Boolean dragging = true;
+	public Boolean dragging = true;
 	@JsProperty
-	Boolean touchZoom = true;
+	public Boolean touchZoom = true;
 	@JsProperty
-	Boolean scrollWheelZoom = true;
+	public Boolean scrollWheelZoom = true;
 	@JsProperty
-	Boolean doubleClickZoom = true;
+	public Boolean doubleClickZoom = true;
 	@JsProperty
-	Boolean boxZoom = true;
+	public Boolean boxZoom = true;
 	@JsProperty
-	Boolean tap = true;
+	public Boolean tap = true;
 	@JsProperty
-	Number tapTolerance = 15;
+	public Number tapTolerance = 15;
 	@JsProperty
-	Boolean trackResize = true;
+	public Boolean trackResize = true;
 	@JsProperty
-	Boolean worldCopyJump = false;
+	public Boolean worldCopyJump = false;
 	@JsProperty
-	Boolean closePopupOnClick = true;
+	public Boolean closePopupOnClick = true;
 
 	// Keyboard Navigation Options
 	@JsProperty
-	Boolean keyboard = true;
+	public Boolean keyboard = true;
 	@JsProperty
-	Number keyboardPanOffset = 80;
+	public Number keyboardPanOffset = 80;
 	@JsProperty
-	Number keyboardZoomOffset = 1;
+	public Number keyboardZoomOffset = 1;
 
 	// Panning Inertia Options
 	@JsProperty
-	Boolean inertia = true;
+	public Boolean inertia = true;
 	@JsProperty
-	Number inertiaDeceleration = 3000;
+	public Number inertiaDeceleration = 3000;
 	@JsProperty
-	Number inertiaMaxSpeed = 1500;
+	public Number inertiaMaxSpeed = 1500;
 	@JsProperty
-	Number inertiaThreshold = 32;
+	public Number inertiaThreshold = 32;
 
 	// Control options
 	@JsProperty
-	Boolean zoomControl = true;
+	public Boolean zoomControl = true;
 	@JsProperty
-	Boolean attributionControl = true;
+	public Boolean attributionControl = true;
 
 	// Animation options
 	@JsProperty
-	Boolean fadeAnimation = true;
+	public Boolean fadeAnimation = true;
 	@JsProperty
-	Boolean zoomAnimation = true;
+	public Boolean zoomAnimation = true;
 	@JsProperty
-	Number zoomAnimationThreshold = 4;
+	public Number zoomAnimationThreshold = 4;
 	@JsProperty
-	Boolean markerZoomAnimation = true;
+	public Boolean markerZoomAnimation = true;
 
 	// Locate options
 	
