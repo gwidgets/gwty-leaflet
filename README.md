@@ -93,17 +93,17 @@ map.on("click", new Function(){
 
 Event Objects that the event can be cast to depending on the usage are: 
 
-    - ErrorEvent
-    - GeoJSONEvent
-    - LayerControlEvent
-    - LayerEvent
-    - LocationEvent
-    - MouseEvent
-    - PopupEvent
-    - ResizeEvent
-    - TileEvent
+- ErrorEvent
+- GeoJSONEvent
+- LayerControlEvent
+- LayerEvent
+- LocationEvent
+- MouseEvent
+- PopupEvent
+- ResizeEvent
+- TileEvent
 
-All events objects extend [JavaScriptObject](http://www.gwtproject.org/javadoc/latest/com/google/gwt/core/client/JavaScriptObject.html), so they can be converted to from JavaScriptObject using cast() method.
+All events objects extend [JavaScriptObject](http://www.gwtproject.org/javadoc/latest/com/google/gwt/core/client/JavaScriptObject.html), so they can be converted to a JavaScriptObject using cast() method.
 
 Events are explained in details Leaflet's documentation. 
 
