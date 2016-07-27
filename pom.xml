@@ -7,7 +7,7 @@
 	<packaging>gwt-lib</packaging>
 
 	<properties>
-		<gwtVersion>2.8.0-beta1</gwtVersion>
+		<gwtVersion>2.8.0-SNAPSHOT</gwtVersion>
 	</properties>
 
 	<developers>
@@ -33,11 +33,18 @@
 	</scm>
 
 	<dependencies>
-		<dependency>
-			<groupId>com.google.gwt</groupId>
-			<artifactId>gwt-user</artifactId>
-			<version>${gwtVersion}</version>
-		</dependency>
+     <dependency>
+      <groupId>com.google.gwt</groupId>
+      <artifactId>gwt-user</artifactId>
+      <version>${gwtVersion}</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.google.jsinterop</groupId>
+      <artifactId>jsinterop-annotations</artifactId>
+      <version>1.0.0-SNAPSHOT</version>
+      <scope>provided</scope>
+    </dependency>
 	</dependencies>
 
 	<build>

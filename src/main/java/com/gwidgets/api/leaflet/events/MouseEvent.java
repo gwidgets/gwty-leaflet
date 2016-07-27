@@ -1,26 +1,31 @@
 package com.gwidgets.api.leaflet.events;
 
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
-
 import com.gwidgets.api.leaflet.LatLng;
 import com.gwidgets.api.leaflet.Point;
 import com.gwidgets.api.leaflet.elemental.DOMMouseEvent;
 
-@JsType(isNative = true)
+import jsinterop.annotations.JsType;
+
+@JsType
 public class MouseEvent extends Event {
+	
+    protected MouseEvent(){}
 
+	public final native LatLng getLatlng() /*-{
+		return this.latlng;
+	}-*/;
 
-	@JsProperty
-	public  LatLng latlng;
+	public final native Point getLayerPoint() /*-{
+		return this.layerPoint;
+	}-*/;
 
-	@JsProperty
-	public  Point layerPoint;
+	public final native Point getContainerPoint() /*-{
+		return this.containerPoint;
+	}-*/;
 
-	@JsProperty
-	public  Point containerPoint;
+	public final native DOMMouseEvent getOriginalEvent() /*-{
+		return this.originalEvent;
+	}-*/;
 
-	@JsProperty
-	public  DOMMouseEvent originalEvent;
 
 }

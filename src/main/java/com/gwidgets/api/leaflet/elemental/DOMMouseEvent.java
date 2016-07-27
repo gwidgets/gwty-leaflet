@@ -9,16 +9,16 @@ import jsinterop.annotations.JsType;
 public class DOMMouseEvent {
 	
 	@JsProperty
-	public long screenX;
+	public int screenX;
 
 	@JsProperty
-	public long screenY;
+	public int screenY;
 
 	@JsProperty
-	public long clientX;
+	public int clientX;
 
 	@JsProperty
-	public long clientY;
+	public int clientY;
 
 	@JsProperty
 	public Boolean ctrlKey;

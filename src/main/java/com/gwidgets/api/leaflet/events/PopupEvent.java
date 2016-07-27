@@ -1,8 +1,5 @@
 package com.gwidgets.api.leaflet.events;
 
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
-
 import com.gwidgets.api.leaflet.ILayer;
 import com.gwidgets.api.leaflet.LatLng;
 import com.gwidgets.api.leaflet.LatLngBounds;
@@ -11,77 +8,103 @@ import com.gwidgets.api.leaflet.Popup;
 import com.gwidgets.api.leaflet.elemental.DOMMouseEvent;
 import com.gwidgets.api.leaflet.elemental.HTMLElement;
 
-@JsType(isNative = true)
+import jsinterop.annotations.JsType;
+
+@JsType
 public class PopupEvent extends Event {
+	
+	protected PopupEvent() {}
 
+	public final native LatLng getLatlng() /*-{
+		return this.latlng;
+	}-*/;
 
-	@JsProperty
-	public  LatLng latlng;
+	public final native Point getLayerPoint() /*-{
+		return this.layerPoint;
+	}-*/;
 
-	@JsProperty
-	public  Point layerPoint;
+	public final native Point getContainerPoint() /*-{
+		return this.containerPoint;
+	}-*/;
 
-	@JsProperty
-	public  Point containerPoint;
+	public final native DOMMouseEvent getOriginalEvent() /*-{
+		return this.originalEvent;
+	}-*/;
 
-	@JsProperty
-	public  DOMMouseEvent originalEvent;
+	public final native LatLngBounds getBounds() /*-{
+		return this.bounds;
+	}-*/;
 
-	@JsProperty
-	public  LatLngBounds bounds;
+	public final native Number getAccuracy() /*-{
+		return this.accuracy;
+	}-*/;
 
-	@JsProperty
-	public  Number accuracy;
+	public final native Number getAltitude() /*-{
+		return this.altitude;
+	}-*/;
 
-	@JsProperty
-	public  Number altitude;
+	public final native Number getAltitudeAccuracy() /*-{
+		return this.altitudeAccuracy;
+	}-*/;
 
-	@JsProperty
-	public  Number altitudeAccuracy;
+	public final native Number getHeading() /*-{
+		return this.heading;
+	}-*/;
 
-	@JsProperty
-	public  Number heading;
+	public final native Number getSpeed() /*-{
+		return this.speed;
+	}-*/;
 
-	@JsProperty
-	public  Number speed;
+	public final native Number getTimestamp() /*-{
+		return this.timestamp;
+	}-*/;
 
-	@JsProperty
-	public  Number timestamp;
+	public final native String getMessage() /*-{
+		return this.message;
+	}-*/;
 
-	@JsProperty
-	public  String message;
+	public final native Number getCode() /*-{
+		return this.code;
+	}-*/;
 
-	@JsProperty
-	public  Number code;
+	public final native String getName() /*-{
+		return this.name;
+	}-*/;
 
-	@JsProperty
-	public  String name;
+	public final native HTMLElement getTile() /*-{
+		return this.tile;
+	}-*/;
 
-	@JsProperty
-	public  HTMLElement tile;
+	public final native String getUrl() /*-{
+		return this.url;
+	}-*/;
 
-	@JsProperty
-	public  String url;
+	public final native Point getOldSize() /*-{
+		return this.oldSize;
+	}-*/;
 
-	@JsProperty
-	public  Point oldSize;
+	public final native Point getNewSize() /*-{
+		return this.newSize;
+	}-*/;
 
-	@JsProperty
-	public  Point newSize;
+	public final native ILayer getLayer() /*-{
+		return this.layer;
+	}-*/;
 
-	@JsProperty
-	public  ILayer layer;
+	public final native Object getProperties() /*-{
+		return this.properties;
+	}-*/;
 
-	@JsProperty
-	public  Object properties;
+	public final native String getGeometryType() /*-{
+		return this.geometryType;
+	}-*/;
 
-	@JsProperty
-	public  String geometryType;
+	public final native String getId() /*-{
+		return this.id;
+	}-*/;
 
-	@JsProperty
-	public  String id;
-
-	@JsProperty
-	public  Popup popup;
+	public final native Popup getPopup() /*-{
+		return this.popup;
+	}-*/;
 
 }

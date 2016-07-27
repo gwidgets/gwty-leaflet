@@ -4,7 +4,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType
-public class PolylineOptions {
+public class PolylineOptions extends PathOptions{
 
 	@JsProperty
 	public Number smoothFactor = 1.0;

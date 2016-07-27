@@ -1,48 +1,60 @@
 package com.gwidgets.api.leaflet.events;
 
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
-
 import com.gwidgets.api.leaflet.LatLng;
 import com.gwidgets.api.leaflet.LatLngBounds;
 import com.gwidgets.api.leaflet.Point;
 import com.gwidgets.api.leaflet.elemental.DOMMouseEvent;
 
-@JsType(isNative = true)
+import jsinterop.annotations.JsType;
+
+@JsType
 public class LocationEvent extends Event {
 
+	protected LocationEvent(){}
 
-	@JsProperty
-	public  Point layerPoint;
 
-	@JsProperty
-	public  Point containerPoint;
+	public final native Point getLayerPoint() /*-{
+		return this.layerPoint;
+	}-*/;
 
-	@JsProperty
-	public  DOMMouseEvent originalEvent;
+	public final native Point getContainerPoint() /*-{
+		return this.containerPoint;
+	}-*/;
 
-	@JsProperty
-	public  LatLng latlng;
+	public final native DOMMouseEvent getOriginalEvent() /*-{
+		return this.originalEvent;
+	}-*/;
 
-	@JsProperty
-	public  LatLngBounds bounds;
+	public final native LatLng getLatlng() /*-{
+		return this.latlng;
+	}-*/;
 
-	@JsProperty
-	public  Number accuracy;
+	public final native LatLngBounds getBounds() /*-{
+		return this.bounds;
+	}-*/;
 
-	@JsProperty
-	public  Number altitude;
+	public final native Number getAccuracy() /*-{
+		return this.accuracy;
+	}-*/;
 
-	@JsProperty
-	public  Number altitudeAccuracy;
+	public final native Number getAltitude() /*-{
+		return this.altitude;
+	}-*/;
 
-	@JsProperty
-	public  Number heading;
+	public final native Number getAltitudeAccuracy() /*-{
+		return this.altitudeAccuracy;
+	}-*/;
 
-	@JsProperty
-	public  Number speed;
+	public final native Number getHeading() /*-{
+		return this.heading;
+	}-*/;
 
-	@JsProperty
-	public  Number timestamp;
+	public final native Number getSpeed() /*-{
+		return this.speed;
+	}-*/;
+
+	public final native Number getTimestamp() /*-{
+		return this.timestamp;
+	}-*/;
 
 }
