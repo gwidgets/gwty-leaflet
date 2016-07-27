@@ -91,7 +91,7 @@ map.on("click", new Function(){
                 });
 ```
 
-Event Objects that the event can be cast to depending on the usage are: 
+Event Objects that the event object can be cast to are (depending on the usage): 
 
 - ErrorEvent
 - GeoJSONEvent
