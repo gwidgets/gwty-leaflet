@@ -80,7 +80,9 @@ For defining actions, events needs to be supplied with an abstract callback func
 ```java
 map.on("click", new Function(){
                         @Override
-                        public JavaScriptObject call(JavaScriptObject... args) {
+                        public JavaScriptObject call(JavaScriptObject event) {
+
+                                MouseEvent msEvent = event.cast();
                                 
                                 map.openPopup("hello", L.latLng(51.508, 11), new PopupOptions());
                                 return null;
@@ -89,5 +91,23 @@ map.on("click", new Function(){
                 });
 ```
 
-Events explained in details Leaflet's documentation. 
+Event Objects that the event can be cast to depending on the usage are: 
+
+    - ErrorEvent
+    - GeoJSONEvent
+    - LayerControlEvent
+    - LayerEvent
+    - LocationEvent
+    - MouseEvent
+    - PopupEvent
+    - ResizeEvent
+    - TileEvent
+
+All events objects extend [JavaScriptObject](http://www.gwtproject.org/javadoc/latest/com/google/gwt/core/client/JavaScriptObject.html), so they can be converted to from JavaScriptObject using cast() method.
+
+Events are explained in details Leaflet's documentation. 
+
+## GWT version:
+
+gwty-leaflet is compiled using GWT 2.8.0-SNAPSHOT. 
 
