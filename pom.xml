@@ -7,7 +7,7 @@
 	<packaging>gwt-lib</packaging>
 
 	<properties>
-		<gwtVersion>2.8.0-SNAPSHOT</gwtVersion>
+		<gwtVersion>2.8.0-rc1</gwtVersion>
 	</properties>
 
 	<developers>
