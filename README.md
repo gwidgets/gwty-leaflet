@@ -9,8 +9,25 @@ gwty-leaflet is wrapper for the famous maps javascript library [Leaflet](http://
                      <dependency>
                         <groupId>com.gwidgets</groupId>
                         <artifactId>gwty-leaflet</artifactId>
-                        <version>0.2</version>
+                        <version>0.3-SNAPSHOT</version>
                      </dependency>
+```
+
+Since the 0.3 is a snapshot version, the sonatype snapshot repository needs to be added. 
+
+```xml
+<repositories>
+		<repository>
+			<id>snapshots</id>
+			<url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
 ```
 
 
@@ -105,9 +122,9 @@ Event Objects that the event object can be cast to are (depending on the usage):
 
 All events objects extend [JavaScriptObject](http://www.gwtproject.org/javadoc/latest/com/google/gwt/core/client/JavaScriptObject.html), so they can be converted to a JavaScriptObject using cast() method.
 
-Events are explained in details Leaflet's documentation. 
+Events are explained in details in Leaflet's documentation. 
 
 ## GWT version:
 
-gwty-leaflet is compiled using GWT 2.8.0-SNAPSHOT. 
+gwty-leaflet is compiled using GWT 2.8.0-rc1. 
 
