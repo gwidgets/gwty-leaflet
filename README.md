@@ -9,11 +9,11 @@ gwty-leaflet is wrapper for the famous maps javascript library [Leaflet](http://
                      <dependency>
                         <groupId>com.gwidgets</groupId>
                         <artifactId>gwty-leaflet</artifactId>
-                        <version>0.3-SNAPSHOT</version>
+                        <version>0.4-SNAPSHOT</version>
                      </dependency>
 ```
 
-Since the 0.3 is a snapshot version, the sonatype snapshot repository needs to be added. 
+The sonatype snapshot repository needs to be added as well: 
 
 ```xml
 <repositories>
@@ -38,13 +38,17 @@ Also, do not forget to include gwty-leaflet in your .gwt.xml module definition f
                   
 ```
 
+##Leaflet version:
+
+gwty-leaflet is compatible with the latest stable version of Leaflet: 0.7. 
+
 ##Leaflet javascript files:
 
-As in any JsInterop wrapper, you need to refer to Js leaflet from your .html app file. You can either download the Js files from [Leaflet website](http://leafletjs.com/download.html), or refer to them directly using their cdn (there are performance implications off course!).
+As in any JsInterop wrapper, you need to refer to the Javascript files from your .html app file. You can either download the Js files from [Leaflet website](http://leafletjs.com/download.html), or refer to them directly using their cdn (there are performance implications off course!).
 
 ```html
-<link rel="stylesheet" href="https://npmcdn.com/leaflet@1.0.0-rc.2/dist/leaflet.css" />
-<script src="https://npmcdn.com/leaflet@1.0.0-rc.2/dist/leaflet.js"></script> 
+<link rel="stylesheet" href="https://npmcdn.com/leaflet@0.7.7/dist/leaflet.css" />
+<script src="https://npmcdn.com/leaflet@0.7.7/dist/leaflet.js"></script>
 ```
 
 
@@ -64,12 +68,26 @@ Trying to create a Leaflet object directly using the new operator will result in
 
 ## Options
 
-As specified by Leaflet documentation, the creations of some objects requires a set of options. gwty-leaflet provides all the options with their respective default values. You can override the default values simply by changing the values of fields: 
+As specified by Leaflet documentation, the creation of some objects requires a set of options. gwty-leaflet provides all the options with their respective default values as [Objects](https://github.com/gwidgets/gwty-leaflet/tree/master/src/main/java/com/gwidgets/api/leaflet/options) annotated with @JsType. As of version 0.4, options builders were introduced to help in the creation of option Objects and enforce fields validations. Several options have required fields, and using builders help the developer distinguish between required and optional fields. 
 
+Before version 0.4: 
 ```java
               PathOptions options = new PathOptions();
                 options.fillColor = "#fff";
                 options.opacity = 1;
+
+                //...
+
+                L.circle(L.latLng(51.508, 11), 200, options).addTo(map);
+```
+
+After version 0.4: 
+
+```java
+              PathOptions options = new PathOptions.Builder()
+                                     .fillColor("#fff")
+                                     .opacity(1)
+                                      .build();
 
                 //...
 
@@ -83,7 +101,7 @@ For more informations about the available options for each objects, and their ut
 To create a map in a div with an id="map", we can do something like: 
 ```java
                 
-                L.map("map", new MapOptions()).setView(L.latLng(51.505, -0.09), 12, new ZoomPanOptions());;
+                L.map("map", new MapOptions.Builder().build()).setView(L.latLng(51.505, -0.09), 12, new ZoomPanOptions.Builder().build());
 
 ```
 
@@ -101,7 +119,7 @@ map.on("click", new Function(){
 
                                 MouseEvent msEvent = event.cast();
                                 
-                                map.openPopup("hello", L.latLng(51.508, 11), new PopupOptions());
+                                map.openPopup("hello", msEvent.getLatlng(), new PopupOptions.Builder().build());
                                 return null;
                         }
                         
@@ -120,11 +138,14 @@ Event Objects that the event object can be cast to are (depending on the usage):
 - ResizeEvent
 - TileEvent
 
-All events objects extend [JavaScriptObject](http://www.gwtproject.org/javadoc/latest/com/google/gwt/core/client/JavaScriptObject.html), so they can be converted to a JavaScriptObject using cast() method.
+All events objects extend [JavaScriptObject](http://www.gwtproject.org/javadoc/latest/com/google/gwt/core/client/JavaScriptObject.html), so they can be converted from/to a JavaScriptObject using cast() method.
+
+Events are executed following the order of registration. 
 
 Events are explained in details in Leaflet's documentation. 
 
+
 ## GWT version:
 
-gwty-leaflet is compiled using GWT 2.8.0-rc1. 
+As of the current version, gwty-leaflet is compiled using GWT 2.8.0-rc2. 
 
