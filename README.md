@@ -58,7 +58,7 @@ All objects initializations are done through the L class. gwty-leaflet provides 
 
 ```java
 //equivalent to new Map(...)
-Map map = L.map("map", new MapOptions());
+Map map = L.map("map", new MapOptions.Builder().build());
 
 //equivalent to new Circle(...)
 Circle circle = L.circle(L.latLng(51.508, 11), 200, options);
