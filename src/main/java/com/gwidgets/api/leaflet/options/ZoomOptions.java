@@ -5,9 +5,43 @@ import jsinterop.annotations.JsType;
 
 @JsType
 public class ZoomOptions {
+	
+	private ZoomOptions() {
+		
+	}
 
-	// Zoom options
 	@JsProperty
-	public Boolean animate = true;
+	private Boolean animate = true;
+	
+	
+	public Boolean getAnimate() {
+		return this.animate;
+	}
+
+
+	public static class Builder {
+		
+		
+		private Boolean animate = true;
+
+		public Builder() {
+
+		}
+		
+		public Builder animate(Boolean animate){
+			
+			this.animate = animate;
+			
+			return this;
+		}
+		
+		public ZoomOptions build(){
+			ZoomOptions options = new ZoomOptions();
+			options.animate = animate;
+			
+			return options;
+		}
+
+	}
 
 }

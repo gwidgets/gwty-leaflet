@@ -24,14 +24,6 @@ import jsinterop.annotations.JsType;
  *Represents a point with x and y coordinates in pixels.
  *@author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
  */
-/**
- * @author zakaria
- *
- */
-/**
- * @author zakaria
- *
- */
 @JsType(isNative = true)
 public class Point {
 

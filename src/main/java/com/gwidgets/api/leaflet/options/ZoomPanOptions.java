@@ -6,14 +6,80 @@ import jsinterop.annotations.JsType;
 @JsType
 public class ZoomPanOptions {
 
-	// Zoom/pan options
+	private ZoomPanOptions() {
+
+	}
+
 	@JsProperty
-	public Boolean reset = false;
+	private Boolean reset = false;
 	@JsProperty
-	public PanOptions pan = null;
+	private PanOptions pan = null;
 	@JsProperty
-	public ZoomOptions zoom = null;
+	private ZoomOptions zoom = null;
 	@JsProperty
-	public Boolean animate = true;
+	private Boolean animate = true;
+
+	public Boolean getReset() {
+		return this.reset;
+	}
+
+	public PanOptions getPan() {
+		return this.pan;
+	}
+
+	public ZoomOptions getZoom() {
+		return this.zoom;
+	}
+
+	public Boolean getAnimate() {
+		return this.animate;
+	}
+
+	public static class Builder {
+
+		private Boolean reset = false;
+
+		private PanOptions pan = null;
+
+		private ZoomOptions zoom = null;
+
+		private Boolean animate = true;
+
+		public Builder() {
+
+		}
+
+		public Builder reset(Boolean reset) {
+			this.reset = reset;
+			return this;
+		}
+
+		public Builder pan(PanOptions pan) {
+			this.pan = pan;
+			return this;
+		}
+
+		public Builder zoom(ZoomOptions zoom) {
+			this.zoom = zoom;
+			return this;
+		}
+
+		public Builder animate(Boolean animate) {
+			this.animate = animate;
+			return this;
+		}
+		
+		public ZoomPanOptions build(){
+			ZoomPanOptions options = new ZoomPanOptions();
+			options.animate = this.animate;
+			options.pan = this.pan;
+			options.zoom = this.zoom;
+			options.reset = this.reset;
+			
+			return options;
+			
+		}
+
+	}
 
 }
