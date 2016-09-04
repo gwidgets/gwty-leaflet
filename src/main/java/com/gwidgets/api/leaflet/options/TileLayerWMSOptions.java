@@ -11,8 +11,8 @@ import com.gwidgets.api.leaflet.ICRS;
 @JsType(isNative=true, namespace=GLOBAL, name="Object")
 public class TileLayerWMSOptions {
 
-	private TileLayerWMSOptions(String layers) {
-		this.layers = layers;
+	private TileLayerWMSOptions() {
+		
 	}
 
 	@JsProperty
@@ -101,7 +101,8 @@ public class TileLayerWMSOptions {
 		}
 		
 		public TileLayerWMSOptions build(){
-			TileLayerWMSOptions options = new TileLayerWMSOptions(layers);
+			TileLayerWMSOptions options = new TileLayerWMSOptions();
+			options.layers = this.layers;
 			options.styles = this.styles;
 			options.format = this.format;
 			options.transparent = this.transparent;

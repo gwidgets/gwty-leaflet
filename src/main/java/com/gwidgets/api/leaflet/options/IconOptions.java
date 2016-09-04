@@ -11,8 +11,8 @@ import com.gwidgets.api.leaflet.Point;
 @JsType(isNative=true, namespace=GLOBAL, name="Object")
 public class IconOptions {
 	
-	private IconOptions(String iconUrl){
-		this.iconUrl = iconUrl;
+	private IconOptions(){
+		
 		
 	}
 
@@ -162,7 +162,8 @@ public class IconOptions {
 		public Builder className(String className){this.className = className; return this;}
 		
 		public IconOptions build(){
-			IconOptions options = new IconOptions(this.iconUrl);
+			IconOptions options = new IconOptions();
+			options.iconUrl = iconUrl;
 			options.iconRetinaUrl = this.iconRetinaUrl;
 			options.iconSize = this.iconSize;
 			options.iconAnchor = this.iconAnchor;
