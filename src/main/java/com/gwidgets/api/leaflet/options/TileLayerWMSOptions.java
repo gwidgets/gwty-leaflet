@@ -1,11 +1,14 @@
 package com.gwidgets.api.leaflet.options;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+import static jsinterop.annotations.JsPackage.GLOBAL;
+
 import com.gwidgets.api.leaflet.ICRS;
 
-@JsType
+@JsType(isNative=true, namespace=GLOBAL, name="Object")
 public class TileLayerWMSOptions {
 
 	private TileLayerWMSOptions(String layers) {
@@ -13,44 +16,44 @@ public class TileLayerWMSOptions {
 	}
 
 	@JsProperty
-	private String layers = "";
+	private String layers;
 
 	@JsProperty
-	private String styles = "";
+	private String styles;
 
 	@JsProperty
-	private String format = "image/jpeg";
+	private String format;
 
 	@JsProperty
-	private Boolean transparent = false;
+	private Boolean transparent;
 
 	@JsProperty
-	private String version = "1.1.1";
+	private String version;
 
 	@JsProperty
-	private ICRS crs = null;
+	private ICRS crs;
 
-	public String getLayers() {
+	@JsOverlay public final String getLayers() {
 		return this.layers;
 	}
 
-	public String getStyles() {
+	@JsOverlay public final String getStyles() {
 		return this.styles;
 	}
 
-	public String getFormat() {
+	@JsOverlay public final String getFormat() {
 		return this.format;
 	}
 
-	public Boolean getTransparent() {
+	@JsOverlay public final Boolean getTransparent() {
 		return this.transparent;
 	}
 
-	public String getVersion() {
+	@JsOverlay public final String getVersion() {
 		return this.version;
 	}
 
-	public ICRS getCrs() {
+	@JsOverlay public final ICRS getCrs() {
 		return this.crs;
 	}
 

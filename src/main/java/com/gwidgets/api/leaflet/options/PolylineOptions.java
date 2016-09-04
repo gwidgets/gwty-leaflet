@@ -1,10 +1,13 @@
 package com.gwidgets.api.leaflet.options;
 
 
+import static jsinterop.annotations.JsPackage.GLOBAL;
+
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType
+@JsType(isNative=true, namespace=GLOBAL, name="Object")
 public class PolylineOptions extends PathOptions{
 	
 	private PolylineOptions() {
@@ -12,104 +15,104 @@ public class PolylineOptions extends PathOptions{
 	}
 
 	@JsProperty
-	private Number smoothFactor = 1.0;
+	private Number smoothFactor;
 
 	@JsProperty
-	private Boolean noClip = false;
+	private Boolean noClip;
 	
 	
 	
 	
-	public Number getSmoothFactor() {
+	@JsOverlay public final Number getSmoothFactor() {
 		return this.smoothFactor;
 	}
 
 
 
 
-	public Boolean getNoClip() {
+	@JsOverlay public final Boolean getNoClip() {
 		return this.noClip;
 	}
 
-	public Boolean getStroke() {
+	@JsOverlay public final Boolean getStroke_() {
 		return this.stroke;
 	}
 
 
 
-	public String getColor() {
+	@JsOverlay public final String getColor_() {
 		return this.color;
 	}
 
 
 
-	public Number getWeight() {
+	@JsOverlay public final Number getWeight_() {
 		return this.weight;
 	}
 
 
 
-	public Number getOpacity() {
+	@JsOverlay public final Number getOpacity_() {
 		return this.opacity;
 	}
 
 
 
-	public Boolean getFill() {
+	@JsOverlay public final Boolean getFill_() {
 		return this.fill;
 	}
 
 
 
-	public String getFillColor() {
+	@JsOverlay public final String getFillColor_() {
 		return this.fillColor;
 	}
 
 
 
-	public Number getFillOpacity() {
+	@JsOverlay public final Number getFillOpacity_() {
 		return this.fillOpacity;
 	}
 
 
 
-	public String getFillRule() {
+	@JsOverlay public final String getFillRule_() {
 		return this.fillRule;
 	}
 
 
 
-	public String getDashArray() {
+	@JsOverlay public final String getDashArray_() {
 		return this.dashArray;
 	}
 
 
 
-	public String getLineCap() {
+	@JsOverlay public final String getLineCap_() {
 		return this.lineCap;
 	}
 
 
 
-	public String getLineJoin() {
+	@JsOverlay public final String getLineJoin_() {
 		return this.lineJoin;
 	}
 
 
 
-	public Boolean getClickable() {
+	@JsOverlay public final Boolean getClickable_() {
 		return this.clickable;
 	}
 
 
 
-	public String getPointerEvents() {
+	@JsOverlay public final String getPointerEvents_() {
 		return this.pointerEvents;
 	}
 
 
 
-	public String getClassName() {
+	@JsOverlay public final String getClassName_() {
 		return this.className;
 	}
 

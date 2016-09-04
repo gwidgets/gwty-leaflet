@@ -1,13 +1,16 @@
 package com.gwidgets.api.leaflet.options;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+
+import static jsinterop.annotations.JsPackage.GLOBAL;
 
 import com.gwidgets.api.leaflet.ILayer;
 import com.gwidgets.api.leaflet.LatLng;
 import com.gwidgets.api.leaflet.LatLngBounds;
 
-@JsType
+@JsType(isNative=true, namespace=GLOBAL, name="Object")
 public class MapOptions {
 
 	private MapOptions() {
@@ -16,189 +19,192 @@ public class MapOptions {
 
 	// Map State Options
 	@JsProperty
-	private LatLng center = null;
+	private LatLng center;
 	@JsProperty
-	private Number zoom = 0;
+	private Number zoom;
 	@JsProperty
-	private ILayer[] layers = null;
+	private ILayer[] layers;
 	@JsProperty
-	private Number minZoom = null;
+	private Number minZoom;
 	@JsProperty
-	private Number maxZoom = null;
+	private Number maxZoom;
 	@JsProperty
-	private LatLngBounds maxBounds = null;
+	private LatLngBounds maxBounds;
 	// @JsProperty
 	// CRS crs = L.CRS.EPSG3857;
 
 	// Interaction Options
 	@JsProperty
-	private Boolean dragging = true;
+	private Boolean dragging;
 	@JsProperty
-	private Boolean touchZoom = true;
+	private Boolean touchZoom;
 	@JsProperty
-	private Boolean scrollWheelZoom = true;
+	private Boolean scrollWheelZoom;
 	@JsProperty
-	private Boolean doubleClickZoom = true;
+	private Boolean doubleClickZoom;
 	@JsProperty
-	private Boolean boxZoom = true;
+	private Boolean boxZoom;
 	@JsProperty
-	private Boolean tap = true;
+	private Boolean tap;
 	@JsProperty
-	private Number tapTolerance = 15;
+	private Number tapTolerance;
 	@JsProperty
-	private Boolean trackResize = true;
+	private Boolean trackResize;
 	@JsProperty
-	private Boolean worldCopyJump = false;
+	private Boolean worldCopyJump;
 	@JsProperty
-	private Boolean closePopupOnClick = true;
+	private Boolean closePopupOnClick;
 
 	// Keyboard Navigation Options
 	@JsProperty
-	private Boolean keyboard = true;
+	private Boolean keyboard;
 	@JsProperty
-	private Number keyboardPanOffset = 80;
+	private Number keyboardPanOffset;
 	@JsProperty
-	private Number keyboardZoomOffset = 1;
+	private Number keyboardZoomOffset;
 
 	// Panning Inertia Options
 	@JsProperty
-	private Boolean inertia = true;
+	private Boolean inertia;
 	@JsProperty
-	private Number inertiaDeceleration = 3000;
+	private Number inertiaDeceleration;
 	@JsProperty
-	private Number inertiaMaxSpeed = 1500;
+	private Number inertiaMaxSpeed;
 	@JsProperty
-	private Number inertiaThreshold = 32;
+	private Number inertiaThreshold;
 
 	// Control options
 	@JsProperty
-	private Boolean zoomControl = true;
+	private Boolean zoomControl;
 	@JsProperty
-	private Boolean attributionControl = true;
+	private Boolean attributionControl;
 
 	// Animation options
 	@JsProperty
-	private Boolean fadeAnimation = true;
+	private Boolean fadeAnimation;
 	@JsProperty
-	private Boolean zoomAnimation = true;
+	private Boolean zoomAnimation;
 	@JsProperty
-	private Number zoomAnimationThreshold = 4;
+	private Number zoomAnimationThreshold;
 	@JsProperty
-	private Boolean markerZoomAnimation = true;
+	private Boolean markerZoomAnimation;
 
-	public LatLng getCenter() {
+	@JsOverlay
+	public final LatLng getCenter() {
 		return this.center;
 	}
 
-	public Number getZoom() {
+	@JsOverlay
+	public final Number getZoom() {
 		return this.zoom;
 	}
 
-	public ILayer[] getLayers() {
+	
+    @JsOverlay public final ILayer[] getLayers() {
 		return this.layers;
 	}
 
-	public Number getMinZoom() {
+	@JsOverlay public final Number getMinZoom() {
 		return this.minZoom;
 	}
 
-	public Number getMaxZoom() {
+	@JsOverlay public final Number getMaxZoom() {
 		return this.maxZoom;
 	}
 
-	public LatLngBounds getMaxBounds() {
+	@JsOverlay public final LatLngBounds getMaxBounds() {
 		return this.maxBounds;
 	}
 
-	public Boolean getDragging() {
+	@JsOverlay public final Boolean getDragging() {
 		return this.dragging;
 	}
 
-	public Boolean getTouchZoom() {
+	@JsOverlay public final Boolean getTouchZoom() {
 		return this.touchZoom;
 	}
 
-	public Boolean getScrollWheelZoom() {
+	@JsOverlay public final Boolean getScrollWheelZoom() {
 		return this.scrollWheelZoom;
 	}
 
-	public Boolean getDoubleClickZoom() {
+	@JsOverlay public final Boolean getDoubleClickZoom() {
 		return this.doubleClickZoom;
 	}
 
-	public Boolean getBoxZoom() {
+	@JsOverlay public final Boolean getBoxZoom() {
 		return this.boxZoom;
 	}
 
-	public Boolean getTap() {
+	@JsOverlay public final Boolean getTap() {
 		return this.tap;
 	}
 
-	public Number getTapTolerance() {
+	@JsOverlay public final Number getTapTolerance() {
 		return this.tapTolerance;
 	}
 
-	public Boolean getTrackResize() {
+	@JsOverlay public final Boolean getTrackResize() {
 		return this.trackResize;
 	}
 
-	public Boolean getWorldCopyJump() {
+	@JsOverlay public final Boolean getWorldCopyJump() {
 		return this.worldCopyJump;
 	}
 
-	public Boolean getClosePopupOnClick() {
+	@JsOverlay public final Boolean getClosePopupOnClick() {
 		return this.closePopupOnClick;
 	}
 
-	public Boolean getKeyboard() {
+	@JsOverlay public final Boolean getKeyboard() {
 		return this.keyboard;
 	}
 
-	public Number getKeyboardPanOffset() {
+	@JsOverlay public final Number getKeyboardPanOffset() {
 		return this.keyboardPanOffset;
 	}
 
-	public Number getKeyboardZoomOffset() {
+	@JsOverlay public final Number getKeyboardZoomOffset() {
 		return this.keyboardZoomOffset;
 	}
 
-	public Boolean getInertia() {
+	@JsOverlay public final Boolean getInertia() {
 		return this.inertia;
 	}
 
-	public Number getInertiaDeceleration() {
+	@JsOverlay public final Number getInertiaDeceleration() {
 		return this.inertiaDeceleration;
 	}
 
-	public Number getInertiaMaxSpeed() {
+	@JsOverlay public final Number getInertiaMaxSpeed() {
 		return this.inertiaMaxSpeed;
 	}
 
-	public Number getInertiaThreshold() {
+	@JsOverlay public final Number getInertiaThreshold() {
 		return this.inertiaThreshold;
 	}
 
-	public Boolean getZoomControl() {
+	@JsOverlay public final Boolean getZoomControl() {
 		return this.zoomControl;
 	}
 
-	public Boolean getAttributionControl() {
+	@JsOverlay public final Boolean getAttributionControl() {
 		return this.attributionControl;
 	}
 
-	public Boolean getFadeAnimation() {
+	@JsOverlay public final Boolean getFadeAnimation() {
 		return this.fadeAnimation;
 	}
 
-	public Boolean getZoomAnimation() {
+	@JsOverlay public final Boolean getZoomAnimation() {
 		return this.zoomAnimation;
 	}
 
-	public Number getZoomAnimationThreshold() {
+	@JsOverlay public final Number getZoomAnimationThreshold() {
 		return this.zoomAnimationThreshold;
 	}
 
-	public Boolean getMarkerZoomAnimation() {
+	@JsOverlay public final Boolean getMarkerZoomAnimation() {
 		return this.markerZoomAnimation;
 	}
 
@@ -461,6 +467,11 @@ public class MapOptions {
 			options.markerZoomAnimation = this.markerZoomAnimation;
 
 			return options;
+		}
+		
+		public static class Properties{
+			
+			
 		}
 
 	}

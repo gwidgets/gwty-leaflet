@@ -1,12 +1,15 @@
 package com.gwidgets.api.leaflet.options;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+
+import static jsinterop.annotations.JsPackage.GLOBAL;
 
 import com.gwidgets.api.leaflet.L;
 import com.gwidgets.api.leaflet.Point;
 
-@JsType
+@JsType(isNative=true, namespace=GLOBAL, name="Object")
 public class FitBoundsOptions {
 
    
@@ -15,34 +18,34 @@ public class FitBoundsOptions {
 	}
 	
 	@JsProperty
-	private Point paddingTopLeft = L.point(0, 0, true);
+	private Point paddingTopLeft;
 	@JsProperty
-	private Point paddingBottomRight = L.point(0, 0, true);
+	private Point paddingBottomRight;
 	@JsProperty
-	private Point padding = L.point(0, 0, true);
+	private Point padding;
 	@JsProperty
-	private Number maxZoom = null;
+	private Number maxZoom;
 	
 	
 	
-	public Number getMaxZoom() {
+	@JsOverlay public final Number getMaxZoom() {
 		return this.maxZoom;
 	}
 
 
-	public Point getPaddingTopLeft() {
+	@JsOverlay public final Point getPaddingTopLeft() {
 		return this.paddingTopLeft;
 	}
 
 
 
-	public Point getPaddingBottomRight() {
+	@JsOverlay public final Point getPaddingBottomRight() {
 		return this.paddingBottomRight;
 	}
 
 
 
-	public Point getPadding() {
+	@JsOverlay public final Point getPadding() {
 		return this.padding;
 	}
 

@@ -1,11 +1,14 @@
 package com.gwidgets.api.leaflet.options;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+import static jsinterop.annotations.JsPackage.GLOBAL;
+
 import com.gwidgets.api.leaflet.Point;
 
-@JsType
+@JsType(isNative=true, namespace=GLOBAL, name="Object")
 public class IconOptions {
 	
 	private IconOptions(String iconUrl){
@@ -45,52 +48,52 @@ public class IconOptions {
 		private String className;
 	
 	
-	public String getIconUrl() {
+		@JsOverlay public final String getIconUrl() {
 			return this.iconUrl;
 		}
 
 
-		public String getIconRetinaUrl() {
+		@JsOverlay public final String getIconRetinaUrl() {
 			return this.iconRetinaUrl;
 		}
 
 
-		public Point getIconSize() {
+		@JsOverlay public final Point getIconSize() {
 			return this.iconSize;
 		}
 
 
-		public Point getIconAnchor() {
+		@JsOverlay public final Point getIconAnchor() {
 			return this.iconAnchor;
 		}
 
 
-		public String getShadowUrl() {
+		@JsOverlay public final String getShadowUrl() {
 			return this.shadowUrl;
 		}
 
 
-		public String getShadowRetinaUrl() {
+		@JsOverlay public final String getShadowRetinaUrl() {
 			return this.shadowRetinaUrl;
 		}
 
 
-		public Point getShadowSize() {
+		@JsOverlay public final Point getShadowSize() {
 			return this.shadowSize;
 		}
 
 
-		public Point getShadowAnchor() {
+		@JsOverlay public final Point getShadowAnchor() {
 			return this.shadowAnchor;
 		}
 
 
-		public Point getPopupAnchor() {
+		@JsOverlay public final Point getPopupAnchor() {
 			return this.popupAnchor;
 		}
 
 
-		public String getClassName() {
+		@JsOverlay public final String getClassName() {
 			return this.className;
 		}
 

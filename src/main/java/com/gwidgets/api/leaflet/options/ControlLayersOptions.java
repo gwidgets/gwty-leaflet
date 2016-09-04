@@ -1,9 +1,12 @@
 package com.gwidgets.api.leaflet.options;
 
+import static jsinterop.annotations.JsPackage.GLOBAL;
+
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType
+@JsType(isNative=true, namespace=GLOBAL, name="Object")
 public class ControlLayersOptions {
 	
 	private ControlLayersOptions(){
@@ -12,26 +15,26 @@ public class ControlLayersOptions {
 	}
 
 	@JsProperty
-	private String position = "topright";
+	private String position;
 
 	@JsProperty
-	private Boolean collapsed = true;
+	private Boolean collapsed;
 
 	@JsProperty
-	private Boolean autoZIndex = true;
+	private Boolean autoZIndex;
 	
 	
-	public String getPosition() {
+	@JsOverlay public final String getPosition() {
 		return this.position;
 	}
 
 
-	public Boolean getCollapsed() {
+	@JsOverlay public final Boolean getCollapsed() {
 		return this.collapsed;
 	}
 
 
-	public Boolean getAutoZIndex() {
+	@JsOverlay public final Boolean getAutoZIndex() {
 		return this.autoZIndex;
 	}
 

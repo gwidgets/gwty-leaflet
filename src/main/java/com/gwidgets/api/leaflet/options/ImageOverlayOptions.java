@@ -1,9 +1,12 @@
 package com.gwidgets.api.leaflet.options;
 
+import static jsinterop.annotations.JsPackage.GLOBAL;
+
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType
+@JsType(isNative=true, namespace=GLOBAL, name="Object")
 public class ImageOverlayOptions {
 	
 	private ImageOverlayOptions() {
@@ -11,11 +14,25 @@ public class ImageOverlayOptions {
 	}
 
 	@JsProperty
-	private Number opacity = 1.0;
+	private Number opacity;
 	
 	@JsProperty
-	private String attribution = "";
+	private String attribution;
 	
+	
+	
+	@JsOverlay public final Number getOpacity() {
+		return this.opacity;
+	}
+
+
+
+	@JsOverlay public final String getAttribution() {
+		return this.attribution;
+	}
+
+
+
 	public static class Builder {
 		
 		private Number opacity = 1.0;

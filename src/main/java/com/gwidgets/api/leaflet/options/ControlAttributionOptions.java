@@ -1,9 +1,12 @@
 package com.gwidgets.api.leaflet.options;
 
+import static jsinterop.annotations.JsPackage.GLOBAL;
+
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType
+@JsType(isNative=true, namespace=GLOBAL, name="Object")
 public class ControlAttributionOptions {
 	
 	
@@ -13,16 +16,16 @@ public class ControlAttributionOptions {
 	}
 
 	@JsProperty
-	private String position = "bottomright";
+	private String position;
 
 	@JsProperty
-	private String prefix = "Powered by Leaflet";
+	private String prefix;
 	
-	public String getPosition() {
+	@JsOverlay public final String getPosition() {
 		return this.position;
 	}
 
-	public String getPrefix() {
+	@JsOverlay public final String getPrefix() {
 		return this.prefix;
 	}
 

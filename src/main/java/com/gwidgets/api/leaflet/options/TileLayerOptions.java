@@ -1,11 +1,14 @@
 package com.gwidgets.api.leaflet.options;
 
+import static jsinterop.annotations.JsPackage.GLOBAL;
+
 import com.gwidgets.api.leaflet.LatLngBounds;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType
+@JsType(isNative=true, namespace=GLOBAL, name="Object")
 public class TileLayerOptions {
 
 	private TileLayerOptions() {
@@ -13,135 +16,135 @@ public class TileLayerOptions {
 	}
 
 	@JsProperty
-	private Number minZoom = 0;
+	private Number minZoom;
 
 	@JsProperty
-	private Number maxZoom = 18;
+	private Number maxZoom;
 
 	@JsProperty
-	private Number maxNativeZoom = null;
+	private Number maxNativeZoom;
 
 	@JsProperty
-	private Number tileSize = 256;
+	private Number tileSize;
 
 	@JsProperty
-	private String[] subdomains = { "abc" };
+	private String[] subdomains;
 
 	@JsProperty
-	private String errorTileUrl = "";
+	private String errorTileUrl;
 
 	@JsProperty
-	private String attribution = "";
+	private String attribution;
 
 	@JsProperty
-	private Boolean tms = false;
+	private Boolean tms;
 
 	@JsProperty
-	private Boolean continuousWorld = false;
+	private Boolean continuousWorld;
 
 	@JsProperty
-	private Boolean noWrap = false;
+	private Boolean noWrap;
 
 	@JsProperty
-	private Number zoomOffset = 0;
+	private Number zoomOffset;
 
 	@JsProperty
-	private Boolean zoomReverse = false;
+	private Boolean zoomReverse;
 
 	@JsProperty
-	private Number opacity = 1.0;
+	private Number opacity;
 
 	@JsProperty
-	private Number zIndex = null;
+	private Number zIndex;
 
 	@JsProperty
-	private Boolean unloadInvisibleTiles = true;
+	private Boolean unloadInvisibleTiles;
 
 	@JsProperty
-	private Boolean updateWhenIdle = false;
+	private Boolean updateWhenIdle;
 
 	@JsProperty
-	private Boolean detectRetina = false;
+	private Boolean detectRetina;
 
 	@JsProperty
-	private Boolean reuseTiles = false;
+	private Boolean reuseTiles;
 
 	@JsProperty
-	private LatLngBounds bounds = null;
+	private LatLngBounds bounds;
 
-	public Number getMinZoom() {
+	@JsOverlay public final Number getMinZoom() {
 		return this.minZoom;
 	}
 
-	public Number getMaxZoom() {
+	@JsOverlay public final Number getMaxZoom() {
 		return this.maxZoom;
 	}
 
-	public Number getMaxNativeZoom() {
+	@JsOverlay public final Number getMaxNativeZoom() {
 		return this.maxNativeZoom;
 	}
 
-	public Number getTileSize() {
+	@JsOverlay public final Number getTileSize() {
 		return this.tileSize;
 	}
 
-	public String[] getSubdomains() {
+	@JsOverlay public final String[] getSubdomains() {
 		return this.subdomains;
 	}
 
-	public String getErrorTileUrl() {
+	@JsOverlay public final String getErrorTileUrl() {
 		return this.errorTileUrl;
 	}
 
-	public String getAttribution() {
+	@JsOverlay public final String getAttribution() {
 		return this.attribution;
 	}
 
-	public Boolean getTms() {
+	@JsOverlay public final Boolean getTms() {
 		return this.tms;
 	}
 
-	public Boolean getContinuousWorld() {
+	@JsOverlay public final Boolean getContinuousWorld() {
 		return this.continuousWorld;
 	}
 
-	public Boolean getNoWrap() {
+	@JsOverlay public final Boolean getNoWrap() {
 		return this.noWrap;
 	}
 
-	public Number getZoomOffset() {
+	@JsOverlay public final Number getZoomOffset() {
 		return this.zoomOffset;
 	}
 
-	public Boolean getZoomReverse() {
+	@JsOverlay public final Boolean getZoomReverse() {
 		return this.zoomReverse;
 	}
 
-	public Number getOpacity() {
+	@JsOverlay public final Number getOpacity() {
 		return this.opacity;
 	}
 
-	public Number getzIndex() {
+	@JsOverlay public final Number getzIndex() {
 		return this.zIndex;
 	}
 
-	public Boolean getUnloadInvisibleTiles() {
+	@JsOverlay public final Boolean getUnloadInvisibleTiles() {
 		return this.unloadInvisibleTiles;
 	}
 
-	public Boolean getUpdateWhenIdle() {
+	@JsOverlay public final Boolean getUpdateWhenIdle() {
 		return this.updateWhenIdle;
 	}
 
-	public Boolean getDetectRetina() {
+	@JsOverlay public final Boolean getDetectRetina() {
 		return this.detectRetina;
 	}
 
-	public Boolean getReuseTiles() {
+	@JsOverlay public final Boolean getReuseTiles() {
 		return this.reuseTiles;
 	}
 
-	public LatLngBounds getBounds() {
+	@JsOverlay public final LatLngBounds getBounds() {
 		return this.bounds;
 	}
 

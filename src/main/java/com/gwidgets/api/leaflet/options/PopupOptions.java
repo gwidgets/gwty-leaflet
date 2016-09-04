@@ -1,12 +1,15 @@
 package com.gwidgets.api.leaflet.options;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+
+import static jsinterop.annotations.JsPackage.GLOBAL;
 
 import com.gwidgets.api.leaflet.L;
 import com.gwidgets.api.leaflet.Point;
 
-@JsType
+@JsType(isNative=true, namespace=GLOBAL, name="Object")
 public class PopupOptions {
 	
 	private PopupOptions() {
@@ -14,44 +17,124 @@ public class PopupOptions {
 	}
 
     @JsProperty
-	private Number maxWidth = 300;
+	private Number maxWidth;
 
 	@JsProperty
-	private Number minWidth = 50;
+	private Number minWidth;
 
 	@JsProperty
-	private Number maxHeight = null;
+	private Number maxHeight;
 
 	@JsProperty
-	private Boolean autoPan = true;
+	private Boolean autoPan;
 
 	@JsProperty
-	private Boolean keepInView = false;
+	private Boolean keepInView;
 
 	@JsProperty
-	private Boolean closeButton = true;
+	private Boolean closeButton;
 
 	@JsProperty
-	private Point offset = L.point(0, 6, true);
+	private Point offset;
 	
 	@JsProperty
-	private Point autoPanPaddingTopLeft = null;
+	private Point autoPanPaddingTopLeft;
 	
 	@JsProperty
-	private Point autoPanPaddingBottomRight = null;
+	private Point autoPanPaddingBottomRight;
 
 	@JsProperty
-	private Point autoPanPadding = L.point(5, 5, true);
+	private Point autoPanPadding;
 
 	@JsProperty
-	private Boolean zoomAnimation = true;
+	private Boolean zoomAnimation;
 
 	@JsProperty
-	private Boolean closeOnClick = null;
+	private Boolean closeOnClick;
 	
 	@JsProperty
-	private String className = "";
+	private String className;
 	
+	
+	
+	@JsOverlay public final Number getMaxWidth() {
+		return this.maxWidth;
+	}
+
+
+
+	@JsOverlay public final Number getMinWidth() {
+		return this.minWidth;
+	}
+
+
+
+	@JsOverlay public final Number getMaxHeight() {
+		return this.maxHeight;
+	}
+
+
+
+	@JsOverlay public final Boolean getAutoPan() {
+		return this.autoPan;
+	}
+
+
+
+	@JsOverlay public final Boolean getKeepInView() {
+		return this.keepInView;
+	}
+
+
+
+	@JsOverlay public final Boolean getCloseButton() {
+		return this.closeButton;
+	}
+
+
+
+	@JsOverlay public final Point getOffset() {
+		return this.offset;
+	}
+
+
+
+	@JsOverlay public final Point getAutoPanPaddingTopLeft() {
+		return this.autoPanPaddingTopLeft;
+	}
+
+
+
+	@JsOverlay public final Point getAutoPanPaddingBottomRight() {
+		return this.autoPanPaddingBottomRight;
+	}
+
+
+
+	@JsOverlay public final Point getAutoPanPadding() {
+		return this.autoPanPadding;
+	}
+
+
+
+	@JsOverlay public final Boolean getZoomAnimation() {
+		return this.zoomAnimation;
+	}
+
+
+
+	@JsOverlay public final Boolean getCloseOnClick() {
+		return this.closeOnClick;
+	}
+
+
+
+	@JsOverlay public final String getClassName() {
+		return this.className;
+	}
+
+
+
 	public static class Builder {
 		
 		private Number maxWidth = 300;

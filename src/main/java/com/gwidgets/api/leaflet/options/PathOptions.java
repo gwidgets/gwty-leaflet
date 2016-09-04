@@ -1,134 +1,137 @@
 package com.gwidgets.api.leaflet.options;
 
+import static jsinterop.annotations.JsPackage.GLOBAL;
+
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType
+@JsType(isNative=true, namespace=GLOBAL, name="Object")
 public class PathOptions {
 
 	@JsProperty
-	protected Boolean stroke = true;
+	protected Boolean stroke;
 
 	@JsProperty
-	protected String color = "#03f";
+	protected String color;
 
 	@JsProperty
-	protected Number weight = 5;
+	protected Number weight;
 
 	@JsProperty
-	protected Number opacity = 0.5;
+	protected Number opacity;
 
 	@JsProperty
-	protected Boolean fill = true;
+	protected Boolean fill;
 
 	@JsProperty
-	protected String fillColor = "#03f";
+	protected String fillColor;
 
 	@JsProperty
-	protected Number fillOpacity = 0.2;
+	protected Number fillOpacity;
 	
 	@JsProperty
-	protected String fillRule = "evenodd";
+	protected String fillRule;
 
 	@JsProperty
-	protected String dashArray = null;
+	protected String dashArray;
 	
 	@JsProperty
-	protected String lineCap = null;
+	protected String lineCap;
 	
 	@JsProperty
-	protected String lineJoin = null;
+	protected String lineJoin;
 
 	@JsProperty
-	protected Boolean clickable = true;
+	protected Boolean clickable;
 
 	@JsProperty
-	protected String pointerEvents = null;
+	protected String pointerEvents;
 	
 	@JsProperty
-	protected String className = "";
+	protected String className;
 	
 	
 	
-	public Boolean getStroke() {
+	@JsOverlay public final Boolean getStroke() {
 		return this.stroke;
 	}
 
 
 
-	public String getColor() {
+	@JsOverlay public final String getColor() {
 		return this.color;
 	}
 
 
 
-	public Number getWeight() {
+	@JsOverlay public final Number getWeight() {
 		return this.weight;
 	}
 
 
 
-	public Number getOpacity() {
+	@JsOverlay public final Number getOpacity() {
 		return this.opacity;
 	}
 
 
 
-	public Boolean getFill() {
+	@JsOverlay public final Boolean getFill() {
 		return this.fill;
 	}
 
 
 
-	public String getFillColor() {
+	@JsOverlay public final String getFillColor() {
 		return this.fillColor;
 	}
 
 
 
-	public Number getFillOpacity() {
+	@JsOverlay public final Number getFillOpacity() {
 		return this.fillOpacity;
 	}
 
 
 
-	public String getFillRule() {
+	@JsOverlay public final String getFillRule() {
 		return this.fillRule;
 	}
 
 
 
-	public String getDashArray() {
+	@JsOverlay public final String getDashArray() {
 		return this.dashArray;
 	}
 
 
 
-	public String getLineCap() {
+	@JsOverlay public final String getLineCap() {
 		return this.lineCap;
 	}
 
 
 
-	public String getLineJoin() {
+	@JsOverlay public final String getLineJoin() {
 		return this.lineJoin;
 	}
 
 
 
-	public Boolean getClickable() {
+	@JsOverlay public final Boolean getClickable() {
 		return this.clickable;
 	}
 
 
 
-	public String getPointerEvents() {
+	@JsOverlay public final String getPointerEvents() {
 		return this.pointerEvents;
 	}
 
 
 
-	public String getClassName() {
+	@JsOverlay public final String getClassName() {
 		return this.className;
 	}
 

@@ -1,9 +1,12 @@
 package com.gwidgets.api.leaflet.options;
 
+import static jsinterop.annotations.JsPackage.GLOBAL;
+
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType
+@JsType(isNative=true, namespace=GLOBAL, name="Object")
 public class LocateOptions {
 	
 	   private LocateOptions() {
@@ -11,51 +14,51 @@ public class LocateOptions {
 	   }
 	
 	    @JsProperty
-		private Boolean watch = false;
+		private Boolean watch;
 		@JsProperty
-		private Boolean setView = false;
+		private Boolean setView;
 		@JsProperty
-		private Number maxZoomLocate = Double.POSITIVE_INFINITY;
+		private Number maxZoomLocate;
 		@JsProperty
-		private Number timeout = 10000;
+		private Number timeout;
 		@JsProperty
-		private Number maximumAge = 0;
+		private Number maximumAge;
 		@JsProperty
-		private Boolean enableHighAccuracy = false;
+		private Boolean enableHighAccuracy;
 		
 		
 	
-	  public Boolean getWatch() {
+		@JsOverlay public final Boolean getWatch() {
 			return this.watch;
 		}
 
 
 
-		public Boolean getSetView() {
+		@JsOverlay public final Boolean getSetView() {
 			return this.setView;
 		}
 
 
 
-		public Number getMaxZoomLocate() {
+		@JsOverlay public final Number getMaxZoomLocate() {
 			return this.maxZoomLocate;
 		}
 
 
 
-		public Number getTimeout() {
+		@JsOverlay public final Number getTimeout() {
 			return this.timeout;
 		}
 
 
 
-		public Number getMaximumAge() {
+		@JsOverlay public final Number getMaximumAge() {
 			return this.maximumAge;
 		}
 
 
 
-		public Boolean getEnableHighAccuracy() {
+		@JsOverlay public final Boolean getEnableHighAccuracy() {
 			return this.enableHighAccuracy;
 		}
 

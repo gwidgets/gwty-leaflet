@@ -1,11 +1,14 @@
 package com.gwidgets.api.leaflet.options;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+import static jsinterop.annotations.JsPackage.GLOBAL;
+
 import com.gwidgets.api.leaflet.Icon;
 
-@JsType
+@JsType(isNative=true, namespace=GLOBAL, name="Object")
 public class MarkerOptions {
 	
 	private MarkerOptions(){
@@ -14,74 +17,74 @@ public class MarkerOptions {
 	}
 
 	@JsProperty
-	private  Icon icon = null;
+	private  Icon icon;
 
 	@JsProperty
-	private  Boolean clickable = true;
+	private  Boolean clickable;
 
 	@JsProperty
-	private  Boolean draggable = false;
+	private  Boolean draggable;
 
 	@JsProperty
-	private  Boolean keyboard = true;
+	private  Boolean keyboard;
 
 	@JsProperty
-	private  String title = "";
+	private  String title;
 
 	@JsProperty
-	private  Number zIndexOffset = 0;
+	private  Number zIndexOffset;
 
 	@JsProperty
-	private  Number opacity = 1.0;
+	private  Number opacity;
 
 	@JsProperty
-	private  Boolean riseOnHover = false;
+	private  Boolean riseOnHover;
 
 	@JsProperty
-	private  Number riseOffset = 250;
+	private  Number riseOffset;
 	
 	
-	public Icon getIcon() {
+	@JsOverlay public final Icon getIcon() {
 		return this.icon;
 	}
 
 
-	public Boolean getClickable() {
+	@JsOverlay public final Boolean getClickable() {
 		return this.clickable;
 	}
 
 
-	public Boolean getDraggable() {
+	@JsOverlay public final Boolean getDraggable() {
 		return this.draggable;
 	}
 
 
-	public Boolean getKeyboard() {
+	@JsOverlay public final Boolean getKeyboard() {
 		return this.keyboard;
 	}
 
 
-	public String getTitle() {
+	@JsOverlay public final String getTitle() {
 		return this.title;
 	}
 
 
-	public Number getzIndexOffset() {
+	@JsOverlay public final Number getzIndexOffset() {
 		return this.zIndexOffset;
 	}
 
 
-	public Number getOpacity() {
+	@JsOverlay public final Number getOpacity() {
 		return this.opacity;
 	}
 
 
-	public Boolean getRiseOnHover() {
+	@JsOverlay public final Boolean getRiseOnHover() {
 		return this.riseOnHover;
 	}
 
 
-	public Number getRiseOffset() {
+	@JsOverlay public final Number getRiseOffset() {
 		return this.riseOffset;
 	}
 

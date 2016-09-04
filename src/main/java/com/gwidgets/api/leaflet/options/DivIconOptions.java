@@ -1,11 +1,14 @@
 package com.gwidgets.api.leaflet.options;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+import static jsinterop.annotations.JsPackage.GLOBAL;
+
 import com.gwidgets.api.leaflet.Point;
 
-@JsType
+@JsType(isNative=true, namespace=GLOBAL, name="Object")
 public class DivIconOptions {
 	
 	private DivIconOptions() {
@@ -22,33 +25,33 @@ public class DivIconOptions {
 	private Point popUpAnchor;
 
 	@JsProperty
-	private String className = "";
+	private String className;
 
 	@JsProperty
-	private String html = "";
+	private String html;
 	
 	
-	public Point getIconSize() {
+	@JsOverlay public final Point getIconSize() {
 		return this.iconSize;
 	}
 
 
-	public Point getIconAnchor() {
+	@JsOverlay public final Point getIconAnchor() {
 		return this.iconAnchor;
 	}
 	
-	public Point getPopUpAnchor() {
+	@JsOverlay public final Point getPopUpAnchor() {
 		return this.popUpAnchor;
 	}
 
 
 
-	public String getClassName() {
+	@JsOverlay public final String getClassName() {
 		return this.className;
 	}
 
 
-	public String getHtml() {
+	@JsOverlay public final String getHtml() {
 		return this.html;
 	}
 

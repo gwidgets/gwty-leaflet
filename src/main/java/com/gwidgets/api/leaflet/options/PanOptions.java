@@ -1,9 +1,12 @@
 package com.gwidgets.api.leaflet.options;
 
+import static jsinterop.annotations.JsPackage.GLOBAL;
+
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType
+@JsType(isNative=true, namespace=GLOBAL, name="Object")
 public class PanOptions {
 	
 	private PanOptions() {
@@ -11,37 +14,37 @@ public class PanOptions {
 	}
 
     @JsProperty
-	private  Boolean animate = true;
+	private  Boolean animate;
 	@JsProperty
-	private  Number duration = 0.25;
+	private  Number duration;
 	@JsProperty
-	private  Number easeLinearity = 0.25;
+	private  Number easeLinearity;
 	@JsProperty
-	private  Boolean noMoveStart = false;
+	private  Boolean noMoveStart;
 	
 	
-	public Boolean getAnimate() {
+	@JsOverlay public final Boolean getAnimate() {
 		return this.animate;
 	}
 
 
 
 
-	public Number getDuration() {
+	@JsOverlay public final Number getDuration() {
 		return this.duration;
 	}
 
 
 
 
-	public Number getEaseLinearity() {
+	@JsOverlay public final Number getEaseLinearity() {
 		return this.easeLinearity;
 	}
 
 
 
 
-	public Boolean getNoMoveStart() {
+	@JsOverlay public final Boolean getNoMoveStart() {
 		return this.noMoveStart;
 	}
 

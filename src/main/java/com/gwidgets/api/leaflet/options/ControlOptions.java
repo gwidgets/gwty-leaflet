@@ -1,13 +1,16 @@
 package com.gwidgets.api.leaflet.options;
 
+import static jsinterop.annotations.JsPackage.GLOBAL;
+
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType
+@JsType(isNative=true, namespace=GLOBAL, name="Object")
 public class ControlOptions {
 	
 	@JsProperty
-	private String position = "topleft";
+	private String position;
 	
 	
 	private ControlOptions(){
@@ -16,7 +19,7 @@ public class ControlOptions {
 	}
 
 	
-	public String getPosition() {
+	@JsOverlay public final String getPosition() {
 		return this.position;
 	}
 

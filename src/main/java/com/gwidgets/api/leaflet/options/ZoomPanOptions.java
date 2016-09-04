@@ -1,9 +1,12 @@
 package com.gwidgets.api.leaflet.options;
 
+import static jsinterop.annotations.JsPackage.GLOBAL;
+
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType
+@JsType(isNative=true, namespace=GLOBAL, name="Object")
 public class ZoomPanOptions {
 
 	private ZoomPanOptions() {
@@ -11,27 +14,27 @@ public class ZoomPanOptions {
 	}
 
 	@JsProperty
-	private Boolean reset = false;
+	private Boolean reset;
 	@JsProperty
-	private PanOptions pan = null;
+	private PanOptions pan;
 	@JsProperty
-	private ZoomOptions zoom = null;
+	private ZoomOptions zoom;
 	@JsProperty
-	private Boolean animate = true;
+	private Boolean animate;
 
-	public Boolean getReset() {
+	@JsOverlay public final Boolean getReset() {
 		return this.reset;
 	}
 
-	public PanOptions getPan() {
+	@JsOverlay public final PanOptions getPan() {
 		return this.pan;
 	}
 
-	public ZoomOptions getZoom() {
+	@JsOverlay public final ZoomOptions getZoom() {
 		return this.zoom;
 	}
 
-	public Boolean getAnimate() {
+	@JsOverlay public final Boolean getAnimate() {
 		return this.animate;
 	}
 
