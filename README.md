@@ -47,8 +47,8 @@ gwty-leaflet is compatible with the latest stable version of Leaflet: 0.7.
 As in any JsInterop wrapper, you need to refer to the Javascript files from your .html app file. You can either download the Js files from [Leaflet website](http://leafletjs.com/download.html), or refer to them directly using their cdn (there are performance implications off course!).
 
 ```html
-<link rel="stylesheet" href="https://npmcdn.com/leaflet@0.7.7/dist/leaflet.css" />
-<script src="https://npmcdn.com/leaflet@0.7.7/dist/leaflet.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@0.7.7/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@0.7.7/dist/leaflet.js"></script>
 ```
 
 
