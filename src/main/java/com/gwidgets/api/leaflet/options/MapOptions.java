@@ -27,6 +27,7 @@ import com.gwidgets.api.leaflet.LatLngBounds;
 /**
  *  The map options used when creating a Map
  * 
+ * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
  */
 @JsType(isNative=true, namespace=GLOBAL, name="Object")
 public class MapOptions {

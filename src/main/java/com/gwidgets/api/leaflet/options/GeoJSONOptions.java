@@ -24,6 +24,8 @@ import com.gwidgets.api.leaflet.elemental.Function;
 
 /**
  * The Interface GeoJSONOptions.
+ * 
+ * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
  */
 @JsType
 public interface GeoJSONOptions {

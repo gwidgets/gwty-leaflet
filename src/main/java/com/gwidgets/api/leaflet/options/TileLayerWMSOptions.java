@@ -24,6 +24,7 @@ import com.gwidgets.api.leaflet.ICRS;
 
 /**
  * The Class TileLayerWMSOptions.
+ * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
  */
 @JsType(isNative = true, namespace = GLOBAL, name = "Object")
 public class TileLayerWMSOptions {

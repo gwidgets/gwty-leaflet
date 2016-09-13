@@ -22,6 +22,8 @@ import jsinterop.annotations.JsType;
 
 /**
  * The Class PathOptions.
+ * 
+ * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
  */
 @JsType(isNative = true, namespace = GLOBAL, name = "Object")
 public class PathOptions {

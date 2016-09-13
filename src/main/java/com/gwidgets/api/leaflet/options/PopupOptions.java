@@ -25,6 +25,7 @@ import com.gwidgets.api.leaflet.Point;
 
 /**
  * The Class PopupOptions.
+ * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
  */
 @JsType(isNative=true, namespace=GLOBAL, name="Object")
 public class PopupOptions {

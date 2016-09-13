@@ -24,6 +24,8 @@ import com.gwidgets.api.leaflet.Icon;
 
 /**
  * The Class MarkerOptions.
+ * 
+ * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
  */
 @JsType(isNative=true, namespace=GLOBAL, name="Object")
 public class MarkerOptions {
