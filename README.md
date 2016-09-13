@@ -149,3 +149,7 @@ Events are explained in details in Leaflet's documentation.
 
 As of the current version, gwty-leaflet is compiled using GWT 2.8.0-rc2. 
 
+## Javadoc:
+
+Javadoc is available for the current version at: [https://gwidgets.github.io/gwty-leaflet/javadoc/0.4](https://gwidgets.github.io/gwty-leaflet/javadoc/0.4)
+
