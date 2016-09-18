@@ -5,15 +5,17 @@ gwty-leaflet is wrapper for the famous maps javascript library [Leaflet](http://
 
 ##Dependency 
 
+The latest stable version of gwty-leaflet is 0.4. You can also use the 0.5-SNAPSHOT version for the latest developments: 
+
 ```xml
                      <dependency>
                         <groupId>com.gwidgets</groupId>
                         <artifactId>gwty-leaflet</artifactId>
-                        <version>0.4-SNAPSHOT</version>
+                        <version>0.5-SNAPSHOT</version>
                      </dependency>
 ```
 
-The sonatype snapshot repository needs to be added as well: 
+If you are using a snaphost version, then you need to include the snapshot repository: 
 
 ```xml
 <repositories>
@@ -113,7 +115,7 @@ Events are available only in some objects. Events can be handled throught the fo
 For defining actions, events needs to be supplied with an abstract callback function that needs to be implemented by the developer. The below example will dipslay a pop up on each map click: 
 
 ```java
-map.on("click", new Function(){
+map.on(EventTypes.Map.CLICK, new Function(){
                         @Override
                         public JavaScriptObject call(JavaScriptObject event) {
 
@@ -128,14 +130,16 @@ map.on("click", new Function(){
 
 Event Objects that the event object can be cast to are (depending on the usage): 
 
+- DragEndEvent
 - ErrorEvent
 - GeoJSONEvent
-- LayerControlEvent
+- LayersControlEvent
 - LayerEvent
 - LocationEvent
 - MouseEvent
 - PopupEvent
 - ResizeEvent
+- TileErrorEvent
 - TileEvent
 
 All events objects extend [JavaScriptObject](http://www.gwtproject.org/javadoc/latest/com/google/gwt/core/client/JavaScriptObject.html), so they can be converted from/to a JavaScriptObject using cast() method.
@@ -143,6 +147,95 @@ All events objects extend [JavaScriptObject](http://www.gwtproject.org/javadoc/l
 Events are executed following the order of registration. 
 
 Events are explained in details in Leaflet's documentation. 
+
+## Events types constants
+
+There is a long list of available events for some objects, and the developer may not know what events are available for the object they are using. The [EventType](https://github.com/gwidgets/gwty-leaflet/blob/master/src/main/java/com/gwidgets/api/leaflet/events/EventTypes.java) class contains a list of subclasses which contains the available events types constants. The event type can be accessed in static a way like: EventType.{object name}.{event type constant}. For example, to register the loading event on a TileLayer : 
+
+```java
+tile.on(EventTypes.TileLayer.LOADING, new Function(){
+                        @Override
+                        public JavaScriptObject call(JavaScriptObject event) {
+
+                               //cast raw event object
+                               TileEvent tileEvent = event.cast();
+                               //Do something
+                               
+                                return null;
+                        }
+                        
+                });
+```
+
+Here is a list of the events that can be registred for objects that can handle events:
+
+<div>
+<table id="archetypes">
+<thead style="font-weight:800;"> 
+ <th>Object</th>
+ <th>Available Events</th>
+</thead>
+<tbody>
+  <tr>
+    <td>
+    Map
+    </td>
+    <td>
+     click, dblclick, mousedown, mouseup, mouseover, mouseout, mousemove, contextmenu, focus, blur, preclick, load, unload, viewreset, movestart, move, moveend, dragstart, drag, dragend, zoomstart, zoomend, zoomlevelschange, resize, autopanstart, layeradd, layerremove, baselayerchange, overlayadd, overlayremove, locationfound, locationerror, popupopen, popupclose  
+    </td>
+  </tr>
+  <tr>
+    <td>
+    Marker
+    </td>
+    <td>
+    click, dblclick, mousedown, mouseover, mouseout, contextmenu, move, dragstart, drag, dragend, add, remove, popupopen, popupclose
+   </td>
+  </tr>
+  <tr>
+    <td>
+    TileLayer
+    </td>
+    <td>
+    loading, load, tileloadstart, tileload, tileunload, tileerror
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Path
+    </td>
+    <td>
+       click, dblclick, mousedown, mouseover, mouseout, contextmenu, add, remove, popupopen, popupclose
+    </td>
+  </tr>
+  <tr>
+    <td>
+      FeatureGroup
+    </td>
+    <td>
+       click, dblclick, mouseover, mouseout, mousemove, contextmenu, layeradd, layerremove
+    </td>
+  </tr>
+  <tr>
+    <td>
+      ControlLayers
+    </td>
+    <td>
+       baselayerchange, overlayadd, overlayremove
+    </td>
+  </tr>
+  <tr>
+    <td>
+      PosAnimation
+    </td>
+    <td>
+       start, step, end
+    </td>
+  </tr>
+</tbody>
+
+</table>
+</div>
 
 
 ## GWT version:
