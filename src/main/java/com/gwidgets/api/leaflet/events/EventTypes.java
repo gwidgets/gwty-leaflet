@@ -19,7 +19,8 @@ public class EventTypes {
 		public static final String FOCUS = "focus";
 		public static final String BLUR = "blur";
 		public static final String PRECLICK = "preclick";
-		public static final String LOAD = "UNLOAD";
+		public static final String LOAD = "load";
+		public static final String UNLOAD = "load";
 		public static final String VIEWRESET = "viewreset";
 		public static final String MOVESTART = "movestart";
 		public static final String MOVE = "move";
