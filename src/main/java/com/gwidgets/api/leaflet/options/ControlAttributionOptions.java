@@ -41,7 +41,7 @@ public class ControlAttributionOptions {
 	private String prefix;
 	
 	/**
-	 * Gets the position of the control (one of the map corners). See class constants for possibe values
+	 * Gets the position of the control (one of the map corners). See class constants for possible values
 	 * </br>
 	 *default "bottomright"
 	 * @return the position

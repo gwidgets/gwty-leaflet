@@ -20,6 +20,7 @@ import jsinterop.annotations.JsType;
 
 /**
  * The Class ErrorEvent.
+ * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
  */
 @JsType
 public class ErrorEvent extends Event {

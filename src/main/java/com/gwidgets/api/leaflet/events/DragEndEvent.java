@@ -3,6 +3,7 @@ package com.gwidgets.api.leaflet.events;
 
 /**
  * The Class DragEndEvent.
+ * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
  */
 public class DragEndEvent extends Event {
 

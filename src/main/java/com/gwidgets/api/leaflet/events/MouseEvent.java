@@ -23,6 +23,7 @@ import jsinterop.annotations.JsType;
 
 /**
  * The Class MouseEvent.
+ * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
  */
 @JsType
 public class MouseEvent extends Event {

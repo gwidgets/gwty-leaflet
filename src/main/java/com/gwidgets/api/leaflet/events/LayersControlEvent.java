@@ -25,12 +25,13 @@ import jsinterop.annotations.JsType;
 
 /**
  * The Class LayerControlEvent.
+ * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
  */
 @JsType
-public class LayerControlEvent extends Event {
+public class LayersControlEvent extends Event {
 	
 
-	protected LayerControlEvent() {
+	protected LayersControlEvent() {
 		
 	}
 
