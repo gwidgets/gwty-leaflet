@@ -14,42 +14,36 @@
  */
 package com.gwidgets.api.leaflet.events;
 
-import com.gwidgets.api.leaflet.ILayer;
-import com.gwidgets.api.leaflet.LatLng;
-import com.gwidgets.api.leaflet.LatLngBounds;
-import com.gwidgets.api.leaflet.Point;
-import com.gwidgets.api.leaflet.elemental.DOMMouseEvent;
-
-import jsinterop.annotations.JsType;
+import com.gwidgets.api.leaflet.elemental.HTMLElement;
 
 
 /**
- * The Class LayerControlEvent.
+ * The Class TileErrorEvent.
+ * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
  */
-@JsType
-public class LayerControlEvent extends Event {
-	
+public class TileErrorEvent extends Event {
 
-	protected LayerControlEvent() {
+
+	protected TileErrorEvent() {
 		
 	}
 
 	/**
-	 * Gets the layer that was added or removed.
+	 * Gets the tile element (image).
 	 *
-	 * @return the layer
+	 * @return the tile
 	 */
-	public final native ILayer getLayer() /*-{
-		return this.layer;
+	public native HTMLElement getTile()/*-{
+		return this.tile;
 	}-*/;
 
 	/**
-	 * Gets the name of the layer that was added or removed.
+	 * Gets the src attribute of the tile element.
 	 *
-	 * @return the name
+	 * @return the url
 	 */
-	public final native String getName() /*-{
-		return this.name;
+	public native String getURL()/*-{
+		return this.url;
 	}-*/;
 
 }
