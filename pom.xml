@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.gwidgets</groupId>
 	<artifactId>gwty-leaflet</artifactId>
-	<version>0.4-SNAPSHOT</version>
+	<version>0.5-SNAPSHOT</version>
 	<packaging>gwt-lib</packaging>
 
 	<properties>
