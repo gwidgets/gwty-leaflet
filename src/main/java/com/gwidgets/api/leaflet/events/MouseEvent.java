@@ -50,7 +50,7 @@ public class MouseEvent extends Event {
 	}-*/;
 
 	/**
-	 * Gets the pixel coordinates of the point where the mouse event occurred relative to the map сontainer.
+	 * Gets the pixel coordinates of the point where the mouse event occurred relative to the map container.
 	 *
 	 * @return the container point
 	 */

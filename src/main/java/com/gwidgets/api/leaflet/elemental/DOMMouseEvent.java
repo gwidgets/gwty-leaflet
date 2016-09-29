@@ -1,11 +1,13 @@
 package com.gwidgets.api.leaflet.elemental;
 
+import static jsinterop.annotations.JsPackage.GLOBAL;
+
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 
-@JsType(isNative=true, name="MouseEvent")
+@JsType(isNative=true, name="MouseEvent", namespace = GLOBAL)
 public class DOMMouseEvent {
 	
 	@JsProperty
