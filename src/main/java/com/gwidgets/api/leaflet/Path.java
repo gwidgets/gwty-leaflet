@@ -90,7 +90,7 @@ public abstract class Path {
 	/**
 	 * Closes the path's bound popup if it is opened.
 	 *
-	 * @return the l
+	 * @return the L class
 	 */
 	@JsMethod
 	public  native L closePopup();
@@ -136,53 +136,5 @@ public abstract class Path {
 	@JsMethod
 	public  native L redraw();
 
-	// events
-
-	/**
-	 * Clear all event listeners.
-	 *
-	 * @return the L class
-	 */
-	@JsMethod
-	public static native L clearAllEventListeners();
-
-	/**
-	 * Adds a set of type/listener pairs
-	 *
-	 * @param type the type
-	 * @param fn the callback function
-	 * @return the L class
-	 */
-	@JsMethod
-	public static native L on(String type, Function fn);
-
-	/**
-	 * Once.
-	 *
-	 * @param type the type
-	 * @param fn the callback function
-	 * @return the L class
-	 */
-	@JsMethod
-	public static native L once(String type, Function fn);
-
-	/**
-	 *  the listener will only get fired once and then removed.
-	 *
-	 * @param type the type
-	 * @param fn the callback function
-	 * @return the L class
-	 */
-	@JsMethod
-	public static native L off(String type, Function fn);
-
-	/**
-	 * Fires an event of the specified type. You can optionally provide an data object — the first argument of the listener function will contain its properties.
-	 *
-	 * @param type the type
-	 * @return the L class
-	 */
-	@JsMethod
-	public static native L fire(String type);
 
 }

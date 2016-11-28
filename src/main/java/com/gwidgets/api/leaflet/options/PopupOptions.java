@@ -65,8 +65,6 @@ public class PopupOptions {
 	@JsProperty
 	private Point autoPanPadding;
 
-	@JsProperty
-	private Boolean zoomAnimation;
 
 	@JsProperty
 	private Boolean closeOnClick;
@@ -182,17 +180,6 @@ public class PopupOptions {
 	 */
 	@JsOverlay public final Point getAutoPanPadding() {
 		return this.autoPanPadding;
-	}
-
-
-
-	/**
-	 * Gets Whether to animate the popup on zoom. Disable it if you have problems with Flash content inside popups.
-	 *
-	 * @return the zoom animation
-	 */
-	@JsOverlay public final Boolean getZoomAnimation() {
-		return this.zoomAnimation;
 	}
 
 
@@ -380,11 +367,11 @@ public class PopupOptions {
 		 *            the class name
 		 * @return the builder
 		 */
-		private Builder className(String className){this.className = className; return this;};
+		public Builder className(String className){this.className = className; return this;};
 		
 		
 		/**
-		 * Builds the.
+		 * Builds the PopupOptions
 		 *
 		 * @return the popup options
 		 */
@@ -400,7 +387,6 @@ public class PopupOptions {
 			options.autoPanPaddingTopLeft = this.autoPanPaddingTopLeft;
 			options.autoPanPaddingBottomRight = this.autoPanPaddingBottomRight;
 			options.autoPanPadding = this.autoPanPadding;
-			options.zoomAnimation = this.zoomAnimation;
 			options.closeOnClick = this.closeOnClick;
 			options.className = this.className;
 			

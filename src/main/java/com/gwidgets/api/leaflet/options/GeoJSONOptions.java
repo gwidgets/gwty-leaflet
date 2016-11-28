@@ -18,7 +18,7 @@ import jsinterop.annotations.JsType;
 
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
-import com.gwidgets.api.leaflet.ILayer;
+import com.gwidgets.api.leaflet.Layer;
 import com.gwidgets.api.leaflet.LatLng;
 import com.gwidgets.api.leaflet.elemental.Function;
 
@@ -54,7 +54,7 @@ public interface GeoJSONOptions {
 	 * @param layer the layer
 	 * @return the function
 	 */
-	public Function onEachFeature(JavaScriptObject featureData, ILayer layer);
+	public Function onEachFeature(JavaScriptObject featureData, Layer layer);
 
 	/**
 	 * Function that will be used to decide whether to show a feature or not.
@@ -63,7 +63,7 @@ public interface GeoJSONOptions {
 	 * @param layer the layer
 	 * @return the function
 	 */
-	public Function filter(JavaScriptObject featureData, ILayer layer);
+	public Function filter(JavaScriptObject featureData, Layer layer);
 
 	/**
 	 * Function that will be used for converting GeoJSON coordinates to LatLng points (if not specified, coords will be assumed to be WGS84 — standard [longitude, latitude] values in degrees).

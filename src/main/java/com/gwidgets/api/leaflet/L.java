@@ -75,7 +75,7 @@ public class L {
 	 * @param source the popup source Layer
 	 * @return a new Popup object
 	 */
-	public static native Popup popup(PopupOptions options, ILayer source);
+	public static native Popup popup(PopupOptions options, Layer source);
 
 	/**
 	 * Used to load and display tile layers on the map, implements ILayer interface.
@@ -108,15 +108,6 @@ public class L {
 	public static native Polyline polyline(LatLng[] latlngs,
 			PolylineOptions options);
 
-	/**
-	 * Extends FeatureGroup to allow creating multi-polylines (single layer that consists of several polylines that share styling/popup).
-	 *
-	 * @param latlngs the latlngs array
-	 * @param options the options
-	 * @return a new MultiPolyline object
-	 */
-	public static native MultiPolyline multiPolyline(LatLng[][] latlngs,
-			PolylineOptions options);
 
 	/**
 	 * A class for drawing polygon overlays on a map. Extends Polyline. Use Map.addLayer() to add it to the map.
@@ -130,15 +121,6 @@ Note that points you pass when creating a polygon shouldn't have an additional l
 	public static native Polygon polygon(LatLng[] latlngs,
 			PolylineOptions options);
 
-	/**
-	 * Extends FeatureGroup to allow creating multi-polygons (single layer that consists of several polygons that share styling/popup).
-	 *
-	 * @param latlngs the latlngs
-	 * @param options the options
-	 * @return a new MultiPolygon object
-	 */
-	public static native MultiPolygon multiPolygon(LatLng[][] latlngs,
-			PolylineOptions options);
 
 	/**
 	 * A class for drawing rectangle overlays on a map. Extends Polygon. Use addLayer() method of the Map object to add it to the map.
@@ -177,7 +159,7 @@ Note that points you pass when creating a polygon shouldn't have an additional l
 	 * @param layers the layers array
 	 * @return a new LayerGroup object
 	 */
-	public static native LayerGroup layerGroup(ILayer[] layers);
+	public static native LayerGroup layerGroup(Layer[] layers);
 
 	/**
 	 * Extended layerGroup that also has mouse events (propagated from members of the group) and a shared bindPopup method. Implements ILayer interface.
@@ -185,7 +167,7 @@ Note that points you pass when creating a polygon shouldn't have an additional l
 	 * @param layers the layers
 	 * @return a new FeatureGroup object
 	 */
-	public static native FeatureGroup featureGroup(ILayer[] layers);
+	public static native FeatureGroup featureGroup(Layer[] layers);
 
 	/**
 	 * Represents a GeoJSON object or an array of GeoJSON objects. Allows you to parse GeoJSON data and display it on the map. Extends FeatureGroup.
@@ -288,6 +270,35 @@ Note that points you pass when creating a polygon shouldn't have an additional l
 	 * @return the version
 	 */
 	public static native String version();
+	
+	
+	
+	/**
+	 * Instantiates a Tooltip object given an optional options object that describes its appearance and location and an optional source object that is used to tag the tooltip with a reference to the Layer to which it refers.
+	 *
+	 * @param options the tooltip options
+	 * @param source the source layer
+	 * @return the tooltip object
+	 */
+	public static native Tooltip tooltip(TooltipOptions options, Layer source);
+	
+	
+	/**
+	 * Creates a SVG renderer with the given options.
+	 *
+	 * @param options the canvas options
+	 * @return the canvas object
+	 */
+	public static native Canvas canvas(RendererOptions options);
+	
+	
+	/**
+	 * Creates a SVG renderer with the given options.
+	 *
+	 * @param options the canvas options
+	 * @return the svg object
+	 */
+	public static native SVG svg(RendererOptions options);
 	
 	 /**
  	 * The Class control.

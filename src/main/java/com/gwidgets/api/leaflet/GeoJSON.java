@@ -64,7 +64,7 @@ public class GeoJSON extends FeatureGroup {
 	 * @return the layer
 	 */
 	@JsMethod
-	public native static ILayer geometryToLayer(JavaScriptObject featureData,
+	public native static Layer geometryToLayer(JavaScriptObject featureData,
 			Function pointToLayer);
 
 	/**

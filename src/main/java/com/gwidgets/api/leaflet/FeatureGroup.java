@@ -19,7 +19,9 @@ import jsinterop.annotations.JsType;
 
 import com.gwidgets.api.leaflet.options.PathOptions;
 import com.gwidgets.api.leaflet.options.PopupOptions;
+import com.gwidgets.api.leaflet.options.TooltipOptions;
 import com.gwidgets.api.leaflet.elemental.Function;
+import com.gwidgets.api.leaflet.elemental.HTMLElement;
 
 
 /**
@@ -27,18 +29,8 @@ import com.gwidgets.api.leaflet.elemental.Function;
  * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
  */
 @JsType(isNative = true)
-public class FeatureGroup implements ILayer {
+public class FeatureGroup implements Layer {
 
-
-	/**
-	 * Binds a popup with a particular HTML content to a click on any layer from the group that has a bindPopup method.
-	 *
-	 * @param htmlContent the html content
-	 * @param options the Popup options
-	 * @return the L class
-	 */
-	@JsMethod
-	public native L bindPopup(String htmlContent, PopupOptions options);
 
 	/**
 	 * Returns the LatLngBounds of the Feature Group (created from bounds and coordinates of its children).
@@ -121,17 +113,174 @@ public class FeatureGroup implements ILayer {
 	 */
 	@JsMethod
 	public static native L fire(String type);
+	
+	/* (non-Javadoc)
+	 * @see com.gwidgets.api.leaflet.Layer#bindPopup(com.gwidgets.api.leaflet.elemental.HTMLElement, com.gwidgets.api.leaflet.options.PopupOptions)
+	 */
+	@JsMethod
+	public native L bindPopup(HTMLElement content, PopupOptions options);	
+
 
 	/* (non-Javadoc)
-	 * @see com.gwidgets.api.leaflet.ILayer#onAdd(com.gwidgets.api.leaflet.Map)
+	 * @see com.gwidgets.api.leaflet.Layer#bindPopup(java.lang.String, com.gwidgets.api.leaflet.options.PopupOptions)
 	 */
-	@Override
-	public native void onAdd(Map map);
+	@JsMethod
+	public native L bindPopup(String id, PopupOptions options);
+
 
 	/* (non-Javadoc)
-	 * @see com.gwidgets.api.leaflet.ILayer#onRemove(com.gwidgets.api.leaflet.Map)
+	 * @see com.gwidgets.api.leaflet.Layer#unbindPopup()
 	 */
-	@Override
-	public native void onRemove(Map map);
+	@JsMethod
+	public native L unbindPopup();
+
+
+
+	/* (non-Javadoc)
+	 * @see com.gwidgets.api.leaflet.Layer#openPopup(com.gwidgets.api.leaflet.LatLng)
+	 */
+	@JsMethod
+	public native L openPopup(LatLng latlng);
+
+
+	/* (non-Javadoc)
+	 * @see com.gwidgets.api.leaflet.Layer#closePopup()
+	 */
+	@JsMethod
+	public native L closePopup();
+
+
+	/* (non-Javadoc)
+	 * @see com.gwidgets.api.leaflet.Layer#togglePopup()
+	 */
+	@JsMethod
+	public native L togglePopup();
+
+
+	/* (non-Javadoc)
+	 * @see com.gwidgets.api.leaflet.Layer#isPopupOpen()
+	 */
+	@JsMethod
+	public native boolean isPopupOpen();
+
+
+	/* (non-Javadoc)
+	 * @see com.gwidgets.api.leaflet.Layer#setPopupContent(java.lang.String)
+	 */
+	@JsMethod
+	public native L setPopupContent(String content);	
+
+
+	/* (non-Javadoc)
+	 * @see com.gwidgets.api.leaflet.Layer#setPopupContent(com.gwidgets.api.leaflet.elemental.HTMLElement)
+	 */
+	@JsMethod
+	public native L setPopupContent(HTMLElement content);	
+
+
+	/* (non-Javadoc)
+	 * @see com.gwidgets.api.leaflet.Layer#setPopupContent(com.gwidgets.api.leaflet.Popup)
+	 */
+	@JsMethod
+	public native L setPopupContent(Popup content);	
+
+
+	/* (non-Javadoc)
+	 * @see com.gwidgets.api.leaflet.Layer#getPopup()
+	 */
+	@JsMethod
+	public native Popup getPopup();	
+
+
+	/* (non-Javadoc)
+	 * @see com.gwidgets.api.leaflet.Layer#bindTooltip(java.lang.String, com.gwidgets.api.leaflet.options.TooltipOptions)
+	 */
+	public native L bindTooltip(String content, TooltipOptions options);	
+
+
+	/* (non-Javadoc)
+	 * @see com.gwidgets.api.leaflet.Layer#bindTooltip(com.gwidgets.api.leaflet.elemental.HTMLElement, com.gwidgets.api.leaflet.options.TooltipOptions)
+	 */
+	public native L bindTooltip(HTMLElement content, TooltipOptions options);
+
+
+	/* (non-Javadoc)
+	 * @see com.gwidgets.api.leaflet.Layer#bindTooltip(com.gwidgets.api.leaflet.Tooltip, com.gwidgets.api.leaflet.options.TooltipOptions)
+	 */
+	public native L bindTooltip(Tooltip content, TooltipOptions options);	
+
+
+	/* (non-Javadoc)
+	 * @see com.gwidgets.api.leaflet.Layer#unbindTooltip()
+	 */
+	public native L unbindTooltip();	
+
+
+	/* (non-Javadoc)
+	 * @see com.gwidgets.api.leaflet.Layer#openTooltip(com.gwidgets.api.leaflet.LatLng)
+	 */
+	public native L openTooltip(LatLng latlng);	
+
+
+	/* (non-Javadoc)
+	 * @see com.gwidgets.api.leaflet.Layer#closeTooltip()
+	 */
+	public native L closeTooltip();	
+
+	/* (non-Javadoc)
+	 * @see com.gwidgets.api.leaflet.Layer#toggleTooltip()
+	 */
+	public native L toggleTooltip();	
+
+	/* (non-Javadoc)
+	 * @see com.gwidgets.api.leaflet.Layer#isTooltipOpen()
+	 */
+	public native boolean isTooltipOpen();	
+
+	/* (non-Javadoc)
+	 * @see com.gwidgets.api.leaflet.Layer#setTooltipContent(java.lang.String)
+	 */
+	public native L setTooltipContent(String content);	
+
+	/* (non-Javadoc)
+	 * @see com.gwidgets.api.leaflet.Layer#setTooltipContent(com.gwidgets.api.leaflet.elemental.HTMLElement)
+	 */
+	public native L setTooltipContent(HTMLElement content);
+
+
+	/* (non-Javadoc)
+	 * @see com.gwidgets.api.leaflet.Layer#setTooltipContent(com.gwidgets.api.leaflet.Tooltip)
+	 */
+	public native L setTooltipContent(Tooltip content);	
+
+
+	/* (non-Javadoc)
+	 * @see com.gwidgets.api.leaflet.Layer#getTooltip()
+	 */
+	public native Tooltip getTooltip();	
+
+	/* (non-Javadoc)
+	 * @see com.gwidgets.api.leaflet.Layer#addTo(com.gwidgets.api.leaflet.Map)
+	 */
+	public native L addTo(Map map);
+
+
+	/* (non-Javadoc)
+	 * @see com.gwidgets.api.leaflet.Layer#remove()
+	 */
+	public native L remove();		
+
+	/* (non-Javadoc)
+	 * @see com.gwidgets.api.leaflet.Layer#removeFrom(com.gwidgets.api.leaflet.Map)
+	 */
+	public native L removeFrom(Map map);	
+
+
+	/* (non-Javadoc)
+	 * @see com.gwidgets.api.leaflet.Layer#getPane(java.lang.String)
+	 */
+	public native HTMLElement getPane(String name);
+
+
 
 }

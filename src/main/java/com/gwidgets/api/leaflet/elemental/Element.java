@@ -18,7 +18,15 @@ public class Element extends Node{
 	@JsProperty
 	public String id;
 	
+	@JsProperty
+	public Function onload;
+	
 	@JsMethod
 	public native void setAttribute(String attribute, String value);
+	
+	
+	
+	
+	
 	
 }

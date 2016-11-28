@@ -36,7 +36,7 @@ import com.gwidgets.api.leaflet.options.ZoomPanOptions;
  * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
  */
 @JsType(isNative = true)
-public class Map {
+public class Map implements Evented {
 
 	// Methods for Modifying Map State
 
@@ -283,7 +283,7 @@ public class Map {
 	 */
 	
 	@JsMethod
-	public native L addLayer(ILayer layer, Boolean insertAtTheBottom);
+	public native L addLayer(Layer layer, Boolean insertAtTheBottom);
 
 	/**
 	 * Removes the given layer from the map.
@@ -292,7 +292,7 @@ public class Map {
 	 * @return the L class
 	 */
 	@JsMethod
-	public native L removeLayer(ILayer layer);
+	public native L removeLayer(Layer layer);
 
 	/**
 	 * Returns true if the given layer is currently added to the map.
@@ -301,7 +301,7 @@ public class Map {
 	 * @return true/false
 	 */
 	@JsMethod
-	public native Boolean hasLayer(ILayer layer);
+	public native Boolean hasLayer(Layer layer);
 	
 	
 	
@@ -363,7 +363,7 @@ public class Map {
 	 * @return the L class
 	 */
 	@JsMethod
-	public native L addControl(IControl control);
+	public native L addControl(Control control);
 
 	/**
 	 * Removes the given control from the map.
@@ -372,7 +372,7 @@ public class Map {
 	 * @return the L class
 	 */
 	@JsMethod
-	public native L removeControl(IControl control);
+	public native L removeControl(Control control);
 
 	
 	// Conversion Methods
@@ -506,78 +506,65 @@ public class Map {
 	@JsMethod
 	public native L whenReady(Function fn, Object context);
 
-	// Events
-
-	/*
-	 * @JsMethod public static native L addEventListener(String type, Function
-	 * fn, Object context );
-	 * 
-	 * @JsMethod public static native L addOneTimeEventListener(String type,
-	 * Function fn, Object context );
-	 * 
-	 * @JsMethod public static native L addEventListener(Object eventMap, Object
-	 * context );
-	 * 
-	 * @JsMethod public static native L removeEventListener(String type,
-	 * Function fn, Object context );
-	 * 
-	 * @JsMethod public static native L removeEventListener(Object eventMap,
-	 * Object context );
-	 * 
-	 * @JsMethod public static native L removeEventListener();
-	 * 
-	 * @JsMethod public static native Boolean hasEventListeners(String type );
-	 * 
-	 * @JsMethod public static native L fireEvent(String type, Object data );
-	 */
-
-	// events
-
-		/**
-		 * Clear all event listeners.
-		 *
-		 * @return the L class
+	// Events 
+		/* (non-Javadoc)
+		 * @see com.gwidgets.api.leaflet.Evented#clearAllEventListeners()
 		 */
-		@JsMethod
 		public native L clearAllEventListeners();
 
-		/**
-		 * Adds a set of type/listener pairs.
-		 *
-		 * @param type the type
-		 * @param fn the callback function
-		 * @return the L class
+
+		/* (non-Javadoc)
+		 * @see com.gwidgets.api.leaflet.Evented#on(java.lang.String, com.gwidgets.api.leaflet.elemental.Function)
 		 */
-		@JsMethod
 		public native L on(String type, Function fn);
 
-		/**
-		 * Once.
-		 *
-		 * @param type the type
-		 * @param fn the callback function
-		 * @return the L class
-		 */
-		@JsMethod
-		public native L once(String type, Function fn);
 
-		/**
-		 *  the listener will only get fired once and then removed.
-		 *
-		 * @param type the type
-		 * @param fn the callback function
-		 * @return the L class
+		/* (non-Javadoc)
+		 * @see com.gwidgets.api.leaflet.Evented#once(java.lang.String, com.gwidgets.api.leaflet.elemental.Function)
 		 */
-		@JsMethod
-		public native L off(String type, Function fn);
+		public  native L once(String type, Function fn);
 
-		/**
-		 * Fires an event of the specified type. You can optionally provide an data object — the first argument of the listener function will contain its properties.
-		 *
-		 * @param type the type
-		 * @return the L class
+		
+		/* (non-Javadoc)
+		 * @see com.gwidgets.api.leaflet.Evented#off(java.lang.String)
 		 */
-		@JsMethod
+		public native L off(String type);
+		
+
+		/* (non-Javadoc)
+		 * @see com.gwidgets.api.leaflet.Evented#off(java.lang.String[])
+		 */
+		public native L off(String[] type);
+		
+		
+		/* (non-Javadoc)
+		 * @see com.gwidgets.api.leaflet.Evented#off()
+		 */
+		public native L off();
+
+
+		/* (non-Javadoc)
+		 * @see com.gwidgets.api.leaflet.Evented#fire(java.lang.String)
+		 */
 		public native L fire(String type);
+		
+		
+		/* (non-Javadoc)
+		 * @see com.gwidgets.api.leaflet.Evented#listens(java.lang.String)
+		 */
+		public native Boolean listens(String type);
+
+
+		/* (non-Javadoc)
+		 * @see com.gwidgets.api.leaflet.Evented#addEventParent(com.gwidgets.api.leaflet.Evented)
+		 */
+		public native L addEventParent(Evented obj); 
+
+
+		/* (non-Javadoc)
+		 * @see com.gwidgets.api.leaflet.Evented#removeEventParent(com.gwidgets.api.leaflet.Evented)
+		 */
+		public native L removeEventParent(Evented obj);
+
 
 }

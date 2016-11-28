@@ -26,7 +26,7 @@ import jsinterop.annotations.JsType;
  * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
  */
 @JsType(isNative = true)
-public class Polygon extends Polyline{
+public class Polygon extends Polyline {
 
 	/* (non-Javadoc)
 	 * @see com.gwidgets.api.leaflet.Polyline#toGeoJSON()

@@ -20,7 +20,7 @@ import jsinterop.annotations.JsType;
 
 import static jsinterop.annotations.JsPackage.GLOBAL;
 
-import com.gwidgets.api.leaflet.ILayer;
+import com.gwidgets.api.leaflet.Layer;
 import com.gwidgets.api.leaflet.LatLng;
 import com.gwidgets.api.leaflet.LatLngBounds;
 
@@ -46,7 +46,7 @@ public class MapOptions {
 	private Number zoom;
 	
 	@JsProperty
-	private ILayer[] layers;
+	private Layer[] layers;
 	
 	@JsProperty
 	private Number minZoom;
@@ -165,7 +165,7 @@ public class MapOptions {
      * default null
      * @return the layers
      */
-    @JsOverlay public final ILayer[] getLayers() {
+    @JsOverlay public final Layer[] getLayers() {
 		return this.layers;
 	}
 
@@ -480,7 +480,7 @@ public class MapOptions {
 		}
 
 		
-		ILayer[] layers = null;
+		Layer[] layers = null;
 
 		Number maxZoom = 0;
 
@@ -543,7 +543,7 @@ public class MapOptions {
 		 * @param layers the Layers that will be added to the map initially.
 		 * @return the builder
 		 */
-		public Builder layers(ILayer[] layers) {
+		public Builder layers(Layer[] layers) {
 			this.layers = layers;
 			return this;
 		}

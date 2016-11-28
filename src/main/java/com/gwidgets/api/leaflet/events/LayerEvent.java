@@ -14,7 +14,7 @@
  */
 package com.gwidgets.api.leaflet.events;
 
-import com.gwidgets.api.leaflet.ILayer;
+import com.gwidgets.api.leaflet.Layer;
 import com.gwidgets.api.leaflet.LatLng;
 import com.gwidgets.api.leaflet.LatLngBounds;
 import com.gwidgets.api.leaflet.Point;
@@ -41,7 +41,7 @@ public class LayerEvent extends Event {
 	 *
 	 * @return the layer
 	 */
-	public final native ILayer getLayer() /*-{
+	public final native Layer getLayer() /*-{
 		return this.layer;
 	}-*/;
 

@@ -14,7 +14,7 @@
  */
 package com.gwidgets.api.leaflet.events;
 
-import com.gwidgets.api.leaflet.ILayer;
+import com.gwidgets.api.leaflet.Layer;
 import jsinterop.annotations.JsType;
 
 /**
@@ -34,7 +34,7 @@ public class GeoJSONEvent extends Event {
 	 *
 	 * @return the layer
 	 */
-	public final native ILayer getLayer() /*-{
+	public final native Layer getLayer() /*-{
 		return this.layer;
 	}-*/;
 

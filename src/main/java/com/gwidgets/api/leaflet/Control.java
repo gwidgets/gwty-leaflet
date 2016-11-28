@@ -32,7 +32,7 @@ import com.gwidgets.api.leaflet.elemental.HTMLElement;
  *@author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
  */
 @JsType(isNative = true)
-public class Control implements IControl {
+public class Control {
 
 
 	/**
@@ -64,11 +64,10 @@ public class Control implements IControl {
 	/**
 	 * Removes the control from the map.
 	 *
-	 * @param map the map
 	 * @return the L class
 	 */
 	@JsMethod
-	public native L removeFrom(Map map);
+	public native L remove(Map map);
 
 	/**
 	 * Returns the HTML container of the control.
@@ -78,18 +77,18 @@ public class Control implements IControl {
 	@JsMethod
 	public native HTMLElement getContainer();
 
-	/* (non-Javadoc)
-	 * @see com.gwidgets.api.leaflet.IControl#onAdd(com.gwidgets.api.leaflet.Map)
+	/**
+	 * Should contain code that creates all the neccessary DOM elements for the control, adds listeners on relevant map events, and returns the element containing the control. Called on map.addControl(control) or control.addTo(map).
+	 *
+	 * @param map the map
+	 * @return the HTML element of the control
 	 */
-	@Override
-	@JsMethod
 	public native HTMLElement onAdd(Map map);
 
-	/* (non-Javadoc)
-	 * @see com.gwidgets.api.leaflet.IControl#onRemove(com.gwidgets.api.leaflet.Map)
+	/**
+	 * Optional, should contain all clean up code (e.g. removes control's event listeners). Called on map.removeControl(control) or control.removeFrom(map). The control's DOM container is removed automatically.
+	 *
+	 * @param map the map
 	 */
-	@Override
-	@JsMethod
 	public native void onRemove(Map map);
-
 }

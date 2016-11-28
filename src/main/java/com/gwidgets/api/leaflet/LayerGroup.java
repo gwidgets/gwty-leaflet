@@ -20,6 +20,9 @@ import jsinterop.annotations.JsType;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
 import com.gwidgets.api.leaflet.elemental.Function;
+import com.gwidgets.api.leaflet.elemental.HTMLElement;
+import com.gwidgets.api.leaflet.options.PopupOptions;
+import com.gwidgets.api.leaflet.options.TooltipOptions;
 
 
 /**
@@ -27,16 +30,8 @@ import com.gwidgets.api.leaflet.elemental.Function;
  * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
  */
 @JsType(isNative = true)
-public class LayerGroup implements ILayer {
+public class LayerGroup implements Layer {
 
-	/**
-	 * Adds the group of layers to the map.
-	 *
-	 * @param map the map
-	 * @return the L class
-	 */
-	@JsMethod
-	public native L addTo(Map map);
 
 	/**
 	 * Adds a given layer to the group.
@@ -45,7 +40,7 @@ public class LayerGroup implements ILayer {
 	 * @return the l
 	 */
 	@JsMethod
-	public native L addLayer(ILayer layer);
+	public native L addLayer(Layer layer);
 
 	/**
 	 * Removes a given layer from the group.
@@ -54,7 +49,7 @@ public class LayerGroup implements ILayer {
 	 * @return the l
 	 */
 	@JsMethod
-	public native L removeLayer(ILayer layer);
+	public native L removeLayer(Layer layer);
 
 	/**
 	 * Removes a given layer from the group.
@@ -72,7 +67,7 @@ public class LayerGroup implements ILayer {
 	 * @return the boolean
 	 */
 	@JsMethod
-	public native Boolean hasLayer(ILayer layer);
+	public native Boolean hasLayer(Layer layer);
 
 	/**
 	 * Returns the layer with the given id.
@@ -117,18 +112,172 @@ public class LayerGroup implements ILayer {
 	@JsMethod
 	public native JavaScriptObject toGeoJSON();
 
+	
 	/* (non-Javadoc)
-	 * @see com.gwidgets.api.leaflet.ILayer#onAdd(com.gwidgets.api.leaflet.Map)
+	 * @see com.gwidgets.api.leaflet.Layer#bindPopup(com.gwidgets.api.leaflet.elemental.HTMLElement, com.gwidgets.api.leaflet.options.PopupOptions)
 	 */
-	@Override
 	@JsMethod
-	public native void onAdd(Map map);
+	public native L bindPopup(HTMLElement content, PopupOptions options);	
+
 
 	/* (non-Javadoc)
-	 * @see com.gwidgets.api.leaflet.ILayer#onRemove(com.gwidgets.api.leaflet.Map)
+	 * @see com.gwidgets.api.leaflet.Layer#bindPopup(java.lang.String, com.gwidgets.api.leaflet.options.PopupOptions)
 	 */
-	@Override
 	@JsMethod
-	public native void onRemove(Map map);
+	public native L bindPopup(String id, PopupOptions options);
+
+
+	/* (non-Javadoc)
+	 * @see com.gwidgets.api.leaflet.Layer#unbindPopup()
+	 */
+	@JsMethod
+	public native L unbindPopup();
+
+
+
+	/* (non-Javadoc)
+	 * @see com.gwidgets.api.leaflet.Layer#openPopup(com.gwidgets.api.leaflet.LatLng)
+	 */
+	@JsMethod
+	public native L openPopup(LatLng latlng);
+
+
+	/* (non-Javadoc)
+	 * @see com.gwidgets.api.leaflet.Layer#closePopup()
+	 */
+	@JsMethod
+	public native L closePopup();
+
+
+	/* (non-Javadoc)
+	 * @see com.gwidgets.api.leaflet.Layer#togglePopup()
+	 */
+	@JsMethod
+	public native L togglePopup();
+
+
+	/* (non-Javadoc)
+	 * @see com.gwidgets.api.leaflet.Layer#isPopupOpen()
+	 */
+	@JsMethod
+	public native boolean isPopupOpen();
+
+
+	/* (non-Javadoc)
+	 * @see com.gwidgets.api.leaflet.Layer#setPopupContent(java.lang.String)
+	 */
+	@JsMethod
+	public native L setPopupContent(String content);	
+
+
+	/* (non-Javadoc)
+	 * @see com.gwidgets.api.leaflet.Layer#setPopupContent(com.gwidgets.api.leaflet.elemental.HTMLElement)
+	 */
+	@JsMethod
+	public native L setPopupContent(HTMLElement content);	
+
+
+	/* (non-Javadoc)
+	 * @see com.gwidgets.api.leaflet.Layer#setPopupContent(com.gwidgets.api.leaflet.Popup)
+	 */
+	@JsMethod
+	public native L setPopupContent(Popup content);	
+
+
+	/* (non-Javadoc)
+	 * @see com.gwidgets.api.leaflet.Layer#getPopup()
+	 */
+	@JsMethod
+	public native Popup getPopup();	
+
+
+	/* (non-Javadoc)
+	 * @see com.gwidgets.api.leaflet.Layer#bindTooltip(java.lang.String, com.gwidgets.api.leaflet.options.TooltipOptions)
+	 */
+	public native L bindTooltip(String content, TooltipOptions options);	
+
+
+	/* (non-Javadoc)
+	 * @see com.gwidgets.api.leaflet.Layer#bindTooltip(com.gwidgets.api.leaflet.elemental.HTMLElement, com.gwidgets.api.leaflet.options.TooltipOptions)
+	 */
+	public native L bindTooltip(HTMLElement content, TooltipOptions options);
+
+
+	/* (non-Javadoc)
+	 * @see com.gwidgets.api.leaflet.Layer#bindTooltip(com.gwidgets.api.leaflet.Tooltip, com.gwidgets.api.leaflet.options.TooltipOptions)
+	 */
+	public native L bindTooltip(Tooltip content, TooltipOptions options);	
+
+
+	/* (non-Javadoc)
+	 * @see com.gwidgets.api.leaflet.Layer#unbindTooltip()
+	 */
+	public native L unbindTooltip();	
+
+
+	/* (non-Javadoc)
+	 * @see com.gwidgets.api.leaflet.Layer#openTooltip(com.gwidgets.api.leaflet.LatLng)
+	 */
+	public native L openTooltip(LatLng latlng);	
+
+
+	/* (non-Javadoc)
+	 * @see com.gwidgets.api.leaflet.Layer#closeTooltip()
+	 */
+	public native L closeTooltip();	
+
+	/* (non-Javadoc)
+	 * @see com.gwidgets.api.leaflet.Layer#toggleTooltip()
+	 */
+	public native L toggleTooltip();	
+
+	/* (non-Javadoc)
+	 * @see com.gwidgets.api.leaflet.Layer#isTooltipOpen()
+	 */
+	public native boolean isTooltipOpen();	
+
+	/* (non-Javadoc)
+	 * @see com.gwidgets.api.leaflet.Layer#setTooltipContent(java.lang.String)
+	 */
+	public native L setTooltipContent(String content);	
+
+	/* (non-Javadoc)
+	 * @see com.gwidgets.api.leaflet.Layer#setTooltipContent(com.gwidgets.api.leaflet.elemental.HTMLElement)
+	 */
+	public native L setTooltipContent(HTMLElement content);
+
+
+	/* (non-Javadoc)
+	 * @see com.gwidgets.api.leaflet.Layer#setTooltipContent(com.gwidgets.api.leaflet.Tooltip)
+	 */
+	public native L setTooltipContent(Tooltip content);	
+
+
+	/* (non-Javadoc)
+	 * @see com.gwidgets.api.leaflet.Layer#getTooltip()
+	 */
+	public native Tooltip getTooltip();	
+
+	/* (non-Javadoc)
+	 * @see com.gwidgets.api.leaflet.Layer#addTo(com.gwidgets.api.leaflet.Map)
+	 */
+	public native L addTo(Map map);
+
+
+	/* (non-Javadoc)
+	 * @see com.gwidgets.api.leaflet.Layer#remove()
+	 */
+	public native L remove();		
+
+	/* (non-Javadoc)
+	 * @see com.gwidgets.api.leaflet.Layer#removeFrom(com.gwidgets.api.leaflet.Map)
+	 */
+	public native L removeFrom(Map map);	
+
+
+	/* (non-Javadoc)
+	 * @see com.gwidgets.api.leaflet.Layer#getPane(java.lang.String)
+	 */
+	public native HTMLElement getPane(String name);
 
 }

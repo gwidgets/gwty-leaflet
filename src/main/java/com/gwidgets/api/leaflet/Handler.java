@@ -14,28 +14,37 @@ package com.gwidgets.api.leaflet;
  * See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-
 import jsinterop.annotations.JsType;
 
+
 /**
- * Represents an object attached to a particular location (or a set of locations) on a map. Implemented by tile layers, markers, popups, image overlays, vector layers and layer groups.
+ * An interface implemented by interaction handlers.
  * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
  */
 @JsType(isNative = true)
-public interface ILayer {
+public interface Handler {
 
+	
 	/**
-	 * Should contain code that creates DOM elements for the overlay, adds them to map panes where they should belong and puts listeners on relevant map events. Called on map.addLayer(layer).
-	 *
-	 * @param map the map
+	 * Enables the handler.
 	 */
-	public void onAdd(Map map);
+	public void enable();
 
+	
 	/**
-	 * Should contain all clean up code that removes the overlay's elements from the DOM and removes listeners previously added in onAdd. Called on map.removeLayer(layer).
-	 *
-	 * @param map the map
+	 * Disables the handler.
 	 */
-	public void onRemove(Map map);
+	public void disable();
+
+	
+	
+	/**
+	 * Returns true if the handler is enabled.
+	 *
+	 * @return the boolean
+	 */
+	public Boolean enabled();
+
+
 
 }
