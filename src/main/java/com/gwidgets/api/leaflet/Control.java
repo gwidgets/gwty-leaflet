@@ -33,7 +33,13 @@ import com.gwidgets.api.leaflet.elemental.HTMLElement;
  */
 @JsType(isNative = true)
 public class Control {
+	
+	
 
+
+	protected Control() {
+		
+	}
 
 	/**
 	 * Sets the position of the control. 

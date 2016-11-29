@@ -27,6 +27,7 @@ import jsinterop.annotations.JsType;
 @JsType(isNative = true)
 public interface Layer {
 
+	
 
 	/**
 	 * Binds a popup to the layer with the passed content and sets up the neccessary event listeners.

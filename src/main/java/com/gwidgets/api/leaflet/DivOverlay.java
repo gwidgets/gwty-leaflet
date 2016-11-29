@@ -4,6 +4,12 @@ import jsinterop.annotations.JsType;
 
 @JsType(isNative = true)
 public class DivOverlay {
+
+	protected DivOverlay() {
+		
+	}
+	
+	
 	
 	
 }

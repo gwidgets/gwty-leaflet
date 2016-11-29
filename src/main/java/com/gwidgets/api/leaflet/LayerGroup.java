@@ -30,7 +30,7 @@ import com.gwidgets.api.leaflet.options.TooltipOptions;
  * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
  */
 @JsType(isNative = true)
-public class LayerGroup implements Layer {
+public class LayerGroup implements Layer, Evented {
 
 
 	/**
@@ -84,7 +84,7 @@ public class LayerGroup implements Layer {
 	 * @return the layers
 	 */
 	@JsMethod
-	public native JsArray<JavaScriptObject> getLayers();
+	public native Layer[] getLayers();
 
 	/**
 	 * Removes all the layers from the group.
@@ -111,6 +111,36 @@ public class LayerGroup implements Layer {
 	 */
 	@JsMethod
 	public native JavaScriptObject toGeoJSON();
+	
+	
+	/**
+	 * Calls setZIndex on every layer contained in this group, passing the z-index.
+	 *
+	 * @param zIndex the z index
+	 * @return the L class
+	 */
+	@JsMethod
+	public native L setZIndex(Number zIndex);
+
+
+
+	/**
+	 * Returns the internal ID for a layer.
+	 *
+	 * @param layer the layer
+	 * @return the layer id
+	 */
+	@JsMethod
+	public native Number getLayerId(Layer layer);
+	
+	/**
+	 * Calls methodName on every layer contained in this group, passing any additional parameters. Has no effect if the layers contained do not implement methodName
+	 *
+	 * @param methodName the method name
+	 * @return the L class
+	 */
+	@JsMethod
+	public native L invoke(String methodName);
 
 	
 	/* (non-Javadoc)
@@ -279,5 +309,65 @@ public class LayerGroup implements Layer {
 	 * @see com.gwidgets.api.leaflet.Layer#getPane(java.lang.String)
 	 */
 	public native HTMLElement getPane(String name);
+	
+	//Events 
+		/* (non-Javadoc)
+		 * @see com.gwidgets.api.leaflet.Evented#clearAllEventListeners()
+		 */
+		public native L clearAllEventListeners();
+
+
+		/* (non-Javadoc)
+		 * @see com.gwidgets.api.leaflet.Evented#on(java.lang.String, com.gwidgets.api.leaflet.elemental.Function)
+		 */
+		public native L on(String type, Function fn);
+
+
+		/* (non-Javadoc)
+		 * @see com.gwidgets.api.leaflet.Evented#once(java.lang.String, com.gwidgets.api.leaflet.elemental.Function)
+		 */
+		public  native L once(String type, Function fn);
+
+		
+		/* (non-Javadoc)
+		 * @see com.gwidgets.api.leaflet.Evented#off(java.lang.String)
+		 */
+		public native L off(String type);
+		
+
+		/* (non-Javadoc)
+		 * @see com.gwidgets.api.leaflet.Evented#off(java.lang.String[])
+		 */
+		public native L off(String[] type);
+		
+		
+		/* (non-Javadoc)
+		 * @see com.gwidgets.api.leaflet.Evented#off()
+		 */
+		public native L off();
+
+
+		/* (non-Javadoc)
+		 * @see com.gwidgets.api.leaflet.Evented#fire(java.lang.String)
+		 */
+		public native L fire(String type);
+		
+		
+		/* (non-Javadoc)
+		 * @see com.gwidgets.api.leaflet.Evented#listens(java.lang.String)
+		 */
+		public native Boolean listens(String type);
+
+
+		/* (non-Javadoc)
+		 * @see com.gwidgets.api.leaflet.Evented#addEventParent(com.gwidgets.api.leaflet.Evented)
+		 */
+		public native L addEventParent(Evented obj); 
+
+
+		/* (non-Javadoc)
+		 * @see com.gwidgets.api.leaflet.Evented#removeEventParent(com.gwidgets.api.leaflet.Evented)
+		 */
+		public native L removeEventParent(Evented obj);
 
 }

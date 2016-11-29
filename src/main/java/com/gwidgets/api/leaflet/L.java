@@ -1,5 +1,27 @@
 package com.gwidgets.api.leaflet;
 
+import com.google.gwt.core.client.JavaScriptObject;
+import com.gwidgets.api.leaflet.elemental.HTMLElement;
+import com.gwidgets.api.leaflet.options.ControlAttributionOptions;
+import com.gwidgets.api.leaflet.options.ControlLayersOptions;
+import com.gwidgets.api.leaflet.options.ControlOptions;
+import com.gwidgets.api.leaflet.options.ControlScaleOptions;
+import com.gwidgets.api.leaflet.options.ControlZoomOptions;
+import com.gwidgets.api.leaflet.options.DivIconOptions;
+import com.gwidgets.api.leaflet.options.GeoJSONOptions;
+import com.gwidgets.api.leaflet.options.GridLayerOptions;
+import com.gwidgets.api.leaflet.options.IconOptions;
+import com.gwidgets.api.leaflet.options.ImageOverlayOptions;
+import com.gwidgets.api.leaflet.options.MapOptions;
+import com.gwidgets.api.leaflet.options.MarkerOptions;
+import com.gwidgets.api.leaflet.options.PathOptions;
+import com.gwidgets.api.leaflet.options.PolylineOptions;
+import com.gwidgets.api.leaflet.options.PopupOptions;
+import com.gwidgets.api.leaflet.options.RendererOptions;
+import com.gwidgets.api.leaflet.options.TileLayerOptions;
+import com.gwidgets.api.leaflet.options.TileLayerWMSOptions;
+import com.gwidgets.api.leaflet.options.TooltipOptions;
+
 /**
  *  Copyright 2016 G-Widgets
  *  Licensed under the Apache License, Version 2.0 (the "License");
@@ -18,15 +40,6 @@ package com.gwidgets.api.leaflet;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
-
-
-
-
-
-import com.google.gwt.core.client.JavaScriptObject;
-import com.gwidgets.api.leaflet.elemental.Function;
-import com.gwidgets.api.leaflet.elemental.HTMLElement;
-import com.gwidgets.api.leaflet.options.*;
 
 
 
@@ -300,10 +313,19 @@ Note that points you pass when creating a polygon shouldn't have an additional l
 	 */
 	public static native SVG svg(RendererOptions options);
 	
-	 /**
- 	 * The Class control.
- 	 */
- 	@JsType(isNative = true)
+	
+	/**
+	 * Creates a new instance of GridLayer with the supplied options.
+	 *
+	 * @param options the options
+	 * @return the grid layer
+	 */
+	public static native GridLayer gridLayer(GridLayerOptions options);
+	
+		 /**
+	 	 * The Class control.
+	 	 */
+ 	    @JsType(isNative = true)
 	    public static class control {
 
 	        /**

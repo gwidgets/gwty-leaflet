@@ -43,6 +43,23 @@ public class Popup implements Layer, Evented {
 	public native L setContent(String htmlContent);
 
 	/**
+	 * gets the HTML content of the popup.
+	 *
+	 * @return the content
+	 */
+	@JsMethod(name="getContent")
+	public native HTMLElement getContentAsHTMLElement();
+	
+	
+	/**
+	 * gets content of the popup.
+	 *
+	 * @return the content
+	 */
+	@JsMethod(name="getContent")
+	public native String getContentAsString();
+
+	/**
 	 * Sets the HTML content of the popup.
 	 *
 	 * @param htmlContent the html content
@@ -50,6 +67,31 @@ public class Popup implements Layer, Evented {
 	 */
 	@JsMethod
 	public native L setContent(HTMLElement htmlContent);
+	
+	
+	/**
+	 * Returns true when the popup is visible on the map.
+	 *
+	 * @return true if popup is open, false otherwise
+	 */
+	@JsMethod
+	public native L bringToFront();
+	
+	/**
+	 * Returns true when the popup is visible on the map.
+	 *
+	 * @return true if popup is open, false otherwise
+	 */
+	@JsMethod
+	public native L bringToBack();
+	
+	/**
+	 * Returns true when the popup is visible on the map.
+	 *
+	 * @return true if popup is open, false otherwise
+	 */
+	@JsMethod
+	public native Boolean isOpen();
 	
 	
 	/**

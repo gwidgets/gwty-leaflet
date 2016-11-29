@@ -23,4 +23,10 @@ import jsinterop.annotations.JsType;
 @JsType(isNative = true)
 public class DivIcon {
 
+	private DivIcon() {
+		
+	}
+	
+	
+
 }

@@ -12,5 +12,9 @@ import jsinterop.annotations.JsType;
 @JsType(isNative = true)
 public class Canvas extends Renderer {
 
+	private Canvas() {
+		
+	}
 
+    
 }

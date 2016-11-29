@@ -25,6 +25,13 @@ import jsinterop.annotations.JsType;
  */
 @JsType(isNative = true)
 public class Attribution extends Control{
+	
+	
+	
+
+	private Attribution() {
+		
+	}
 
 	/**
 	 * Sets the text before the attributions.

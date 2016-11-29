@@ -26,6 +26,12 @@ import com.gwidgets.api.leaflet.options.TileLayerWMSOptions;
 @JsType(isNative = true)
 public class WMS extends TileLayer{
 
+	
+	
+	private WMS() {
+		
+	}
+
 	/**
 	 * Merges an object with the new parameters and re-requests tiles on the current screen (unless noRedraw was set to true).
 	 *

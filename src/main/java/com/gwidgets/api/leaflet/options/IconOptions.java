@@ -38,7 +38,7 @@ public class IconOptions {
 	}
 
 
-   	@JsProperty
+   	    @JsProperty
 		private String iconUrl;
 
 		@JsProperty

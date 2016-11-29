@@ -28,6 +28,11 @@ import com.gwidgets.api.leaflet.elemental.Function;
  */
 @JsType(isNative = true)
 public class GeoJSON extends FeatureGroup {
+	
+
+	private GeoJSON() {
+		
+	}
 
 	/**
 	 * Adds a GeoJSON object to the layer.
@@ -69,24 +74,58 @@ public class GeoJSON extends FeatureGroup {
 
 	/**
 	 * Creates a LatLng object from an array of 2 numbers (latitude, longitude) used in GeoJSON for points. If reverse is set to true, the numbers will be interpreted as (longitude, latitude).
-	 *
 	 * @param coords the coordinates
-	 * @param reverse the reverse
 	 * @return the lat lng
 	 */
 	@JsMethod
-	public native static LatLng coordsToLatlng(JsArray<JavaScriptObject> coords, Boolean reverse);
+	public native static LatLng coordsToLatlng(Number[] coords);
+	
 
 	/**
-	 * Creates a multidimensional array of LatLng objects from a GeoJSON coordinates array. levelsDeep specifies the nesting level (0 is for an array of points, 1 for an array of arrays of points, etc., 0 by default). If reverse is set to true, the numbers will be interpreted as (longitude, latitude).
+	 * Creates a multidimensional array of LatLngs from a GeoJSON coordinates array. levelsDeep specifies the nesting level (0 is for an array of points, 1 for an array of arrays of points, etc., 0 by default). Can use a custom coordsToLatLng function.
 	 *
 	 * @param coords the coordinates
 	 * @param levelsDeep  specifies the nesting level 
-	 * @param reverse the reverse
+	 * @param Function coordsToLatLngs
 	 * @return js array of coordinates
 	 */
 	@JsMethod
 	public native static JsArray<JavaScriptObject> coordsToLatlngs(JsArray<JavaScriptObject> coords, Number levelsDeep,
-			Boolean reverse);
+			Function coordsToLatlngs);
+	
+	
+	/**
+	 *  Reverse of coordsToLatLng.
+	 *
+	 * @param latlng the latlng
+	 * @return the js array
+	 */
+	@JsMethod
+    public native JsArray<JavaScriptObject> latLngToCoords(LatLng latlng);
+
+
+/**
+ *  Reverse of coordsToLatLngs closed determines whether the first point should be appended to the end of the array to close the feature, only used when levelsDeep is 0. False by default.
+ *
+ * @param latlngs the latlngs
+ * @param levelsDeep the levels deep
+ * @param closed closed
+ * @return the js array
+ */
+	@JsMethod
+  public native JsArray<JavaScriptObject> latLngsToCoords(JsArray<JavaScriptObject> latlngs, Number levelsDeep, Boolean closed); 
+
+
+ /**
+ *  Normalize GeoJSON geometries/features into GeoJSON features.
+ *
+ * @param geojson the geojson
+ * @return the java script object
+ */
+	@JsMethod
+  public native JavaScriptObject asFeature(JavaScriptObject geojson);
+	
+	
+	
 
 }

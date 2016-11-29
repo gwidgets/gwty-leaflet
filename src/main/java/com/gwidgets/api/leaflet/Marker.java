@@ -15,6 +15,7 @@ package com.gwidgets.api.leaflet;
  *  limitations under the License.
  */
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 import com.google.gwt.core.client.JavaScriptObject;
@@ -29,6 +30,12 @@ import com.gwidgets.api.leaflet.options.TooltipOptions;
  */
 @JsType(isNative = true)
 public class Marker implements Layer, Evented {
+	
+	
+	
+	/** Marker dragging handler (by both mouse and touch). */
+	@JsProperty
+	public Handler dragging;
 
 
 

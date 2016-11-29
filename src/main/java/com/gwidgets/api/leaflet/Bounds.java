@@ -25,6 +25,12 @@ import jsinterop.annotations.JsType;
  */
 @JsType(isNative = true)
 public class Bounds {
+	
+	
+
+	private Bounds() {
+		
+	}
 
 	/**
 	 * Extends the bounds to contain the given point.

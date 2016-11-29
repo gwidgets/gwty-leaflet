@@ -29,6 +29,10 @@ import jsinterop.annotations.JsType;
 @JsType(isNative = true)
 public class ImageOverlay implements Layer, Evented{
 
+    
+	private ImageOverlay() {
+		
+	}
 
 	/**
 	 * Sets the opacity of the overlay.

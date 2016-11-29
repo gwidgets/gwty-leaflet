@@ -16,6 +16,7 @@ package com.gwidgets.api.leaflet;
  */
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
+import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 import com.google.gwt.core.client.JavaScriptObject;
@@ -37,6 +38,44 @@ import com.gwidgets.api.leaflet.options.ZoomPanOptions;
  */
 @JsType(isNative = true)
 public class Map implements Evented {
+	
+	
+	
+	
+		/** Box (shift-drag with mouse) zoom handler.
+		 */
+		@JsProperty
+		public Handler boxZoom; 		
+		
+		/** Double click zoom handler.
+			 */
+		@JsProperty
+		public Handler doubleClickZoom;	
+		
+		/** Map dragging handler (by both mouse and touch).
+			 */
+		@JsProperty
+		public Handler dragging;	
+		
+		/** Keyboard navigation handler.
+			 */
+		@JsProperty
+		public Handler keyboard;		
+		
+		/** Scroll wheel zoom handler.
+			 */
+		@JsProperty
+		public Handler scrollWheelZoom;		
+		
+		/** Mobile touch hacks (quick tap and touch hold) handler.
+			 */
+		@JsProperty
+		public Handler tap;		
+		
+		/** Touch zoom handler.
+			 */
+		@JsProperty
+		public Handler touchZoom; 
 
 	// Methods for Modifying Map State
 

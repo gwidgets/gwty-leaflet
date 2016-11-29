@@ -16,6 +16,8 @@ package com.gwidgets.api.leaflet.options;
 
 import jsinterop.annotations.JsType;
 
+import static jsinterop.annotations.JsPackage.GLOBAL;
+
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
 import com.gwidgets.api.leaflet.Layer;
@@ -27,7 +29,7 @@ import com.gwidgets.api.leaflet.elemental.Function;
  * 
  * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
  */
-@JsType
+@JsType(isNative=true, namespace=GLOBAL, name="Object")
 public interface GeoJSONOptions {
 
 	/**

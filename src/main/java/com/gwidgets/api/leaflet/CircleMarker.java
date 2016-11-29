@@ -27,8 +27,15 @@ import jsinterop.annotations.JsType;
  */
 @JsType(isNative = true)
 public class CircleMarker extends Circle {
+	
+	
 
 	
+	private CircleMarker() {
+		
+	}
+
+
 	/* (non-Javadoc)
 	 * @see com.gwidgets.api.leaflet.Circle#setLatLng(com.gwidgets.api.leaflet.LatLng)
 	 */

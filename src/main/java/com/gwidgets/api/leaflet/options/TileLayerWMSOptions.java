@@ -20,7 +20,7 @@ import jsinterop.annotations.JsType;
 
 import static jsinterop.annotations.JsPackage.GLOBAL;
 
-import com.gwidgets.api.leaflet.ICRS;
+import com.gwidgets.api.leaflet.CRS;
 
 /**
  * The Class TileLayerWMSOptions.
@@ -49,7 +49,7 @@ public class TileLayerWMSOptions {
 	private String version;
 
 	@JsProperty
-	private ICRS crs;
+	private CRS crs;
 
 	/**
 	 * Gets the Comma-separated WMS layers. </br>
@@ -112,7 +112,7 @@ public class TileLayerWMSOptions {
 	 * @return the crs
 	 */
 	@JsOverlay
-	public final ICRS getCrs() {
+	public final CRS getCrs() {
 		return this.crs;
 	}
 
@@ -131,7 +131,7 @@ public class TileLayerWMSOptions {
 
 		private String version = "1.1.1";
 
-		private ICRS crs = null;
+		private CRS crs = null;
 
 		/**
 		 * Instantiates a new builder.
@@ -203,7 +203,7 @@ public class TileLayerWMSOptions {
 		 *            the crs
 		 * @return the builder
 		 */
-		public Builder crs(ICRS crs) {
+		public Builder crs(CRS crs) {
 			this.crs = crs;
 			return this;
 		}

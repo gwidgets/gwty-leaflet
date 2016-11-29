@@ -28,6 +28,13 @@ import jsinterop.annotations.JsType;
  */
 @JsType(isNative = true)
 public class Circle extends Path implements Layer, Evented {
+	
+	
+	
+
+	protected Circle() {
+		
+	}
 
 	/**
 	 * Returns the current geographical position of the circle.
