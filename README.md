@@ -5,7 +5,7 @@ gwty-leaflet is wrapper for the famous maps javascript library [Leaflet](http://
 
 ##Dependency 
 
-The latest stable version of gwty-leaflet is 0.4. You can also use the 0.5-SNAPSHOT version for the latest developments: 
+The latest stable version of gwty-leaflet is 0.4. The source code of 0.4 version has been moved to the 0.4 branch. The current version is 0.5-SNAPSHOT and is undergoing developments to reflect the changes in the 1.0 version of leaflet: 
 
 ```xml
                      <dependency>
@@ -42,7 +42,7 @@ Also, do not forget to include gwty-leaflet in your .gwt.xml module definition f
 
 ##Leaflet version:
 
-gwty-leaflet is compatible with the latest stable version of Leaflet: 0.7. 
+gwty-leaflet 0.5 is compatible with leaflet 1.0. 
 
 ##Leaflet javascript files:
 
@@ -51,6 +51,20 @@ As in any JsInterop wrapper, you need to refer to the Javascript files from your
 ```html
 <link rel="stylesheet" href="https://npmcdn.com/leaflet@0.7.7/dist/leaflet.css" />
 <script src="https://npmcdn.com/leaflet@0.7.7/dist/leaflet.js"></script>
+```
+
+Starting from the 0.5 version, a new feature has been added to allow dynamically from the code adding leaflet resource files instead of including them manually in the .html: 
+
+```java
+LeafletResources.whenReady(
+        e -> 
+                 {
+      MapOptions options = new MapOptions.Builder(L.latLng(52.51, 13.40), 12, 12).dragging(false).build();
+    final Map map = L.map("map", options);
+    GWT.log(options.getZoom()+"");
+    L.tileLayer(MAP_URL, null).addTo(map);
+     return null;
+    });
 ```
 
 
@@ -66,7 +80,7 @@ Map map = L.map("map", new MapOptions.Builder().build());
 Circle circle = L.circle(L.latLng(51.508, 11), 200, options);
 
 ```
-Trying to create a Leaflet object directly using the new operator will result in an error. For more information about Leaflet objects creational patterns, you can refer to [Leaflet's official documentation](http://leafletjs.com/reference.html).  
+For more information about Leaflet objects creational patterns, you can refer to [Leaflet's official documentation](http://leafletjs.com/reference.html).  
 
 ## Options
 
@@ -240,9 +254,6 @@ Here is a list of the events that can be registred for objects that can handle e
 
 ## GWT version:
 
-As of the current version, gwty-leaflet is compiled using GWT 2.8.0-rc2. 
+As of the current version, gwty-leaflet is compiled using GWT 2.8.0. 
 
-## Javadoc:
-
-Javadoc is available for the current version at: [https://gwidgets.github.io/gwty-leaflet/javadoc/0.4](https://gwidgets.github.io/gwty-leaflet/javadoc/0.4)
 
