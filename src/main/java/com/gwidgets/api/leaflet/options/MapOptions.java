@@ -21,6 +21,8 @@ import jsinterop.annotations.JsType;
 import static jsinterop.annotations.JsPackage.GLOBAL;
 
 import com.gwidgets.api.leaflet.Layer;
+import com.gwidgets.api.leaflet.Renderer;
+import com.gwidgets.api.leaflet.CRS;
 import com.gwidgets.api.leaflet.LatLng;
 import com.gwidgets.api.leaflet.LatLngBounds;
 
@@ -36,6 +38,16 @@ public class MapOptions {
 	private MapOptions() {
 
 	}
+	
+	
+	/*****************************************
+	********************************************/
+	
+	@JsProperty
+	private Boolean preferCanvas;
+	
+	/**********************************************
+	*********************************************/
 
 
 	// Map State Options
@@ -56,8 +68,15 @@ public class MapOptions {
 	
 	@JsProperty
 	private LatLngBounds maxBounds;
-	// @JsProperty
-	// CRS crs = L.CRS.EPSG3857;
+	
+	/*****************************************
+	********************************************/
+	@JsProperty
+     private Renderer renderer;
+	/**********************************************
+	*********************************************/
+	@JsProperty
+	private CRS crs;
 
 	// Interaction Options
 	@JsProperty
@@ -68,6 +87,20 @@ public class MapOptions {
 	
 	@JsProperty
 	private Boolean scrollWheelZoom;
+	
+	/*****************************************
+	********************************************/
+	@JsProperty
+     private Number wheelDebounceTime;
+	/**********************************************
+	*********************************************/
+	
+	/*****************************************
+	********************************************/
+	@JsProperty
+     private Number wheelPxPerZoomLevel;
+	/**********************************************
+	*********************************************/
 	
 	@JsProperty
 	private Boolean doubleClickZoom;
@@ -84,24 +117,36 @@ public class MapOptions {
 	@JsProperty
 	private Boolean trackResize;
 	
-	@JsProperty
-	private Boolean worldCopyJump;
+	
 	
 	@JsProperty
 	private Boolean closePopupOnClick;
 	
 	@JsProperty
 	private Boolean bounceAtZoomLimits;
+	
+	/*****************************************
+	********************************************/
+	 @JsProperty
+     private Number zoomSnap;
+	/**********************************************
+	*********************************************/
+	
+	/*****************************************
+	********************************************/
+	  @JsProperty
+      private Number zoomDelta; 
+	/**********************************************
+	*********************************************/
+	
 
 	// Keyboard Navigation Options
 	@JsProperty
 	private Boolean keyboard;
 	
 	@JsProperty
-	private Number keyboardPanOffset;
+	private Number keyboardPanDelta;
 	
-	@JsProperty
-	private Number keyboardZoomOffset;
 
 	// Panning Inertia Options
 	@JsProperty
@@ -113,8 +158,16 @@ public class MapOptions {
 	@JsProperty
 	private Number inertiaMaxSpeed;
 	
+	
 	@JsProperty
-	private Number inertiaThreshold;
+	private Boolean worldCopyJump;
+	
+	/*****************************************
+	********************************************/
+	   @JsProperty
+       private Number maxBoundsViscosity;
+	/**********************************************
+	*********************************************/
 
 	// Control options
 	@JsProperty
@@ -135,6 +188,15 @@ public class MapOptions {
 	
 	@JsProperty
 	private Boolean markerZoomAnimation;
+	
+	/*****************************************
+	********************************************/
+	@JsProperty
+    private Number transform3DLimit;
+	/**********************************************
+	*********************************************/
+	
+
 
 	/**
 	 * Gets the Initial geographical center of the map.
@@ -334,19 +396,9 @@ public class MapOptions {
 	 * @return the keyboard pan offset
 	 */
 	@JsOverlay public final Number getKeyboardPanOffset() {
-		return this.keyboardPanOffset;
+		return this.keyboardPanDelta;
 	}
 
-	/**
-	 * Gets the Number of zoom levels to change when pressing + or - key.
-	 * </br>
-	 * default 1
-	 *
-	 * @return the keyboard zoom offset
-	 */
-	@JsOverlay public final Number getKeyboardZoomOffset() {
-		return this.keyboardZoomOffset;
-	}
 
 	/**
 	 * Gets whether the panning of the map will have an inertia effect where the map builds momentum while dragging and continues moving in the same direction for some time. Feels especially nice on touch devices.
@@ -378,16 +430,6 @@ public class MapOptions {
 		return this.inertiaMaxSpeed;
 	}
 
-	/**
-	 * Gets the Number of milliseconds that should pass between stopping the movement and releasing the mouse or touch to prevent inertial movement. 32 for touch devices and 14 for the rest by default.
-	 *  </br>
-	 * default 32
-	 *
-	 * @return the inertia threshold
-	 */
-	@JsOverlay public final Number getInertiaThreshold() {
-		return this.inertiaThreshold;
-	}
 
 	/**
 	 * Gets Whether the zoom control is added to the map by default.
@@ -451,6 +493,42 @@ public class MapOptions {
 		return this.markerZoomAnimation;
 	}
 
+	@JsOverlay public final Boolean getPreferCanvas() {
+		return this.preferCanvas;
+	}
+
+	@JsOverlay public final Renderer getRenderer() {
+		return this.renderer;
+	}
+
+	@JsOverlay public final Number getKeyboardPanDelta() {
+		return this.keyboardPanDelta;
+	}
+
+	@JsOverlay public final Number getWheelDebounceTime() {
+		return this.wheelDebounceTime;
+	}
+
+	@JsOverlay public final Number getWheelPxPerZoomLevel() {
+		return this.wheelPxPerZoomLevel;
+	}
+
+	@JsOverlay public final Number getZoomSnap() {
+		return this.zoomSnap;
+	}
+
+	@JsOverlay public final Number getZoomDelta() {
+		return this.zoomDelta;
+	}
+
+	@JsOverlay public final Number getMaxBoundsViscosity() {
+		return this.maxBoundsViscosity;
+	}
+
+	@JsOverlay public final Number getTransform3DLimit() {
+		return this.transform3DLimit;
+	}
+
 	/**
 	 * The Class Builder.
 	 */
@@ -510,9 +588,8 @@ public class MapOptions {
 
 		Boolean keyboard = true;
 
-		Number keyboardPanOffset = 80;
+		Number keyboardPanDelta = 80;
 
-		Number keyboardZoomOffset = 1;
 
 		Boolean inertia = true;
 
@@ -524,9 +601,7 @@ public class MapOptions {
 
 		Boolean zoomControl = true;
 
-
 		Boolean attributionControl = true;
-
 
 		Boolean fadeAnimation = true;
 
@@ -535,6 +610,22 @@ public class MapOptions {
 		Number zoomAnimationThreshold = 4;
 
 		Boolean markerZoomAnimation = true;
+		
+		Boolean preferCanvas = false;
+		
+	    Renderer renderer;
+
+	    Number wheelDebounceTime = 40;
+
+	    Number wheelPxPerZoomLevel = 60;
+
+	    Number zoomSnap = 1;
+
+	    Number zoomDelta = 1; 
+
+	    Number maxBoundsViscosity = 0.0;
+
+	    Number transform3DLimit = Math.pow(2, 23);
 
 		/**
 		 * Layers that will be added to the map initially.
@@ -721,22 +812,12 @@ public class MapOptions {
 		 * @param keyboardPanOffset the keyboard pan offset
 		 * @return the builder
 		 */
-		public Builder keyboardPanOffset(Number keyboardPanOffset) {
-			this.keyboardPanOffset = keyboardPanOffset;
+		public Builder keyboardPanDelta(Number keyboardPanDelta) {
+			this.keyboardPanDelta = keyboardPanDelta;
 			return this;
 		}
 
-		/**
-		 * Number of zoom levels to change when pressing + or - key.
-		 *
-		 * default 1
-		 * @param keyboardZoomOffset the keyboard zoom offset
-		 * @return the builder
-		 */
-		public Builder keyboardZoomOffset(Number keyboardZoomOffset) {
-			this.keyboardZoomOffset = keyboardZoomOffset;
-			return this;
-		}
+
 
 		/**
 		 * If enabled, panning of the map will have an inertia effect where the map builds momentum while dragging and continues moving in the same direction for some time. Feels especially nice on touch devices.
@@ -857,6 +938,94 @@ public class MapOptions {
 			this.markerZoomAnimation = markerZoomAnimation;
 			return this;
 		}
+		
+	    /**
+		 * Whether Paths should be rendered on a Canvas renderer. By default, all Paths are rendered in a  SVG renderer.
+		 *
+		 * @param preferCanvas
+		 * @return the builder
+		 */
+		public Builder preferCanvas(Boolean preferCanvas) {
+			this.preferCanvas = preferCanvas;
+			return this;
+		}
+
+		/**
+		 * The default method for drawing vector layers on the map. L.SVG or L.Canvas by default depending on browser support.
+		 *
+		 * @param renderer
+		 * @return the builder
+		 */
+		public Builder renderer(Renderer renderer) {
+			this.renderer = renderer;
+			return this;
+		}
+
+		/**
+		 * Limits the rate at which a wheel can fire (in milliseconds). By default user can't zoom via wheel more often than once per 40 ms.
+		 *
+		 * @param wheelDebounceTime
+		 * @return the builder
+		 */
+		public Builder wheelDebounceTime(Number wheelDebounceTime) {
+			this.wheelDebounceTime = wheelDebounceTime;
+			return this;
+		}
+
+		/**
+		 * How many scroll pixels (as reported by L.DomEvent.getWheelDelta) mean a change of one full zoom level. Smaller values will make wheel-zooming faster (and vice versa).
+		 *
+		 * @param wheelPxPerZoomLevel
+		 * @return the builder
+		 */
+		public Builder wheelPxPerZoomLevel(Number wheelPxPerZoomLevel) {
+			this.wheelPxPerZoomLevel = wheelPxPerZoomLevel;
+			return this;
+		}
+
+		/**
+		 * Forces the map's zoom level to always be a multiple of this, particularly right after a fitBounds() or a pinch-zoom. By default, the zoom level snaps to the nearest integer; lower values (e.g. 0.5 or 0.1) allow for greater granularity. A value of 0 means the zoom level will not be snapped after fitBounds or a pinch-zoom.
+		 *
+		 * @param zoomSnap
+		 * @return the builder
+		 */
+		public Builder zoomSnap(Number zoomSnap) {
+			this.zoomSnap = zoomSnap;
+			return this;
+		}
+
+		/**
+		 * Controls how much the map's zoom level will change after a zoomIn(), zoomOut(), pressing + or - on the keyboard, or using the zoom controls. Values smaller than 1 (e.g. 0.5) allow for greater granularity.
+		 *
+		 * @param zoomDelta 
+		 * @return the builder
+		 */
+		public Builder zoomDelta(Number zoomDelta) {
+			this.zoomDelta = zoomDelta;
+			return this;
+		}
+
+		/**
+		 * If maxBounds is set, this option will control how solid the bounds are when dragging the map around. The default value of 0.0 allows the user to drag outside the bounds at normal speed, higher values will slow down map dragging outside bounds, and 1.0 makes the bounds fully solid, preventing the user from dragging outside the bounds.
+		 *
+		 * @param maxBoundsViscosity 
+		 * @return the builder
+		 */
+		public Builder maxBoundsViscosity(Number maxBoundsViscosity) {
+			this.maxBoundsViscosity = maxBoundsViscosity;
+			return this;
+		}
+
+		/**
+		 * Defines the maximum size of a CSS translation transform. The default value should not be changed unless a web browser positions layers in the wrong place after doing a large panBy.
+		 *
+		 * @param transform3DLimit 
+		 * @return the builder
+		 */
+		public Builder transform3DLimit(Number transform3DLimit) {
+			this.transform3DLimit = transform3DLimit;
+			return this;
+		}
 
 		/**
 		 * Builds the options
@@ -903,17 +1072,13 @@ public class MapOptions {
 
 			options.keyboard = this.keyboard;
 
-			options.keyboardPanOffset = this.keyboardPanOffset;
-
-			options.keyboardZoomOffset = this.keyboardPanOffset;
+			options.keyboardPanDelta = this.keyboardPanDelta;
 
 			options.inertia = this.inertia;
 
 			options.inertiaDeceleration = this.inertiaDeceleration;
 
 			options.inertiaMaxSpeed = this.inertiaMaxSpeed;
-
-			options.inertiaThreshold = this.inertiaThreshold;
 
 			options.zoomControl = this.zoomControl;
 
@@ -926,6 +1091,22 @@ public class MapOptions {
 			options.zoomAnimationThreshold = this.zoomAnimationThreshold;
 
 			options.markerZoomAnimation = this.markerZoomAnimation;
+			
+			 options.preferCanvas = this.preferCanvas;
+				
+		     options.renderer = this.renderer;
+
+		     options.wheelDebounceTime = this.wheelDebounceTime;
+
+		     options.wheelPxPerZoomLevel = this.wheelPxPerZoomLevel;
+
+		     options.zoomSnap = this.zoomSnap;
+
+		     options.zoomDelta = this.zoomDelta; 
+
+		    options.maxBoundsViscosity = this.maxBoundsViscosity;
+
+		    options.transform3DLimit = this.transform3DLimit;
 
 			return options;
 		}

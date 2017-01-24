@@ -20,6 +20,7 @@ import jsinterop.annotations.JsType;
 
 import static jsinterop.annotations.JsPackage.GLOBAL;
 
+import com.gwidgets.api.leaflet.L;
 import com.gwidgets.api.leaflet.Point;
 
 
@@ -52,6 +53,51 @@ public class DivIconOptions {
 
 	@JsProperty
 	private String html;
+	
+	/*****************************************
+	********************************************/
+    @JsProperty
+    private Point bgPos;
+	/**********************************************
+	*********************************************/
+    
+    /*****************************************
+	********************************************/
+    @JsProperty
+     private String iconUrl;
+	/**********************************************
+	*********************************************/
+    @JsProperty
+    private String iconRetinaUrl;
+    /*****************************************
+	********************************************/
+    @JsProperty
+    private String shadowUrl;
+	/**********************************************
+	*********************************************/
+    @JsProperty
+    private String shadowRetinaUrl;
+	/**********************************************
+	*********************************************/
+    @JsProperty
+    private Point shadowSize;
+    /**********************************************
+	*********************************************/
+    @JsProperty
+    private Point shadowAnchor;
+    /**********************************************
+   	*********************************************/
+    @JsProperty
+    private String pane;
+    /**********************************************
+   	*********************************************/
+    @JsProperty
+    private String attribution;
+    /**********************************************
+   	*********************************************/
+
+    
+    
 	
 	
 	/**
@@ -104,6 +150,51 @@ public class DivIconOptions {
 	}
 
 
+	@JsOverlay public final Point getBgPos() {
+		return this.bgPos;
+	}
+
+
+	@JsOverlay public final String getIconUrl() {
+		return this.iconUrl;
+	}
+
+
+	@JsOverlay public final String getIconRetinaUrl() {
+		return this.iconRetinaUrl;
+	}
+
+
+	@JsOverlay public final String getShadowUrl() {
+		return this.shadowUrl;
+	}
+
+
+	@JsOverlay public final String getShadowRetinaUrl() {
+		return this.shadowRetinaUrl;
+	}
+
+
+	@JsOverlay public final Point getShadowSize() {
+		return this.shadowSize;
+	}
+
+
+	@JsOverlay public final Point getShadowAnchor() {
+		return this.shadowAnchor;
+	}
+
+
+	@JsOverlay public final String getPane() {
+		return this.pane;
+	}
+
+
+	@JsOverlay public final String getAttribution() {
+		return this.attribution;
+	}
+
+
 	/**
 	 * The Class Builder.
 	 */
@@ -120,10 +211,41 @@ public class DivIconOptions {
 		private String className = "leaflet-div-icon";
 
 		private String html = "";
+		
+		 private Point bgPos = L.point(0, 0, true);
+		    
+		    
+	     private String iconUrl;
+
+	    
+	    private String iconRetinaUrl;
+
+	    
+	    private String shadowUrl;
+
+	    
+	    private String shadowRetinaUrl;
+
+	    
+	    private Point shadowSize;
+
+	    
+	    private Point shadowAnchor;
+
+	    
+	    private String pane = "overlayPane";
+
+	    
+	    private String attribution;
 
 		
-		public Builder() {
-
+		/**
+		 * Instantiates a new builder. Takes the icon url as a required paramater.
+		 *
+		 * @param iconUrl the icon url 
+		 */
+		public Builder(String iconUrl) {
+            this.iconUrl = iconUrl;
 		}
 		
 		/**
@@ -166,6 +288,24 @@ public class DivIconOptions {
 		 */
 		public Builder html(String html){this.html = html; return this;}
 		
+		public Builder bgPos(Point bgPos){this.bgPos = bgPos; return this;}
+
+	    public Builder iconRetinaUrl(String iconRetinaUrl){this.iconRetinaUrl = iconRetinaUrl; return this;}
+
+	    public Builder shadowUrl(String shadowUrl){this.shadowUrl = shadowUrl; return this;}
+
+	    public Builder shadowRetinaUrl(String shadowRetinaUrl){this.shadowRetinaUrl = shadowRetinaUrl; return this;}
+
+	    public Builder shadowSize(Point shadowSize){this.shadowSize = shadowSize; return this;}
+
+	    public Builder shadowAnchor(Point shadowAnchor){this.shadowAnchor = shadowAnchor; return this;}
+
+	    public Builder pane(String pane){this.pane = pane; return this;}
+
+	    public Builder attribution(String attribution){this.attribution = attribution; return this;}
+		
+		
+		
 		/**
 		 * Builds th DivIconOptions new instance
 		 *
@@ -179,6 +319,15 @@ public class DivIconOptions {
 			options.popUpAnchor = this.popUpAnchor;
 			options.className = this.className;
 			options.html = this.html;
+			options.iconUrl = this.iconUrl;
+		    options.bgPos = this.bgPos;
+		    options.iconRetinaUrl = this.iconRetinaUrl;
+		    options.shadowUrl = this.shadowUrl;
+		    options.shadowRetinaUrl = this.shadowRetinaUrl;
+		    options.shadowSize = this.shadowSize;
+		    options.shadowAnchor = this.shadowAnchor;
+		    options.pane = this.pane;
+		    options.attribution = this.attribution;
 			
 			
 			return options;

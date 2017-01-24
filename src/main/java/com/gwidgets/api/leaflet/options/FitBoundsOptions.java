@@ -48,6 +48,34 @@ public class FitBoundsOptions {
 	
 	@JsProperty
 	private Number maxZoom;
+	
+	/*****************************************
+	********************************************/
+	@JsProperty
+    private Boolean animate;
+	/**********************************************
+	*********************************************/
+    
+    /*****************************************
+	********************************************/
+	@JsProperty
+    private Number duration;
+	/**********************************************
+	*********************************************/
+    
+    /*****************************************
+	********************************************/
+	@JsProperty
+    private Number easeLinearity;
+	/**********************************************
+	*********************************************/
+    /*****************************************
+	********************************************/
+	@JsProperty
+    private Boolean noMoveStart;
+	/**********************************************
+	*********************************************/
+    
 
 	/**
 	 * Gets the maximum possible zoom to use.
@@ -89,6 +117,22 @@ public class FitBoundsOptions {
 		return this.padding;
 	}
 
+	public final Boolean getAnimate() {
+		return this.animate;
+	}
+
+	public final Number getDuration() {
+		return this.duration;
+	}
+
+	public final Number getEaseLinearity() {
+		return this.easeLinearity;
+	}
+
+	public final Boolean getNoMoveStart() {
+		return this.noMoveStart;
+	}
+
 	/**
 	 * The Class Builder.
 	 */
@@ -101,6 +145,14 @@ public class FitBoundsOptions {
 		private Point padding = L.point(0, 0, true);
 
 		private Number maxZoom = null;
+		
+	    private Boolean animate;
+
+	    private Number duration = 0.25;
+
+	    private Number easeLinearity = 0.25;
+
+	    private Boolean noMoveStart = false;
 
 		/**
 		 * Instantiates a new builder.
@@ -160,6 +212,14 @@ public class FitBoundsOptions {
 			this.maxZoom = maxZoom;
 			return this;
 		}
+		
+		public Builder animate(Boolean animate){this.animate = animate; return this;}
+
+	    public Builder duration(Number duration){this.duration = duration; return this;}
+
+	    public Builder easeLinearity(Number easeLinearity){this.easeLinearity = easeLinearity; return this;}
+
+	    public Builder noMoveStart(Boolean noMoveStart){this.noMoveStart = noMoveStart; return this;}
 
 		/**
 		 * Builds the FitBoundsOptions new instance
@@ -172,6 +232,10 @@ public class FitBoundsOptions {
 			options.paddingBottomRight = this.paddingBottomRight;
 			options.padding = this.padding;
 			options.maxZoom = this.maxZoom;
+		    options.animate = this.animate;
+		    options.duration = this.duration;
+		    options.easeLinearity = this.easeLinearity;
+		    options.noMoveStart = this.noMoveStart;
 
 			return options;
 

@@ -21,6 +21,7 @@ import jsinterop.annotations.JsType;
 import static jsinterop.annotations.JsPackage.GLOBAL;
 
 import com.gwidgets.api.leaflet.Point;
+import com.gwidgets.api.leaflet.options.DivIconOptions.Builder;
 
 
 /**
@@ -67,6 +68,16 @@ public class IconOptions {
 
 		@JsProperty
 		private String className;
+		
+		 @JsProperty
+		 private String pane;
+		 /**********************************************
+		 *********************************************/
+		 
+		 @JsProperty
+		 private String attribution;
+		 /**********************************************
+		 *********************************************/
 	
 	
 		/**
@@ -167,6 +178,15 @@ public class IconOptions {
 		@JsOverlay public final String getClassName() {
 			return this.className;
 		}
+		
+		@JsOverlay public final String getPane() {
+			return this.pane;
+		}
+
+
+		@JsOverlay public final String getAttribution() {
+			return this.attribution;
+		}
 
 
 	/**
@@ -200,6 +220,11 @@ public class IconOptions {
 		private Point popupAnchor;
 
 		private String className = "";
+		
+	    private String pane = "overlayPane";
+
+	    
+	    private String attribution;
 
 		/**
 		 * Instantiates a new builder. takes the icon url (absolute or relative to your script path) as a required parameter
@@ -291,6 +316,10 @@ public class IconOptions {
 		 */
 		public Builder className(String className){this.className = className; return this;}
 		
+	    public Builder pane(String pane){this.pane = pane; return this;}
+
+	    public Builder attribution(String attribution){this.attribution = attribution; return this;}
+		
 		/**
 		 * Builds the.
 		 *
@@ -308,6 +337,8 @@ public class IconOptions {
 			options.shadowAnchor = this.shadowAnchor;
 			options.popupAnchor = this.popupAnchor;
 			options.className = this.className;
+			options.pane = this.pane;
+			options.attribution = this.attribution;
 			
 			return options;
 			
