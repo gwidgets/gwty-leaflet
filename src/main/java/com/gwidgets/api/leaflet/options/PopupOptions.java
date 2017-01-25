@@ -22,6 +22,7 @@ import static jsinterop.annotations.JsPackage.GLOBAL;
 
 import com.gwidgets.api.leaflet.L;
 import com.gwidgets.api.leaflet.Point;
+import com.gwidgets.api.leaflet.options.DivIconOptions.Builder;
 
 /**
  * The Class PopupOptions.
@@ -67,12 +68,21 @@ public class PopupOptions {
 
 
 	@JsProperty
-	private Boolean closeOnClick;
+	private Boolean autoClose;
 	
 	@JsProperty
 	private String className;
 	
 	
+    @JsProperty
+    private String pane;
+    /**********************************************
+   	*********************************************/
+    @JsProperty
+    private String attribution;
+    /**********************************************
+   	*********************************************/
+
 	
 	/**
 	 * Gets the max width of the popup
@@ -189,8 +199,8 @@ public class PopupOptions {
 	 *
 	 * @return the close on click
 	 */
-	@JsOverlay public final Boolean getCloseOnClick() {
-		return this.closeOnClick;
+	@JsOverlay public final Boolean getAutoClose() {
+		return this.autoClose;
 	}
 
 
@@ -202,6 +212,16 @@ public class PopupOptions {
 	 */
 	@JsOverlay public final String getClassName() {
 		return this.className;
+	}
+	
+	
+	@JsOverlay public final String getPane() {
+		return this.pane;
+	}
+
+
+	@JsOverlay public final String getAttribution() {
+		return this.attribution;
 	}
 
 
@@ -229,7 +249,7 @@ public class PopupOptions {
 		private Boolean closeButton = true;
 
 		
-		private Point offset = L.point(0, 6, true);
+		private Point offset = L.point(0, 7, true);
 		
 
 		private Point autoPanPaddingTopLeft = null;
@@ -243,9 +263,15 @@ public class PopupOptions {
 		private Boolean zoomAnimation = true;
 
 		
-		private Boolean closeOnClick = null;
+		private Boolean autoClose = null;
 		
 		private String className = "";
+		
+		   
+	    private String pane = "popupPane";
+
+	    
+	    private String attribution;
 
 		
 		public Builder() {
@@ -358,7 +384,7 @@ public class PopupOptions {
 		 * @param closeOnClick the close on click
 		 * @return the builder
 		 */
-		public Builder closeOnClick(Boolean closeOnClick){this.closeOnClick = closeOnClick; return this;}
+		public Builder autoClose(Boolean autoClose){this.autoClose = autoClose; return this;}
 		
 		/**
 		 * A custom class name to assign to the popup.
@@ -368,6 +394,10 @@ public class PopupOptions {
 		 * @return the builder
 		 */
 		public Builder className(String className){this.className = className; return this;};
+		
+	    public Builder pane(String pane){this.pane = pane; return this;}
+
+	    public Builder attribution(String attribution){this.attribution = attribution; return this;}
 		
 		
 		/**
@@ -387,8 +417,10 @@ public class PopupOptions {
 			options.autoPanPaddingTopLeft = this.autoPanPaddingTopLeft;
 			options.autoPanPaddingBottomRight = this.autoPanPaddingBottomRight;
 			options.autoPanPadding = this.autoPanPadding;
-			options.closeOnClick = this.closeOnClick;
+			options.autoClose = this.autoClose;
 			options.className = this.className;
+			options.pane = this.pane;
+			options.attribution = this.attribution;
 			
 			
 			return options;

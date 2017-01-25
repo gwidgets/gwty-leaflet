@@ -2,6 +2,8 @@ package com.gwidgets.api.leaflet.options;
 
 import static jsinterop.annotations.JsPackage.GLOBAL;
 
+import com.gwidgets.api.leaflet.options.PopupOptions.Builder;
+
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -14,6 +16,11 @@ public class RendererOptions {
 	
 	@JsProperty
 	private String pane;
+	
+	@JsProperty
+	private String attribution;
+	/**********************************************
+	 *********************************************/
 
 	private RendererOptions() {
 		
@@ -29,6 +36,11 @@ public class RendererOptions {
 		return this.pane;
 	}
 	
+	@JsOverlay 
+	public final String getAttribution() {
+		return this.attribution;
+	}
+	
 	
 	public static class Builder{
 		
@@ -36,6 +48,8 @@ public class RendererOptions {
 		private Number padding = 0.1;
 		
 		private String pane = "overlayPane";
+		
+		private String attribution;
 		
 		
 		public Builder(){
@@ -55,10 +69,13 @@ public class RendererOptions {
 			return this;
 		}
 		
+		 public Builder attribution(String attribution){this.attribution = attribution; return this;}
+		
 		public RendererOptions build(){
 			RendererOptions rendererOptions = new RendererOptions();
 			rendererOptions.padding = this.padding;
 			rendererOptions.pane = this.pane;
+			rendererOptions.attribution = this.attribution;
 			
 			return rendererOptions;
 		}

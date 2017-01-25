@@ -16,6 +16,8 @@ package com.gwidgets.api.leaflet.options;
 
 import static jsinterop.annotations.JsPackage.GLOBAL;
 
+import com.gwidgets.api.leaflet.Renderer;
+
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -62,13 +64,37 @@ public class PathOptions {
 	protected String lineJoin;
 
 	@JsProperty
-	protected Boolean clickable;
-
-	@JsProperty
 	protected String pointerEvents;
 
 	@JsProperty
 	protected String className;
+	
+	/*****************************************
+	********************************************/
+	@JsProperty
+    protected String dashOffset;
+	/**********************************************
+	*********************************************/
+	/*****************************************
+	********************************************/
+	@JsProperty
+	protected Renderer renderer;
+	/**********************************************
+	*********************************************/
+    @JsProperty
+    protected String pane;
+    /**********************************************
+   	*********************************************/
+    @JsProperty
+    protected String attribution;
+    /**********************************************
+   	*********************************************/
+    /*****************************************
+	********************************************/
+    @JsProperty
+    protected Boolean interactive;
+	/**********************************************
+	*********************************************/
 
 	/**
 	 * Gets Whether to draw stroke along the path. Set it to false to disable
@@ -202,17 +228,6 @@ public class PathOptions {
 		return this.lineJoin;
 	}
 
-	/**
-	 * Gets whether the the vector will not emit mouse events and will act as a
-	 * part of the underlying map. </br>
-	 * default true
-	 * 
-	 * @return the clickable
-	 */
-	@JsOverlay
-	public final Boolean getClickable() {
-		return this.clickable;
-	}
 
 	/**
 	 * Gets the pointer-events attribute on the path if SVG backend is used.
@@ -235,6 +250,32 @@ public class PathOptions {
 	@JsOverlay
 	public final String getClassName() {
 		return this.className;
+	}
+
+	@JsOverlay
+	public final String getDashOffset() {
+		return this.dashOffset;
+	}
+
+	@JsOverlay
+	public final Renderer getRenderer() {
+		return this.renderer;
+	}
+	
+	
+	@JsOverlay
+	public final String getPane() {
+		return this.pane;
+	}
+
+	@JsOverlay
+	public final String getAttribution() {
+		return this.attribution;
+	}
+
+	@JsOverlay
+	public final Boolean getInteractive() {
+		return this.interactive;
 	}
 
 	/**
@@ -264,11 +305,19 @@ public class PathOptions {
 
 		private String lineJoin = null;
 
-		private Boolean clickable = true;
-
 		private String pointerEvents = null;
 
 		private String className = "";
+		
+	    private String dashOffset;
+
+		private Renderer renderer;
+
+	    private String pane = "overlayPane"; 
+
+	    private String attribution;
+
+	    private Boolean interactive = true;
 
 		/**
 		 * Instantiates a new builder.
@@ -431,19 +480,6 @@ public class PathOptions {
 			return this;
 		}
 
-		/**
-		 * If false, the vector will not emit mouse events and will act as a
-		 * part of the underlying map. </br>
-		 * default true
-		 * 
-		 * @param clickable
-		 *            the clickable
-		 * @return the builder
-		 */
-		public Builder clickable(Boolean clickable) {
-			this.clickable = clickable;
-			return this;
-		}
 
 		/**
 		 * Sets the pointer-events attribute on the path if SVG backend is used.
@@ -471,6 +507,16 @@ public class PathOptions {
 			this.className = className;
 			return this;
 		}
+		
+		public Builder dashOffset(String dashOffset){this.dashOffset = dashOffset; return this;}
+
+	    public Builder renderer(Renderer renderer){this.renderer = renderer; return this;}
+
+	    public Builder attribution(String attribution){this.attribution = attribution; return this;}
+
+	    public Builder pane(String pane){this.pane = pane; return this;}
+
+	    public Builder interactive(Boolean interactive){this.interactive = interactive; return this;}
 
 		/**
 		 * Builds the PathOptions new instance
@@ -481,6 +527,7 @@ public class PathOptions {
 			PathOptions options = new PathOptions();
 			options.stroke = this.stroke;
 			options.color = this.color;
+			options.opacity = this.opacity;
 			options.weight = this.weight;
 			options.fill = this.fill;
 			options.fillColor = this.fillColor;
@@ -489,9 +536,13 @@ public class PathOptions {
 			options.dashArray = this.dashArray;
 			options.lineCap = this.lineCap;
 			options.lineJoin = this.lineJoin;
-			options.clickable = this.clickable;
 			options.pointerEvents = this.pointerEvents;
 			options.className = this.className;
+			options.dashOffset = this.dashOffset;
+			options.renderer = this.renderer;
+		    options.pane = this.pane;
+		    options.attribution = this.attribution;
+		    options.interactive = this.interactive;
 
 			return options;
 

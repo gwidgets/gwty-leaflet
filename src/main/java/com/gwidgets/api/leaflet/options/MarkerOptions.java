@@ -21,6 +21,7 @@ import jsinterop.annotations.JsType;
 import static jsinterop.annotations.JsPackage.GLOBAL;
 
 import com.gwidgets.api.leaflet.Icon;
+import com.gwidgets.api.leaflet.options.DivIconOptions.Builder;
 
 /**
  * The Class MarkerOptions.
@@ -64,6 +65,23 @@ public class MarkerOptions {
 
 	@JsProperty
 	private  Number riseOffset;
+	
+	
+	/*****************************************
+	********************************************/
+	@JsProperty
+    private Boolean interactive;
+	/**********************************************
+	*********************************************/
+	
+    @JsProperty
+	private String pane;
+	/**********************************************
+	 *********************************************/
+    @JsProperty
+    private String attribution;
+    /**********************************************
+   	*********************************************/
 	
 	
 	/**
@@ -173,6 +191,21 @@ public class MarkerOptions {
 	@JsOverlay public final Number getRiseOffset() {
 		return this.riseOffset;
 	}
+	
+	
+	
+	@JsOverlay public final String getPane() {
+		return this.pane;
+	}
+	
+	@JsOverlay public final String getAttribution() {
+		return this.attribution;
+	}
+
+
+	@JsOverlay public final Boolean getInteractive() {
+		return this.interactive;
+	}
 
 
 	/**
@@ -180,33 +213,31 @@ public class MarkerOptions {
 	 */
 	public static class Builder{
 		
-         private Icon icon = null;
-		
+        private Icon icon = null;
 		
 		private Boolean clickable = true;
-
 		
 		private Boolean draggable = false;
-
 		
 		private Boolean keyboard = true;
-
 		
 		private String title = "";
 		
 		private String alt = "";
-
 		
 		private Number zIndexOffset = 0;
-
 		
 		private Number opacity = 1.0;
-
 		
 		private Boolean riseOnHover = false;
-
 		
 		private Number riseOffset = 250;
+		
+		private Boolean interactive = true;
+		
+		private String pane = "markerPane";
+		
+		private String attribution;
 		
 		
 		/**
@@ -315,6 +346,13 @@ public class MarkerOptions {
 		 */
 		public Builder riseOffset(Number riseOffset){this.riseOffset = riseOffset; return this;}
 		
+	   
+		public Builder pane(String pane){this.pane = pane; return this;}
+
+	    public Builder attribution(String attribution){this.attribution = attribution; return this;}
+	    
+	    public Builder interactive(Boolean interactive){this.interactive = interactive; return this;}
+		
 		
 		/**
 		 * Builds the MarkerOptions new instace
@@ -334,6 +372,9 @@ public class MarkerOptions {
 			options.opacity = this.opacity;
 			options.riseOnHover = this.riseOnHover;
 			options.riseOffset = this.riseOffset;
+			options.interactive = this.interactive;
+			options.pane = this.pane;
+			options.attribution = this.attribution;
 			
 			
 			return options;

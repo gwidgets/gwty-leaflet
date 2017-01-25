@@ -33,8 +33,6 @@ public class PanOptions {
 		
 	}
 
-    @JsProperty
-	private  Boolean animate;
 	
 	@JsProperty
 	private  Number duration;
@@ -46,17 +44,6 @@ public class PanOptions {
 	private  Boolean noMoveStart;
 	
 	
-	/**
-	 * Gets whether panning will always be animated if possible
-	 * </br>
-	 * @return the animate
-	 */
-	@JsOverlay public final Boolean getAnimate() {
-		return this.animate;
-	}
-
-
-
 
 	/**
 	 * Gets the duration of animated panning.
@@ -102,7 +89,6 @@ public class PanOptions {
 	 */
 	public static class Builder {
 		
-		private  Boolean animate = true;
 		 
 		private  Number duration = 0.25;
 		 
@@ -117,13 +103,6 @@ public class PanOptions {
 
 		}
 		
-		/**
-		 * If true, panning will always be animated if possible. If false, it will not animate panning, either resetting the map view if panning more than a screen away, or just setting a new offset for the map pane (except for `panBy` which always does the latter).
-		 * </br>
-		 * @param animate the animate
-		 * @return the builder
-		 */
-		public  Builder animate(Boolean animate){this.animate = animate; return this;}
 		 
 		/**
 		 * Duration of animated panning.
@@ -160,7 +139,6 @@ public class PanOptions {
 		 */
 		public PanOptions build(){
 			PanOptions options = new PanOptions();
-			options.animate = this.animate;
 			options.duration = this.duration;
 			options.easeLinearity = this.easeLinearity;
 			options.noMoveStart = this.noMoveStart;

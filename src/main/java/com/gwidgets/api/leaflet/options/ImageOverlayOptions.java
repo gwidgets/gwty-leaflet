@@ -41,6 +41,31 @@ public class ImageOverlayOptions {
 	@JsProperty
 	private String attribution;
 	
+	/*****************************************
+	********************************************/
+	@JsProperty
+    private String alt;
+	/**********************************************
+	*********************************************/
+    /*****************************************
+	********************************************/
+	@JsProperty
+    private Boolean interactive;
+	/**********************************************
+	*********************************************/
+	/*****************************************
+	********************************************/
+	@JsProperty
+    private Boolean crossOrigin;
+	/**********************************************
+	*********************************************/
+    /*****************************************
+	********************************************/
+	@JsProperty
+    private String pane;
+	/**********************************************
+	*********************************************/
+	
 	
 	
 	/**
@@ -65,6 +90,30 @@ public class ImageOverlayOptions {
 
 
 
+	@JsOverlay  public final String getAlt() {
+		return this.alt;
+	}
+
+
+
+	@JsOverlay  public final Boolean getInteractive() {
+		return this.interactive;
+	}
+
+
+
+	@JsOverlay  public final Boolean getCrossOrigin() {
+		return this.crossOrigin;
+	}
+
+
+
+	@JsOverlay  public final String getPane() {
+		return this.pane;
+	}
+
+
+
 	/**
 	 * The Class Builder.
 	 */
@@ -73,6 +122,14 @@ public class ImageOverlayOptions {
 		private Number opacity = 1.0;
 		
 		private String attribution = "";
+		
+		private String alt;
+
+		private Boolean interactive;
+
+		private Boolean crossOrigin;
+
+		private String pane;
 
 		/**
 		 * Instantiates a new builder.
@@ -96,7 +153,7 @@ public class ImageOverlayOptions {
 		/**
 		 * The attribution text of the image overlay.
 		 *</br>
-		 *default empty
+		 * default empty
 		 * @param attribution the attribution
 		 * @return the builder
 		 */
@@ -104,6 +161,15 @@ public class ImageOverlayOptions {
 			this.attribution = attribution;
 			return this;
 		}
+		
+
+		public Builder alt(String alt){this.alt = alt; return this;}
+
+	    public Builder interactive(Boolean interactive){this.interactive = interactive; return this;}
+
+	    public Builder crossOrigin(Boolean crossOrigin){this.crossOrigin = crossOrigin; return this;}
+
+	    public Builder pane(String pane){this.pane = pane; return this;}
 		
 		/**
 		 * Builds the ImageOverlayOptions instance
@@ -114,6 +180,10 @@ public class ImageOverlayOptions {
 			ImageOverlayOptions options = new ImageOverlayOptions();
 			options.opacity = this.opacity;
 			options.attribution = this.attribution;
+		    options.alt = this.alt;
+		    options.interactive = this.interactive;
+		    options.crossOrigin = this.crossOrigin;
+		    options.pane = this.pane;
 		
 			return options;
 		}
