@@ -43,9 +43,15 @@ public class TileLayerOptions {
 	@JsProperty
 	private Number maxZoom;
 
-	
 	@JsProperty
 	private Number maxNativeZoom;
+	
+	/*****************************************
+	********************************************/
+	@JsProperty
+    private Number minNativeZoom;
+	/**********************************************
+	*********************************************/
 
 	@JsProperty
 	private Number tileSize;
@@ -62,8 +68,6 @@ public class TileLayerOptions {
 	@JsProperty
 	private Boolean tms;
 
-	@JsProperty
-	private Boolean continuousWorld;
 
 	@JsProperty
 	private Boolean noWrap;
@@ -81,19 +85,57 @@ public class TileLayerOptions {
 	private Number zIndex;
 
 	@JsProperty
-	private Boolean unloadInvisibleTiles;
-
-	@JsProperty
 	private Boolean updateWhenIdle;
+	
+	/*****************************************
+	********************************************/
+	 @JsProperty
+     private Boolean updateWhenZooming;
+	/**********************************************
+	*********************************************/
+	 
+	 /*****************************************
+	********************************************/
+	 @JsProperty
+     private Boolean updateInterval;
+	/**********************************************
+	*********************************************/
 
 	@JsProperty
 	private Boolean detectRetina;
 
-	@JsProperty
-	private Boolean reuseTiles;
 
 	@JsProperty
 	private LatLngBounds bounds;
+	
+	/*****************************************
+	********************************************/
+	@JsProperty
+    private Boolean crossOrigin;
+	/**********************************************
+	*********************************************/
+	
+	/*****************************************
+	********************************************/
+	@JsProperty
+    private String pane;
+	/**********************************************
+	*********************************************/
+	
+	/*****************************************
+	********************************************/
+	@JsProperty
+    private String className;
+	/**********************************************
+	*********************************************/
+	
+	/*****************************************
+	********************************************/
+	@JsProperty
+    private Number keepBuffer;
+	/**********************************************
+	*********************************************/
+	
 
 	/**
 	 * Gets the min zoom.
@@ -175,15 +217,6 @@ public class TileLayerOptions {
 		return this.tms;
 	}
 
-	/**
-	 * Gets whether the tile coordinates won't be wrapped by world width (-180 to 180 longitude) or clamped to lie within world height (-90 to 90). Use this if you use Leaflet for maps that don't reflect the real world (e.g. game, indoor or photo maps).
-	 * </br>
-	 * default false
-	 * @return the continuous world
-	 */
-	@JsOverlay public final Boolean getContinuousWorld() {
-		return this.continuousWorld;
-	}
 
 	/**
 	 * Gets whether the tiles just won't load outside the world width (-180 to 180 longitude) instead of repeating.
@@ -235,15 +268,6 @@ public class TileLayerOptions {
 		return this.zIndex;
 	}
 
-	/**
-	 * Gets whether all the tiles that are not visible after panning are removed (for better performance). true by default on mobile WebKit, otherwise false.
-	 * </br>
-	 * default true
-	 * @return the unload invisible tiles
-	 */
-	@JsOverlay public final Boolean getUnloadInvisibleTiles() {
-		return this.unloadInvisibleTiles;
-	}
 
 	/**
 	 * Gets whether the new tiles are loaded during panning, otherwise only after it (for better performance). true by default on mobile WebKit, otherwise false.
@@ -265,15 +289,6 @@ public class TileLayerOptions {
 		return this.detectRetina;
 	}
 
-	/**
-	 * Gets whether all the tiles that are not visible after panning are placed in a reuse queue from which they will be fetched when new tiles become visible (as opposed to dynamically creating new ones).
-	 * </br>
-	 * default false
-	 * @return the reuse tiles
-	 */
-	@JsOverlay public final Boolean getReuseTiles() {
-		return this.reuseTiles;
-	}
 
 	/**
 	 * Gets whether the TileLayer only loads tiles that are in the given geographical bounds.
@@ -287,6 +302,48 @@ public class TileLayerOptions {
 
 
 	
+	public final Number getMinNativeZoom() {
+		return this.minNativeZoom;
+	}
+
+
+
+	public final Boolean getUpdateWhenZooming() {
+		return this.updateWhenZooming;
+	}
+
+
+
+	public final Boolean getUpdateInterval() {
+		return this.updateInterval;
+	}
+
+
+
+	public final Boolean getCrossOrigin() {
+		return this.crossOrigin;
+	}
+
+
+
+	public final String getPane() {
+		return this.pane;
+	}
+
+
+
+	public final String getClassName() {
+		return this.className;
+	}
+
+
+
+	public final Number getKeepBuffer() {
+		return this.keepBuffer;
+	}
+
+
+
 	public static class Builder {
 
 		private Number minZoom = 0;
@@ -305,8 +362,6 @@ public class TileLayerOptions {
 
 		private Boolean tms = false;
 
-		private Boolean continuousWorld = false;
-
 		private Boolean noWrap = false;
 
 		private Number zoomOffset = 0;
@@ -317,15 +372,25 @@ public class TileLayerOptions {
 
 		private Number zIndex = null;
 
-		private Boolean unloadInvisibleTiles = true;
-
 		private Boolean updateWhenIdle = false;
 
 		private Boolean detectRetina = false;
 
-		private Boolean reuseTiles = false;
-
 		private LatLngBounds bounds = null;
+		
+	    private Boolean crossOrigin;
+		
+	    private String pane;
+		
+	    private String className;
+
+	    private Number keepBuffer;
+
+	    private Boolean updateWhenZooming;	 
+		 
+	    private Boolean updateInterval;
+
+	    private Number minNativeZoom;
 
 
 		public Builder() {
@@ -428,17 +493,6 @@ public class TileLayerOptions {
 			return this;
 		}
 
-		/**
-		 * If set to true, the tile coordinates won't be wrapped by world width (-180 to 180 longitude) or clamped to lie within world height (-90 to 90). Use this if you use Leaflet for maps that don't reflect the real world (e.g. game, indoor or photo maps).
-		 * </br>
-		 * default false
-		 * @param continuousWorld the continuous world
-		 * @return the builder
-		 */
-		public Builder continuousWorld(Boolean continuousWorld) {
-			this.continuousWorld = continuousWorld;
-			return this;
-		}
 
 		/**
 		 * If set to true, the tiles just won't load outside the world width (-180 to 180 longitude) instead of repeating.
@@ -499,17 +553,6 @@ public class TileLayerOptions {
 			return this;
 		}
 
-		/**
-		 * If true, all the tiles that are not visible after panning are removed (for better performance). true by default on mobile WebKit, otherwise false.
-		 * </br>
-		 * default true
-		 * @param unloadInvisibleTiles the unload invisible tiles
-		 * @return the builder
-		 */
-		public Builder unloadInvisibleTiles(Boolean unloadInvisibleTiles) {
-			this.unloadInvisibleTiles = unloadInvisibleTiles;
-			return this;
-		}
 
 		/**
 		 * If false, new tiles are loaded during panning, otherwise only after it (for better performance). true by default on mobile WebKit, otherwise false.
@@ -535,17 +578,6 @@ public class TileLayerOptions {
 			return this;
 		}
 
-		/**
-		 * If true, all the tiles that are not visible after panning are placed in a reuse queue from which they will be fetched when new tiles become visible (as opposed to dynamically creating new ones). This will in theory keep memory usage low and eliminate the need for reserving new memory whenever a new tile is needed.
-		 * </br>
-		 * default false
-		 * @param reuseTiles the reuse tiles
-		 * @return the builder
-		 */
-		public Builder reuseTiles(Boolean reuseTiles) {
-			this.reuseTiles = reuseTiles;
-			return this;
-		}
 
 		/**
 		 * When this option is set, the TileLayer only loads tiles that are in the given geographical bounds.
@@ -558,6 +590,20 @@ public class TileLayerOptions {
 			this.bounds = bounds;
 			return this;
 		}
+		
+		public Builder crossOrigin(Boolean crossOrigin){this.crossOrigin = crossOrigin; return this;}
+
+	    public Builder keepBuffer(Number keepBuffer){this.keepBuffer = keepBuffer; return this;}
+
+	    public Builder className(String className){this.className = className; return this;}
+
+	    public Builder pane(String pane){this.pane = pane; return this;}
+
+	    public Builder updateWhenZooming(Boolean updateWhenZooming){this.updateWhenZooming = updateWhenZooming; return this;}
+
+	    public Builder updateInterval(Boolean updateInterval){this.updateInterval = updateInterval; return this;}
+
+	    public Builder minNativeZoom(Number minNativeZoom){this.minNativeZoom = minNativeZoom; return this;}
 		
 		/**
 		 * Builds the TileLayerOptions new instance
@@ -575,17 +621,21 @@ public class TileLayerOptions {
 			options.errorTileUrl = this.errorTileUrl;
 			options.attribution = this.attribution;
 			options.tms = this.tms;
-			options.continuousWorld = this.continuousWorld;
 			options.noWrap = this.noWrap;
 			options.zoomOffset = this.zoomOffset;
 			options.zoomReverse = this.zoomReverse;
 			options.opacity = this.opacity;
 			options.zIndex = this.zIndex;
-			options.unloadInvisibleTiles = this.unloadInvisibleTiles;
 			options.updateWhenIdle = this.updateWhenIdle;
 			options.detectRetina = this.detectRetina;
-			options.reuseTiles = this.reuseTiles;
 			options.bounds = this.bounds;
+			options.crossOrigin = this.crossOrigin;
+			options.pane = this.pane;
+			options.className = this.className;
+			options.keepBuffer = this.keepBuffer;
+			options.updateWhenZooming = this.updateWhenZooming;	 
+			options.updateInterval = this.updateInterval;
+			options.minNativeZoom = this.minNativeZoom;
 			
 			return options;
 			

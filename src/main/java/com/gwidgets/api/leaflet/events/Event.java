@@ -24,7 +24,6 @@ import jsinterop.annotations.JsType;
  * The base event object. All other event objects contain these properties too.
  * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
  */
-@JsType
 public class Event  extends JavaScriptObject {
 	
 	

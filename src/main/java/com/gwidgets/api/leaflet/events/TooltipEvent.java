@@ -14,34 +14,31 @@
  */
 package com.gwidgets.api.leaflet.events;
 
-import com.gwidgets.api.leaflet.Layer;
-import com.gwidgets.api.leaflet.LatLng;
-import com.gwidgets.api.leaflet.LatLngBounds;
-import com.gwidgets.api.leaflet.Point;
-import com.gwidgets.api.leaflet.elemental.DOMMouseEvent;
-
-import jsinterop.annotations.JsType;
+import com.gwidgets.api.leaflet.Tooltip;
 
 
+
+// TODO: Auto-generated Javadoc
 /**
- * The Class LayerEvent.
+ * The Class TooltipEvent.
  * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
  */
-public class LayerEvent extends Event {
+public class TooltipEvent extends Event {
 	
-
-	protected LayerEvent() {
-		// TODO Auto-generated constructor stub
-	}
+	/**
+	 * Instantiates a new tooltip event.
+	 */
+	protected TooltipEvent() {}
 
 
 	/**
-	 * Gets the layer that was added or removed.
+	 * The tooltip that was opened or closed.
 	 *
-	 * @return the layer
+	 * @return the popup
 	 */
-	public final native Layer getLayer() /*-{
-		return this.layer;
+	public final native Tooltip getTooltip() /*-{
+		return this.tooltip;
 	}-*/;
+
 
 }

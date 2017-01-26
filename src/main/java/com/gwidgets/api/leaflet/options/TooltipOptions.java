@@ -50,6 +50,20 @@ public class TooltipOptions {
 
     @JsProperty
 	private Number opacity;	
+    
+    /*****************************************
+	********************************************/
+    @JsProperty
+    private String className;
+	/**********************************************
+	*********************************************/
+    
+    /*****************************************
+	********************************************/
+    @JsProperty
+    private String attribution;
+	/**********************************************
+	*********************************************/
 	
 	
 	private TooltipOptions(){
@@ -123,6 +137,20 @@ public class TooltipOptions {
 
 
 
+	public final String getClassName() {
+		return this.className;
+	}
+
+
+
+	public final String getAttribution() {
+		return this.attribution;
+	}
+
+
+
+
+
 	public static class Builder{
 		
 		private String pane	= "tooltipPane";
@@ -138,6 +166,10 @@ public class TooltipOptions {
 		private  Boolean interactive = false;	
 
 		private  Number opacity	= 0.9;	
+		
+		private String className;
+
+	    private String attribution;
 		
 		
 		public Builder(){
@@ -185,6 +217,10 @@ public class TooltipOptions {
 			 */
 		public Builder opacity(Number opacity){this.opacity = opacity; return this;}
 		
+		public Builder className(String className){this.className = className; return this;}
+		
+		public Builder attribution(String attribution){this.attribution = attribution; return this;}
+		
 		
 		public TooltipOptions build(){
 			TooltipOptions toolTipOptions = new TooltipOptions();
@@ -195,6 +231,8 @@ public class TooltipOptions {
 			toolTipOptions.sticky = this.sticky;
 			toolTipOptions.interactive = this.interactive;
 			toolTipOptions.opacity = this.opacity;
+			toolTipOptions.attribution = this.attribution;
+			toolTipOptions.className = this.className;
 			
 			return toolTipOptions;
 		}

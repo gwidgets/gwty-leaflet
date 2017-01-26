@@ -14,34 +14,26 @@
  */
 package com.gwidgets.api.leaflet.events;
 
-import com.gwidgets.api.leaflet.Layer;
-import com.gwidgets.api.leaflet.LatLng;
-import com.gwidgets.api.leaflet.LatLngBounds;
-import com.gwidgets.api.leaflet.Point;
-import com.gwidgets.api.leaflet.elemental.DOMMouseEvent;
+import com.gwidgets.api.leaflet.elemental.DOMKeyboardEvent;
 
-import jsinterop.annotations.JsType;
 
 
 /**
- * The Class LayerEvent.
+ * The Class KeyboardEvent.
  * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
  */
-public class LayerEvent extends Event {
+public class KeyboardEvent extends Event {
 	
 
-	protected LayerEvent() {
-		// TODO Auto-generated constructor stub
-	}
-
+	protected KeyboardEvent() {}
 
 	/**
-	 * Gets the layer that was added or removed.
+	 * The original Dom KeyboardEvent that triggered this Leaflet event. 
 	 *
-	 * @return the layer
+	 * @return the popup
 	 */
-	public final native Layer getLayer() /*-{
-		return this.layer;
+	public final native DOMKeyboardEvent getOriginalEvent() /*-{
+		return this.originalEvent;
 	}-*/;
 
 }

@@ -21,6 +21,8 @@ import jsinterop.annotations.JsType;
 import static jsinterop.annotations.JsPackage.GLOBAL;
 
 import com.gwidgets.api.leaflet.CRS;
+import com.gwidgets.api.leaflet.LatLngBounds;
+import com.gwidgets.api.leaflet.options.TileLayerOptions.Builder;
 
 /**
  * The Class TileLayerWMSOptions.
@@ -50,6 +52,117 @@ public class TileLayerWMSOptions {
 
 	@JsProperty
 	private CRS crs;
+	
+	
+	/******* Inherited options from TileLayer ****/ 
+	
+    @JsProperty
+	private Number minZoom;
+
+
+	@JsProperty
+	private Number maxZoom;
+
+	@JsProperty
+	private Number maxNativeZoom;
+	
+	/*****************************************
+	********************************************/
+	@JsProperty
+    private Number minNativeZoom;
+	/**********************************************
+	*********************************************/
+
+
+	@JsProperty
+	private String[] subdomains;
+
+	@JsProperty
+	private String errorTileUrl;
+
+
+	@JsProperty
+	private Boolean tms;
+
+
+	@JsProperty
+	private Number zoomOffset;
+
+	@JsProperty
+	private Boolean zoomReverse;
+
+
+	@JsProperty
+	private Boolean detectRetina;
+
+
+	@JsProperty
+    private Boolean crossOrigin;
+	/**********************************************
+	*********************************************/
+	
+
+	@JsProperty
+	private Number tileSize;
+
+	@JsProperty
+	private String attribution;
+
+
+	@JsProperty
+	private Boolean noWrap;
+
+
+	@JsProperty
+	private Number opacity;
+
+	@JsProperty
+	private Number zIndex;
+
+	@JsProperty
+	private Boolean updateWhenIdle;
+	
+	/*****************************************
+	********************************************/
+	 @JsProperty
+     private Boolean updateWhenZooming;
+	/**********************************************
+	*********************************************/
+	 
+	 /*****************************************
+	********************************************/
+	 @JsProperty
+     private Boolean updateInterval;
+	/**********************************************
+	*********************************************/
+
+
+	@JsProperty
+	private LatLngBounds bounds;
+	
+	/*****************************************
+	********************************************/
+	
+	/*****************************************
+	********************************************/
+	@JsProperty
+    private String pane;
+	/**********************************************
+	*********************************************/
+	
+	/*****************************************
+	********************************************/
+	@JsProperty
+    private String className;
+	/**********************************************
+	*********************************************/
+	
+	/*****************************************
+	********************************************/
+	@JsProperty
+    private Number keepBuffer;
+	/**********************************************
+	*********************************************/
 
 	/**
 	 * Gets the Comma-separated WMS layers. </br>
@@ -116,6 +229,98 @@ public class TileLayerWMSOptions {
 		return this.crs;
 	}
 
+	public final Number getMinZoom() {
+		return this.minZoom;
+	}
+
+	public final Number getMaxZoom() {
+		return this.maxZoom;
+	}
+
+	public final Number getMaxNativeZoom() {
+		return this.maxNativeZoom;
+	}
+
+	public final Number getMinNativeZoom() {
+		return this.minNativeZoom;
+	}
+
+	public final String[] getSubdomains() {
+		return this.subdomains;
+	}
+
+	public final String getErrorTileUrl() {
+		return this.errorTileUrl;
+	}
+
+	public final Boolean getTms() {
+		return this.tms;
+	}
+
+	public final Number getZoomOffset() {
+		return this.zoomOffset;
+	}
+
+	public final Boolean getZoomReverse() {
+		return this.zoomReverse;
+	}
+
+	public final Boolean getDetectRetina() {
+		return this.detectRetina;
+	}
+
+	public final Boolean getCrossOrigin() {
+		return this.crossOrigin;
+	}
+
+	public final Number getTileSize() {
+		return this.tileSize;
+	}
+
+	public final String getAttribution() {
+		return this.attribution;
+	}
+
+	public final Boolean getNoWrap() {
+		return this.noWrap;
+	}
+
+	public final Number getOpacity() {
+		return this.opacity;
+	}
+
+	public final Number getzIndex() {
+		return this.zIndex;
+	}
+
+	public final Boolean getUpdateWhenIdle() {
+		return this.updateWhenIdle;
+	}
+
+	public final Boolean getUpdateWhenZooming() {
+		return this.updateWhenZooming;
+	}
+
+	public final Boolean getUpdateInterval() {
+		return this.updateInterval;
+	}
+
+	public final LatLngBounds getBounds() {
+		return this.bounds;
+	}
+
+	public final String getPane() {
+		return this.pane;
+	}
+
+	public final String getClassName() {
+		return this.className;
+	}
+
+	public final Number getKeepBuffer() {
+		return this.keepBuffer;
+	}
+
 	/**
 	 * The Class Builder.
 	 */
@@ -132,6 +337,53 @@ public class TileLayerWMSOptions {
 		private String version = "1.1.1";
 
 		private CRS crs = null;
+		
+		private Number minZoom = 0;
+
+		private Number maxZoom = 18;
+
+		private Number maxNativeZoom = null;
+
+		private Number tileSize = 256;
+
+		private String[] subdomains = { "abc" };
+
+		private String errorTileUrl = "";
+
+		private String attribution = "";
+
+		private Boolean tms = false;
+
+		private Boolean noWrap = false;
+
+		private Number zoomOffset = 0;
+
+		private Boolean zoomReverse = false;
+
+		private Number opacity = 1.0;
+
+		private Number zIndex = null;
+
+		private Boolean updateWhenIdle = false;
+
+		private Boolean detectRetina = false;
+
+		private LatLngBounds bounds = null;
+		
+	    private Boolean crossOrigin;
+		
+	    private String pane;
+		
+	    private String className;
+
+	    private Number keepBuffer;
+
+	    private Boolean updateWhenZooming;	 
+		 
+	    private Boolean updateInterval;
+
+	    private Number minNativeZoom;
+
 
 		/**
 		 * Instantiates a new builder.
@@ -207,6 +459,214 @@ public class TileLayerWMSOptions {
 			this.crs = crs;
 			return this;
 		}
+		
+		/**
+		 * Minimum zoom number.
+		 * </br>
+		 * default 0
+		 * @param minZoom the min zoom
+		 * @return the builder
+		 */
+		public Builder minZoom(Number minZoom) {
+			this.minZoom = minZoom;
+			return this;
+		}
+
+		/**
+		 * Maximum zoom number.
+		 * </br>
+		 * default 18
+		 * @param maxZoom the max zoom
+		 * @return the builder
+		 */
+		public Builder maxZoom(Number maxZoom) {
+			this.maxZoom = maxZoom;
+			return this;
+		}
+
+		/**
+		 * Maximum zoom number the tiles source has available. If it is specified, the tiles on all zoom levels higher than maxNativeZoom will be loaded from maxNativeZoom level and auto-scaled.
+		 * </br>
+		 * default null
+		 * @param maxNativeZoom the max native zoom
+		 * @return the builder
+		 */
+		public Builder maxNativeZoom(Number maxNativeZoom) {
+			this.maxNativeZoom = maxNativeZoom;
+			return this;
+		}
+
+		/**
+		 * Tile size (width and height in pixels, assuming tiles are square).
+		 * </br>
+		 * default 256
+		 * @param tileSize the tile size
+		 * @return the builder
+		 */
+		public Builder tileSize(Number tileSize) {
+			this.tileSize = tileSize;
+			return this;
+		}
+
+		/**
+		 * Subdomains of the tile service. Can be passed in the form of one string (where each letter is a subdomain name) or an array of strings.
+		 * </br>
+		 * default {"abc"}
+		 * @param subdomains the subdomains
+		 * @return the builder
+		 */
+		public Builder subdomains(String[] subdomains) {
+			this.subdomains = subdomains;
+			return this;
+		}
+
+		/**
+		 * URL to the tile image to show in place of the tile that failed to load.
+		 * </br>
+		 * default ""
+		 * @param errorTileUrl the error tile url
+		 * @return the builder
+		 */
+		public Builder errorTileUrl(String errorTileUrl) {
+			this.errorTileUrl = errorTileUrl;
+			return this;
+		}
+
+		/**
+		 * e.g. "© Mapbox" — the string used by the attribution control, describes the layer data.
+		 * </br>
+		 * default ""
+		 * @param attribution the attribution
+		 * @return the builder
+		 */
+		public Builder attribution(String attribution) {
+			this.attribution = attribution;
+			return this;
+		}
+
+		/**
+		 * If true, inverses Y axis numbering for tiles (turn this on for TMS services).
+		 * </br>
+		 * default true
+		 * @param tms the tms
+		 * @return the builder
+		 */
+		public Builder tms(Boolean tms) {
+			this.tms = tms;
+			return this;
+		}
+
+
+		/**
+		 * If set to true, the tiles just won't load outside the world width (-180 to 180 longitude) instead of repeating.
+		 * default false
+		 * @param noWrap the no wrap
+		 * @return the builder
+		 */
+		public Builder noWrap(Boolean noWrap) {
+			this.noWrap = noWrap;
+			return this;
+		}
+
+		/**
+		 * The zoom number used in tile URLs will be offset with this value.
+		 * </br>
+		 * default 0
+		 * @param zoomOffset the zoom offset
+		 * @return the builder
+		 */
+		public Builder zoomOffset(Number zoomOffset) {
+			this.zoomOffset = zoomOffset;
+			return this;
+		}
+
+		/**
+		 * If set to true, the zoom number used in tile URLs will be reversed (maxZoom - zoom instead of zoom).
+		 * </br>
+		 * default false
+		 * @param zoomReverse the zoom reverse
+		 * @return the builder
+		 */
+		public Builder zoomReverse(Boolean zoomReverse) {
+			this.zoomReverse = zoomReverse;
+			return this;
+		}
+
+		/**
+		 * The opacity of the tile layer.
+		 * </br>
+		 * default 1.0
+		 * @param opacity the opacity
+		 * @return the builder
+		 */
+		public Builder opacity(Number opacity) {
+			this.opacity = opacity;
+			return this;
+		}
+
+		/**
+		 * The explicit zIndex of the tile layer. Not set by default.
+		 * </br>
+		 * default null
+		 * @param zIndex the z index
+		 * @return the builder
+		 */
+		public Builder zIndex(Number zIndex) {
+			this.zIndex = zIndex;
+			return this;
+		}
+
+
+		/**
+		 * If false, new tiles are loaded during panning, otherwise only after it (for better performance). true by default on mobile WebKit, otherwise false.
+		 * </br>
+		 * default true
+		 * @param updateWhenIdle the update when idle
+		 * @return the builder
+		 */
+		public Builder updateWhenIdle(Boolean updateWhenIdle) {
+			this.updateWhenIdle = updateWhenIdle;
+			return this;
+		}
+
+		/**
+		 * If true and user is on a retina display, it will request four tiles of half the specified size and a bigger zoom level in place of one to utilize the high resolution.
+		 * </br>
+		 * default false
+		 * @param detectRetina the detect retina
+		 * @return the builder
+		 */
+		public Builder detectRetina(Boolean detectRetina) {
+			this.detectRetina = detectRetina;
+			return this;
+		}
+
+
+		/**
+		 * When this option is set, the TileLayer only loads tiles that are in the given geographical bounds.
+		 * </br>
+		 * default null
+		 * @param bounds the bounds
+		 * @return the builder
+		 */
+		public Builder bounds(LatLngBounds bounds) {
+			this.bounds = bounds;
+			return this;
+		}
+		
+		public Builder crossOrigin(Boolean crossOrigin){this.crossOrigin = crossOrigin; return this;}
+
+	    public Builder keepBuffer(Number keepBuffer){this.keepBuffer = keepBuffer; return this;}
+
+	    public Builder className(String className){this.className = className; return this;}
+
+	    public Builder pane(String pane){this.pane = pane; return this;}
+
+	    public Builder updateWhenZooming(Boolean updateWhenZooming){this.updateWhenZooming = updateWhenZooming; return this;}
+
+	    public Builder updateInterval(Boolean updateInterval){this.updateInterval = updateInterval; return this;}
+
+	    public Builder minNativeZoom(Number minNativeZoom){this.minNativeZoom = minNativeZoom; return this;}
 
 		/**
 		 * Builds the TileLayerWMSOptions new instance
@@ -221,6 +681,29 @@ public class TileLayerWMSOptions {
 			options.transparent = this.transparent;
 			options.version = this.version;
 			options.crs = this.crs;
+			options.minZoom = this.minZoom;
+			options.maxZoom = this.maxZoom;
+			options.maxNativeZoom = this.maxNativeZoom;
+			options.tileSize = this.tileSize;
+			options.subdomains = this.subdomains;
+			options.errorTileUrl = this.errorTileUrl;
+			options.attribution = this.attribution;
+			options.tms = this.tms;
+			options.noWrap = this.noWrap;
+			options.zoomOffset = this.zoomOffset;
+			options.zoomReverse = this.zoomReverse;
+			options.opacity = this.opacity;
+			options.zIndex = this.zIndex;
+			options.updateWhenIdle = this.updateWhenIdle;
+			options.detectRetina = this.detectRetina;
+			options.bounds = this.bounds;
+			options.crossOrigin = this.crossOrigin;
+			options.pane = this.pane;
+			options.className = this.className;
+			options.keepBuffer = this.keepBuffer;
+			options.updateWhenZooming = this.updateWhenZooming;	 
+			options.updateInterval = this.updateInterval;
+			options.minNativeZoom = this.minNativeZoom;
 
 			return options;
 

@@ -24,7 +24,7 @@ import jsinterop.annotations.JsType;
  * The Class ResizeEvent.
  * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
  */
-@JsType
+
 public class ResizeEvent extends Event {
 	
 	/**

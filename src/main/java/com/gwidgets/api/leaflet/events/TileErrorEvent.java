@@ -14,6 +14,7 @@
  */
 package com.gwidgets.api.leaflet.events;
 
+import com.gwidgets.api.leaflet.Point;
 import com.gwidgets.api.leaflet.elemental.HTMLElement;
 
 
@@ -38,12 +39,12 @@ public class TileErrorEvent extends Event {
 	}-*/;
 
 	/**
-	 * Gets the src attribute of the tile element.
+	 * Point object with tile's x, y, and z (zoom level) coordinates. 
 	 *
-	 * @return the url
+	 * @return the coords
 	 */
-	public native String getURL()/*-{
-		return this.url;
+	public final native Point getCoords() /*-{
+		return this.coords;
 	}-*/;
 
 }
