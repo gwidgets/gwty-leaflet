@@ -406,5 +406,16 @@ Note that points you pass when creating a polygon shouldn't have an additional l
 
 
 	}
+	
+	
+	@JsType(isNative = true)
+	public static class CRS{
+
+		
+
+		
+
+
+	}
 
 }

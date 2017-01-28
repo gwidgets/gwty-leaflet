@@ -302,43 +302,43 @@ public class TileLayerOptions {
 
 
 	
-	public final Number getMinNativeZoom() {
+	@JsOverlay public final Number getMinNativeZoom() {
 		return this.minNativeZoom;
 	}
 
 
 
-	public final Boolean getUpdateWhenZooming() {
+	@JsOverlay public final Boolean getUpdateWhenZooming() {
 		return this.updateWhenZooming;
 	}
 
 
 
-	public final Boolean getUpdateInterval() {
+	@JsOverlay public final Boolean getUpdateInterval() {
 		return this.updateInterval;
 	}
 
 
 
-	public final Boolean getCrossOrigin() {
+	@JsOverlay public final Boolean getCrossOrigin() {
 		return this.crossOrigin;
 	}
 
 
 
-	public final String getPane() {
+	@JsOverlay public final String getPane() {
 		return this.pane;
 	}
 
 
 
-	public final String getClassName() {
+	@JsOverlay public final String getClassName() {
 		return this.className;
 	}
 
 
 
-	public final Number getKeepBuffer() {
+	@JsOverlay public final Number getKeepBuffer() {
 		return this.keepBuffer;
 	}
 

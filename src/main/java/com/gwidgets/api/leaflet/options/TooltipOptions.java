@@ -137,12 +137,13 @@ public class TooltipOptions {
 
 
 
+	@JsOverlay
 	public final String getClassName() {
 		return this.className;
 	}
 
 
-
+	@JsOverlay
 	public final String getAttribution() {
 		return this.attribution;
 	}

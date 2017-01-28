@@ -117,18 +117,22 @@ public class FitBoundsOptions {
 		return this.padding;
 	}
 
+	@JsOverlay
 	public final Boolean getAnimate() {
 		return this.animate;
 	}
 
+	@JsOverlay
 	public final Number getDuration() {
 		return this.duration;
 	}
-
+	
+	@JsOverlay
 	public final Number getEaseLinearity() {
 		return this.easeLinearity;
 	}
 
+	@JsOverlay
 	public final Boolean getNoMoveStart() {
 		return this.noMoveStart;
 	}

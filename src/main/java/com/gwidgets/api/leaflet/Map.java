@@ -33,14 +33,11 @@ import com.gwidgets.api.leaflet.options.ZoomPanOptions;
 
 // TODO: Auto-generated Javadoc
 /**
- * The central class of the API — it is used to create a map on a page and manipulate it.
+ * The central class of the API. it is used to create a map on a page and manipulate it.
  * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
  */
 @JsType(isNative = true)
 public class Map implements Evented {
-	
-	
-	
 	
 		/** Box (shift-drag with mouse) zoom handler.
 		 */

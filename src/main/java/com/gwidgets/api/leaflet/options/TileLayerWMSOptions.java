@@ -229,94 +229,117 @@ public class TileLayerWMSOptions {
 		return this.crs;
 	}
 
+	@JsOverlay
 	public final Number getMinZoom() {
 		return this.minZoom;
 	}
 
+	@JsOverlay
 	public final Number getMaxZoom() {
 		return this.maxZoom;
 	}
 
+	@JsOverlay
 	public final Number getMaxNativeZoom() {
 		return this.maxNativeZoom;
 	}
 
+	@JsOverlay
 	public final Number getMinNativeZoom() {
 		return this.minNativeZoom;
 	}
 
+	@JsOverlay
 	public final String[] getSubdomains() {
 		return this.subdomains;
 	}
 
+	@JsOverlay
 	public final String getErrorTileUrl() {
 		return this.errorTileUrl;
 	}
-
+	
+	@JsOverlay
 	public final Boolean getTms() {
 		return this.tms;
 	}
 
+	@JsOverlay
 	public final Number getZoomOffset() {
 		return this.zoomOffset;
 	}
 
+	@JsOverlay
 	public final Boolean getZoomReverse() {
 		return this.zoomReverse;
 	}
 
+	@JsOverlay
 	public final Boolean getDetectRetina() {
 		return this.detectRetina;
 	}
 
+	@JsOverlay
 	public final Boolean getCrossOrigin() {
 		return this.crossOrigin;
 	}
 
+	@JsOverlay
 	public final Number getTileSize() {
 		return this.tileSize;
 	}
 
+	@JsOverlay
 	public final String getAttribution() {
 		return this.attribution;
 	}
 
+	@JsOverlay
 	public final Boolean getNoWrap() {
 		return this.noWrap;
 	}
 
+	@JsOverlay
 	public final Number getOpacity() {
 		return this.opacity;
 	}
 
+	@JsOverlay
 	public final Number getzIndex() {
 		return this.zIndex;
 	}
 
+	@JsOverlay
 	public final Boolean getUpdateWhenIdle() {
 		return this.updateWhenIdle;
 	}
 
+	@JsOverlay
 	public final Boolean getUpdateWhenZooming() {
 		return this.updateWhenZooming;
 	}
 
+	@JsOverlay
 	public final Boolean getUpdateInterval() {
 		return this.updateInterval;
 	}
 
+	@JsOverlay
 	public final LatLngBounds getBounds() {
 		return this.bounds;
 	}
 
+	@JsOverlay
 	public final String getPane() {
 		return this.pane;
 	}
 
+	@JsOverlay
 	public final String getClassName() {
 		return this.className;
 	}
 
+	@JsOverlay
 	public final Number getKeepBuffer() {
 		return this.keepBuffer;
 	}
