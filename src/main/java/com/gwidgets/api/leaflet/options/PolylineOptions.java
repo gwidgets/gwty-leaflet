@@ -195,17 +195,7 @@ public class PolylineOptions extends PathOptions {
 		return this.lineJoin;
 	}
 
-	/**
-	 * Gets whether the the vector will not emit mouse events and will act as a
-	 * part of the underlying map. </br>
-	 * default true
-	 * 
-	 * @return the clickable
-	 */
-	@JsOverlay
-	public final Boolean getClickable_() {
-		return this.clickable;
-	}
+
 
 	/**
 	 * Gets the pointer-events attribute on the path if SVG backend is used.
@@ -257,8 +247,6 @@ public class PolylineOptions extends PathOptions {
 
 		private String lineJoin = null;
 
-		private Boolean clickable = true;
-
 		private String pointerEvents = null;
 
 		private String className = "";
@@ -280,7 +268,7 @@ public class PolylineOptions extends PathOptions {
 		 *            the smooth factor
 		 * @return the builder
 		 */
-		private Builder smoothFactor(Number smoothFactor) {
+		public Builder smoothFactor(Number smoothFactor) {
 			this.smoothFactor = smoothFactor;
 			return this;
 		}
@@ -293,7 +281,7 @@ public class PolylineOptions extends PathOptions {
 		 *            the no clip
 		 * @return the builder
 		 */
-		private Builder noClip(Boolean noClip) {
+		public Builder noClip(Boolean noClip) {
 			this.noClip = noClip;
 			return this;
 		}
@@ -453,20 +441,6 @@ public class PolylineOptions extends PathOptions {
 		}
 
 		/**
-		 * If false, the vector will not emit mouse events and will act as a
-		 * part of the underlying map. </br>
-		 * default true
-		 * 
-		 * @param clickable
-		 *            the clickable
-		 * @return the builder
-		 */
-		public Builder clickable(Boolean clickable) {
-			this.clickable = clickable;
-			return this;
-		}
-
-		/**
 		 * Sets the pointer-events attribute on the path if SVG backend is used.
 		 * </br>
 		 * default null
@@ -513,7 +487,6 @@ public class PolylineOptions extends PathOptions {
 			options.dashArray = this.dashArray;
 			options.lineCap = this.lineCap;
 			options.lineJoin = this.lineJoin;
-			options.clickable = this.clickable;
 			options.pointerEvents = this.pointerEvents;
 			options.className = this.className;
 

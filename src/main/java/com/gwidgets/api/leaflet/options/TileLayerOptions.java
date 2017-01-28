@@ -198,7 +198,7 @@ public class TileLayerOptions {
 	}
 
 	/**
-	 * Gets e.g. "© Mapbox" — the string used by the attribution control, describes the layer data.
+	 * Gets the string used by the attribution control, describes the layer data.
 	 * </br>
 	 * default ""
 	 * @return the attribution
@@ -470,7 +470,7 @@ public class TileLayerOptions {
 		}
 
 		/**
-		 * e.g. "© Mapbox" — the string used by the attribution control, describes the layer data.
+		 *the string used by the attribution control, describes the layer data.
 		 * </br>
 		 * default ""
 		 * @param attribution the attribution

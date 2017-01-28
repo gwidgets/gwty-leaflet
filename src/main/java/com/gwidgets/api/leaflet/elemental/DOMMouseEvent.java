@@ -3,6 +3,7 @@ package com.gwidgets.api.leaflet.elemental;
 import static jsinterop.annotations.JsPackage.GLOBAL;
 
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
@@ -11,34 +12,87 @@ import jsinterop.annotations.JsType;
 public class DOMMouseEvent {
 	
 	@JsProperty
-	public int screenX;
+	private int screenX;
 
 	@JsProperty
-	public int screenY;
+	private int screenY;
 
 	@JsProperty
-	public int clientX;
+	private int clientX;
 
 	@JsProperty
-	public int clientY;
+	private int clientY;
 
 	@JsProperty
-	public Boolean ctrlKey;
+	private Boolean ctrlKey;
 
 	@JsProperty
-	public Boolean shiftKey;
+	private Boolean shiftKey;
 
 	@JsProperty
-	public Boolean altKey;
+	private Boolean altKey;
 
 	@JsProperty
-	public Boolean metaKey;
+	private Boolean metaKey;
 
 	@JsProperty
-	public short button;
+	private short button;
 	
-	
-   @JsMethod
-	public native void initMouseEvent();
+	@JsOverlay
+	public final int getScreenX() {
+		return this.screenX;
+	}
+
+
+	@JsOverlay
+	public final int getScreenY() {
+		return this.screenY;
+	}
+
+
+	@JsOverlay
+	public final int getClientX() {
+		return this.clientX;
+	}
+
+
+	@JsOverlay
+	public final int getClientY() {
+		return this.clientY;
+	}
+
+
+	@JsOverlay
+	public final Boolean getCtrlKey() {
+		return this.ctrlKey;
+	}
+
+
+	@JsOverlay
+	public final Boolean getShiftKey() {
+		return this.shiftKey;
+	}
+
+
+	@JsOverlay
+	public final Boolean getAltKey() {
+		return this.altKey;
+	}
+
+
+	@JsOverlay
+	public final Boolean getMetaKey() {
+		return this.metaKey;
+	}
+
+
+	@JsOverlay
+	public final short getButton() {
+		return this.button;
+	}
+
+
+	@JsMethod
+	public native Boolean getModifierState();
 
 }

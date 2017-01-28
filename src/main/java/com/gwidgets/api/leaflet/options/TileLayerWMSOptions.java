@@ -533,7 +533,7 @@ public class TileLayerWMSOptions {
 		}
 
 		/**
-		 * e.g. "© Mapbox" — the string used by the attribution control, describes the layer data.
+		 * the string used by the attribution control, describes the layer data.
 		 * </br>
 		 * default ""
 		 * @param attribution the attribution

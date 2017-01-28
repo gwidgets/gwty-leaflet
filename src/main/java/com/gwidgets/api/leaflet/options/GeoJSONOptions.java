@@ -68,7 +68,7 @@ public interface GeoJSONOptions {
 	public Function filter(JavaScriptObject featureData, Layer layer);
 
 	/**
-	 * Function that will be used for converting GeoJSON coordinates to LatLng points (if not specified, coords will be assumed to be WGS84 — standard [longitude, latitude] values in degrees).
+	 * Function that will be used for converting GeoJSON coordinates to LatLng points (if not specified, coords will be assumed to be WGS84 standard [longitude, latitude] values in degrees).
 	 *
 	 * @param coords the coords
 	 * @return the function
