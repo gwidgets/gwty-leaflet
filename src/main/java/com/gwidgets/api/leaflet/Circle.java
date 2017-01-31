@@ -1,6 +1,5 @@
 package com.gwidgets.api.leaflet;
 
-import com.google.gwt.core.client.JavaScriptObject;
 import com.gwidgets.api.leaflet.elemental.Function;
 import com.gwidgets.api.leaflet.elemental.HTMLElement;
 import com.gwidgets.api.leaflet.options.PopupOptions;
@@ -27,56 +26,25 @@ import jsinterop.annotations.JsType;
  * A class for drawing circle overlays on a map. Extends Path. Use addLayer method of the Map class to add it to the map.
  */
 @JsType(isNative = true)
-public class Circle extends Path implements Layer, Evented {
+public class Circle extends CircleMarker implements Layer, Evented {
 	
 	
 	
 
 	protected Circle() {
+		super();
 		
 	}
 
-	/**
-	 * Returns the current geographical position of the circle.
-	 *
-	 * @return the lat lng 
-	 */
-	@JsMethod
-	public native LatLng getLatLng();
 
-	/**
-	 * Returns the current radius of a circle. Units are in meters.
-	 *
-	 * @return the radius
-	 */
-	@JsMethod
-	public native Number getRadius();
 
-	/**
-	 * Sets the position of a circle to a new location.
-	 *
-	 * @param latlng the latlng
-	 * @return the L class
-	 */
-	@JsMethod
-	public native L setLatLng(LatLng latlng);
+	
 
-	/**
-	 * Sets the radius of a circle. Units are in meters.
-	 *
-	 * @param radius the radius
-	 * @return the L class
-	 */
-	@JsMethod
-	public native L setRadius(Number radius);
+	
 
-	/**
-	 * Returns a GeoJSON representation of the circle (GeoJSON Point Feature).
-	 *
-	 * @return the object
-	 */
-	@JsMethod
-	public native JavaScriptObject toGeoJSON();
+	
+
+	
 	
 	/* (non-Javadoc)
 	 * @see com.gwidgets.api.leaflet.Layer#bindPopup(com.gwidgets.api.leaflet.elemental.HTMLElement, com.gwidgets.api.leaflet.options.PopupOptions)

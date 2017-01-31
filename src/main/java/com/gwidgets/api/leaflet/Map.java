@@ -108,6 +108,9 @@ public class Map implements Evented {
 	 */
 	@JsMethod
 	public native L zoomIn(Number delta, ZoomOptions options);
+	
+	@JsMethod
+	public native L zoomIn(Number delta);
 
 	/**
 	 * Decreases the zoom of the map by delta (1 by default).

@@ -2,6 +2,7 @@ package com.gwidgets.api.leaflet;
 
 import com.google.gwt.core.client.JavaScriptObject;
 import com.gwidgets.api.leaflet.elemental.HTMLElement;
+import com.gwidgets.api.leaflet.options.CircleOptions;
 import com.gwidgets.api.leaflet.options.ControlAttributionOptions;
 import com.gwidgets.api.leaflet.options.ControlLayersOptions;
 import com.gwidgets.api.leaflet.options.ControlOptions;
@@ -149,12 +150,11 @@ Note that points you pass when creating a polygon shouldn't have an additional l
 	 * A class for drawing circle overlays on a map. Extends Path. Use addLayer() method of the Map object to add it to the map.
 	 *
 	 * @param latlng the latlng of the circle on the map
-	 * @param radius the radius of the map
 	 * @param options the Circle options
 	 * @return a new Circle object
-	 */
-	public static native Circle circle(LatLng latlng, Number radius,
-			PathOptions options);
+	 */	
+	public static native Circle circle(LatLng latlng,  
+			CircleOptions options);
 
 	/**
 	 * A circle of a fixed size with radius specified in pixels. Extends Circle. Use addLayer() method of the Map object to add it to the map.
@@ -164,7 +164,7 @@ Note that points you pass when creating a polygon shouldn't have an additional l
 	 * @return a new CircleMarker object
 	 */
 	public static native CircleMarker circleMarker(LatLng latlng,
-			PathOptions options);
+			CircleOptions options);
 
 	/**
 	 * Used to group several layers and handle them as one. If you add it to the map, any layers added or removed from the group will be added/removed on the map as well. Implements ILayer interface.

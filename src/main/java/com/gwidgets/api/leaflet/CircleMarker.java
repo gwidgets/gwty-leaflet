@@ -26,32 +26,56 @@ import jsinterop.annotations.JsType;
  * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
  */
 @JsType(isNative = true)
-public class CircleMarker extends Circle {
+public class CircleMarker extends Path {
 	
 	
 
 	
-	private CircleMarker() {
+	protected CircleMarker() {
 		
 	}
 
 
-	/* (non-Javadoc)
-	 * @see com.gwidgets.api.leaflet.Circle#setLatLng(com.gwidgets.api.leaflet.LatLng)
+	/**
+	 * Sets the position of a circle to a new location.
+	 *
+	 * @param latlng the latlng
+	 * @return the L class
 	 */
 	@JsMethod
 	public native L setLatLng(LatLng latlng);
+	
+	/**
+	 * Returns the current geographical position of the circle.
+	 *
+	 * @return the lat lng 
+	 */
+	@JsMethod
+	public native LatLng getLatLng();
 
 	
-	/* (non-Javadoc)
-	 * @see com.gwidgets.api.leaflet.Circle#setRadius(java.lang.Number)
+	/**
+	 * Sets the radius of a circle. Units are in meters.
+	 *
+	 * @param radius the radius
+	 * @return the L class
 	 */
 	@JsMethod
 	public native L setRadius(Number radius);
+	
+	/**
+	 * Returns the current radius of a circle. Units are in meters.
+	 *
+	 * @return the radius
+	 */
+	@JsMethod
+	public native Number getRadius();
 
 	
-	/* (non-Javadoc)
-	 * @see com.gwidgets.api.leaflet.Circle#toGeoJSON()
+	/**
+	 * Returns a GeoJSON representation of the circle (GeoJSON Point Feature).
+	 *
+	 * @return the object
 	 */
 	@JsMethod
 	public native JavaScriptObject toGeoJSON();
