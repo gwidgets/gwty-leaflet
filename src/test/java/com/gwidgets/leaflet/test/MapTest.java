@@ -12,10 +12,6 @@ public class MapTest extends GwtyLeafletTestCase {
 	
 	
 	
-	
-	
-
-	
 	public void testMapCreateWithId(){
 		
 		InjectedLeafletResources.whenReady(new Function(){
@@ -97,7 +93,7 @@ public class MapTest extends GwtyLeafletTestCase {
 				    assertEquals(map.getMinZoom().toString(), "7");
      				assertEquals(map.getMaxZoom().toString(), "20");
      				
-     				//Zoom In/Zoom Out has weird behavior
+     				//Zoom In/Zoom Out has weird behavior *** Fails
 					
 					return null;
 			}

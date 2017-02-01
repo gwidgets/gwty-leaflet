@@ -14,13 +14,13 @@
  */
 package com.gwidgets.api.leaflet.events;
 
-public class EventTypes {
+public class Types {
 
-	private EventTypes() {
+	private Types() {
 
 	}
 
-	public static class Map {
+	public static class MapEvents {
 		public static final String BASELAYERCHANGE = "baselayerchange";
 		public static final String OVERLAYADD = "overlayadd";
 		public static final String OVERLAYREMOVE = "overlayremove";
@@ -57,7 +57,7 @@ public class EventTypes {
 		public static final String LOCATIONFOUND = "locationfound";
 	}
 
-	public static class Marker {
+	public static class MarkerEvents {
 		public static final String MOVE = "move";
 		public static final String DRAGSTART = "dragstart";
 		public static final String MOVESTART = "movestart";
@@ -78,7 +78,7 @@ public class EventTypes {
 		public static final String TOOLTIPCLOSE = "tooltipclose";
 	}
 
-	public static class Popup {
+	public static class PopupEvents {
 		public static final String ADD = "add";
 		public static final String REMOVE = "remove";
 		public static final String POPUPOPEN = "popupopen";
@@ -87,7 +87,7 @@ public class EventTypes {
 		public static final String TOOLTIPCLOSE = "tooltipclose";
 	}
 
-	public static class Tooltip {
+	public static class TooltipEvents {
 		public static final String ADD = "add";
 		public static final String REMOVE = "remove";
 		public static final String POPUPOPEN = "popupopen";
@@ -96,7 +96,7 @@ public class EventTypes {
 		public static final String TOOLTIPCLOSE = "tooltipclose";
 	}
 
-	public static class TileLayer {
+	public static class TileLayerEvents {
 		public static final String LOADING = "loading";
 		public static final String TILEUNLOAD = "tileunload";
 		public static final String TILELOADSTART = "tileloadstart";
@@ -111,7 +111,7 @@ public class EventTypes {
 		public static final String TOOLTIPCLOSE = "tooltipclose";
 	}
 
-	public static class TileLayerWMS {
+	public static class TileLayerWMSEvents {
 		public static final String LOADING = "loading";
 		public static final String TILEUNLOAD = "tileunload";
 		public static final String TILELOADSTART = "tileloadstart";
@@ -126,7 +126,7 @@ public class EventTypes {
 		public static final String TOOLTIPCLOSE = "tooltipclose";
 	}
 
-	public static class ImageOverlay {
+	public static class ImageOverlayEvents {
 		public static final String CLICK = "click";
 		public static final String DBLCLICK = "dblclick";
 		public static final String MOUSEDOWN = "mousedown";
@@ -141,7 +141,7 @@ public class EventTypes {
 		public static final String TOOLTIPCLOSE = "tooltipclose";
 	}
 
-	public static class Path {
+	public static class PathEvents {
 		public static final String CLICK = "click";
 		public static final String DBLCLICK = "dblclick";
 		public static final String MOUSEDOWN = "mousedown";
@@ -156,7 +156,7 @@ public class EventTypes {
 		public static final String TOOLTIPCLOSE = "tooltipclose";
 	}
 
-	public static class Polyline {
+	public static class PolylineEvents {
 		public static final String CLICK = "click";
 		public static final String DBLCLICK = "dblclick";
 		public static final String MOUSEDOWN = "mousedown";
@@ -171,7 +171,7 @@ public class EventTypes {
 		public static final String TOOLTIPCLOSE = "tooltipclose";
 	}
 
-	public static class Polygon {
+	public static class PolygonEvents {
 		public static final String CLICK = "click";
 		public static final String DBLCLICK = "dblclick";
 		public static final String MOUSEDOWN = "mousedown";
@@ -186,7 +186,7 @@ public class EventTypes {
 		public static final String TOOLTIPCLOSE = "tooltipclose";
 	}
 
-	public static class Rectangle {
+	public static class RectangleEvents {
 		public static final String CLICK = "click";
 		public static final String DBLCLICK = "dblclick";
 		public static final String MOUSEDOWN = "mousedown";
@@ -201,7 +201,7 @@ public class EventTypes {
 		public static final String TOOLTIPCLOSE = "tooltipclose";
 	}
 
-	public static class Circle {
+	public static class CircleEvents {
 		public static final String CLICK = "click";
 		public static final String DBLCLICK = "dblclick";
 		public static final String MOUSEDOWN = "mousedown";
@@ -216,7 +216,7 @@ public class EventTypes {
 		public static final String TOOLTIPCLOSE = "tooltipclose";
 	}
 
-	public static class CircleMaker {
+	public static class CircleMakerEvents {
 		public static final String CLICK = "click";
 		public static final String DBLCLICK = "dblclick";
 		public static final String MOUSEDOWN = "mousedown";
@@ -231,7 +231,7 @@ public class EventTypes {
 		public static final String TOOLTIPCLOSE = "tooltipclose";
 	}
 
-	public static class SVG {
+	public static class SVGEvents {
 		public static final String UPDATE = "update";
 		public static final String ADD = "add";
 		public static final String REMOVE = "remove";
@@ -241,7 +241,7 @@ public class EventTypes {
 		public static final String TOOLTIPCLOSE = "tooltipclose";
 	}
 
-	public static class Canvas {
+	public static class CanvasEvents {
 		public static final String UPDATE = "update";
 		public static final String ADD = "add";
 		public static final String REMOVE = "remove";
@@ -251,7 +251,7 @@ public class EventTypes {
 		public static final String TOOLTIPCLOSE = "tooltipclose";
 	}
 
-	public static class LayerGroup {
+	public static class LayerGroupEvents {
 		public static final String ADD = "add";
 		public static final String REMOVE = "remove";
 		public static final String POPUPOPEN = "popupopen";
@@ -260,7 +260,7 @@ public class EventTypes {
 		public static final String TOOLTIPCLOSE = "tooltipclose";
 	}
 
-	public static class FeatureGroup {
+	public static class FeatureGroupEvents {
 		public static final String LAYERADD = "layeradd";
 		public static final String LAYERREMOVE = "layerremove";
 		public static final String ADD = "add";
@@ -271,7 +271,7 @@ public class EventTypes {
 		public static final String TOOLTIPCLOSE = "tooltipclose";
 	}
 
-	public static class GeoJson {
+	public static class GeoJsonEvents {
 		public static final String LAYERADD = "layeradd";
 		public static final String LAYERREMOVE = "layerremove";
 		public static final String ADD = "add";
@@ -282,7 +282,7 @@ public class EventTypes {
 		public static final String TOOLTIPCLOSE = "tooltipclose";
 	}
 
-	public static class GridLayer {
+	public static class GridLayerEvents {
 		public static final String LOADING = "loading";
 		public static final String TILEUNLOAD = "tileunload";
 		public static final String TILELOADSTART = "tileloadstart";
@@ -297,7 +297,7 @@ public class EventTypes {
 		public static final String TOOLTIPCLOSE = "tooltipclose";
 	}
 
-	public static class Icon {
+	public static class IconEvents {
 		public static final String ADD = "add";
 		public static final String REMOVE = "remove";
 		public static final String POPUPOPEN = "popupopen";
@@ -306,7 +306,7 @@ public class EventTypes {
 		public static final String TOOLTIPCLOSE = "tooltipclose";
 	}
 
-	public static class DivIcon {
+	public static class DivIconEvents {
 		public static final String ADD = "add";
 		public static final String REMOVE = "remove";
 		public static final String POPUPOPEN = "popupopen";
@@ -315,21 +315,14 @@ public class EventTypes {
 		public static final String TOOLTIPCLOSE = "tooltipclose";
 	}
 
-	public static class PosAnimation {
+	public static class PosAnimationEvents {
 		public static final String START = "start";
 		public static final String STEP = "step";
 		public static final String END = "end";
 	}
 
-	public static class Draggable {
-		public static final String DOWN = "down";
-		public static final String DRAGSTART = "dragstart";
-		public static final String PREDRAG = "predrag";
-		public static final String DRAG = "drag";
-		public static final String DRAGEND = "dragend";
-	}
 
-	public static class Layer {
+	public static class LayerEvents {
 		public static final String ADD = "add";
 		public static final String REMOVE = "remove";
 		public static final String POPUPOPEN = "popupopen";
@@ -338,7 +331,7 @@ public class EventTypes {
 		public static final String TOOLTIPCLOSE = "tooltipclose";
 	}
 
-	public static class InteractiveLayer {
+	public static class InteractiveLayerEvents {
 		public static final String CLICK = "click";
 		public static final String DBLCLICK = "dblclick";
 		public static final String MOUSEDOWN = "mousedown";
@@ -353,7 +346,7 @@ public class EventTypes {
 		public static final String TOOLTIPCLOSE = "tooltipclose";
 	}
 
-	public static class Renderer {
+	public static class RendererEvents {
 		public static final String UPDATE = "update";
 		public static final String ADD = "add";
 		public static final String REMOVE = "remove";
@@ -363,7 +356,7 @@ public class EventTypes {
 		public static final String TOOLTIPCLOSE = "tooltipclose";
 	}
 
-	public static class DivOverlay {
+	public static class DivOverlayEvents {
 		public static final String ADD = "add";
 		public static final String REMOVE = "remove";
 		public static final String POPUPOPEN = "popupopen";

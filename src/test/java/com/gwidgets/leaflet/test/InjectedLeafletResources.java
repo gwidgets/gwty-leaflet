@@ -13,11 +13,11 @@ public class InjectedLeafletResources {
 	public static void whenReady(Function function){
 		
 		HTMLScriptElement leafletScript = (HTMLScriptElement) Document.createElement("script");
-		leafletScript.src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js";
+		leafletScript.src="https://unpkg.com/leaflet@1.0.0/dist/leaflet.js";
 		leafletScript.type="text/javascript";
 		
 		HTMLLinkElement leafletStyle = (HTMLLinkElement) Document.createElement("link");
-		leafletStyle.href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css";
+		leafletStyle.href="https://unpkg.com/leaflet@1.0.0/dist/leaflet.css";
 		leafletStyle.rel="stylesheet";
 		
 		

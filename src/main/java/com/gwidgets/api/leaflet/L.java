@@ -23,6 +23,8 @@ import com.gwidgets.api.leaflet.options.TileLayerOptions;
 import com.gwidgets.api.leaflet.options.TileLayerWMSOptions;
 import com.gwidgets.api.leaflet.options.TooltipOptions;
 
+import jsinterop.annotations.JsConstructor;
+
 /**
  *  Copyright 2016 G-Widgets
  *  Licensed under the Apache License, Version 2.0 (the "License");
@@ -40,6 +42,7 @@ import com.gwidgets.api.leaflet.options.TooltipOptions;
 
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsPackage;
+import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 
@@ -119,7 +122,7 @@ public class L {
 	 * @param options the Polyline options
 	 * @return a new Polyline object
 	 */
-	public static native Polyline polyline(LatLng[] latlngs,
+	public static native Polyline polyline(LatLng[][] latlngs,
 			PolylineOptions options);
 
 
@@ -132,7 +135,7 @@ Note that points you pass when creating a polygon shouldn't have an additional l
 	 * @param options the Polygon options
 	 * @return a new MultiPolyline object
 	 */
-	public static native Polygon polygon(LatLng[] latlngs,
+	public static native Polygon polygon(LatLng[][] latlngs,
 			PolylineOptions options);
 
 
@@ -282,7 +285,8 @@ Note that points you pass when creating a polygon shouldn't have an additional l
 	 *
 	 * @return the version
 	 */
-	public static native String version();
+	@JsProperty
+	public static String version;
 	
 	
 	
@@ -412,6 +416,43 @@ Note that points you pass when creating a polygon shouldn't have an additional l
 	public static class CRS{
 
 		
+
+		
+
+
+	}
+	
+	
+	@JsType(isNative = true)
+	public static class Transformation{
+		
+		@JsConstructor
+		public Transformation(Number a, Number b,
+				Number c, Number d){
+			
+			
+		}
+
+		/**
+		 * Returns a transformed point, optionally multiplied by the given scale. Only accepts real L.Point instances, not arrays.
+		 *
+		 * @param point the point
+		 * @param scale the scale
+		 * @return the transformed point
+		 */
+		@JsMethod
+		public native Point transform(Point point, Number scale);
+
+		/**
+		 * Returns the reverse transformation of the given point, optionally divided by the given scale. Only accepts real L.Point instances, not arrays.
+		 *
+		 * @param point the point
+		 * @param scale the scale
+		 * @return the untransformed point
+		 */
+		@JsMethod
+		public native Point untransform(Point point, Number scale);
+
 
 		
 

@@ -11,8 +11,9 @@ public class GwtyLeafletTestSuite extends GWTTestSuite {
 	        TestSuite suite = new TestSuite("gwty-leaflet tests");
 //	        suite.addTestSuite(MapTest.class); 
 //	        suite.addTestSuite(MarkerTest.class);
-	        suite.addTestSuite(PathTest.class);
-//	        suite.addTestSuite(VersionTest.class);
+	    //    suite.addTestSuite(PathTest.class);
+	        suite.addTestSuite(VersionTest.class);
+	        suite.addTestSuite(TransformationTest.class);
 	        
 	        return suite;
 	 }

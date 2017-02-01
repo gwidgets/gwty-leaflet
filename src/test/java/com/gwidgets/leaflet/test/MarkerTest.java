@@ -30,8 +30,6 @@ public class MarkerTest extends GwtyLeafletTestCase{
 					assertEquals(marker.getLatLng().lat, 52.51);
 					assertEquals(marker.getLatLng().lng, 13.40);
 					
-					//assertEquals(com.gwidgets.api.leaflet.events.EventTy);
-					
 					return null;
 			}
 		});
