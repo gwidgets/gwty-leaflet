@@ -8,6 +8,8 @@
 
 	<properties>
 		<gwtVersion>2.8.0</gwtVersion>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.source>1.8</maven.compiler.source>
 	</properties>
 
 	<developers>
@@ -39,6 +41,18 @@
       <version>${gwtVersion}</version>
       <scope>provided</scope>
     </dependency>
+    <dependency>
+       <groupId>com.google.gwt</groupId>
+        <artifactId>gwt-dev</artifactId>
+        <version>${gwtVersion}</version>
+      <scope>provided</scope>
+        </dependency>
+      <dependency>
+		<groupId>junit</groupId>
+		<artifactId>junit</artifactId>
+		<version>4.12</version>
+		<scope>test</scope>
+	</dependency>
 	</dependencies>
 
 	<build>
@@ -46,6 +60,9 @@
 			<resource>
 				<directory>src/main/java</directory>
 				<filtering>true</filtering>
+			</resource>
+			<resource>
+				<directory>src/test/resources</directory>
 			</resource>
 		</resources>
 		<plugins>
