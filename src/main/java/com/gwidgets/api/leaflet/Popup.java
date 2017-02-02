@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
  * Used to open popups in certain places of the map. Use openPopup of the Map class to open popups while making sure that only one popup is open at one time (recommended for usability), or use of addLayer method of the Map class to open as many as you want.
  */
 @JsType(isNative = true)
-public class Popup implements Layer, Evented {
+public class Popup extends DivOverlay implements Layer, Evented{
 
 
 	/**
@@ -110,6 +110,7 @@ public class Popup implements Layer, Evented {
 	 */
 	@JsMethod
 	public native L getLatLng();
+	
 	
 	/* (non-Javadoc)
 	 * @see com.gwidgets.api.leaflet.Layer#bindPopup(com.gwidgets.api.leaflet.elemental.HTMLElement, com.gwidgets.api.leaflet.options.PopupOptions)
@@ -277,7 +278,10 @@ public class Popup implements Layer, Evented {
 	 * @see com.gwidgets.api.leaflet.Layer#getPane(java.lang.String)
 	 */
 	public native HTMLElement getPane(String name);
-	
+
+
+	// events
+
 	//Events 
 		/* (non-Javadoc)
 		 * @see com.gwidgets.api.leaflet.Evented#clearAllEventListeners()
@@ -337,5 +341,7 @@ public class Popup implements Layer, Evented {
 		 * @see com.gwidgets.api.leaflet.Evented#removeEventParent(com.gwidgets.api.leaflet.Evented)
 		 */
 		public native L removeEventParent(Evented obj);
+	
+	
 
 }

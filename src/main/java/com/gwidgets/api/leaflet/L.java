@@ -47,6 +47,7 @@ import jsinterop.annotations.JsType;
 
 
 
+// TODO: Auto-generated Javadoc
 /**
  * The Master class of leaflet. All leaflet classes should be created through this class.
  *  This class transcribes factory methods from the Javascript version. 
@@ -70,7 +71,7 @@ public class L {
 	/**
 	 * The central class of the API — it is used to create a map on a page and manipulate it.
 	 *
-	 * @param the HTML element
+	 * @param element the element
 	 * @param options map options
 	 * @return  a new Map object
 	 */
@@ -264,21 +265,16 @@ Note that points you pass when creating a polygon shouldn't have an additional l
 	/**
 	 * Represents an affine transformation: a set of coefficients a, b, c, d for transforming a point of a form (x, y) into (a*x + b, c*y + d) and doing the reverse. Used by Leaflet in its projections code.
 	 *
-	 * @param a 
-	 * @param b 
-	 * @param c 
-	 * @param d 
+	 * @param a the a
+	 * @param b the b
+	 * @param c the c
+	 * @param d the d
 	 * @return a new Transformation object
 	 */
 	public static native Transformation transformation(Number a, Number b,
 			Number c, Number d);
 
-	/**
-	 * Used internally for panning animations, utilizing CSS3 Transitions for modern browsers and a timer fallback for IE6-9.
-	 *
-	 * @return a new PosAnimation object
-	 */
-	public static native PosAnimation posAnimation();
+
 
 	/**
 	 * A constant that represents the Leaflet version in use.
@@ -412,20 +408,51 @@ Note that points you pass when creating a polygon shouldn't have an additional l
 	}
 	
 	
+	/**
+	 * The Class CRS.
+	 */
 	@JsType(isNative = true)
 	public static class CRS{
-
 		
+		/** Rarely used by some commercial tile providers. Uses Elliptical Mercator projection. */
+		@JsProperty
+		public com.gwidgets.api.leaflet.CRS EPSG3395;
+		
+		/** The most common CRS for online maps, used by almost all free and commercial tile providers. Uses Spherical Mercator projection. Set in by default in Map's crs option. */
+		@JsProperty
+		public com.gwidgets.api.leaflet.CRS EPSG3857;
 
+		/** 	A common CRS among GIS enthusiasts. Uses simple Equirectangular projection. */
+		@JsProperty
+		public com.gwidgets.api.leaflet.CRS EPSG4326;
+		
+		/** Serves as the base for CRS that are global such that they cover the earth. Can only be used as the base for other CRS and cannot be used directly, since it does not have a code,  projection or transformation. distance() returns meters. */
+		@JsProperty
+		public com.gwidgets.api.leaflet.CRS Earth;
+		
+		/** 	A simple CRS that maps longitude and latitude into x and y directly. May be used for maps of flat surfaces (e.g. game maps). Note that the y axis should still be inverted (going from bottom to top). distance() returns simple euclidean distance. */
+		@JsProperty
+		public com.gwidgets.api.leaflet.CRS Simple;
 		
 
 
 	}
 	
 	
+	/**
+	 * The Class Transformation.
+	 */
 	@JsType(isNative = true)
 	public static class Transformation{
 		
+		/**
+		 * Instantiates a new transformation.
+		 *
+		 * @param a the a
+		 * @param b the b
+		 * @param c the c
+		 * @param d the d
+		 */
 		@JsConstructor
 		public Transformation(Number a, Number b,
 				Number c, Number d){

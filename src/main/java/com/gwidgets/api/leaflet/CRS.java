@@ -1,5 +1,6 @@
 package com.gwidgets.api.leaflet;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsProperty;
 /**
  *  Copyright 2016 G-Widgets
  *  Licensed under the Apache License, Version 2.0 (the "License");
@@ -22,6 +23,24 @@ import jsinterop.annotations.JsType;
  */
 @JsType(isNative = true)
 public abstract class CRS {
+	
+	
+	
+	/** Standard code name of the CRS passed into WMS services (e.g. 'EPSG:3857') */
+	@JsProperty
+	public String code;
+	
+	/** An array of two numbers defining whether the longitude (horizontal) coordinate axis wraps around a given range and how. Defaults to [-180, 180] in most geographical CRSs. If undefined, the longitude axis does not wrap around. */
+	@JsProperty
+	public Number[] wrapLng;
+	
+	/** Like wrapLng, but for the latitude (vertical) axis. */
+	@JsProperty
+	public Number[] wrapLat;
+	
+	/** If true, the coordinate space will be unbounded (infinite in both axes) */
+	@JsProperty
+	public Boolean infinite;
 
 	/**
 	 * Projects geographical coordinates on a given zoom into pixel coordinates.

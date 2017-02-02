@@ -14,9 +14,9 @@
  */
 package com.gwidgets.api.leaflet.events;
 
-public class Types {
+public class EventTypes {
 
-	private Types() {
+	private EventTypes() {
 
 	}
 
