@@ -355,42 +355,42 @@ public class EventTest extends GwtyLeafletTestCase {
 		});
 	}
 
-	public void testIconTooltipOpenEvent() {
-		InjectedLeafletResources.whenReady(new Function() {
-			public JavaScriptObject call(JavaScriptObject event) {
-				
-				Icon icon = L.icon(null);
-                
-				icon.on(EventTypes.IconEvents.TOOLTIPOPEN, (e) -> {
+//	public void testIconTooltipOpenEvent() {
+//		InjectedLeafletResources.whenReady(new Function() {
+//			public JavaScriptObject call(JavaScriptObject event) {
+//				
+//				Icon icon = L.icon(null);
+//                
+//				icon.on(EventTypes.IconEvents.TOOLTIPOPEN, (e) -> {
+//
+//					return null;
+//				});
+//
+//				assertTrue(icon.listens(EventTypes.IconEvents.TOOLTIPOPEN));
+//				
+//
+//				return null;
+//			}
+//		});
+//	}
 
-					return null;
-				});
-
-				assertTrue(icon.listens(EventTypes.IconEvents.TOOLTIPOPEN));
-				
-
-				return null;
-			}
-		});
-	}
-
-	public void testDivIconPopupCloseEvent() {
-		InjectedLeafletResources.whenReady(new Function() {
-			public JavaScriptObject call(JavaScriptObject event) {
-				
-				DivIcon divIcon = L.divIcon(null);
-                
-				divIcon.on(EventTypes.DivIconEvents.POPUPCLOSE, (e) -> {
-
-					return null;
-				});
-
-				assertTrue(divIcon.listens(EventTypes.DivIconEvents.POPUPCLOSE));
-
-				return null;
-			}
-		});
-	}
+//	public void testDivIconPopupCloseEvent() {
+//		InjectedLeafletResources.whenReady(new Function() {
+//			public JavaScriptObject call(JavaScriptObject event) {
+//				
+//				DivIcon divIcon = L.divIcon(null);
+//                
+//				divIcon.on(EventTypes.DivIconEvents.POPUPCLOSE, (e) -> {
+//
+//					return null;
+//				});
+//
+//				assertTrue(divIcon.listens(EventTypes.DivIconEvents.POPUPCLOSE));
+//
+//				return null;
+//			}
+//		});
+//	}
 
 
 

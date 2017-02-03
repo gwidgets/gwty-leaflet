@@ -1,6 +1,9 @@
 package com.gwidgets.api.leaflet;
 
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsPackage;
+import jsinterop.annotations.JsProperty;
 /**
  *  Copyright 2016 G-Widgets
  *  Licensed under the Apache License, Version 2.0 (the "License");
@@ -23,7 +26,15 @@ import jsinterop.annotations.JsType;
  */
 @JsType(isNative = true)
 public class Projection {
+	
+	@JsProperty
+	public LatLngBounds bounds;
 
+    
+	private Projection() {
+		
+		
+	}
 	/**
 	 * Projects geographical coordinates into a 2D point.
 	 *
@@ -31,7 +42,7 @@ public class Projection {
 	 * @return the point
 	 */
 	@JsMethod
-	public native static Point project(LatLng latlng);
+	public native Point project(LatLng latlng);
 
 	/**
 	 * The inverse of project. Projects a 2D point into geographical location.
@@ -40,6 +51,6 @@ public class Projection {
 	 * @return the lat lng
 	 */
 	@JsMethod
-	public native static LatLng unproject(Point point);
+	public native LatLng unproject(Point point);
 
 }

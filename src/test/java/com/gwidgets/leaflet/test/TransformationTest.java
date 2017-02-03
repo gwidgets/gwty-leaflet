@@ -11,7 +11,7 @@ public class TransformationTest extends GwtyLeafletTestCase {
 	
 	/******* test fails *********/
 	
-//	public void testLeafletVersion(){
+//	public void testTransformation(){
 //		InjectedLeafletResources.whenReady(new Function(){
 //			public JavaScriptObject call(JavaScriptObject event) {
 //				

@@ -50,7 +50,7 @@ public abstract class CRS {
 	 * @return the point
 	 */
 	@JsMethod
-	public static native Point latLngToPoint(LatLng latlng, Number zoom);
+	public native Point latLngToPoint(LatLng latlng, Number zoom);
 
 	/**
 	 * The inverse of latLngToPoint. Projects pixel coordinates on a given zoom into geographical coordinates.
@@ -60,7 +60,7 @@ public abstract class CRS {
 	 * @return the lat lng
 	 */
 	@JsMethod
-	public static native LatLng pointToLatLng(Point point, Number zoom);
+	public native LatLng pointToLatLng(Point point, Number zoom);
 
 	/**
 	 * Projects geographical coordinates into coordinates in units accepted for this CRS (e.g. meters for EPSG:3857, for passing it to WMS services).
@@ -69,7 +69,7 @@ public abstract class CRS {
 	 * @return the point
 	 */
 	@JsMethod
-	public static native Point project(LatLng latlng);
+	public native Point project(LatLng latlng);
 	
 	/**
 	 * Given a projected coordinate returns the corresponding LatLng. The inverse of project.
@@ -78,7 +78,7 @@ public abstract class CRS {
 	 * @return the latlng
 	 */
 	@JsMethod
-	public static native LatLng unproject(Point point);
+	public native LatLng unproject(Point point);
 
 	/**
 	 * Returns the scale used when transforming projected coordinates into pixel coordinates for a particular zoom. For example, it returns 256 * 2^zoom for Mercator-based CRS.
@@ -87,7 +87,7 @@ public abstract class CRS {
 	 * @return the number
 	 */
 	@JsMethod
-	public static native Number scale(Number zoom);
+	public native Number scale(Number zoom);
 	
 	
 	/**
@@ -97,7 +97,7 @@ public abstract class CRS {
 	 * @return the zoom level
 	 */
 	@JsMethod
-	public static native Number zoom(Number scale);
+	public native Number zoom(Number scale);
 	
 	/**
 	 * Returns the projection's bounds scaled and transformed for the provided zoom.
@@ -106,7 +106,7 @@ public abstract class CRS {
 	 * @return the bounds
 	 */
 	@JsMethod
-	public static native Bounds getProjectedBounds(Number zoom);
+	public native Bounds getProjectedBounds(Number zoom);
 	
 	/**
 	 * Returns the distance between two geographical coordinates.
@@ -116,7 +116,7 @@ public abstract class CRS {
 	 * @return the distance
 	 */
 	@JsMethod
-	public static native Number distance(LatLng latlng1, LatLng latlng2);
+	public native Number distance(LatLng latlng1, LatLng latlng2);
 	
 	/**
 	 * Returns a LatLng where lat and lng has been wrapped according to the CRS's wrapLat and wrapLng properties, if they are outside the CRS's bounds.
@@ -125,6 +125,6 @@ public abstract class CRS {
 	 * @return the LatLng
 	 */
 	@JsMethod
-	public static native Number wrapLatLng(LatLng latlng);
+	public native Number wrapLatLng(LatLng latlng);
 
 }

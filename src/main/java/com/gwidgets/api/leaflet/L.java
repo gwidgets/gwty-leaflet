@@ -416,26 +416,42 @@ Note that points you pass when creating a polygon shouldn't have an additional l
 		
 		/** Rarely used by some commercial tile providers. Uses Elliptical Mercator projection. */
 		@JsProperty
-		public com.gwidgets.api.leaflet.CRS EPSG3395;
+		public static com.gwidgets.api.leaflet.CRS EPSG3395;
 		
 		/** The most common CRS for online maps, used by almost all free and commercial tile providers. Uses Spherical Mercator projection. Set in by default in Map's crs option. */
 		@JsProperty
-		public com.gwidgets.api.leaflet.CRS EPSG3857;
+		public static com.gwidgets.api.leaflet.CRS EPSG3857;
 
 		/** 	A common CRS among GIS enthusiasts. Uses simple Equirectangular projection. */
 		@JsProperty
-		public com.gwidgets.api.leaflet.CRS EPSG4326;
+		public static com.gwidgets.api.leaflet.CRS EPSG4326;
 		
 		/** Serves as the base for CRS that are global such that they cover the earth. Can only be used as the base for other CRS and cannot be used directly, since it does not have a code,  projection or transformation. distance() returns meters. */
 		@JsProperty
-		public com.gwidgets.api.leaflet.CRS Earth;
+		public static com.gwidgets.api.leaflet.CRS Earth;
 		
 		/** 	A simple CRS that maps longitude and latitude into x and y directly. May be used for maps of flat surfaces (e.g. game maps). Note that the y axis should still be inverted (going from bottom to top). distance() returns simple euclidean distance. */
 		@JsProperty
-		public com.gwidgets.api.leaflet.CRS Simple;
+		public static com.gwidgets.api.leaflet.CRS Simple;
 		
+	}
+	
+	
+	@JsType(isNative = true)
+	public static class Projection{
+		
+		/** Equirectangular, or Plate Carree projection — the most simple projection, mostly used by GIS enthusiasts. Directly maps x as longitude, and y as latitude. Also suitable for flat worlds, e.g. game maps. Used by the EPSG:3395 and Simple CRS. */
+		@JsProperty
+		public static com.gwidgets.api.leaflet.Projection LonLat;
+		
+		/** Elliptical Mercator projection — more complex than Spherical Mercator. Takes into account that Earth is a geoid, not a perfect sphere. Used by the EPSG:3395 CRS. */
+		@JsProperty
+		public static com.gwidgets.api.leaflet.Projection Mercator;
 
-
+		/** 	Spherical Mercator projection — the most common projection for online maps, used by almost all free and commercial tile providers. Assumes that Earth is a sphere. Used by the EPSG:3857 CRS. */
+		@JsProperty
+		public static com.gwidgets.api.leaflet.Projection SphericalMercator;
+				
 	}
 	
 	
