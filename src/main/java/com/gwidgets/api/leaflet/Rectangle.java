@@ -24,6 +24,12 @@ import jsinterop.annotations.JsType;
  */
 @JsType(isNative = true)
 public class Rectangle extends Polygon{
+	
+	
+
+	private Rectangle() {
+	
+	}
 
 	/**
 	 * Redraws the rectangle with the passed bounds.

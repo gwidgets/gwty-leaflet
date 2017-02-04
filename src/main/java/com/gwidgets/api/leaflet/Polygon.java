@@ -27,6 +27,12 @@ import jsinterop.annotations.JsType;
  */
 @JsType(isNative = true)
 public class Polygon extends Polyline {
+	
+	
+
+	protected Polygon() {
+		 super();
+	}
 
 	/* (non-Javadoc)
 	 * @see com.gwidgets.api.leaflet.Polyline#toGeoJSON()

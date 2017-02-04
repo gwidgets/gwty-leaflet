@@ -8,6 +8,14 @@ import jsinterop.annotations.JsType;
 public class SVG extends Renderer{
 	
 	
+	
+	
+	private SVG() {
+		super();
+		
+	}
+
+
 	/** Returns a instance of SVGElement, corresponding to the class name passed. For example, using 'line' will return an instance of SVGLineElement.
 	* @return SVGElement
 		 */

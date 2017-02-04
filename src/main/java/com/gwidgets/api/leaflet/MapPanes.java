@@ -27,32 +27,36 @@ import jsinterop.annotations.JsType;
 @JsType
 public class MapPanes {
 	
+	private MapPanes() {
+		
+	}
+
 	/** Pane that contains all other map panes. */
 	@JsProperty
-	HTMLElement	mapPane;
+	public HTMLElement	mapPane;
 	
 	/** Pane for tile layers. */
 	@JsProperty
-	HTMLElement	tilePane;
+	public HTMLElement	tilePane;
 	
 	/** Pane that contains all the panes except tile pane. */
 	@JsProperty
-	HTMLElement	objectsPane;
+	public HTMLElement objectsPane;
 	
 	/** Pane for overlay shadows (e.g. marker shadows). */
 	@JsProperty
-	HTMLElement	shadowPane;	
+	public HTMLElement	shadowPane;	
 	
 	/** Pane for overlays like polylines and polygons. */
 	@JsProperty
-	HTMLElement	overlayPane;
+	public HTMLElement	overlayPane;
 	
 	/** Pane for marker icons. */
 	@JsProperty
-	HTMLElement markerPane;	
+	public HTMLElement markerPane;	
 	
 	/** Pane for popups. */
 	@JsProperty
-	HTMLElement popupPane;	
+	public HTMLElement popupPane;	
 
 }

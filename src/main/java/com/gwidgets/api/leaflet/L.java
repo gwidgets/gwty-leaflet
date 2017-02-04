@@ -57,7 +57,14 @@ import jsinterop.annotations.JsType;
  */
 @JsType(isNative = true, namespace = JsPackage.GLOBAL)
 public class L {
+	
+	
+	
 
+
+	private L() {
+
+	}
 
 	/**
 	 * The central class of the API — it is used to create a map on a page and manipulate it.

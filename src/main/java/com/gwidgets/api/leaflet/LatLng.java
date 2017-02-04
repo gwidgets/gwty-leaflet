@@ -27,7 +27,13 @@ import jsinterop.annotations.JsType;
 @JsType(isNative = true)
 public class LatLng {
 
+	
+	
 
+
+	private LatLng() {
+		
+	}
 
 	/** Latitude in degrees. */
 	@JsProperty

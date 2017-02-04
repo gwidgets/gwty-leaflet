@@ -13,6 +13,12 @@ public class Renderer implements Evented, Layer {
 	
 	
 	
+	
+	protected Renderer() {
+	
+	}
+
+
 	// Events 
 	/* (non-Javadoc)
 	 * @see com.gwidgets.api.leaflet.Evented#clearAllEventListeners()

@@ -30,6 +30,12 @@ import jsinterop.annotations.JsType;
  */
 @JsType(isNative = true)
 public class Polyline extends Path implements Layer, Evented {
+	
+	
+
+	protected Polyline() {
+		
+	}
 
 	/**
 	 * Adds a given point to the polyline.

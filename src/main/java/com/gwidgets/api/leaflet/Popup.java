@@ -13,7 +13,13 @@ import jsinterop.annotations.JsType;
  */
 @JsType(isNative = true)
 public class Popup extends DivOverlay implements Layer, Evented{
+	
+	
 
+
+	protected Popup() {
+		super();
+	}
 
 	/**
 	 * Adds the popup to the map and closes the previous one. The same as map.openPopup(popup).

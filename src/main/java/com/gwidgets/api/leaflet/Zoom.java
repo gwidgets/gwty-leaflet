@@ -23,4 +23,10 @@ import jsinterop.annotations.JsType;
 @JsType(isNative = true)
 public class Zoom extends Control {
 
+	private Zoom() {
+		super();
+	}
+	
+	
+
 }

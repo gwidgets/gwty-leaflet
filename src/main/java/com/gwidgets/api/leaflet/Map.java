@@ -39,6 +39,13 @@ import com.gwidgets.api.leaflet.options.ZoomPanOptions;
 @JsType(isNative = true)
 public class Map implements Evented {
 	
+	
+	
+		private Map() {
+		
+	   }
+
+
 		/** Box (shift-drag with mouse) zoom handler.
 		 */
 		@JsProperty

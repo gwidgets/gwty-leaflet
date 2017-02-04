@@ -26,14 +26,16 @@ import jsinterop.annotations.JsType;
  */
 @JsType(isNative = true)
 public class Point {
+	
+	
 
 	/** The x coordinate. */
 	@JsProperty
-	Number x;
+	public Number x;
 
 	/** The The y coordinate. */
 	@JsProperty
-	Number y;
+	public Number y;
 
 	/**
 	 * Instantiates a new point.

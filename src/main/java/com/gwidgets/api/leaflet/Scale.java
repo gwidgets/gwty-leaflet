@@ -23,4 +23,11 @@ import jsinterop.annotations.JsType;
 @JsType(isNative = true)
 public class Scale extends Control{
 
+	protected Scale() {
+		super();
+		
+	}
+	
+	
+
 }

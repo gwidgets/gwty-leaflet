@@ -33,6 +33,11 @@ public class Marker implements Layer, Evented {
 	
 	
 	
+	private Marker() {
+		
+	}
+
+
 	/** Marker dragging handler (by both mouse and touch). */
 	@JsProperty
 	public Handler dragging;

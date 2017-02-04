@@ -29,6 +29,14 @@ import jsinterop.annotations.JsType;
 @JsType(isNative = true)
 public class Tooltip extends DivOverlay implements Layer, Evented {
 	
+	
+	
+	private Tooltip() {
+		super();
+	
+	}
+
+
 	/* (non-Javadoc)
 	 * @see com.gwidgets.api.leaflet.Layer#bindPopup(com.gwidgets.api.leaflet.elemental.HTMLElement, com.gwidgets.api.leaflet.options.PopupOptions)
 	 */
