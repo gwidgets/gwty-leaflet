@@ -31,22 +31,13 @@ public class Point {
 
 	/** The x coordinate. */
 	@JsProperty
-	public Number x;
+	public double x;
 
 	/** The The y coordinate. */
 	@JsProperty
-	public Number y;
+	public double y;
 
-	/**
-	 * Instantiates a new point.
-	 *
-	 * @param newX the new X
-	 * @param newY the new Y
-	 */
-	@JsConstructor
-	public Point(Number newX, Number newY) {
 
-	}
 
 	/**
 	 * Returns the result of addition of the current and the given points.
@@ -73,7 +64,7 @@ public class Point {
 	 * @return the point
 	 */
 	@JsMethod
-	public native Point multiplyBy(Number number);
+	public native Point multiplyBy(double number);
 
 	/**
 	 * Returns the result of division of the current point by the given number. If optional round is set to true, returns a rounded result.
@@ -83,7 +74,7 @@ public class Point {
 	 * @return the point
 	 */
 	@JsMethod
-	public native Point divideBy(Number number, Boolean round);
+	public native Point divideBy(double number, Boolean round);
 
 	/**
 	 * Returns the distance between the current and the given points.
@@ -92,7 +83,7 @@ public class Point {
 	 * @return the number
 	 */
 	@JsMethod
-	public native Number distanceTo(Point otherPoint);
+	public native double distanceTo(Point otherPoint);
 
 	/* (non-Javadoc)
 	 * @see java.lang.Object#clone()

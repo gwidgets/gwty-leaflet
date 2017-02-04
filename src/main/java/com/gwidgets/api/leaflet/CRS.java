@@ -32,11 +32,11 @@ public abstract class CRS {
 	
 	/** An array of two numbers defining whether the longitude (horizontal) coordinate axis wraps around a given range and how. Defaults to [-180, 180] in most geographical CRSs. If undefined, the longitude axis does not wrap around. */
 	@JsProperty
-	public Number[] wrapLng;
+	public double[] wrapLng;
 	
 	/** Like wrapLng, but for the latitude (vertical) axis. */
 	@JsProperty
-	public Number[] wrapLat;
+	public double[] wrapLat;
 	
 	/** If true, the coordinate space will be unbounded (infinite in both axes) */
 	@JsProperty
@@ -50,7 +50,7 @@ public abstract class CRS {
 	 * @return the point
 	 */
 	@JsMethod
-	public native Point latLngToPoint(LatLng latlng, Number zoom);
+	public native Point latLngToPoint(LatLng latlng, double zoom);
 
 	/**
 	 * The inverse of latLngToPoint. Projects pixel coordinates on a given zoom into geographical coordinates.
@@ -60,7 +60,7 @@ public abstract class CRS {
 	 * @return the lat lng
 	 */
 	@JsMethod
-	public native LatLng pointToLatLng(Point point, Number zoom);
+	public native LatLng pointToLatLng(Point point, double zoom);
 
 	/**
 	 * Projects geographical coordinates into coordinates in units accepted for this CRS (e.g. meters for EPSG:3857, for passing it to WMS services).
@@ -87,7 +87,7 @@ public abstract class CRS {
 	 * @return the number
 	 */
 	@JsMethod
-	public native Number scale(Number zoom);
+	public native double scale(double zoom);
 	
 	
 	/**
@@ -97,7 +97,7 @@ public abstract class CRS {
 	 * @return the zoom level
 	 */
 	@JsMethod
-	public native Number zoom(Number scale);
+	public native double zoom(double scale);
 	
 	/**
 	 * Returns the projection's bounds scaled and transformed for the provided zoom.
@@ -106,7 +106,7 @@ public abstract class CRS {
 	 * @return the bounds
 	 */
 	@JsMethod
-	public native Bounds getProjectedBounds(Number zoom);
+	public native Bounds getProjectedBounds(double zoom);
 	
 	/**
 	 * Returns the distance between two geographical coordinates.
@@ -116,7 +116,7 @@ public abstract class CRS {
 	 * @return the distance
 	 */
 	@JsMethod
-	public native Number distance(LatLng latlng1, LatLng latlng2);
+	public native double distance(LatLng latlng1, LatLng latlng2);
 	
 	/**
 	 * Returns a LatLng where lat and lng has been wrapped according to the CRS's wrapLat and wrapLng properties, if they are outside the CRS's bounds.
@@ -125,6 +125,6 @@ public abstract class CRS {
 	 * @return the LatLng
 	 */
 	@JsMethod
-	public native Number wrapLatLng(LatLng latlng);
+	public native double wrapLatLng(LatLng latlng);
 
 }

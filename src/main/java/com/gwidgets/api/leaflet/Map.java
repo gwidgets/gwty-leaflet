@@ -93,7 +93,7 @@ public class Map implements Evented {
 	 */
 	
 	@JsMethod
-	public native L setView(LatLng center, Number zoom, ZoomPanOptions options);
+	public native L setView(LatLng center, double zoom, ZoomPanOptions options);
 	
 
 	/**
@@ -104,7 +104,7 @@ public class Map implements Evented {
 	 * @return the L class
 	 */
 	@JsMethod
-	public native L setZoom(Number zoom, ZoomOptions options);
+	public native L setZoom(double zoom, ZoomOptions options);
 
 	/**
 	 * Increases the zoom of the map by delta (1 by default).
@@ -114,7 +114,7 @@ public class Map implements Evented {
 	 * @return the L class
 	 */
 	@JsMethod
-	public native L zoomIn(Number delta, ZoomOptions options);
+	public native L zoomIn(double delta, ZoomOptions options);
 	
 
 	/**
@@ -125,7 +125,7 @@ public class Map implements Evented {
 	 * @return the L class
 	 */
 	@JsMethod
-	public native L zoomOut(Number delta, ZoomOptions options);
+	public native L zoomOut(double delta, ZoomOptions options);
 
 	/**
 	 * Zooms the map while keeping a specified point on the map stationary (e.g. used internally for scroll zoom and double-click zoom).
@@ -136,7 +136,7 @@ public class Map implements Evented {
 	 * @return the L class
 	 */
 	@JsMethod
-	public native L setZoomAround(LatLng latlng, Number zoom,
+	public native L setZoomAround(LatLng latlng, double zoom,
 			ZoomOptions options);
 
 	/**
@@ -257,7 +257,7 @@ public class Map implements Evented {
 	 * @return the zoom
 	 */
 	@JsMethod
-	public native Number getZoom();
+	public native double getZoom();
 
 	/**
 	 * Returns the minimum zoom level of the map.
@@ -265,7 +265,7 @@ public class Map implements Evented {
 	 * @return the min zoom
 	 */
 	@JsMethod
-	public native Number getMinZoom();
+	public native double getMinZoom();
 
 	/**
 	 * Returns the maximum zoom level of the map.
@@ -273,7 +273,7 @@ public class Map implements Evented {
 	 * @return the max zoom
 	 */
 	@JsMethod
-	public native Number getMaxZoom();
+	public native double getMaxZoom();
 
 	/**
 	 * Returns the LatLngBounds of the current map view.
@@ -291,7 +291,7 @@ public class Map implements Evented {
 	 * @return the bounds zoom
 	 */
 	@JsMethod
-	public native Number getBoundsZoom(LatLngBounds bounds, Boolean inside);
+	public native double getBoundsZoom(LatLngBounds bounds, Boolean inside);
 
 	/**
 	 * Returns the current size of the map container.
@@ -483,7 +483,7 @@ public class Map implements Evented {
 	 * @return the point
 	 */
 	@JsMethod
-	public native Point project(LatLng latlng, Number zoom);
+	public native Point project(LatLng latlng, double zoom);
 
 	/**
 	 * Projects the given absolute pixel coordinates to geographical coordinates for the given zoom level (current zoom level by default).
@@ -493,7 +493,7 @@ public class Map implements Evented {
 	 * @return the lat lng
 	 */
 	@JsMethod
-	public native LatLng unproject(Point point, Number zoom);
+	public native LatLng unproject(Point point, double zoom);
 
 	/**
 	 * Returns the pixel coordinates of a mouse click (relative to the top left corner of the map) given its event object.

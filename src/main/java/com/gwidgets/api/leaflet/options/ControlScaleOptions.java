@@ -38,7 +38,7 @@ public class ControlScaleOptions {
 	private String position;
 
 	@JsProperty
-	private Number maxWidth;
+	private double maxWidth;
 
 	@JsProperty
 	private Boolean metric;
@@ -67,7 +67,7 @@ public class ControlScaleOptions {
 	 * @return the max width
 	 */
 	@JsOverlay
-	public final Number getMaxWidth() {
+	public final double getMaxWidth() {
 		return this.maxWidth;
 	}
 
@@ -111,7 +111,7 @@ public class ControlScaleOptions {
 
 		private String position = "bottomleft";
 
-		private Number maxWidth = 100;
+		private double maxWidth = 100;
 
 		private Boolean metric = true;
 
@@ -146,7 +146,7 @@ public class ControlScaleOptions {
 		 * @param maxWidth the max width
 		 * @return the builder
 		 */
-		public Builder maxWidth(Number maxWidth) {
+		public Builder maxWidth(double maxWidth) {
 			this.maxWidth = maxWidth;
 			return this;
 		}

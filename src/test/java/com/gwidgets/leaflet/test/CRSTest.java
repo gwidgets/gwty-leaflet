@@ -22,11 +22,11 @@ public class CRSTest extends GwtyLeafletTestCase {
 				assertEquals(unprojected.lat.toString().substring(0, 5), "52.12");
 				assertEquals(unprojected.lng.toString().substring(0, 5), "42.15");
 				
-				Number scaled = myCRS.scale(25);
-				Number zoomed = myCRS.zoom(scaled);
+				double scaled = myCRS.scale(25);
+				double zoomed = myCRS.zoom(scaled);
 				
 				
-				assertEquals(zoomed.intValue(), 25);
+				assertEquals(String.valueOf(zoomed), "25");
 				
 				return null;
 			}

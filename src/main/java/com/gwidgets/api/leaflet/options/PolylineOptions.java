@@ -34,7 +34,7 @@ public class PolylineOptions extends PathOptions {
 	}
 
 	@JsProperty
-	private Number smoothFactor;
+	private double smoothFactor;
 
 	@JsProperty
 	private Boolean noClip;
@@ -48,7 +48,7 @@ public class PolylineOptions extends PathOptions {
 	 * @return the smooth factor
 	 */
 	@JsOverlay
-	public final Number getSmoothFactor() {
+	public final double getSmoothFactor() {
 		return this.smoothFactor;
 	}
 
@@ -93,7 +93,7 @@ public class PolylineOptions extends PathOptions {
 	 * @return the weight
 	 */
 	@JsOverlay
-	public final Number getWeight_() {
+	public final double getWeight_() {
 		return this.weight;
 	}
 
@@ -104,7 +104,7 @@ public class PolylineOptions extends PathOptions {
 	 * @return the opacity
 	 */
 	@JsOverlay
-	public final Number getOpacity_() {
+	public final double getOpacity_() {
 		return this.opacity;
 	}
 
@@ -138,7 +138,7 @@ public class PolylineOptions extends PathOptions {
 	 * @return the fill opacity
 	 */
 	@JsOverlay
-	public final Number getFillOpacity_() {
+	public final double getFillOpacity_() {
 		return this.fillOpacity;
 	}
 
@@ -229,15 +229,15 @@ public class PolylineOptions extends PathOptions {
 
 		private String color = "#03f";
 
-		private Number weight = 5;
+		private double weight = 5;
 
-		private Number opacity = 0.5;
+		private double opacity = 0.5;
 
 		private Boolean fill = true;
 
 		private String fillColor = "#03f";
 
-		private Number fillOpacity = 0.2;
+		private double fillOpacity = 0.2;
 
 		private String fillRule = "evenodd";
 
@@ -251,7 +251,7 @@ public class PolylineOptions extends PathOptions {
 
 		private String className = "";
 
-		private Number smoothFactor = 1.0;
+		private double smoothFactor = 1.0;
 
 		private Boolean noClip = false;
 
@@ -268,7 +268,7 @@ public class PolylineOptions extends PathOptions {
 		 *            the smooth factor
 		 * @return the builder
 		 */
-		public Builder smoothFactor(Number smoothFactor) {
+		public Builder smoothFactor(double smoothFactor) {
 			this.smoothFactor = smoothFactor;
 			return this;
 		}
@@ -321,7 +321,7 @@ public class PolylineOptions extends PathOptions {
 		 *            the weight
 		 * @return the builder
 		 */
-		public Builder weight(Number weight) {
+		public Builder weight(double weight) {
 			this.weight = weight;
 			return this;
 		}
@@ -334,7 +334,7 @@ public class PolylineOptions extends PathOptions {
 		 *            the opacity
 		 * @return the builder
 		 */
-		public Builder opacity(Number opacity) {
+		public Builder opacity(double opacity) {
 			this.opacity = opacity;
 			return this;
 		}
@@ -374,7 +374,7 @@ public class PolylineOptions extends PathOptions {
 		 *            the fill opacity
 		 * @return the builder
 		 */
-		public Builder fillOpacity(Number fillOpacity) {
+		public Builder fillOpacity(double fillOpacity) {
 			this.fillOpacity = fillOpacity;
 			return this;
 		}

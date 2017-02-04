@@ -55,16 +55,16 @@ public class MapOptions {
 	private LatLng center;
 	
 	@JsProperty
-	private Number zoom;
+	private double zoom;
 	
 	@JsProperty
 	private Layer[] layers;
 	
 	@JsProperty
-	private Number minZoom;
+	private double minZoom;
 	
 	@JsProperty
-	private Number maxZoom;
+	private double maxZoom;
 	
 	@JsProperty
 	private LatLngBounds maxBounds;
@@ -91,14 +91,14 @@ public class MapOptions {
 	/*****************************************
 	********************************************/
 	@JsProperty
-     private Number wheelDebounceTime;
+     private double wheelDebounceTime;
 	/**********************************************
 	*********************************************/
 	
 	/*****************************************
 	********************************************/
 	@JsProperty
-     private Number wheelPxPerZoomLevel;
+     private double wheelPxPerZoomLevel;
 	/**********************************************
 	*********************************************/
 	
@@ -112,7 +112,7 @@ public class MapOptions {
 	private Boolean tap;
 	
 	@JsProperty
-	private Number tapTolerance;
+	private double tapTolerance;
 	
 	@JsProperty
 	private Boolean trackResize;
@@ -128,14 +128,14 @@ public class MapOptions {
 	/*****************************************
 	********************************************/
 	 @JsProperty
-     private Number zoomSnap;
+     private double zoomSnap;
 	/**********************************************
 	*********************************************/
 	
 	/*****************************************
 	********************************************/
 	  @JsProperty
-      private Number zoomDelta; 
+      private double zoomDelta; 
 	/**********************************************
 	*********************************************/
 	
@@ -145,7 +145,7 @@ public class MapOptions {
 	private Boolean keyboard;
 	
 	@JsProperty
-	private Number keyboardPanDelta;
+	private double keyboardPanDelta;
 	
 
 	// Panning Inertia Options
@@ -153,10 +153,10 @@ public class MapOptions {
 	private Boolean inertia;
 	
 	@JsProperty
-	private Number inertiaDeceleration;
+	private double inertiaDeceleration;
 	
 	@JsProperty
-	private Number inertiaMaxSpeed;
+	private double inertiaMaxSpeed;
 	
 	
 	@JsProperty
@@ -165,7 +165,7 @@ public class MapOptions {
 	/*****************************************
 	********************************************/
 	   @JsProperty
-       private Number maxBoundsViscosity;
+       private double maxBoundsViscosity;
 	/**********************************************
 	*********************************************/
 
@@ -184,7 +184,7 @@ public class MapOptions {
 	private Boolean zoomAnimation;
 	
 	@JsProperty
-	private Number zoomAnimationThreshold;
+	private double zoomAnimationThreshold;
 	
 	@JsProperty
 	private Boolean markerZoomAnimation;
@@ -192,7 +192,7 @@ public class MapOptions {
 	/*****************************************
 	********************************************/
 	@JsProperty
-    private Number transform3DLimit;
+    private double transform3DLimit;
 	/**********************************************
 	*********************************************/
 	
@@ -216,7 +216,7 @@ public class MapOptions {
 	 * @return the zoom
 	 */
 	@JsOverlay
-	public final Number getZoom() {
+	public final double getZoom() {
 		return this.zoom;
 	}
 
@@ -237,7 +237,7 @@ public class MapOptions {
 	 * default 0
 	 * @return the min zoom
 	 */
-	@JsOverlay public final Number getMinZoom() {
+	@JsOverlay public final double getMinZoom() {
 		return this.minZoom;
 	}
 
@@ -247,7 +247,7 @@ public class MapOptions {
 	 * default 0
 	 * @return the max zoom
 	 */
-	@JsOverlay public final Number getMaxZoom() {
+	@JsOverlay public final double getMaxZoom() {
 		return this.maxZoom;
 	}
 
@@ -334,7 +334,7 @@ public class MapOptions {
 	 *
 	 * @return the tap tolerance
 	 */
-	@JsOverlay public final Number getTapTolerance() {
+	@JsOverlay public final double getTapTolerance() {
 		return this.tapTolerance;
 	}
 
@@ -395,7 +395,7 @@ public class MapOptions {
 	 *
 	 * @return the keyboard pan offset
 	 */
-	@JsOverlay public final Number getKeyboardPanOffset() {
+	@JsOverlay public final double getKeyboardPanOffset() {
 		return this.keyboardPanDelta;
 	}
 
@@ -416,7 +416,7 @@ public class MapOptions {
 	 * default 3000
 	 * @return the inertia deceleration
 	 */
-	@JsOverlay public final Number getInertiaDeceleration() {
+	@JsOverlay public final double getInertiaDeceleration() {
 		return this.inertiaDeceleration;
 	}
 
@@ -426,7 +426,7 @@ public class MapOptions {
 	 * default 1500
 	 * @return the inertia max speed
 	 */
-	@JsOverlay public final Number getInertiaMaxSpeed() {
+	@JsOverlay public final double getInertiaMaxSpeed() {
 		return this.inertiaMaxSpeed;
 	}
 
@@ -479,7 +479,7 @@ public class MapOptions {
 	 * default 4
 	 * @return the zoom animation threshold
 	 */
-	@JsOverlay public final Number getZoomAnimationThreshold() {
+	@JsOverlay public final double getZoomAnimationThreshold() {
 		return this.zoomAnimationThreshold;
 	}
 
@@ -501,31 +501,31 @@ public class MapOptions {
 		return this.renderer;
 	}
 
-	@JsOverlay public final Number getKeyboardPanDelta() {
+	@JsOverlay public final double getKeyboardPanDelta() {
 		return this.keyboardPanDelta;
 	}
 
-	@JsOverlay public final Number getWheelDebounceTime() {
+	@JsOverlay public final double getWheelDebounceTime() {
 		return this.wheelDebounceTime;
 	}
 
-	@JsOverlay public final Number getWheelPxPerZoomLevel() {
+	@JsOverlay public final double getWheelPxPerZoomLevel() {
 		return this.wheelPxPerZoomLevel;
 	}
 
-	@JsOverlay public final Number getZoomSnap() {
+	@JsOverlay public final double getZoomSnap() {
 		return this.zoomSnap;
 	}
 
-	@JsOverlay public final Number getZoomDelta() {
+	@JsOverlay public final double getZoomDelta() {
 		return this.zoomDelta;
 	}
 
-	@JsOverlay public final Number getMaxBoundsViscosity() {
+	@JsOverlay public final double getMaxBoundsViscosity() {
 		return this.maxBoundsViscosity;
 	}
 
-	@JsOverlay public final Number getTransform3DLimit() {
+	@JsOverlay public final double getTransform3DLimit() {
 		return this.transform3DLimit;
 	}
 
@@ -538,10 +538,10 @@ public class MapOptions {
 		LatLng center = null;
 
 
-		Number zoom = 0;
+		double zoom = 0;
 
 
-		Number minZoom = 0;
+		double minZoom = 0;
 
 		/**
 		 * Instantiates a new MapOtions builder.
@@ -550,7 +550,7 @@ public class MapOptions {
 		 * @param zoom Initial map zoom.
 		 * @param minZoom Minimum zoom level of the map. Overrides any minZoom set on map layers.
 		 */
-		public Builder(LatLng center, Number zoom, Number minZoom) {
+		public Builder(LatLng center, double zoom, double minZoom) {
 			this.center = center;
 			this.zoom = zoom;
 			this.minZoom = minZoom;
@@ -560,7 +560,7 @@ public class MapOptions {
 		
 		Layer[] layers = null;
 
-		Number maxZoom = 0;
+		double maxZoom = 0;
 
 		LatLngBounds maxBounds = null;
 
@@ -576,7 +576,7 @@ public class MapOptions {
 
 		Boolean tap = true;
 
-		Number tapTolerance = 15;
+		double tapTolerance = 15;
 
 		Boolean trackResize = true;
 
@@ -588,16 +588,16 @@ public class MapOptions {
 
 		Boolean keyboard = true;
 
-		Number keyboardPanDelta = 80;
+		double keyboardPanDelta = 80;
 
 
 		Boolean inertia = true;
 
-		Number inertiaDeceleration = 3000;
+		double inertiaDeceleration = 3000;
 
-		Number inertiaMaxSpeed = 1500;
+		double inertiaMaxSpeed = 1500;
 
-		Number inertiaThreshold = 32;
+		double inertiaThreshold = 32;
 
 		Boolean zoomControl = true;
 
@@ -607,7 +607,7 @@ public class MapOptions {
 
 		Boolean zoomAnimation = true;
 
-		Number zoomAnimationThreshold = 4;
+		double zoomAnimationThreshold = 4;
 
 		Boolean markerZoomAnimation = true;
 		
@@ -615,17 +615,17 @@ public class MapOptions {
 		
 	    Renderer renderer;
 
-	    Number wheelDebounceTime = 40;
+	    double wheelDebounceTime = 40;
 
-	    Number wheelPxPerZoomLevel = 60;
+	    double wheelPxPerZoomLevel = 60;
 
-	    Number zoomSnap = 1;
+	    double zoomSnap = 1;
 
-	    Number zoomDelta = 1; 
+	    double zoomDelta = 1; 
 
-	    Number maxBoundsViscosity = 0.0;
+	    double maxBoundsViscosity = 0.0;
 
-	    Number transform3DLimit = Math.pow(2, 23);
+	    double transform3DLimit = Math.pow(2, 23);
 
 		/**
 		 * Layers that will be added to the map initially.
@@ -646,7 +646,7 @@ public class MapOptions {
 		 * @param maxZoom the max zoom
 		 * @return the builder
 		 */
-		public Builder maxZoom(Number maxZoom) {
+		public Builder maxZoom(double maxZoom) {
 			this.maxZoom = maxZoom;
 			return this;
 		}
@@ -740,7 +740,7 @@ public class MapOptions {
 		 * @param tapTolerance the tap tolerance number
 		 * @return the builder
 		 */
-		public Builder tapTolerance(Number tapTolerance) {
+		public Builder tapTolerance(double tapTolerance) {
 			this.tapTolerance = tapTolerance;
 			return this;
 		}
@@ -812,7 +812,7 @@ public class MapOptions {
 		 * @param keyboardPanOffset the keyboard pan offset
 		 * @return the builder
 		 */
-		public Builder keyboardPanDelta(Number keyboardPanDelta) {
+		public Builder keyboardPanDelta(double keyboardPanDelta) {
 			this.keyboardPanDelta = keyboardPanDelta;
 			return this;
 		}
@@ -838,7 +838,7 @@ public class MapOptions {
 		 * @param inertiaDeceleration the inertia deceleration
 		 * @return the builder
 		 */
-		public Builder inertiaDeceleration(Number inertiaDeceleration) {
+		public Builder inertiaDeceleration(double inertiaDeceleration) {
 			this.inertiaDeceleration = inertiaDeceleration;
 			return this;
 		}
@@ -850,7 +850,7 @@ public class MapOptions {
 		 * @param inertiaMaxSpeed the inertia max speed
 		 * @return the builder
 		 */
-		public Builder inertiaMaxSpeed(Number inertiaMaxSpeed) {
+		public Builder inertiaMaxSpeed(double inertiaMaxSpeed) {
 			this.inertiaMaxSpeed = inertiaMaxSpeed;
 			return this;
 		}
@@ -862,7 +862,7 @@ public class MapOptions {
 		 * @param inertiaThreshold the inertia threshold
 		 * @return the builder
 		 */
-		public Builder inertiaThreshold(Number inertiaThreshold) {
+		public Builder inertiaThreshold(double inertiaThreshold) {
 			this.inertiaThreshold = inertiaThreshold;
 			return this;
 		}
@@ -922,7 +922,7 @@ public class MapOptions {
 		 * @param zoomAnimationThreshold the zoom animation threshold
 		 * @return the builder
 		 */
-		public Builder zoomAnimationThreshold(Number zoomAnimationThreshold) {
+		public Builder zoomAnimationThreshold(double zoomAnimationThreshold) {
 			this.zoomAnimationThreshold = zoomAnimationThreshold;
 			return this;
 		}
@@ -967,7 +967,7 @@ public class MapOptions {
 		 * @param wheelDebounceTime
 		 * @return the builder
 		 */
-		public Builder wheelDebounceTime(Number wheelDebounceTime) {
+		public Builder wheelDebounceTime(double wheelDebounceTime) {
 			this.wheelDebounceTime = wheelDebounceTime;
 			return this;
 		}
@@ -978,7 +978,7 @@ public class MapOptions {
 		 * @param wheelPxPerZoomLevel
 		 * @return the builder
 		 */
-		public Builder wheelPxPerZoomLevel(Number wheelPxPerZoomLevel) {
+		public Builder wheelPxPerZoomLevel(double wheelPxPerZoomLevel) {
 			this.wheelPxPerZoomLevel = wheelPxPerZoomLevel;
 			return this;
 		}
@@ -989,7 +989,7 @@ public class MapOptions {
 		 * @param zoomSnap
 		 * @return the builder
 		 */
-		public Builder zoomSnap(Number zoomSnap) {
+		public Builder zoomSnap(double zoomSnap) {
 			this.zoomSnap = zoomSnap;
 			return this;
 		}
@@ -1000,7 +1000,7 @@ public class MapOptions {
 		 * @param zoomDelta 
 		 * @return the builder
 		 */
-		public Builder zoomDelta(Number zoomDelta) {
+		public Builder zoomDelta(double zoomDelta) {
 			this.zoomDelta = zoomDelta;
 			return this;
 		}
@@ -1011,7 +1011,7 @@ public class MapOptions {
 		 * @param maxBoundsViscosity 
 		 * @return the builder
 		 */
-		public Builder maxBoundsViscosity(Number maxBoundsViscosity) {
+		public Builder maxBoundsViscosity(double maxBoundsViscosity) {
 			this.maxBoundsViscosity = maxBoundsViscosity;
 			return this;
 		}
@@ -1022,7 +1022,7 @@ public class MapOptions {
 		 * @param transform3DLimit 
 		 * @return the builder
 		 */
-		public Builder transform3DLimit(Number transform3DLimit) {
+		public Builder transform3DLimit(double transform3DLimit) {
 			this.transform3DLimit = transform3DLimit;
 			return this;
 		}

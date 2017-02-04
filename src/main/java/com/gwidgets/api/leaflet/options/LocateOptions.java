@@ -39,13 +39,13 @@ public class LocateOptions {
 	private Boolean setView;
 
 	@JsProperty
-	private Number maxZoom;
+	private double maxZoom;
 
 	@JsProperty
-	private Number timeout;
+	private double timeout;
 
 	@JsProperty
-	private Number maximumAge;
+	private double maximumAge;
 
 	@JsProperty
 	private Boolean enableHighAccuracy;
@@ -83,7 +83,7 @@ public class LocateOptions {
 	 * @return the max zoom locate
 	 */
 	@JsOverlay
-	public final Number getMaxZoom() {
+	public final double getMaxZoom() {
 		return this.maxZoom;
 	}
 
@@ -95,7 +95,7 @@ public class LocateOptions {
 	 * @return the timeout
 	 */
 	@JsOverlay
-	public final Number getTimeout() {
+	public final double getTimeout() {
 		return this.timeout;
 	}
 
@@ -108,7 +108,7 @@ public class LocateOptions {
 	 * @return the maximum age
 	 */
 	@JsOverlay
-	public final Number getMaximumAge() {
+	public final double getMaximumAge() {
 		return this.maximumAge;
 	}
 
@@ -134,11 +134,11 @@ public class LocateOptions {
 
 		private Boolean setView = false;
 
-		private Number maxZoom = Double.POSITIVE_INFINITY;
+		private double maxZoom = Double.POSITIVE_INFINITY;
 
-		private Number timeout = 10000;
+		private double timeout = 10000;
 
-		private Number maximumAge = 0;
+		private double maximumAge = 0;
 
 		private Boolean enableHighAccuracy = false;
 
@@ -188,7 +188,7 @@ public class LocateOptions {
 		 *            the max zoom locate
 		 * @return the builder
 		 */
-		public Builder maxZoom(Number maxZoom) {
+		public Builder maxZoom(double maxZoom) {
 			this.maxZoom = maxZoom;
 			return this;
 		}
@@ -202,7 +202,7 @@ public class LocateOptions {
 		 *            the timeout
 		 * @return the builder
 		 */
-		public Builder timeout(Number timeout) {
+		public Builder timeout(double timeout) {
 			this.timeout = timeout;
 			return this;
 		}
@@ -217,7 +217,7 @@ public class LocateOptions {
 		 *            the maximum age
 		 * @return the builder
 		 */
-		public Builder maximumAge(Number maximumAge) {
+		public Builder maximumAge(double maximumAge) {
 			this.maximumAge = maximumAge;
 			return this;
 		}

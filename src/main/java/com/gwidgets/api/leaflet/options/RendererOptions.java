@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
 public class RendererOptions {
 	
 	@JsProperty
-	private Number padding;
+	private double padding;
 	
 	@JsProperty
 	private String pane;
@@ -27,7 +27,7 @@ public class RendererOptions {
 	}
 
 	@JsOverlay
-	public final Number getPadding() {
+	public final double getPadding() {
 		return this.padding;
 	}
 
@@ -45,7 +45,7 @@ public class RendererOptions {
 	public static class Builder{
 		
 	
-		private Number padding = 0.1;
+		private double padding = 0.1;
 		
 		private String pane = "overlayPane";
 		
@@ -59,7 +59,7 @@ public class RendererOptions {
 		}
 		
 		
-		public Builder padding(Number padding){
+		public Builder padding(double padding){
 			this.padding = padding;
 			return this;
 		}

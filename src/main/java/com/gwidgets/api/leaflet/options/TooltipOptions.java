@@ -49,7 +49,7 @@ public class TooltipOptions {
 	private Boolean interactive;	
 
     @JsProperty
-	private Number opacity;	
+	private double opacity;	
     
     /*****************************************
 	********************************************/
@@ -129,7 +129,7 @@ public class TooltipOptions {
 	/** Tooltip container opacity.
 		 */
 	@JsOverlay
-	public final Number getOpacity() {
+	public final double getOpacity() {
 		return this.opacity;
 	}
 
@@ -166,7 +166,7 @@ public class TooltipOptions {
 
 		private  Boolean interactive = false;	
 
-		private  Number opacity	= 0.9;	
+		private  double opacity	= 0.9;	
 		
 		private String className;
 
@@ -216,7 +216,7 @@ public class TooltipOptions {
 		/** Tooltip container opacity.
 		* @return Builder
 			 */
-		public Builder opacity(Number opacity){this.opacity = opacity; return this;}
+		public Builder opacity(double opacity){this.opacity = opacity; return this;}
 		
 		public Builder className(String className){this.className = className; return this;}
 		

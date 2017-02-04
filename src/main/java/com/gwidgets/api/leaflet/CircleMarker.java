@@ -65,7 +65,7 @@ public class CircleMarker extends Path implements Layer, Evented{
 	 * @return the L class
 	 */
 	@JsMethod
-	public native L setRadius(Number radius);
+	public native L setRadius(double radius);
 	
 	/**
 	 * Returns the current radius of a circle. Units are in meters.
@@ -73,7 +73,7 @@ public class CircleMarker extends Path implements Layer, Evented{
 	 * @return the radius
 	 */
 	@JsMethod
-	public native Number getRadius();
+	public native double getRadius();
 
 	
 	/**

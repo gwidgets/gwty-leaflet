@@ -37,11 +37,11 @@ public class LatLng {
 
 	/** Latitude in degrees. */
 	@JsProperty
-	public Number lat;
+	public Double lat;
 
 	/** Longitude in degrees.The lng. */
 	@JsProperty
-	public Number lng;
+	public Double lng;
 	
 	
 	
@@ -52,7 +52,7 @@ public class LatLng {
      * @param lng the lng
      */
     @JsConstructor
-	public LatLng(Number lat, Number lng) {
+	public LatLng(double lat, double lng) {
 	
 	}
 
@@ -63,7 +63,7 @@ public class LatLng {
 	 * @return the distance (in meters)
 	 */
 	@JsMethod
-	public native Number distanceTo(LatLng otherLatlng);
+	public native double distanceTo(LatLng otherLatlng);
 
 	/**
 	 * Returns true if the given LatLng point is at the same position (within a small margin of error).
@@ -88,6 +88,6 @@ public class LatLng {
 	 * @return the lat lng
 	 */
 	@JsMethod
-	public native LatLng wrap(Number left, Number right);
+	public native LatLng wrap(double left, double right);
 
 }

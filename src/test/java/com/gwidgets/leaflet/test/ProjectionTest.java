@@ -21,8 +21,8 @@ public class ProjectionTest extends GwtyLeafletTestCase {
 			  
 			  LatLng unprojected = projection.unproject(p);
 			  
-			  assertEquals(unprojected.lat.toString(), "41");
-			  assertEquals(unprojected.lng.toString(), "72");
+			  assertEquals(String.valueOf(unprojected.lat), "41");
+			  assertEquals(String.valueOf(unprojected.lng), "72");
 			   
 				
 				return null;

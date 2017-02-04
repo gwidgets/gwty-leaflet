@@ -11,25 +11,25 @@ import jsinterop.annotations.JsType;
 public class GridLayerOptions {
 	
 	
-	private Number tileSize;	
+	private double tileSize;	
 
-	private Number opacity;	
+	private double opacity;	
 
 	private Boolean updateWhenIdle;	
 
 	private Boolean	updateWhenZooming;
 
-	private Number updateInterval;
+	private double updateInterval;
 
 	private String	attribution;	
 	
-	private Number zIndex;	
+	private double zIndex;	
 
 	private LatLngBounds bounds;
 
-	private Number minZoom;	
+	private double minZoom;	
 
-	private Number maxZoom;
+	private double maxZoom;
 
 	private Boolean	noWrap;	
 
@@ -37,7 +37,7 @@ public class GridLayerOptions {
 
 	private String className;	
 
-	private Number keepBuffer;	
+	private double keepBuffer;	
 	
 	private GridLayerOptions(){
 		
@@ -49,7 +49,7 @@ public class GridLayerOptions {
 	
 	
 	@JsOverlay
-	public final Number getTileSize() {
+	public final double getTileSize() {
 		return this.tileSize;
 	}
 
@@ -57,7 +57,7 @@ public class GridLayerOptions {
 
 
 	@JsOverlay
-	public final Number getOpacity() {
+	public final double getOpacity() {
 		return this.opacity;
 	}
 
@@ -79,7 +79,7 @@ public class GridLayerOptions {
 
 	
 	@JsOverlay
-	public final Number getUpdateInterval() {
+	public final double getUpdateInterval() {
 		return this.updateInterval;
 	}
 
@@ -89,7 +89,7 @@ public class GridLayerOptions {
 	}
 
 	@JsOverlay
-	public final Number getzIndex() {
+	public final double getzIndex() {
 		return this.zIndex;
 	}
 
@@ -100,12 +100,12 @@ public class GridLayerOptions {
 	}
 
 	@JsOverlay
-	public final Number getMinZoom() {
+	public final double getMinZoom() {
 		return this.minZoom;
 	}
 
 	@JsOverlay
-	public final Number getMaxZoom() {
+	public final double getMaxZoom() {
 		return this.maxZoom;
 	}
 
@@ -125,7 +125,7 @@ public class GridLayerOptions {
 	}
 
 	@JsOverlay
-	public final Number getKeepBuffer() {
+	public final double getKeepBuffer() {
 		return this.keepBuffer;
 	}
 
@@ -135,25 +135,25 @@ public class GridLayerOptions {
 
 	public static class Builder{
 		
-		private Number tileSize = 256;	
+		private double tileSize = 256;	
 
-		private Number opacity	= 1.0;	
+		private double opacity	= 1.0;	
 
 		private Boolean updateWhenIdle = false;	
 
 		private Boolean	updateWhenZooming =	true;
 
-		private Number updateInterval = 200;
+		private double updateInterval = 200;
 
 		private String	attribution	= null;	
 		
-		private Number zIndex = 1;	
+		private double zIndex = 1;	
 
 		private LatLngBounds bounds = null;
 
-		private Number minZoom = 0;	
+		private double minZoom = 0;	
 
-		private Number maxZoom = null;
+		private double maxZoom;
 
 		private Boolean	noWrap = false;	
 
@@ -161,7 +161,7 @@ public class GridLayerOptions {
 
 		private String className  = "";	
 
-		private Number keepBuffer =  2;	
+		private double keepBuffer =  2;	
 		
 		
 		public Builder(){
@@ -170,25 +170,25 @@ public class GridLayerOptions {
 		}
 		
 		
-		    public Builder tileSize(Number tileSize){this.tileSize = tileSize; return this;}	
+		    public Builder tileSize(double tileSize){this.tileSize = tileSize; return this;}	
 
-			public Builder opacity(Number opacity){this.opacity = opacity; return this;}	
+			public Builder opacity(double opacity){this.opacity = opacity; return this;}	
 
 			public Builder updateWhenIdle(Boolean updateWhenIdle){this.updateWhenIdle = updateWhenIdle; return this;}
 
 			public Builder updateWhenZooming(Boolean updateWhenZooming){this.updateWhenZooming = updateWhenZooming; return this;}
 
-			public Builder updateInterval(Number updateInterval){this.updateInterval = updateInterval; return this;}
+			public Builder updateInterval(double updateInterval){this.updateInterval = updateInterval; return this;}
 
 			public Builder attribution(String attribution){this.attribution = attribution; return this;}
 			
-			public Builder zIndex(Number zIndex){this.zIndex = zIndex; return this;}	
+			public Builder zIndex(double zIndex){this.zIndex = zIndex; return this;}	
 
 			public Builder bounds(LatLngBounds bounds){this.bounds = bounds; return this;}
 
-			public Builder minZoom(Number minZoom){this.minZoom = minZoom; return this;}
+			public Builder minZoom(double minZoom){this.minZoom = minZoom; return this;}
 
-			public Builder maxZoom(Number maxZoom){this.maxZoom = maxZoom; return this;}
+			public Builder maxZoom(double maxZoom){this.maxZoom = maxZoom; return this;}
 
 			public Builder noWrap(Boolean noWrap){this.noWrap = noWrap; return this;}	
 
@@ -196,7 +196,7 @@ public class GridLayerOptions {
 
 			public Builder className(String className){this.className = className; return this;}
 
-			public Builder keepBuffer(Number keepBuffer){this.keepBuffer = keepBuffer; return this;}
+			public Builder keepBuffer(double keepBuffer){this.keepBuffer = keepBuffer; return this;}
 			
 			
 			

@@ -49,14 +49,14 @@ public class GridLayer implements Layer, Evented{
 	* @return the L class
 		 */
 	@JsMethod
-	public native L setOpacity(Number opacity);
+	public native L setOpacity(double opacity);
 
 
 	/** Changes the zIndex of the grid layer.
 	* @return the L class
 		 */
 	@JsMethod
-	public native L setZIndex(Number zIndex);
+	public native L setZIndex(double zIndex);
 
 
 	/** Returns true if any tile in the grid layer has not finished loading.

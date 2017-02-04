@@ -78,7 +78,7 @@ public class GeoJSON extends FeatureGroup {
 	 * @return the lat lng
 	 */
 	@JsMethod
-	public native static LatLng coordsToLatlng(Number[] coords);
+	public native static LatLng coordsToLatlng(double[] coords);
 	
 
 	/**
@@ -90,7 +90,7 @@ public class GeoJSON extends FeatureGroup {
 	 * @return js array of coordinates
 	 */
 	@JsMethod
-	public native static JsArray<JavaScriptObject> coordsToLatlngs(JsArray<JavaScriptObject> coords, Number levelsDeep,
+	public native static JsArray<JavaScriptObject> coordsToLatlngs(JsArray<JavaScriptObject> coords, double levelsDeep,
 			Function coordsToLatlngs);
 	
 	
@@ -113,7 +113,7 @@ public class GeoJSON extends FeatureGroup {
  * @return the js array
  */
 	@JsMethod
-  public native JsArray<JavaScriptObject> latLngsToCoords(JsArray<JavaScriptObject> latlngs, Number levelsDeep, Boolean closed); 
+  public native JsArray<JavaScriptObject> latLngsToCoords(JsArray<JavaScriptObject> latlngs, double levelsDeep, Boolean closed); 
 
 
  /**

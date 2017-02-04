@@ -15,7 +15,7 @@ public class CircleOptions extends PathOptions {
 		
 	}
 	
-	private Number radius;
+	private double radius;
 	
 	
 	/**
@@ -24,7 +24,7 @@ public class CircleOptions extends PathOptions {
 	 * @return the radius
 	 */
 	@JsOverlay
-	public final Number getRadius() {
+	public final double getRadius() {
 		return this.radius;
 	}
 
@@ -37,15 +37,15 @@ public class CircleOptions extends PathOptions {
 
 		private String color = "#03f";
 
-		private Number weight = 5;
+		private double weight = 5;
 
-		private Number opacity = 0.5;
+		private double opacity = 0.5;
 
 		private Boolean fill = true;
 
 		private String fillColor = "#03f";
 
-		private Number fillOpacity = 0.2;
+		private double fillOpacity = 0.2;
 
 		private String fillRule = "evenodd";
 
@@ -69,7 +69,7 @@ public class CircleOptions extends PathOptions {
 
 	    private Boolean interactive = true;
 	    
-	    private Number radius = 10;
+	    private double radius = 10;
 
 		/**
 		 * Instantiates a new builder.
@@ -113,7 +113,7 @@ public class CircleOptions extends PathOptions {
 		 *            the weight
 		 * @return the builder
 		 */
-		public Builder weight(Number weight) {
+		public Builder weight(double weight) {
 			this.weight = weight;
 			return this;
 		}
@@ -126,7 +126,7 @@ public class CircleOptions extends PathOptions {
 		 *            the opacity
 		 * @return the builder
 		 */
-		public Builder opacity(Number opacity) {
+		public Builder opacity(double opacity) {
 			this.opacity = opacity;
 			return this;
 		}
@@ -166,7 +166,7 @@ public class CircleOptions extends PathOptions {
 		 *            the fill opacity
 		 * @return the builder
 		 */
-		public Builder fillOpacity(Number fillOpacity) {
+		public Builder fillOpacity(double fillOpacity) {
 			this.fillOpacity = fillOpacity;
 			return this;
 		}
@@ -270,7 +270,7 @@ public class CircleOptions extends PathOptions {
 
 	    public Builder interactive(Boolean interactive){this.interactive = interactive; return this;}
 	    
-	    public Builder radius(Number radius){this.radius = radius;return this;}
+	    public Builder radius(double radius){this.radius = radius;return this;}
 
 		/**
 		 * Builds the PathOptions new instance

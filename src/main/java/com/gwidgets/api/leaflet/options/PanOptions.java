@@ -35,10 +35,10 @@ public class PanOptions {
 
 	
 	@JsProperty
-	private  Number duration;
+	private  double duration;
 	
 	@JsProperty
-	private  Number easeLinearity;
+	private  double easeLinearity;
 	
 	@JsProperty
 	private  Boolean noMoveStart;
@@ -51,7 +51,7 @@ public class PanOptions {
 	 * default 0.25
 	 * @return the duration
 	 */
-	@JsOverlay public final Number getDuration() {
+	@JsOverlay public final double getDuration() {
 		return this.duration;
 	}
 
@@ -64,7 +64,7 @@ public class PanOptions {
 	 * default 0.25
 	 * @return the ease linearity
 	 */
-	@JsOverlay public final Number getEaseLinearity() {
+	@JsOverlay public final double getEaseLinearity() {
 		return this.easeLinearity;
 	}
 
@@ -90,9 +90,9 @@ public class PanOptions {
 	public static class Builder {
 		
 		 
-		private  Number duration = 0.25;
+		private  double duration = 0.25;
 		 
-		private  Number easeLinearity = 0.25;
+		private  double easeLinearity = 0.25;
 		 
 		private  Boolean noMoveStart = false;
 
@@ -111,7 +111,7 @@ public class PanOptions {
 		 * @param duration the duration
 		 * @return the builder
 		 */
-		public  Builder duration(Number duration){this.duration = duration; return this;}
+		public  Builder duration(double duration){this.duration = duration; return this;}
 		 
 		/**
 		 * The curvature factor of panning animation easing (third parameter of the Cubic Bezier curve). 1.0 means linear animation, the less the more bowed the curve.
@@ -120,7 +120,7 @@ public class PanOptions {
 		 * @param easeLinearity the ease linearity
 		 * @return the builder
 		 */
-		public  Builder easeLinearity(Number easeLinearity){this.easeLinearity = easeLinearity; return this;}
+		public  Builder easeLinearity(double easeLinearity){this.easeLinearity = easeLinearity; return this;}
 		 
 		/**
 		 * If true, panning won't fire movestart event on start (used internally for panning inertia).

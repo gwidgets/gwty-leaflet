@@ -120,7 +120,7 @@ public class LayerGroup implements Layer, Evented {
 	 * @return the L class
 	 */
 	@JsMethod
-	public native L setZIndex(Number zIndex);
+	public native L setZIndex(double zIndex);
 
 
 
@@ -131,7 +131,7 @@ public class LayerGroup implements Layer, Evented {
 	 * @return the layer id
 	 */
 	@JsMethod
-	public native Number getLayerId(Layer layer);
+	public native double getLayerId(Layer layer);
 	
 	/**
 	 * Calls methodName on every layer contained in this group, passing any additional parameters. Has no effect if the layers contained do not implement methodName

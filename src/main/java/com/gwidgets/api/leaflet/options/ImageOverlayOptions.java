@@ -36,7 +36,7 @@ public class ImageOverlayOptions {
 	}
 
 	@JsProperty
-	private Number opacity;
+	private double opacity;
 	
 	@JsProperty
 	private String attribution;
@@ -73,7 +73,7 @@ public class ImageOverlayOptions {
 	 *
 	 * @return the opacity
 	 */
-	@JsOverlay public final Number getOpacity() {
+	@JsOverlay public final double getOpacity() {
 		return this.opacity;
 	}
 
@@ -119,7 +119,7 @@ public class ImageOverlayOptions {
 	 */
 	public static class Builder {
 		
-		private Number opacity = 1.0;
+		private double opacity = 1.0;
 		
 		private String attribution = "";
 		
@@ -145,7 +145,7 @@ public class ImageOverlayOptions {
 		 * @param opacity the opacity
 		 * @return the builder
 		 */
-		public Builder opacity(Number opacity){
+		public Builder opacity(double opacity){
 			this.opacity = opacity;
 			return this;
 		}

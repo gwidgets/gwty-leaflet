@@ -37,10 +37,10 @@ public class PathOptions {
 	protected String color;
 
 	@JsProperty
-	protected Number weight;
+	protected double weight;
 
 	@JsProperty
-	protected Number opacity;
+	protected double opacity;
 
 	@JsProperty
 	protected Boolean fill;
@@ -49,7 +49,7 @@ public class PathOptions {
 	protected String fillColor;
 
 	@JsProperty
-	protected Number fillOpacity;
+	protected double fillOpacity;
 
 	@JsProperty
 	protected String fillRule;
@@ -126,7 +126,7 @@ public class PathOptions {
 	 * @return the weight
 	 */
 	@JsOverlay
-	public final Number getWeight() {
+	public final double getWeight() {
 		return this.weight;
 	}
 
@@ -137,7 +137,7 @@ public class PathOptions {
 	 * @return the opacity
 	 */
 	@JsOverlay
-	public final Number getOpacity() {
+	public final double getOpacity() {
 		return this.opacity;
 	}
 
@@ -171,7 +171,7 @@ public class PathOptions {
 	 * @return the fill opacity
 	 */
 	@JsOverlay
-	public final Number getFillOpacity() {
+	public final double getFillOpacity() {
 		return this.fillOpacity;
 	}
 
@@ -287,15 +287,15 @@ public class PathOptions {
 
 		private String color = "#03f";
 
-		private Number weight = 5;
+		private double weight = 5;
 
-		private Number opacity = 0.5;
+		private double opacity = 0.5;
 
 		private Boolean fill = true;
 
 		private String fillColor = "#03f";
 
-		private Number fillOpacity = 0.2;
+		private double fillOpacity = 0.2;
 
 		private String fillRule = "evenodd";
 
@@ -361,7 +361,7 @@ public class PathOptions {
 		 *            the weight
 		 * @return the builder
 		 */
-		public Builder weight(Number weight) {
+		public Builder weight(double weight) {
 			this.weight = weight;
 			return this;
 		}
@@ -374,7 +374,7 @@ public class PathOptions {
 		 *            the opacity
 		 * @return the builder
 		 */
-		public Builder opacity(Number opacity) {
+		public Builder opacity(double opacity) {
 			this.opacity = opacity;
 			return this;
 		}
@@ -414,7 +414,7 @@ public class PathOptions {
 		 *            the fill opacity
 		 * @return the builder
 		 */
-		public Builder fillOpacity(Number fillOpacity) {
+		public Builder fillOpacity(double fillOpacity) {
 			this.fillOpacity = fillOpacity;
 			return this;
 		}

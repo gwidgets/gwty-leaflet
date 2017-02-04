@@ -15,7 +15,7 @@ public class DOMKeyboardEvent {
 	private Boolean altKey;
 	
 	@JsProperty
-	private Number charCode;
+	private int charCode;
 	
 	@JsProperty
 	private String code;
@@ -30,10 +30,10 @@ public class DOMKeyboardEvent {
 	private String key;
 	
 	@JsProperty
-	private Number keyCode;
+	private int keyCode;
 	
 	@JsProperty
-	private Number location;
+	private int location;
 	
 	@JsProperty
 	private Boolean metaKey;
@@ -53,7 +53,7 @@ public class DOMKeyboardEvent {
 	}
 
 	@JsOverlay
-	public final Number getCharCode() {
+	public final int getCharCode() {
 		return this.charCode;
 	}
 
@@ -78,12 +78,12 @@ public class DOMKeyboardEvent {
 	}
 
 	@JsOverlay
-	public final Number getKeyCode() {
+	public final int getKeyCode() {
 		return this.keyCode;
 	}
 
 	@JsOverlay
-	public final Number getLocation() {
+	public final int getLocation() {
 		return this.location;
 	}
 

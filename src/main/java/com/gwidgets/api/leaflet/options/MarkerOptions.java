@@ -55,16 +55,16 @@ public class MarkerOptions {
 	private  String alt;
 
 	@JsProperty
-	private  Number zIndexOffset;
+	private  double zIndexOffset;
 
 	@JsProperty
-	private  Number opacity;
+	private  double opacity;
 
 	@JsProperty
 	private  Boolean riseOnHover;
 
 	@JsProperty
-	private  Number riseOffset;
+	private  double riseOffset;
 	
 	
 	/*****************************************
@@ -155,7 +155,7 @@ public class MarkerOptions {
 	 * default 0
 	 * @return the z index offset
 	 */
-	@JsOverlay public final Number getzIndexOffset() {
+	@JsOverlay public final double getzIndexOffset() {
 		return this.zIndexOffset;
 	}
 
@@ -166,7 +166,7 @@ public class MarkerOptions {
 	 * default 1.0
 	 * @return the opacity
 	 */
-	@JsOverlay public final Number getOpacity() {
+	@JsOverlay public final double getOpacity() {
 		return this.opacity;
 	}
 
@@ -188,7 +188,7 @@ public class MarkerOptions {
 	 * default 250
 	 * @return the rise offset
 	 */
-	@JsOverlay public final Number getRiseOffset() {
+	@JsOverlay public final double getRiseOffset() {
 		return this.riseOffset;
 	}
 	
@@ -225,13 +225,13 @@ public class MarkerOptions {
 		
 		private String alt = "";
 		
-		private Number zIndexOffset = 0;
+		private double zIndexOffset = 0;
 		
-		private Number opacity = 1.0;
+		private double opacity = 1.0;
 		
 		private Boolean riseOnHover = false;
 		
-		private Number riseOffset = 250;
+		private double riseOffset = 250;
 		
 		private Boolean interactive = true;
 		
@@ -314,7 +314,7 @@ public class MarkerOptions {
 		 * @param zIndexOffset the z index offset
 		 * @return the builder
 		 */
-		public Builder zIndexOffset(Number zIndexOffset){this.zIndexOffset = zIndexOffset; return this;}
+		public Builder zIndexOffset(double zIndexOffset){this.zIndexOffset = zIndexOffset; return this;}
 
 		
 		/**
@@ -324,7 +324,7 @@ public class MarkerOptions {
 		 * @param opacity the opacity
 		 * @return the builder
 		 */
-		public Builder opacity(Number opacity){this.opacity = opacity; return this;}
+		public Builder opacity(double opacity){this.opacity = opacity; return this;}
 
 		
 		/**
@@ -344,7 +344,7 @@ public class MarkerOptions {
 		 * @param riseOffset the rise offset
 		 * @return the builder
 		 */
-		public Builder riseOffset(Number riseOffset){this.riseOffset = riseOffset; return this;}
+		public Builder riseOffset(double riseOffset){this.riseOffset = riseOffset; return this;}
 		
 	   
 		public Builder pane(String pane){this.pane = pane; return this;}

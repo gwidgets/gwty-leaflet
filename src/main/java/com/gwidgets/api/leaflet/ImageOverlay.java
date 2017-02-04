@@ -41,7 +41,7 @@ public class ImageOverlay implements Layer, Evented{
 	 * @return the L class
 	 */
 	@JsMethod
-	public static native L setOpacity(Number opacity);
+	public static native L setOpacity(double opacity);
 
 	/**
 	 * Brings the layer to the top of all overlays.

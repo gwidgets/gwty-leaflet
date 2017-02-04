@@ -57,19 +57,19 @@ public class TileLayerWMSOptions {
 	/******* Inherited options from TileLayer ****/ 
 	
     @JsProperty
-	private Number minZoom;
+	private double minZoom;
 
 
 	@JsProperty
-	private Number maxZoom;
+	private double maxZoom;
 
 	@JsProperty
-	private Number maxNativeZoom;
+	private double maxNativeZoom;
 	
 	/*****************************************
 	********************************************/
 	@JsProperty
-    private Number minNativeZoom;
+    private double minNativeZoom;
 	/**********************************************
 	*********************************************/
 
@@ -86,7 +86,7 @@ public class TileLayerWMSOptions {
 
 
 	@JsProperty
-	private Number zoomOffset;
+	private double zoomOffset;
 
 	@JsProperty
 	private Boolean zoomReverse;
@@ -103,7 +103,7 @@ public class TileLayerWMSOptions {
 	
 
 	@JsProperty
-	private Number tileSize;
+	private double tileSize;
 
 	@JsProperty
 	private String attribution;
@@ -114,10 +114,10 @@ public class TileLayerWMSOptions {
 
 
 	@JsProperty
-	private Number opacity;
+	private double opacity;
 
 	@JsProperty
-	private Number zIndex;
+	private double zIndex;
 
 	@JsProperty
 	private Boolean updateWhenIdle;
@@ -160,7 +160,7 @@ public class TileLayerWMSOptions {
 	/*****************************************
 	********************************************/
 	@JsProperty
-    private Number keepBuffer;
+    private double keepBuffer;
 	/**********************************************
 	*********************************************/
 
@@ -230,22 +230,22 @@ public class TileLayerWMSOptions {
 	}
 
 	@JsOverlay
-	public final Number getMinZoom() {
+	public final double getMinZoom() {
 		return this.minZoom;
 	}
 
 	@JsOverlay
-	public final Number getMaxZoom() {
+	public final double getMaxZoom() {
 		return this.maxZoom;
 	}
 
 	@JsOverlay
-	public final Number getMaxNativeZoom() {
+	public final double getMaxNativeZoom() {
 		return this.maxNativeZoom;
 	}
 
 	@JsOverlay
-	public final Number getMinNativeZoom() {
+	public final double getMinNativeZoom() {
 		return this.minNativeZoom;
 	}
 
@@ -265,7 +265,7 @@ public class TileLayerWMSOptions {
 	}
 
 	@JsOverlay
-	public final Number getZoomOffset() {
+	public final double getZoomOffset() {
 		return this.zoomOffset;
 	}
 
@@ -285,7 +285,7 @@ public class TileLayerWMSOptions {
 	}
 
 	@JsOverlay
-	public final Number getTileSize() {
+	public final double getTileSize() {
 		return this.tileSize;
 	}
 
@@ -300,12 +300,12 @@ public class TileLayerWMSOptions {
 	}
 
 	@JsOverlay
-	public final Number getOpacity() {
+	public final double getOpacity() {
 		return this.opacity;
 	}
 
 	@JsOverlay
-	public final Number getzIndex() {
+	public final double getzIndex() {
 		return this.zIndex;
 	}
 
@@ -340,7 +340,7 @@ public class TileLayerWMSOptions {
 	}
 
 	@JsOverlay
-	public final Number getKeepBuffer() {
+	public final double getKeepBuffer() {
 		return this.keepBuffer;
 	}
 
@@ -361,13 +361,13 @@ public class TileLayerWMSOptions {
 
 		private CRS crs = null;
 		
-		private Number minZoom = 0;
+		private double minZoom = 0;
 
-		private Number maxZoom = 18;
+		private double maxZoom = 18;
 
-		private Number maxNativeZoom = null;
+		private double maxNativeZoom;
 
-		private Number tileSize = 256;
+		private double tileSize = 256;
 
 		private String[] subdomains = { "abc" };
 
@@ -379,13 +379,13 @@ public class TileLayerWMSOptions {
 
 		private Boolean noWrap = false;
 
-		private Number zoomOffset = 0;
+		private double zoomOffset = 0;
 
 		private Boolean zoomReverse = false;
 
-		private Number opacity = 1.0;
+		private double opacity = 1.0;
 
-		private Number zIndex = null;
+		private double zIndex;
 
 		private Boolean updateWhenIdle = false;
 
@@ -399,13 +399,13 @@ public class TileLayerWMSOptions {
 		
 	    private String className;
 
-	    private Number keepBuffer;
+	    private double keepBuffer;
 
 	    private Boolean updateWhenZooming;	 
 		 
 	    private Boolean updateInterval;
 
-	    private Number minNativeZoom;
+	    private double minNativeZoom;
 
 
 		/**
@@ -490,7 +490,7 @@ public class TileLayerWMSOptions {
 		 * @param minZoom the min zoom
 		 * @return the builder
 		 */
-		public Builder minZoom(Number minZoom) {
+		public Builder minZoom(double minZoom) {
 			this.minZoom = minZoom;
 			return this;
 		}
@@ -502,7 +502,7 @@ public class TileLayerWMSOptions {
 		 * @param maxZoom the max zoom
 		 * @return the builder
 		 */
-		public Builder maxZoom(Number maxZoom) {
+		public Builder maxZoom(double maxZoom) {
 			this.maxZoom = maxZoom;
 			return this;
 		}
@@ -514,7 +514,7 @@ public class TileLayerWMSOptions {
 		 * @param maxNativeZoom the max native zoom
 		 * @return the builder
 		 */
-		public Builder maxNativeZoom(Number maxNativeZoom) {
+		public Builder maxNativeZoom(double maxNativeZoom) {
 			this.maxNativeZoom = maxNativeZoom;
 			return this;
 		}
@@ -526,7 +526,7 @@ public class TileLayerWMSOptions {
 		 * @param tileSize the tile size
 		 * @return the builder
 		 */
-		public Builder tileSize(Number tileSize) {
+		public Builder tileSize(double tileSize) {
 			this.tileSize = tileSize;
 			return this;
 		}
@@ -598,7 +598,7 @@ public class TileLayerWMSOptions {
 		 * @param zoomOffset the zoom offset
 		 * @return the builder
 		 */
-		public Builder zoomOffset(Number zoomOffset) {
+		public Builder zoomOffset(double zoomOffset) {
 			this.zoomOffset = zoomOffset;
 			return this;
 		}
@@ -622,7 +622,7 @@ public class TileLayerWMSOptions {
 		 * @param opacity the opacity
 		 * @return the builder
 		 */
-		public Builder opacity(Number opacity) {
+		public Builder opacity(double opacity) {
 			this.opacity = opacity;
 			return this;
 		}
@@ -634,7 +634,7 @@ public class TileLayerWMSOptions {
 		 * @param zIndex the z index
 		 * @return the builder
 		 */
-		public Builder zIndex(Number zIndex) {
+		public Builder zIndex(double zIndex) {
 			this.zIndex = zIndex;
 			return this;
 		}
@@ -679,7 +679,7 @@ public class TileLayerWMSOptions {
 		
 		public Builder crossOrigin(Boolean crossOrigin){this.crossOrigin = crossOrigin; return this;}
 
-	    public Builder keepBuffer(Number keepBuffer){this.keepBuffer = keepBuffer; return this;}
+	    public Builder keepBuffer(double keepBuffer){this.keepBuffer = keepBuffer; return this;}
 
 	    public Builder className(String className){this.className = className; return this;}
 
@@ -689,7 +689,7 @@ public class TileLayerWMSOptions {
 
 	    public Builder updateInterval(Boolean updateInterval){this.updateInterval = updateInterval; return this;}
 
-	    public Builder minNativeZoom(Number minNativeZoom){this.minNativeZoom = minNativeZoom; return this;}
+	    public Builder minNativeZoom(double minNativeZoom){this.minNativeZoom = minNativeZoom; return this;}
 
 		/**
 		 * Builds the TileLayerWMSOptions new instance

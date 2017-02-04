@@ -77,7 +77,7 @@ public class Marker implements Layer, Evented {
 	 * @return the l
 	 */
 	@JsMethod
-	public native L setZIndexOffset(Number offset);
+	public native L setZIndexOffset(double offset);
 
 	/**
 	 * Changes the zIndex offset of the marker.
@@ -86,7 +86,7 @@ public class Marker implements Layer, Evented {
 	 * @return the L class
 	 */
 	@JsMethod
-	public native L setOpacity(Number opacity);
+	public native L setOpacity(double opacity);
 
 	/**
 	 * Updates the marker position, useful if coordinates of its latLng object were changed directly.

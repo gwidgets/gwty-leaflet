@@ -69,7 +69,7 @@ public class PathTest extends GwtyLeafletTestCase {
 				Circle circ = L.circle(L.latLng(52.51, 13.37), circleOptions);
 				
 				
-				assertEquals(circ.getRadius(), 500);
+				assertEquals(String.valueOf(circ.getRadius()), "500");
 				assertEquals(circ.getLatLng().lat, 52.51);
 				assertEquals(circ.getLatLng().lng, 13.37);
 				

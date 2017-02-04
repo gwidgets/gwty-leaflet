@@ -72,7 +72,7 @@ public class Polyline extends Path implements Layer, Evented {
 	 * @return an array of removed points (if any).
 	 */
 	@JsMethod
-	public native LatLng[] spliceLatLngs(Number index, Number pointsToRemove,
+	public native LatLng[] spliceLatLngs(double index, double pointsToRemove,
 			LatLng latlng);
 
 	/* (non-Javadoc)

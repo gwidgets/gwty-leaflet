@@ -89,11 +89,17 @@ public class MapTest extends GwtyLeafletTestCase {
 					Map map = L.map("test3", options);
 
 					assertNotNull(map);
-					assertEquals(map.getZoom().toString(), "12");
-				    assertEquals(map.getMinZoom().toString(), "7");
-     				assertEquals(map.getMaxZoom().toString(), "20");
+					assertEquals(String.valueOf(map.getZoom()), "12");
+				    assertEquals(String.valueOf(map.getMinZoom()), "7");
+     				assertEquals(String.valueOf(map.getMaxZoom()), "20");
      				
      				//Zoom In/Zoom Out has weird behavior *** Fails
+     				
+//     				map.zoomIn(3, null);
+//     				assertEquals(String.valueOf(map.getZoom()), "15");
+//     				
+//     				map.zoomOut(5, null);
+//     				assertEquals(String.valueOf(map.getMaxZoom()), "10");
 					
 					return null;
 			}
@@ -113,6 +119,8 @@ public class MapTest extends GwtyLeafletTestCase {
 					map.panTo(L.latLng(51.51, 13.80), null);
 					assertEquals(map.getCenter().lat, 51.51);
 					assertEquals(map.getCenter().lng, 13.80);
+					
+					
 				
 					
 					return null;

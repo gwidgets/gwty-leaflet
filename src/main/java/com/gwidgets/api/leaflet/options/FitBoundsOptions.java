@@ -47,7 +47,7 @@ public class FitBoundsOptions {
 	private Point padding;
 	
 	@JsProperty
-	private Number maxZoom;
+	private double maxZoom;
 	
 	/*****************************************
 	********************************************/
@@ -59,14 +59,14 @@ public class FitBoundsOptions {
     /*****************************************
 	********************************************/
 	@JsProperty
-    private Number duration;
+    private double duration;
 	/**********************************************
 	*********************************************/
     
     /*****************************************
 	********************************************/
 	@JsProperty
-    private Number easeLinearity;
+    private double easeLinearity;
 	/**********************************************
 	*********************************************/
     /*****************************************
@@ -83,7 +83,7 @@ public class FitBoundsOptions {
 	 * @return the max zoom
 	 */
 	@JsOverlay
-	public final Number getMaxZoom() {
+	public final double getMaxZoom() {
 		return this.maxZoom;
 	}
 
@@ -123,12 +123,12 @@ public class FitBoundsOptions {
 	}
 
 	@JsOverlay
-	public final Number getDuration() {
+	public final double getDuration() {
 		return this.duration;
 	}
 	
 	@JsOverlay
-	public final Number getEaseLinearity() {
+	public final double getEaseLinearity() {
 		return this.easeLinearity;
 	}
 
@@ -148,13 +148,13 @@ public class FitBoundsOptions {
 
 		private Point padding = L.point(0, 0, true);
 
-		private Number maxZoom = null;
+		private double maxZoom;
 		
 	    private Boolean animate;
 
-	    private Number duration = 0.25;
+	    private double duration = 0.25;
 
-	    private Number easeLinearity = 0.25;
+	    private double easeLinearity = 0.25;
 
 	    private Boolean noMoveStart = false;
 
@@ -212,16 +212,16 @@ public class FitBoundsOptions {
 		 * @param maxZoom the max zoom
 		 * @return the builder
 		 */
-		public Builder maxZoom(Number maxZoom) {
+		public Builder maxZoom(double maxZoom) {
 			this.maxZoom = maxZoom;
 			return this;
 		}
 		
 		public Builder animate(Boolean animate){this.animate = animate; return this;}
 
-	    public Builder duration(Number duration){this.duration = duration; return this;}
+	    public Builder duration(double duration){this.duration = duration; return this;}
 
-	    public Builder easeLinearity(Number easeLinearity){this.easeLinearity = easeLinearity; return this;}
+	    public Builder easeLinearity(double easeLinearity){this.easeLinearity = easeLinearity; return this;}
 
 	    public Builder noMoveStart(Boolean noMoveStart){this.noMoveStart = noMoveStart; return this;}
 

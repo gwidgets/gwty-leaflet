@@ -37,13 +37,13 @@ public class PopupOptions {
 	}
 
     @JsProperty
-	private Number maxWidth;
+	private double maxWidth;
 
 	@JsProperty
-	private Number minWidth;
+	private double minWidth;
 
 	@JsProperty
-	private Number maxHeight;
+	private double maxHeight;
 
 	@JsProperty
 	private Boolean autoPan;
@@ -89,7 +89,7 @@ public class PopupOptions {
 	 *
 	 * @return the max width
 	 */
-	@JsOverlay public final Number getMaxWidth() {
+	@JsOverlay public final double getMaxWidth() {
 		return this.maxWidth;
 	}
 
@@ -100,7 +100,7 @@ public class PopupOptions {
 	 *
 	 * @return the min width
 	 */
-	@JsOverlay public final Number getMinWidth() {
+	@JsOverlay public final double getMinWidth() {
 		return this.minWidth;
 	}
 
@@ -111,7 +111,7 @@ public class PopupOptions {
 	 *
 	 * @return the max height
 	 */
-	@JsOverlay public final Number getMaxHeight() {
+	@JsOverlay public final double getMaxHeight() {
 		return this.maxHeight;
 	}
 
@@ -231,13 +231,13 @@ public class PopupOptions {
 	 */
 	public static class Builder {
 		
-		private Number maxWidth = 300;
+		private double maxWidth = 300;
 
 		
-		private Number minWidth = 50;
+		private double minWidth = 50;
 
 		
-		private Number maxHeight = null;
+		private double maxHeight;
 
 		
 		private Boolean autoPan = true;
@@ -285,7 +285,7 @@ public class PopupOptions {
 		 * @param maxWidth the max width
 		 * @return the builder
 		 */
-		public Builder maxWidth(Number maxWidth){this.maxHeight = maxWidth;return this;}
+		public Builder maxWidth(double maxWidth){this.maxHeight = maxWidth;return this;}
 
 		
 		/**
@@ -294,7 +294,7 @@ public class PopupOptions {
 		 * @param minWidth the min width
 		 * @return the builder
 		 */
-		public Builder minWidth(Number minWidth){this.minWidth = minWidth; return this;}
+		public Builder minWidth(double minWidth){this.minWidth = minWidth; return this;}
 
 		
 		/**
@@ -303,7 +303,7 @@ public class PopupOptions {
 		 * @param maxHeight the max height
 		 * @return the builder
 		 */
-		public Builder maxHeight(Number maxHeight){this.maxHeight = maxHeight; return this;}
+		public Builder maxHeight(double maxHeight){this.maxHeight = maxHeight; return this;}
 
 		
 		/**

@@ -87,7 +87,7 @@ public class LatLngBounds {
 	 * @return the west
 	 */
 	@JsMethod
-	public native Number getWest();
+	public native double getWest();
 
 	/**
 	 * Returns the south latitude of the bounds.
@@ -95,7 +95,7 @@ public class LatLngBounds {
 	 * @return the south
 	 */
 	@JsMethod
-	public native Number getSouth();
+	public native double getSouth();
 
 	/**
 	 * Returns the east longitude of the bounds.
@@ -103,7 +103,7 @@ public class LatLngBounds {
 	 * @return the east
 	 */
 	@JsMethod
-	public native Number getEast();
+	public native double getEast();
 
 	/**
 	 * Returns the north latitude of the bounds.
@@ -111,7 +111,7 @@ public class LatLngBounds {
 	 * @return the north
 	 */
 	@JsMethod
-	public native Number getNorth();
+	public native double getNorth();
 
 	/**
 	 * Returns the center point of the bounds.
@@ -172,7 +172,7 @@ public class LatLngBounds {
 	 * @return the lat lng bounds
 	 */
 	@JsMethod
-	public native LatLngBounds pad(Number bufferRatio);
+	public native LatLngBounds pad(double bufferRatio);
 
 	/**
 	 * Returns true if the bounds are properly initialized.

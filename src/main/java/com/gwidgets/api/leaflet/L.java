@@ -209,7 +209,7 @@ Note that points you pass when creating a polygon shouldn't have an additional l
 	 * @param longitude Longitude in degrees.
 	 * @return a new LatLng object
 	 */
-	public static native LatLng latLng(Number latitude, Number longitude);
+	public static native LatLng latLng(double latitude, double longitude);
 
 	/**
 	 * Represents a rectangular geographical area on a map.
@@ -229,7 +229,7 @@ Note that points you pass when creating a polygon shouldn't have an additional l
 	 * @param round the round
 	 * @return a new Point object
 	 */
-	public static native Point point(Number x, Number y, Boolean round);
+	public static native Point point(double x, double y, Boolean round);
 
 	/**
 	 * Represents a rectangular area in pixel coordinates.
@@ -278,8 +278,8 @@ Note that points you pass when creating a polygon shouldn't have an additional l
 	 * @param d the d
 	 * @return a new Transformation object
 	 */
-	public static native Transformation transformation(Number a, Number b,
-			Number c, Number d);
+	public static native Transformation transformation(double a, double b,
+			double c, double d);
 
 
 
@@ -447,7 +447,7 @@ Note that points you pass when creating a polygon shouldn't have an additional l
 	@JsType(isNative = true)
 	public static class Projection{
 		
-		/** Equirectangular, or Plate Carree projection — the most simple projection, mostly used by GIS enthusiasts. Directly maps x as longitude, and y as latitude. Also suitable for flat worlds, e.g. game maps. Used by the EPSG:3395 and Simple CRS. */
+		/** Equirectangular, or Plate Carree projection the most simple projection, mostly used by GIS enthusiasts. Directly maps x as longitude, and y as latitude. Also suitable for flat worlds, e.g. game maps. Used by the EPSG:3395 and Simple CRS. */
 		@JsProperty
 		public static com.gwidgets.api.leaflet.Projection LonLat;
 		
@@ -477,8 +477,8 @@ Note that points you pass when creating a polygon shouldn't have an additional l
 		 * @param d the d
 		 */
 		@JsConstructor
-		public Transformation(Number a, Number b,
-				Number c, Number d){
+		public Transformation(double a, double b,
+				double c, double d){
 			
 			
 		}
@@ -491,7 +491,7 @@ Note that points you pass when creating a polygon shouldn't have an additional l
 		 * @return the transformed point
 		 */
 		@JsMethod
-		public native Point transform(Point point, Number scale);
+		public native Point transform(Point point, double scale);
 
 		/**
 		 * Returns the reverse transformation of the given point, optionally divided by the given scale. Only accepts real L.Point instances, not arrays.
@@ -501,7 +501,7 @@ Note that points you pass when creating a polygon shouldn't have an additional l
 		 * @return the untransformed point
 		 */
 		@JsMethod
-		public native Point untransform(Point point, Number scale);
+		public native Point untransform(Point point, double scale);
 
 
 		

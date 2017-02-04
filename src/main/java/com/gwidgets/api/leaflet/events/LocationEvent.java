@@ -56,7 +56,7 @@ public class LocationEvent extends Event {
 	 *
 	 * @return the accuracy
 	 */
-	public final native Number getAccuracy() /*-{
+	public final native double getAccuracy() /*-{
 		return this.accuracy;
 	}-*/;
 
@@ -65,7 +65,7 @@ public class LocationEvent extends Event {
 	 *
 	 * @return the altitude
 	 */
-	public final native Number getAltitude() /*-{
+	public final native double getAltitude() /*-{
 		return this.altitude;
 	}-*/;
 
@@ -74,7 +74,7 @@ public class LocationEvent extends Event {
 	 *
 	 * @return the altitude accuracy
 	 */
-	public final native Number getAltitudeAccuracy() /*-{
+	public final native double getAltitudeAccuracy() /*-{
 		return this.altitudeAccuracy;
 	}-*/;
 
@@ -83,7 +83,7 @@ public class LocationEvent extends Event {
 	 *
 	 * @return the heading
 	 */
-	public final native Number getHeading() /*-{
+	public final native double getHeading() /*-{
 		return this.heading;
 	}-*/;
 
@@ -92,7 +92,7 @@ public class LocationEvent extends Event {
 	 *
 	 * @return the speed
 	 */
-	public final native Number getSpeed() /*-{
+	public final native double getSpeed() /*-{
 		return this.speed;
 	}-*/;
 
@@ -101,7 +101,7 @@ public class LocationEvent extends Event {
 	 *
 	 * @return the timestamp
 	 */
-	public final native Number getTimestamp() /*-{
+	public final native double getTimestamp() /*-{
 		return this.timestamp;
 	}-*/;
 

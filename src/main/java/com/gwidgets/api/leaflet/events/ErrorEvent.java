@@ -45,7 +45,7 @@ public class ErrorEvent extends Event {
 	 *
 	 * @return the code
 	 */
-	public final native Number getCode() /*-{
+	public final native double getCode() /*-{
 		return this.code;
 	}-*/;
 
