@@ -5,13 +5,12 @@ gwty-leaflet is wrapper for the famous maps javascript library [Leaflet](http://
 
 ##Dependency 
 
-The latest stable version of gwty-leaflet is 0.4. The source code of 0.4 version has been moved to the 0.4 branch. The current version is 0.5-SNAPSHOT and is undergoing developments to reflect the changes in the 1.0 version of leaflet: 
 
 ```xml
                      <dependency>
                         <groupId>com.gwidgets</groupId>
                         <artifactId>gwty-leaflet</artifactId>
-                        <version>0.5-SNAPSHOT</version>
+                        <version>{version}</version>
                      </dependency>
 ```
 
@@ -32,28 +31,28 @@ If you are using a snaphost version, then you need to include the snapshot repos
 	</repositories>
 ```
 
-
 Also, do not forget to include gwty-leaflet in your .gwt.xml module definition file: 
 
 ```xml
  <inherits name='com.gwidgets.api.GwtyLeaflet' />
                   
 ```
+##Versions
 
-##Leaflet version:
+- 0.5-rc1: latest version, compatible with leaflet 1.0 and 1.0.1
+- 0.4: compatible with leaflet 0.7
 
-gwty-leaflet 0.5 is compatible with leaflet 1.0. 
 
 ##Leaflet javascript files:
 
 As in any JsInterop wrapper, you need to refer to the Javascript files from your .html app file. You can either download the Js files from [Leaflet website](http://leafletjs.com/download.html), or refer to them directly using their cdn (there are performance implications off course!).
 
 ```html
-<link rel="stylesheet" href="https://npmcdn.com/leaflet@0.7.7/dist/leaflet.css" />
-<script src="https://npmcdn.com/leaflet@0.7.7/dist/leaflet.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.0/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.0.0/dist/leaflet.js"></script>
 ```
 
-Starting from the 0.5 version, a new feature has been added to allow dynamically from the code adding leaflet resource files instead of including them manually in the .html: 
+Starting from the version 0.5, a new feature has been added to allow adding leaflet resource files dynamically from the code instead of including them manually in the .html: 
 
 ```java
 LeafletResources.whenReady(
@@ -67,6 +66,7 @@ LeafletResources.whenReady(
     });
 ```
 
+This will automatically inject the leaflet .js and .css, and execute the code inside when they are loaded. 
 
 ##Initializing objects
 
@@ -147,6 +147,7 @@ Event Objects that the event object can be cast to are (depending on the usage):
 - DragEndEvent
 - ErrorEvent
 - GeoJSONEvent
+- KeyboardEvent
 - LayersControlEvent
 - LayerEvent
 - LocationEvent
@@ -155,6 +156,7 @@ Event Objects that the event object can be cast to are (depending on the usage):
 - ResizeEvent
 - TileErrorEvent
 - TileEvent
+- TooltipEvent
 
 All events objects extend [JavaScriptObject](http://www.gwtproject.org/javadoc/latest/com/google/gwt/core/client/JavaScriptObject.html), so they can be converted from/to a JavaScriptObject using cast() method.
 
@@ -164,7 +166,7 @@ Events are explained in details in Leaflet's documentation.
 
 ## Events types constants
 
-There is a long list of available events for some objects, and the developer may not know what events are available for the object they are using. The [EventType](https://github.com/gwidgets/gwty-leaflet/blob/master/src/main/java/com/gwidgets/api/leaflet/events/EventTypes.java) class contains a list of subclasses which contains the available events types constants. The event type can be accessed in static a way like: EventType.{object name}.{event type constant}. For example, to register the loading event on a TileLayer : 
+There is a long list of available events for some objects, and the developer may not know what events are available for the object they are using. The [EventType](https://github.com/gwidgets/gwty-leaflet/blob/master/src/main/java/com/gwidgets/api/leaflet/events/EventTypes.java) class contains a list of subclasses which contains the available events types constants. The event type can be accessed in static a way like: EventTypes.{object name}Events.{event type name}. For example, to register the loading event on a TileLayer : 
 
 ```java
 tile.on(EventTypes.TileLayer.LOADING, new Function(){
@@ -190,70 +192,201 @@ Here is a list of the events that can be registred for objects that can handle e
  <th>Available Events</th>
 </thead>
 <tbody>
-  <tr>
-    <td>
-    Map
-    </td>
-    <td>
-     click, dblclick, mousedown, mouseup, mouseover, mouseout, mousemove, contextmenu, focus, blur, preclick, load, unload, viewreset, movestart, move, moveend, dragstart, drag, dragend, zoomstart, zoomend, zoomlevelschange, resize, autopanstart, layeradd, layerremove, baselayerchange, overlayadd, overlayremove, locationfound, locationerror, popupopen, popupclose  
-    </td>
-  </tr>
-  <tr>
-    <td>
-    Marker
-    </td>
-    <td>
-    click, dblclick, mousedown, mouseover, mouseout, contextmenu, move, dragstart, drag, dragend, add, remove, popupopen, popupclose
-   </td>
-  </tr>
-  <tr>
-    <td>
-    TileLayer
-    </td>
-    <td>
-    loading, load, tileloadstart, tileload, tileunload, tileerror
-    </td>
-  </tr>
-  <tr>
-    <td>
-      Path
-    </td>
-    <td>
-       click, dblclick, mousedown, mouseover, mouseout, contextmenu, add, remove, popupopen, popupclose
-    </td>
-  </tr>
-  <tr>
-    <td>
-      FeatureGroup
-    </td>
-    <td>
-       click, dblclick, mouseover, mouseout, mousemove, contextmenu, layeradd, layerremove
-    </td>
-  </tr>
-  <tr>
-    <td>
-      ControlLayers
-    </td>
-    <td>
-       baselayerchange, overlayadd, overlayremove
-    </td>
-  </tr>
-  <tr>
-    <td>
-      PosAnimation
-    </td>
-    <td>
-       start, step, end
-    </td>
-  </tr>
+ <tr>
+<td>
+DivOverlayEvents
+</td>
+<td>
+add,remove,popupopen,popupclose,tooltipopen,tooltipclose</td>
+</tr>
+<tr>
+<td>
+RendererEvents
+</td>
+<td>
+update,add,remove,popupopen,popupclose,tooltipopen,tooltipclose</td>
+</tr>
+<tr>
+<td>
+InteractiveLayerEvents
+</td>
+<td>
+click,dblclick,mousedown,mouseover,mouseout,contextmenu,add,remove,popupopen,popupclose,tooltipopen,tooltipclose</td>
+</tr>
+<tr>
+<td>
+LayerEvents
+</td>
+<td>
+add,remove,popupopen,popupclose,tooltipopen,tooltipclose</td>
+</tr>
+<tr>
+<td>
+PosAnimationEvents
+</td>
+<td>
+start,step,end</td>
+</tr>
+<tr>
+<td>
+DivIconEvents
+</td>
+<td>
+add,remove,popupopen,popupclose,tooltipopen,tooltipclose</td>
+</tr>
+<tr>
+<td>
+IconEvents
+</td>
+<td>
+add,remove,popupopen,popupclose,tooltipopen,tooltipclose</td>
+</tr>
+<tr>
+<td>
+GridLayerEvents
+</td>
+<td>
+loading,tileunload,tileloadstart,tileerror,tileload,load,add,remove,popupopen,popupclose,tooltipopen,tooltipclose</td>
+</tr>
+<tr>
+<td>
+GeoJsonEvents
+</td>
+<td>
+layeradd,layerremove,add,remove,popupopen,popupclose,tooltipopen,tooltipclose</td>
+</tr>
+<tr>
+<td>
+FeatureGroupEvents
+</td>
+<td>
+layeradd,layerremove,add,remove,popupopen,popupclose,tooltipopen,tooltipclose</td>
+</tr>
+<tr>
+<td>
+LayerGroupEvents
+</td>
+<td>
+add,remove,popupopen,popupclose,tooltipopen,tooltipclose</td>
+</tr>
+<tr>
+<td>
+CanvasEvents
+</td>
+<td>
+update,add,remove,popupopen,popupclose,tooltipopen,tooltipclose</td>
+</tr>
+<tr>
+<td>
+SVGEvents
+</td>
+<td>
+update,add,remove,popupopen,popupclose,tooltipopen,tooltipclose</td>
+</tr>
+<tr>
+<td>
+CircleMakerEvents
+</td>
+<td>
+click,dblclick,mousedown,mouseover,mouseout,contextmenu,add,remove,popupopen,popupclose,tooltipopen,tooltipclose</td>
+</tr>
+<tr>
+<td>
+CircleEvents
+</td>
+<td>
+click,dblclick,mousedown,mouseover,mouseout,contextmenu,add,remove,popupopen,popupclose,tooltipopen,tooltipclose</td>
+</tr>
+<tr>
+<td>
+RectangleEvents
+</td>
+<td>
+click,dblclick,mousedown,mouseover,mouseout,contextmenu,add,remove,popupopen,popupclose,tooltipopen,tooltipclose</td>
+</tr>
+<tr>
+<td>
+PolygonEvents
+</td>
+<td>
+click,dblclick,mousedown,mouseover,mouseout,contextmenu,add,remove,popupopen,popupclose,tooltipopen,tooltipclose</td>
+</tr>
+<tr>
+<td>
+PolylineEvents
+</td>
+<td>
+click,dblclick,mousedown,mouseover,mouseout,contextmenu,add,remove,popupopen,popupclose,tooltipopen,tooltipclose</td>
+</tr>
+<tr>
+<td>
+PathEvents
+</td>
+<td>
+click,dblclick,mousedown,mouseover,mouseout,contextmenu,add,remove,popupopen,popupclose,tooltipopen,tooltipclose</td>
+</tr>
+<tr>
+<td>
+ImageOverlayEvents
+</td>
+<td>
+click,dblclick,mousedown,mouseover,mouseout,contextmenu,add,remove,popupopen,popupclose,tooltipopen,tooltipclose</td>
+</tr>
+<tr>
+<td>
+TileLayerWMSEvents
+</td>
+<td>
+loading,tileunload,tileloadstart,tileerror,tileload,load,add,remove,popupopen,popupclose,tooltipopen,tooltipclose</td>
+</tr>
+<tr>
+<td>
+TileLayerEvents
+</td>
+<td>
+loading,tileunload,tileloadstart,tileerror,tileload,load,add,remove,popupopen,popupclose,tooltipopen,tooltipclose</td>
+</tr>
+<tr>
+<td>
+TooltipEvents
+</td>
+<td>
+add,remove,popupopen,popupclose,tooltipopen,tooltipclose</td>
+</tr>
+<tr>
+<td>
+PopupEvents
+</td>
+<td>
+add,remove,popupopen,popupclose,tooltipopen,tooltipclose</td>
+</tr>
+<tr>
+<td>
+MarkerEvents
+</td>
+<td>
+move,dragstart,movestart,drag,dragend,moveend,click,dblclick,mousedown,mouseover,mouseout,contextmenu,add,remove,popupopen,popupclose,tooltipopen,tooltipclose</td>
+</tr>
+<tr>
+<td>
+MapEvents
+</td>
+<td>
+baselayerchange,overlayadd,overlayremove,layeradd,layerremove,zoomlevelschange,resize,unload,viewreset,load,zoomstart,movestart,zoom,move,zoomend,moveend,popupopen,popupclose,autopanstart,tooltipopen,tooltipclose,click,dblclick,mousedown,mouseup,mouseover,mouseout,mousemove,contextmenu,keypress,preclick,zoomanim,locationerror,locationfound</td>
+</tr>
 </tbody>
 
 </table>
 </div>
 
 
+## Javadoc :
+
+version 0.5-rc1: https://gwidgets.github.io/gwty-leaflet/javadoc/0.5/doc/
+version 0.4: https://gwidgets.github.io/gwty-leaflet/javadoc/0.5/doc/
+
 ## GWT version:
 
-As of the current version, gwty-leaflet is compiled using GWT 2.8.0. 
+As of the 0.5 version, gwty-leaflet is compiled using GWT 2.8.0. 
 
 
