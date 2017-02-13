@@ -192,187 +192,187 @@ Here is a list of the events that can be registred for objects that can handle e
  <th>Available Events</th>
 </thead>
 <tbody>
- <tr>
+<tr>
 <td>
 DivOverlayEvents
 </td>
 <td>
-add,remove,popupopen,popupclose,tooltipopen,tooltipclose</td>
+add, remove, popupopen, popupclose, tooltipopen, tooltipclose</td>
 </tr>
 <tr>
 <td>
 RendererEvents
 </td>
 <td>
-update,add,remove,popupopen,popupclose,tooltipopen,tooltipclose</td>
+update, add, remove, popupopen, popupclose, tooltipopen, tooltipclose</td>
 </tr>
 <tr>
 <td>
 InteractiveLayerEvents
 </td>
 <td>
-click,dblclick,mousedown,mouseover,mouseout,contextmenu,add,remove,popupopen,popupclose,tooltipopen,tooltipclose</td>
+click, dblclick, mousedown, mouseover, mouseout, contextmenu, add, remove, popupopen, popupclose, tooltipopen, tooltipclose</td>
 </tr>
 <tr>
 <td>
 LayerEvents
 </td>
 <td>
-add,remove,popupopen,popupclose,tooltipopen,tooltipclose</td>
+add, remove, popupopen, popupclose, tooltipopen, tooltipclose</td>
 </tr>
 <tr>
 <td>
 PosAnimationEvents
 </td>
 <td>
-start,step,end</td>
+start, step, end</td>
 </tr>
 <tr>
 <td>
 DivIconEvents
 </td>
 <td>
-add,remove,popupopen,popupclose,tooltipopen,tooltipclose</td>
+add, remove, popupopen, popupclose, tooltipopen, tooltipclose</td>
 </tr>
 <tr>
 <td>
 IconEvents
 </td>
 <td>
-add,remove,popupopen,popupclose,tooltipopen,tooltipclose</td>
+add, remove, popupopen, popupclose, tooltipopen, tooltipclose</td>
 </tr>
 <tr>
 <td>
 GridLayerEvents
 </td>
 <td>
-loading,tileunload,tileloadstart,tileerror,tileload,load,add,remove,popupopen,popupclose,tooltipopen,tooltipclose</td>
+loading, tileunload, tileloadstart, tileerror, tileload, load, add, remove, popupopen, popupclose, tooltipopen, tooltipclose</td>
 </tr>
 <tr>
 <td>
 GeoJsonEvents
 </td>
 <td>
-layeradd,layerremove,add,remove,popupopen,popupclose,tooltipopen,tooltipclose</td>
+layeradd, layerremove, add, remove, popupopen, popupclose, tooltipopen, tooltipclose</td>
 </tr>
 <tr>
 <td>
 FeatureGroupEvents
 </td>
 <td>
-layeradd,layerremove,add,remove,popupopen,popupclose,tooltipopen,tooltipclose</td>
+layeradd, layerremove, add, remove, popupopen, popupclose, tooltipopen, tooltipclose</td>
 </tr>
 <tr>
 <td>
 LayerGroupEvents
 </td>
 <td>
-add,remove,popupopen,popupclose,tooltipopen,tooltipclose</td>
+add, remove, popupopen, popupclose, tooltipopen, tooltipclose</td>
 </tr>
 <tr>
 <td>
 CanvasEvents
 </td>
 <td>
-update,add,remove,popupopen,popupclose,tooltipopen,tooltipclose</td>
+update, add, remove, popupopen, popupclose, tooltipopen, tooltipclose</td>
 </tr>
 <tr>
 <td>
 SVGEvents
 </td>
 <td>
-update,add,remove,popupopen,popupclose,tooltipopen,tooltipclose</td>
+update, add, remove, popupopen, popupclose, tooltipopen, tooltipclose</td>
 </tr>
 <tr>
 <td>
 CircleMakerEvents
 </td>
 <td>
-click,dblclick,mousedown,mouseover,mouseout,contextmenu,add,remove,popupopen,popupclose,tooltipopen,tooltipclose</td>
+click, dblclick, mousedown, mouseover, mouseout, contextmenu, add, remove, popupopen, popupclose, tooltipopen, tooltipclose</td>
 </tr>
 <tr>
 <td>
 CircleEvents
 </td>
 <td>
-click,dblclick,mousedown,mouseover,mouseout,contextmenu,add,remove,popupopen,popupclose,tooltipopen,tooltipclose</td>
+click, dblclick, mousedown, mouseover, mouseout, contextmenu, add, remove, popupopen, popupclose, tooltipopen, tooltipclose</td>
 </tr>
 <tr>
 <td>
 RectangleEvents
 </td>
 <td>
-click,dblclick,mousedown,mouseover,mouseout,contextmenu,add,remove,popupopen,popupclose,tooltipopen,tooltipclose</td>
+click, dblclick, mousedown, mouseover, mouseout, contextmenu, add, remove, popupopen, popupclose, tooltipopen, tooltipclose</td>
 </tr>
 <tr>
 <td>
 PolygonEvents
 </td>
 <td>
-click,dblclick,mousedown,mouseover,mouseout,contextmenu,add,remove,popupopen,popupclose,tooltipopen,tooltipclose</td>
+click, dblclick, mousedown, mouseover, mouseout, contextmenu, add, remove, popupopen, popupclose, tooltipopen, tooltipclose</td>
 </tr>
 <tr>
 <td>
 PolylineEvents
 </td>
 <td>
-click,dblclick,mousedown,mouseover,mouseout,contextmenu,add,remove,popupopen,popupclose,tooltipopen,tooltipclose</td>
+click, dblclick, mousedown, mouseover, mouseout, contextmenu, add, remove, popupopen, popupclose, tooltipopen, tooltipclose</td>
 </tr>
 <tr>
 <td>
 PathEvents
 </td>
 <td>
-click,dblclick,mousedown,mouseover,mouseout,contextmenu,add,remove,popupopen,popupclose,tooltipopen,tooltipclose</td>
+click, dblclick, mousedown, mouseover, mouseout, contextmenu, add, remove, popupopen, popupclose, tooltipopen, tooltipclose</td>
 </tr>
 <tr>
 <td>
 ImageOverlayEvents
 </td>
 <td>
-click,dblclick,mousedown,mouseover,mouseout,contextmenu,add,remove,popupopen,popupclose,tooltipopen,tooltipclose</td>
+click, dblclick, mousedown, mouseover, mouseout, contextmenu, add, remove, popupopen, popupclose, tooltipopen, tooltipclose</td>
 </tr>
 <tr>
 <td>
 TileLayerWMSEvents
 </td>
 <td>
-loading,tileunload,tileloadstart,tileerror,tileload,load,add,remove,popupopen,popupclose,tooltipopen,tooltipclose</td>
+loading, tileunload, tileloadstart, tileerror, tileload, load, add, remove, popupopen, popupclose, tooltipopen, tooltipclose</td>
 </tr>
 <tr>
 <td>
 TileLayerEvents
 </td>
 <td>
-loading,tileunload,tileloadstart,tileerror,tileload,load,add,remove,popupopen,popupclose,tooltipopen,tooltipclose</td>
+loading, tileunload, tileloadstart, tileerror, tileload, load, add, remove, popupopen, popupclose, tooltipopen, tooltipclose</td>
 </tr>
 <tr>
 <td>
 TooltipEvents
 </td>
 <td>
-add,remove,popupopen,popupclose,tooltipopen,tooltipclose</td>
+add, remove, popupopen, popupclose, tooltipopen, tooltipclose</td>
 </tr>
 <tr>
 <td>
 PopupEvents
 </td>
 <td>
-add,remove,popupopen,popupclose,tooltipopen,tooltipclose</td>
+add, remove, popupopen, popupclose, tooltipopen, tooltipclose</td>
 </tr>
 <tr>
 <td>
 MarkerEvents
 </td>
 <td>
-move,dragstart,movestart,drag,dragend,moveend,click,dblclick,mousedown,mouseover,mouseout,contextmenu,add,remove,popupopen,popupclose,tooltipopen,tooltipclose</td>
+move, dragstart, movestart, drag, dragend, moveend, click, dblclick, mousedown, mouseover, mouseout, contextmenu, add, remove, popupopen, popupclose, tooltipopen, tooltipclose</td>
 </tr>
 <tr>
 <td>
 MapEvents
 </td>
 <td>
-baselayerchange,overlayadd,overlayremove,layeradd,layerremove,zoomlevelschange,resize,unload,viewreset,load,zoomstart,movestart,zoom,move,zoomend,moveend,popupopen,popupclose,autopanstart,tooltipopen,tooltipclose,click,dblclick,mousedown,mouseup,mouseover,mouseout,mousemove,contextmenu,keypress,preclick,zoomanim,locationerror,locationfound</td>
+baselayerchange, overlayadd, overlayremove, layeradd, layerremove, zoomlevelschange, resize, unload, viewreset, load, zoomstart, movestart, zoom, move, zoomend, moveend, popupopen, popupclose, autopanstart, tooltipopen, tooltipclose, click, dblclick, mousedown, mouseup, mouseover, mouseout, mousemove, contextmenu, keypress, preclick, zoomanim, locationerror, locationfound</td>
 </tr>
 </tbody>
 
