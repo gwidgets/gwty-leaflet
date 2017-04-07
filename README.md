@@ -3,7 +3,7 @@
 gwty-leaflet is wrapper for the famous maps javascript library [Leaflet](http://leafletjs.com/). gwty-leaflet is based on JsInterop and allows using Leaflet from your GWT application exactly the same way as from a javascript script with a slight advantage: static typing. It was partially generated automatically from Leaflet docs.
 
 
-##Dependency 
+## Dependency 
 
 
 ```xml
@@ -37,13 +37,13 @@ Also, do not forget to include gwty-leaflet in your .gwt.xml module definition f
  <inherits name='com.gwidgets.api.GwtyLeaflet' />
                   
 ```
-##Versions
+## Versions
 
-- 0.5-rc1: latest version, compatible with leaflet 1.0 and 1.0.1
+- 0.5: latest version, compatible with leaflet 1.0 and 1.0.1
 - 0.4: compatible with leaflet 0.7
 
 
-##Leaflet javascript files:
+## Leaflet javascript files:
 
 As in any JsInterop wrapper, you need to refer to the Javascript files from your .html app file. You can either download the Js files from [Leaflet website](http://leafletjs.com/download.html), or refer to them directly using their cdn (there are performance implications off course!).
 
@@ -58,7 +58,7 @@ Starting from the version 0.5, a new feature has been added to allow adding leaf
 LeafletResources.whenReady(
         e -> 
                  {
-      MapOptions options = new MapOptions.Builder(L.latLng(52.51, 13.40), 12, 12).dragging(false).build();
+      MapOptions options = new MapOptions.Builder(L.latLng(52.51, 13.40), 12.0, 12.0).dragging(false).build();
     final Map map = L.map("map", options);
     GWT.log(options.getZoom()+"");
     L.tileLayer(MAP_URL, null).addTo(map);
@@ -68,7 +68,7 @@ LeafletResources.whenReady(
 
 This will automatically inject the leaflet .js and .css, and execute the code inside when they are loaded. 
 
-##Initializing objects
+## Initializing objects
 
 All objects initializations are done through the L class. gwty-leaflet provides all factory methods of Leaflet. For example:
 
@@ -117,7 +117,7 @@ For more informations about the available options for each objects, and their ut
 To create a map in a div with an id="map", we can do something like: 
 ```java
                 
-                L.map("map", new MapOptions.Builder().build()).setView(L.latLng(51.505, -0.09), 12, new ZoomPanOptions.Builder().build());
+                L.map("map", new MapOptions.Builder().build()).setView(L.latLng(51.505, -0.09), 12.0, new ZoomPanOptions.Builder().build());
 
 ```
 
@@ -382,8 +382,8 @@ baselayerchange, overlayadd, overlayremove, layeradd, layerremove, zoomlevelscha
 
 ## Javadoc :
 
-version 0.5-rc1: https://gwidgets.github.io/gwty-leaflet/javadoc/0.5/doc/
-version 0.4: https://gwidgets.github.io/gwty-leaflet/javadoc/0.5/doc/
+- version 0.5: https://gwidgets.github.io/gwty-leaflet/javadoc/0.5/doc/
+- version 0.4: https://gwidgets.github.io/gwty-leaflet/javadoc/0.5/doc/
 
 ## GWT version:
 
