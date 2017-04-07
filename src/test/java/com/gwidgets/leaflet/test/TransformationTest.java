@@ -9,7 +9,7 @@ import com.gwidgets.api.leaflet.elemental.Function;
 public class TransformationTest extends GwtyLeafletTestCase {
 	
 	
-	/******* test fails *********/
+	/******* test fails for equal method *********/
 	
 	public void testTransformation(){
 		InjectedLeafletResources.whenReady(new Function(){
@@ -22,9 +22,11 @@ public class TransformationTest extends GwtyLeafletTestCase {
 				   Point untransformed = trans.untransform(transformed, 1);
 				   
 				   assertEquals(testpoint.toString(), untransformed.toString());
+				   assertEquals(String.valueOf(testpoint.x), String.valueOf(untransformed.x));
+				   assertEquals(String.valueOf(testpoint.y), String.valueOf(untransformed.y));
 				 //  assertTrue(untransformed.equals(testpoint));
 				   
-					
+
 					return null;
 			}
 		});

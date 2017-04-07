@@ -40,7 +40,7 @@ public class EventTest extends GwtyLeafletTestCase {
 				div.id = "test9";
 				Document.getBody().appendChild(div);
 				
-				 MapOptions options = new MapOptions.Builder(L.latLng(52.51, 13.40), 12, 7).maxZoom(20).build();
+				 MapOptions options = new MapOptions.Builder(L.latLng(52.51, 13.40), 12.0, 7.0).maxZoom(20.0).build();
 				Map map = L.map("test9", options);
 
 				map.on(EventTypes.MapEvents.LOAD, (e) -> {

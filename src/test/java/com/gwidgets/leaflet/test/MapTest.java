@@ -40,23 +40,23 @@ public class MapTest extends GwtyLeafletTestCase {
 		});
 	}
 	
-//	public void testMapRemove(){
-//		InjectedLeafletResources.whenReady(new Function(){
-//			public JavaScriptObject call(JavaScriptObject event) {
-//				 HTMLElement div = Document.createElement("div");
-//				    div.id = "test5";
-//				    Document.getBody().appendChild(div);
-//				      MapOptions options = new MapOptions.Builder(L.latLng(52.51, 13.40), 12, 7).maxZoom(20).build();
-//					Map map = L.map("test5", options);
-//
-//					assertNotNull(map);
-//					map.remove();
-//				
-//					
-//					return null;
-//			}
-//		});
-//	}
+	public void testMapRemove(){
+		InjectedLeafletResources.whenReady(new Function(){
+			public JavaScriptObject call(JavaScriptObject event) {
+				 HTMLElement div = Document.createElement("div");
+				    div.id = "test5";
+				    Document.getBody().appendChild(div);
+				      MapOptions options = new MapOptions.Builder(L.latLng(52.51, 13.40), 12.0, 7.0).maxZoom(20.0).build();
+					Map map = L.map("test5", options);
+
+					assertNotNull(map);
+					map.remove();
+				
+					
+					return null;
+			}
+		});
+	}
 	
 	
 	public void testMapView(){
@@ -67,7 +67,7 @@ public class MapTest extends GwtyLeafletTestCase {
 				    Document.getBody().appendChild(div);
 				    
 					Map map = L.map("test2", null);
-					map.setView(L.latLng(52.51, 13.40), 12, null);
+					map.setView(L.latLng(52.51, 13.40), 12.0, null);
 					assertNotNull(map);
 					assertEquals(map.getCenter().lat, 52.51);
 					assertEquals(map.getCenter().lng, 13.40);
@@ -85,21 +85,19 @@ public class MapTest extends GwtyLeafletTestCase {
 				 HTMLElement div = Document.createElement("div");
 				    div.id = "test3";
 				    Document.getBody().appendChild(div);
-				      MapOptions options = new MapOptions.Builder(L.latLng(52.51, 13.40), 12, 7).dragging(true).maxZoom(20).build();
+				      MapOptions options = new MapOptions.Builder(L.latLng(52.51, 13.40), 12.0, 7.0).dragging(true).maxZoom(20.0).build();
 					Map map = L.map("test3", options);
-
+					
 					assertNotNull(map);
 					assertEquals(String.valueOf(map.getZoom()), "12");
 				    assertEquals(String.valueOf(map.getMinZoom()), "7");
      				assertEquals(String.valueOf(map.getMaxZoom()), "20");
      				
-     				//Zoom In/Zoom Out has weird behavior *** Fails
+     				//Zoom In method has weird behavior *** Fails
      				
-//     				map.zoomIn(3, null);
-//     				assertEquals(String.valueOf(map.getZoom()), "15");
-//     				
-//     				map.zoomOut(5, null);
-//     				assertEquals(String.valueOf(map.getMaxZoom()), "10");
+     				
+     				map.zoomOut(5.0, null);
+     				assertEquals("7", map.getZoom().toString());
 					
 					return null;
 			}
@@ -112,7 +110,7 @@ public class MapTest extends GwtyLeafletTestCase {
 				 HTMLElement div = Document.createElement("div");
 				    div.id = "test4";
 				    Document.getBody().appendChild(div);
-				      MapOptions options = new MapOptions.Builder(L.latLng(52.51, 13.40), 12, 7).maxZoom(20).build();
+				      MapOptions options = new MapOptions.Builder(L.latLng(52.51, 13.40), 12.0, 7.0).maxZoom(20.0).build();
 					Map map = L.map("test4", options);
 
 					assertNotNull(map);
