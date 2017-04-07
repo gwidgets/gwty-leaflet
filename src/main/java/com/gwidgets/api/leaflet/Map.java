@@ -1,5 +1,16 @@
 package com.gwidgets.api.leaflet;
 
+import com.google.gwt.core.client.JavaScriptObject;
+import com.gwidgets.api.leaflet.elemental.Function;
+import com.gwidgets.api.leaflet.elemental.HTMLElement;
+import com.gwidgets.api.leaflet.events.MouseEvent;
+import com.gwidgets.api.leaflet.options.FitBoundsOptions;
+import com.gwidgets.api.leaflet.options.LocateOptions;
+import com.gwidgets.api.leaflet.options.PanOptions;
+import com.gwidgets.api.leaflet.options.PopupOptions;
+import com.gwidgets.api.leaflet.options.ZoomOptions;
+import com.gwidgets.api.leaflet.options.ZoomPanOptions;
+
 /**
  *  Copyright 2016 G-Widgets
  *  Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,20 +26,8 @@ package com.gwidgets.api.leaflet;
  *  limitations under the License.
  */
 import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-
-import com.google.gwt.core.client.JavaScriptObject;
-import com.gwidgets.api.leaflet.elemental.Function;
-import com.gwidgets.api.leaflet.elemental.HTMLElement;
-import com.gwidgets.api.leaflet.events.MouseEvent;
-import com.gwidgets.api.leaflet.options.FitBoundsOptions;
-import com.gwidgets.api.leaflet.options.LocateOptions;
-import com.gwidgets.api.leaflet.options.PanOptions;
-import com.gwidgets.api.leaflet.options.PopupOptions;
-import com.gwidgets.api.leaflet.options.ZoomOptions;
-import com.gwidgets.api.leaflet.options.ZoomPanOptions;
 
 
 // TODO: Auto-generated Javadoc
@@ -114,7 +113,7 @@ public class Map implements Evented {
 	 * @return the L class
 	 */
 	@JsMethod
-	public native L zoomIn(double delta, ZoomOptions options);
+	public native L zoomIn(Double delta, ZoomOptions options);
 	
 
 	/**
@@ -125,7 +124,7 @@ public class Map implements Evented {
 	 * @return the L class
 	 */
 	@JsMethod
-	public native L zoomOut(double delta, ZoomOptions options);
+	public native L zoomOut(Double delta, ZoomOptions options);
 
 	/**
 	 * Zooms the map while keeping a specified point on the map stationary (e.g. used internally for scroll zoom and double-click zoom).
@@ -257,7 +256,7 @@ public class Map implements Evented {
 	 * @return the zoom
 	 */
 	@JsMethod
-	public native double getZoom();
+	public native Double getZoom();
 
 	/**
 	 * Returns the minimum zoom level of the map.
@@ -265,7 +264,7 @@ public class Map implements Evented {
 	 * @return the min zoom
 	 */
 	@JsMethod
-	public native double getMinZoom();
+	public native Double getMinZoom();
 
 	/**
 	 * Returns the maximum zoom level of the map.
@@ -273,7 +272,7 @@ public class Map implements Evented {
 	 * @return the max zoom
 	 */
 	@JsMethod
-	public native double getMaxZoom();
+	public native Double getMaxZoom();
 
 	/**
 	 * Returns the LatLngBounds of the current map view.

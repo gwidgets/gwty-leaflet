@@ -18,8 +18,6 @@ package com.gwidgets.api.leaflet.events;
 import com.gwidgets.api.leaflet.Point;
 import com.gwidgets.api.leaflet.elemental.HTMLElement;
 
-import jsinterop.annotations.JsType;
-
 
 /**
  * The Class TileEvent.

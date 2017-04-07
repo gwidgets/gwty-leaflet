@@ -55,16 +55,16 @@ public class MapOptions {
 	private LatLng center;
 	
 	@JsProperty
-	private double zoom;
+	private Double zoom;
 	
 	@JsProperty
 	private Layer[] layers;
 	
 	@JsProperty
-	private double minZoom;
+	private Double minZoom;
 	
 	@JsProperty
-	private double maxZoom;
+	private Double maxZoom;
 	
 	@JsProperty
 	private LatLngBounds maxBounds;
@@ -216,7 +216,7 @@ public class MapOptions {
 	 * @return the zoom
 	 */
 	@JsOverlay
-	public final double getZoom() {
+	public final Double getZoom() {
 		return this.zoom;
 	}
 
@@ -237,7 +237,7 @@ public class MapOptions {
 	 * default 0
 	 * @return the min zoom
 	 */
-	@JsOverlay public final double getMinZoom() {
+	@JsOverlay public final Double getMinZoom() {
 		return this.minZoom;
 	}
 
@@ -247,7 +247,7 @@ public class MapOptions {
 	 * default 0
 	 * @return the max zoom
 	 */
-	@JsOverlay public final double getMaxZoom() {
+	@JsOverlay public final Double getMaxZoom() {
 		return this.maxZoom;
 	}
 
@@ -538,10 +538,10 @@ public class MapOptions {
 		LatLng center = null;
 
 
-		double zoom = 0;
+		Double zoom = 0.0;
 
 
-		double minZoom = 0;
+		Double minZoom = 0.0;
 
 		/**
 		 * Instantiates a new MapOtions builder.
@@ -550,7 +550,7 @@ public class MapOptions {
 		 * @param zoom Initial map zoom.
 		 * @param minZoom Minimum zoom level of the map. Overrides any minZoom set on map layers.
 		 */
-		public Builder(LatLng center, double zoom, double minZoom) {
+		public Builder(LatLng center, Double zoom, Double minZoom) {
 			this.center = center;
 			this.zoom = zoom;
 			this.minZoom = minZoom;
@@ -560,7 +560,7 @@ public class MapOptions {
 		
 		Layer[] layers = null;
 
-		double maxZoom = 0;
+		Double maxZoom = 0.0;
 
 		LatLngBounds maxBounds = null;
 
@@ -646,7 +646,7 @@ public class MapOptions {
 		 * @param maxZoom the max zoom
 		 * @return the builder
 		 */
-		public Builder maxZoom(double maxZoom) {
+		public Builder maxZoom(Double maxZoom) {
 			this.maxZoom = maxZoom;
 			return this;
 		}

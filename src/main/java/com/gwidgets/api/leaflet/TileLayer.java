@@ -1,5 +1,7 @@
 package com.gwidgets.api.leaflet;
 
+import com.gwidgets.api.leaflet.elemental.HTMLElement;
+
 /**
  *  Copyright 2016 G-Widgets
  *  Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,13 +18,6 @@ package com.gwidgets.api.leaflet;
  */
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsType;
-
-import com.gwidgets.api.leaflet.elemental.Function;
-import com.gwidgets.api.leaflet.elemental.HTMLElement;
-import com.gwidgets.api.leaflet.options.PopupOptions;
-import com.gwidgets.api.leaflet.options.TileLayerOptions;
-import com.gwidgets.api.leaflet.options.TileLayerWMSOptions;
-import com.gwidgets.api.leaflet.options.TooltipOptions;
 
 
 /**

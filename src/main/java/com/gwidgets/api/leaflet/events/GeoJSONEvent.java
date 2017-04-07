@@ -15,7 +15,6 @@
 package com.gwidgets.api.leaflet.events;
 
 import com.gwidgets.api.leaflet.Layer;
-import jsinterop.annotations.JsType;
 
 /**
  * The Class GeoJSONEvent.

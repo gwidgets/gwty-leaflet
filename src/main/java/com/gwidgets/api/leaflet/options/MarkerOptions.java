@@ -14,14 +14,13 @@
  */
 package com.gwidgets.api.leaflet.options;
 
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
-
 import static jsinterop.annotations.JsPackage.GLOBAL;
 
 import com.gwidgets.api.leaflet.Icon;
-import com.gwidgets.api.leaflet.options.DivIconOptions.Builder;
+
+import jsinterop.annotations.JsOverlay;
+import jsinterop.annotations.JsProperty;
+import jsinterop.annotations.JsType;
 
 /**
  * The Class MarkerOptions.

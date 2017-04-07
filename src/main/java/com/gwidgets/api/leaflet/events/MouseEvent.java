@@ -18,8 +18,6 @@ import com.gwidgets.api.leaflet.LatLng;
 import com.gwidgets.api.leaflet.Point;
 import com.gwidgets.api.leaflet.elemental.DOMMouseEvent;
 
-import jsinterop.annotations.JsType;
-
 
 /**
  * The Class MouseEvent.

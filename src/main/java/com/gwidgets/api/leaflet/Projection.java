@@ -1,8 +1,6 @@
 package com.gwidgets.api.leaflet;
 
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 /**
  *  Copyright 2016 G-Widgets

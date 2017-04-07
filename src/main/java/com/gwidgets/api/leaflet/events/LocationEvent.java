@@ -16,10 +16,6 @@ package com.gwidgets.api.leaflet.events;
 
 import com.gwidgets.api.leaflet.LatLng;
 import com.gwidgets.api.leaflet.LatLngBounds;
-import com.gwidgets.api.leaflet.Point;
-import com.gwidgets.api.leaflet.elemental.DOMMouseEvent;
-
-import jsinterop.annotations.JsType;
 
 
 /**

@@ -14,15 +14,14 @@
  */
 package com.gwidgets.api.leaflet.options;
 
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
-
 import static jsinterop.annotations.JsPackage.GLOBAL;
 
 import com.gwidgets.api.leaflet.CRS;
 import com.gwidgets.api.leaflet.LatLngBounds;
-import com.gwidgets.api.leaflet.options.TileLayerOptions.Builder;
+
+import jsinterop.annotations.JsOverlay;
+import jsinterop.annotations.JsProperty;
+import jsinterop.annotations.JsType;
 
 /**
  * The Class TileLayerWMSOptions.

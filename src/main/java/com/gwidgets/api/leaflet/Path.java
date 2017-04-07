@@ -1,5 +1,9 @@
 package com.gwidgets.api.leaflet;
 
+import com.gwidgets.api.leaflet.elemental.HTMLElement;
+import com.gwidgets.api.leaflet.options.PathOptions;
+import com.gwidgets.api.leaflet.options.PopupOptions;
+
 /**
  *  Copyright 2016 G-Widgets
  *  Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,11 +20,6 @@ package com.gwidgets.api.leaflet;
  */
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsType;
-
-import com.gwidgets.api.leaflet.elemental.Function;
-import com.gwidgets.api.leaflet.elemental.HTMLElement;
-import com.gwidgets.api.leaflet.options.PathOptions;
-import com.gwidgets.api.leaflet.options.PopupOptions;
 
 /**
  * An abstract class that contains options and constants shared between vector overlays (Polygon, Polyline, Circle). Do not use it directly.

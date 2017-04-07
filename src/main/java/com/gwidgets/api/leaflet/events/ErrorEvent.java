@@ -14,10 +14,6 @@
  */
 package com.gwidgets.api.leaflet.events;
 
-
-import jsinterop.annotations.JsType;
-
-
 /**
  * The Class ErrorEvent.
  * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>

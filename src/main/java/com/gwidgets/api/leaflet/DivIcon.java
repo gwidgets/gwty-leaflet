@@ -1,11 +1,5 @@
 package com.gwidgets.api.leaflet;
 
-import com.gwidgets.api.leaflet.elemental.Function;
-import com.gwidgets.api.leaflet.elemental.HTMLElement;
-import com.gwidgets.api.leaflet.options.PopupOptions;
-import com.gwidgets.api.leaflet.options.TooltipOptions;
-
-import jsinterop.annotations.JsMethod;
 /**
  *  Copyright 2016 G-Widgets
  *  Licensed under the Apache License, Version 2.0 (the "License");
