@@ -258,10 +258,6 @@ public class PopupOptions {
 
 		private Point autoPanPadding = L.point(5, 5, true);
 
-
-		private Boolean zoomAnimation = true;
-
-		
 		private Boolean autoClose = null;
 		
 		private String className = "";
@@ -366,15 +362,6 @@ public class PopupOptions {
 		 * @return the builder
 		 */
 		public Builder autoPanPadding(Point autoPanPadding){this.autoPanPadding = autoPanPadding; return this;}
-
-		
-		/**
-		 * Whether to animate the popup on zoom. Disable it if you have problems with Flash content inside popups.
-		 *
-		 * @param zoomAnimation the zoom animation
-		 * @return the builder
-		 */
-		public Builder zoomAnimation(Boolean zoomAnimation){this.zoomAnimation = zoomAnimation; return this;}
 
 		
 		/**
