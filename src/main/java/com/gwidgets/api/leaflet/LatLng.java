@@ -16,7 +16,6 @@ package com.gwidgets.api.leaflet;
  */
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 

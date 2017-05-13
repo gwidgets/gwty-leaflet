@@ -18,7 +18,6 @@ import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsType;
 
 import com.google.gwt.core.client.JavaScriptObject;
-import com.google.gwt.core.client.JsArray;
 import com.gwidgets.api.leaflet.elemental.Function;
 import com.gwidgets.api.leaflet.elemental.HTMLElement;
 import com.gwidgets.api.leaflet.options.PopupOptions;
