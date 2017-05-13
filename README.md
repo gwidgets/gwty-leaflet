@@ -39,7 +39,8 @@ Also, do not forget to include gwty-leaflet in your .gwt.xml module definition f
 ```
 ## Versions
 
-- 0.5: latest version, compatible with leaflet 1.0 and 1.0.1
+- 1.0-SNAPSHOT: current version, under developement
+- 0.5: latest stable version, compatible with leaflet 1.0 and 1.0.1
 - 0.4: compatible with leaflet 0.7
 
 
