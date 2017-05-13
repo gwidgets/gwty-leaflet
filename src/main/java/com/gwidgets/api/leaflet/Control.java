@@ -15,7 +15,6 @@ package com.gwidgets.api.leaflet;
  *  limitations under the License.
  */
 import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 
