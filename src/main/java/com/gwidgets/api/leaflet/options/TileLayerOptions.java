@@ -31,7 +31,7 @@ import jsinterop.annotations.JsType;
 public class TileLayerOptions {
 
 	
-	private TileLayerOptions() {
+	public TileLayerOptions() {
 
 	}
 
