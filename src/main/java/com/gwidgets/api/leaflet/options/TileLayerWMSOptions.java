@@ -30,7 +30,7 @@ import jsinterop.annotations.JsType;
 @JsType(isNative = true, namespace = GLOBAL, name = "Object")
 public class TileLayerWMSOptions {
 
-	private TileLayerWMSOptions() {
+	public TileLayerWMSOptions() {
 
 	}
 
