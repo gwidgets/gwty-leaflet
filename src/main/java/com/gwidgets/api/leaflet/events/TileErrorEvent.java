@@ -34,7 +34,7 @@ public class TileErrorEvent extends Event {
 	 *
 	 * @return the tile
 	 */
-	public native HTMLElement getTile()/*-{
+	public final native HTMLElement getTile()/*-{
 		return this.tile;
 	}-*/;
 

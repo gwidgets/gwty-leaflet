@@ -31,7 +31,7 @@ public class DragEndEvent extends Event {
 	 *
 	 * @return the distance
 	 */
-	public native double getDistance()/*-{
+	public final native double getDistance()/*-{
 		return this.distance;
 	}-*/;
 
