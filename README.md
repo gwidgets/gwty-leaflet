@@ -40,7 +40,7 @@ Also, do not forget to include gwty-leaflet in your .gwt.xml module definition f
 ```
 ## Versions
 
-- 1.0-SNAPSHOT: current version, under developement
+- 1.0-SNAPSHOT: current version, under development
 - 0.5: latest stable version, compatible with leaflet 1.0 and 1.0.1
 - 0.4: compatible with leaflet 0.7
 
@@ -131,11 +131,9 @@ Events are available only in some objects. Events can be handled throught the fo
 For defining actions, events needs to be supplied with an abstract callback function that needs to be implemented by the developer. The below example will dipslay a pop up on each map click: 
 
 ```java
-map.on(EventTypes.Map.CLICK, new Function(){
-                        @Override
-                        public JavaScriptObject call(JavaScriptObject event) {
-
-                                MouseEvent msEvent = event.cast();
+map.on(EventTypes.MapEvents.CLICK, new EventCallback<MouseEvent>() {
+			@Override
+			public void call(MouseEvent event) {
                                 
                                 map.openPopup("hello", msEvent.getLatlng(), new PopupOptions.Builder().build());
                                 return null;
@@ -144,7 +142,7 @@ map.on(EventTypes.Map.CLICK, new Function(){
                 });
 ```
 
-Event Objects that the event object can be cast to are (depending on the usage): 
+Event Objects are: 
 
 - DragEndEvent
 - ErrorEvent
@@ -160,7 +158,6 @@ Event Objects that the event object can be cast to are (depending on the usage):
 - TileEvent
 - TooltipEvent
 
-All events objects extend [JavaScriptObject](http://www.gwtproject.org/javadoc/latest/com/google/gwt/core/client/JavaScriptObject.html), so they can be converted from/to a JavaScriptObject using cast() method.
 
 Events are executed following the order of registration. 
 
@@ -171,15 +168,10 @@ Events are explained in details in Leaflet's documentation.
 There is a long list of available events for some objects, and the developer may not know what events are available for the object they are using. The [EventType](https://github.com/gwidgets/gwty-leaflet/blob/master/src/main/java/com/gwidgets/api/leaflet/events/EventTypes.java) class contains a list of subclasses which contains the available events types constants. The event type can be accessed in static a way like: EventTypes.{object name}Events.{event type name}. For example, to register the loading event on a TileLayer : 
 
 ```java
-tile.on(EventTypes.TileLayer.LOADING, new Function(){
-                        @Override
-                        public JavaScriptObject call(JavaScriptObject event) {
-
-                               //cast raw event object
-                               TileEvent tileEvent = event.cast();
-                               //Do something
-                               
-                                return null;
+tile.on(EventTypes.TileLayer.LOADING, new EventCallback<TileEvent>() {
+			@Override
+			public void call(TileEvent event) {
+                        //do something
                         }
                         
                 });
