@@ -45,7 +45,7 @@ public class EventTest extends GwtyLeafletTestCase {
 
 				map.on(EventTypes.MapEvents.LOAD, (e) -> {
 
-					return null;
+
 				});
 
 				assertTrue(map.listens(EventTypes.MapEvents.LOAD));
@@ -63,7 +63,7 @@ public class EventTest extends GwtyLeafletTestCase {
 
 				marker.on(EventTypes.MarkerEvents.CLICK, (e) -> {
 
-					return null;
+
 				});
 
 				assertTrue(marker.listens(EventTypes.MarkerEvents.CLICK));
@@ -81,7 +81,6 @@ public class EventTest extends GwtyLeafletTestCase {
 
 				popup.on(EventTypes.PopupEvents.POPUPOPEN, (e) -> {
 
-					return null;
 				});
 
 				assertTrue(popup.listens(EventTypes.PopupEvents.POPUPOPEN));
@@ -99,7 +98,6 @@ public class EventTest extends GwtyLeafletTestCase {
 
 				tLayer.on(EventTypes.TileLayerEvents.ADD, (e) -> {
 
-					return null;
 				});
 
 				assertTrue(tLayer.listens(EventTypes.TileLayerEvents.ADD));
@@ -117,7 +115,6 @@ public class EventTest extends GwtyLeafletTestCase {
 
 				wms.on(EventTypes.TileLayerWMSEvents.TILELOAD, (e) -> {
 
-					return null;
 				});
 
 				assertTrue(wms.listens(EventTypes.TileLayerWMSEvents.TILELOAD));
@@ -135,7 +132,6 @@ public class EventTest extends GwtyLeafletTestCase {
 
 				imgOverlay.on(EventTypes.ImageOverlayEvents.MOUSEOUT, (e) -> {
 
-					return null;
 				});
 
 				assertTrue(imgOverlay.listens(EventTypes.ImageOverlayEvents.MOUSEOUT));
@@ -159,7 +155,6 @@ public class EventTest extends GwtyLeafletTestCase {
 
 				polyline.on(EventTypes.PolylineEvents.REMOVE, (e) -> {
 
-					return null;
 				});
 
 				assertTrue(polyline.listens(EventTypes.PolylineEvents.REMOVE));
@@ -181,7 +176,6 @@ public class EventTest extends GwtyLeafletTestCase {
 
 				polygon.on(EventTypes.PolygonEvents.REMOVE, (e) -> {
 
-					return null;
 				});
 
 				assertTrue(polygon.listens(EventTypes.PolygonEvents.REMOVE));
@@ -201,7 +195,6 @@ public class EventTest extends GwtyLeafletTestCase {
 
 				rect.on(EventTypes.RectangleEvents.MOUSEDOWN, (e) -> {
 
-					return null;
 				});
 
 				assertTrue(rect.listens(EventTypes.RectangleEvents.MOUSEDOWN));
@@ -219,7 +212,6 @@ public class EventTest extends GwtyLeafletTestCase {
 
 				circ.on(EventTypes.CircleEvents.CONTEXTMENU, (e) -> {
 
-					return null;
 				});
 
 				assertTrue(circ.listens(EventTypes.CircleEvents.CONTEXTMENU));
@@ -237,7 +229,6 @@ public class EventTest extends GwtyLeafletTestCase {
 
 				circ.on(EventTypes.CircleMakerEvents.MOUSEOUT, (e) -> {
 
-					return null;
 				});
 
 				assertTrue(circ.listens(EventTypes.CircleMakerEvents.MOUSEOUT));
@@ -255,7 +246,6 @@ public class EventTest extends GwtyLeafletTestCase {
 
 				svg.on(EventTypes.SVGEvents.UPDATE, (e) -> {
 
-					return null;
 				});
 
 				assertTrue(svg.listens(EventTypes.SVGEvents.UPDATE));
@@ -273,7 +263,6 @@ public class EventTest extends GwtyLeafletTestCase {
 
 				canv.on(EventTypes.CanvasEvents.ADD, (e) -> {
 
-					return null;
 				});
 
 				assertTrue(canv.listens(EventTypes.CanvasEvents.ADD));
@@ -291,7 +280,6 @@ public class EventTest extends GwtyLeafletTestCase {
 
 				lay.on(EventTypes.LayerGroupEvents.ADD, (e) -> {
 
-					return null;
 				});
 
 				assertTrue(lay.listens(EventTypes.LayerGroupEvents.ADD));
@@ -309,7 +297,6 @@ public class EventTest extends GwtyLeafletTestCase {
 
 				fGroup.on(EventTypes.FeatureGroupEvents.ADD, (e) -> {
 
-					return null;
 				});
 
 				assertTrue(fGroup.listens(EventTypes.FeatureGroupEvents.ADD));
@@ -327,7 +314,6 @@ public class EventTest extends GwtyLeafletTestCase {
 
 				geoJson.on(EventTypes.GeoJsonEvents.LAYERREMOVE, (e) -> {
 
-					return null;
 				});
 
 				assertTrue(geoJson.listens(EventTypes.GeoJsonEvents.LAYERREMOVE));
@@ -345,7 +331,6 @@ public class EventTest extends GwtyLeafletTestCase {
 
 				gridLayer.on(EventTypes.GridLayerEvents.TILEUNLOAD, (e) -> {
 
-					return null;
 				});
 
 				assertTrue(gridLayer.listens(EventTypes.GridLayerEvents.TILEUNLOAD));

@@ -17,34 +17,35 @@ package com.gwidgets.api.leaflet.events;
 
 import com.gwidgets.api.leaflet.Point;
 
+import jsinterop.annotations.JsProperty;
+import jsinterop.annotations.JsType;
+
 /**
  * The Class ResizeEvent.
  * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
  */
-
+@JsType(isNative=true, name="Object", namespace=jsinterop.annotations.JsPackage.GLOBAL)
 public class ResizeEvent extends Event {
 	
 	/**
 	 * Instantiates a new resize event.
 	 */
-	protected ResizeEvent(){}
+	private ResizeEvent(){}
 
 	/**
 	 * Gets the old size before resize event.
 	 *
 	 * @return the old size
 	 */
-	public final native Point getOldSize() /*-{
-		return this.oldSize;
-	}-*/;
+	@JsProperty
+	public final native Point getOldSize();
 
 	/**
 	 * Gets the new size after the resize event.
 	 *
 	 * @return the new size
 	 */
-	public final native Point getNewSize() /*-{
-		return this.newSize;
-	}-*/;
+	@JsProperty
+	public final native Point getNewSize();
 
 }

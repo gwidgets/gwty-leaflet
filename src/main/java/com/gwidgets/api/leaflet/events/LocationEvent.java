@@ -17,15 +17,19 @@ package com.gwidgets.api.leaflet.events;
 import com.gwidgets.api.leaflet.LatLng;
 import com.gwidgets.api.leaflet.LatLngBounds;
 
+import jsinterop.annotations.JsProperty;
+import jsinterop.annotations.JsType;
+
 
 /**
  * The Class LocationEvent.
  * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
  */
+@JsType(isNative=true, name="Object", namespace=jsinterop.annotations.JsPackage.GLOBAL)
 public class LocationEvent extends Event {
 
 	
-	protected LocationEvent(){}
+	private LocationEvent(){}
 
 
 
@@ -34,71 +38,63 @@ public class LocationEvent extends Event {
 	 *
 	 * @return the latlng
 	 */
-	public final native LatLng getLatlng() /*-{
-		return this.latlng;
-	}-*/;
+	@JsProperty
+	public final native LatLng getLatlng();
 
 	/**
 	 * Gets the geographical bounds of the area user is located in (with respect to the accuracy of location).
 	 *
 	 * @return the bounds
 	 */
-	public final native LatLngBounds getBounds() /*-{
-		return this.bounds;
-	}-*/;
+	@JsProperty
+	public final native LatLngBounds getBounds();
 
 	/**
 	 * Gets the accuracy of location in meters.
 	 *
 	 * @return the accuracy
 	 */
-	public final native double getAccuracy() /*-{
-		return this.accuracy;
-	}-*/;
+	@JsProperty
+	public final native double getAccuracy();
 
 	/**
 	 * Gets the height of the position above the WGS84 ellipsoid in meters.
 	 *
 	 * @return the altitude
 	 */
-	public final native double getAltitude() /*-{
-		return this.altitude;
-	}-*/;
+	@JsProperty
+	public final native double getAltitude();
 
 	/**
 	 * Gets the accuracy of the altitude in meters.
 	 *
 	 * @return the altitude accuracy
 	 */
-	public final native double getAltitudeAccuracy() /*-{
-		return this.altitudeAccuracy;
-	}-*/;
+	@JsProperty
+	public final native double getAltitudeAccuracy();
 
 	/**
 	 * Gets the direction of travel in degrees counting clockwise from true North.
 	 *
 	 * @return the heading
 	 */
-	public final native double getHeading() /*-{
-		return this.heading;
-	}-*/;
+	@JsProperty
+	public final native double getHeading();
 
 	/**
 	 * Gets the current velocity in meters per second.
 	 *
 	 * @return the speed
 	 */
-	public final native double getSpeed() /*-{
-		return this.speed;
-	}-*/;
+	@JsProperty
+	public final native double getSpeed();
 
 	/**
 	 * Gets the time when the position was acquired.
 	 *
 	 * @return the timestamp
 	 */
-	public final native double getTimestamp() /*-{
-		return this.timestamp;
-	}-*/;
+	@JsProperty
+	public final native double getTimestamp();
 
 }

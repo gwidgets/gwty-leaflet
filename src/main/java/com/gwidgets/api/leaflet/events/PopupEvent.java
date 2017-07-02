@@ -17,14 +17,17 @@ package com.gwidgets.api.leaflet.events;
 
 import com.gwidgets.api.leaflet.Popup;
 
+import jsinterop.annotations.JsProperty;
+import jsinterop.annotations.JsType;
+
 /**
  * The Class PopupEvent.
  * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
  */
-
+@JsType(isNative=true, name="Object", namespace=jsinterop.annotations.JsPackage.GLOBAL)
 public class PopupEvent extends Event {
 	
-	protected PopupEvent() {}
+	private PopupEvent() {}
 
 
 	/**
@@ -32,8 +35,7 @@ public class PopupEvent extends Event {
 	 *
 	 * @return the popup
 	 */
-	public final native Popup getPopup() /*-{
-		return this.popup;
-	}-*/;
+	@JsProperty
+	public final native Popup getPopup();
 
 }

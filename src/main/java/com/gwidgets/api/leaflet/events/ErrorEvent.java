@@ -14,14 +14,18 @@
  */
 package com.gwidgets.api.leaflet.events;
 
+import jsinterop.annotations.JsProperty;
+import jsinterop.annotations.JsType;
+
 /**
  * The Class ErrorEvent.
  * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
  */
+@JsType(isNative=true, name="Object", namespace=jsinterop.annotations.JsPackage.GLOBAL)
 public class ErrorEvent extends Event {
 	
   
-    protected ErrorEvent(){
+    private ErrorEvent(){
 		
 		
 	}
@@ -32,17 +36,14 @@ public class ErrorEvent extends Event {
 	 *
 	 * @return the message
 	 */
-	public final native String getMessage() /*-{
-		return this.message;
-	}-*/;
+    @JsProperty
+	public final native String getMessage();
 
 	/**
 	 * Gets the error code (if applicable).
 	 *
 	 * @return the code
 	 */
-	public final native double getCode() /*-{
-		return this.code;
-	}-*/;
+	public final native double getCode();
 
 }

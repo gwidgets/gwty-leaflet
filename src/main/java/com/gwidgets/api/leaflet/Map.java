@@ -1,6 +1,7 @@
 package com.gwidgets.api.leaflet;
 
 import com.google.gwt.core.client.JavaScriptObject;
+import com.gwidgets.api.leaflet.elemental.EventCallback;
 import com.gwidgets.api.leaflet.elemental.Function;
 import com.gwidgets.api.leaflet.elemental.HTMLElement;
 import com.gwidgets.api.leaflet.events.MouseEvent;
@@ -559,13 +560,13 @@ public class Map implements Evented {
 		/* (non-Javadoc)
 		 * @see com.gwidgets.api.leaflet.Evented#on(java.lang.String, com.gwidgets.api.leaflet.elemental.Function)
 		 */
-		public native L on(String type, Function fn);
+		public native L on(String type, EventCallback fn);
 
 
 		/* (non-Javadoc)
 		 * @see com.gwidgets.api.leaflet.Evented#once(java.lang.String, com.gwidgets.api.leaflet.elemental.Function)
 		 */
-		public  native L once(String type, Function fn);
+		public  native L once(String type, EventCallback fn);
 
 		
 		/* (non-Javadoc)

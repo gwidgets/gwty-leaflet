@@ -17,16 +17,20 @@ package com.gwidgets.api.leaflet.events;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.gwidgets.api.leaflet.elemental.HTMLElement;
 
+import jsinterop.annotations.JsProperty;
+import jsinterop.annotations.JsType;
+
 
 
 /**
  * The base event object. All other event objects contain these properties too.
  * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
  */
-public class Event  extends JavaScriptObject {
+@JsType(isNative=true, name="Object", namespace=jsinterop.annotations.JsPackage.GLOBAL)
+public class Event  {
 	
 	
-	protected Event(){
+	public Event(){
 		
 		
 	}
@@ -36,18 +40,16 @@ public class Event  extends JavaScriptObject {
 	 *
 	 * @return the type
 	 */
-	public final native  String getType() /*-{
-	return this.target;
-    }-*/;
+	@JsProperty
+	public final native  String getType();
 
 	/**
 	 * Gets the object that fired the event..
 	 *
 	 * @return the target
 	 */
-	public final native HTMLElement getTarget()  /*-{
-		return this.target;
-	}-*/;
+	@JsProperty
+	public final native HTMLElement getTarget();
 
 	
 	

@@ -1,5 +1,6 @@
 package com.gwidgets.api.leaflet;
 
+import com.gwidgets.api.leaflet.elemental.EventCallback;
 import com.gwidgets.api.leaflet.elemental.Function;
 
 import jsinterop.annotations.JsType;
@@ -21,7 +22,7 @@ public interface Evented {
 	 * @param fn the callback function
 	 * @return the L class
 	 */
-	public L on(String type, Function fn);
+	public L on(String type, EventCallback fn);
 
 	/**
 	 * the listener will only get fired once and then removed.
@@ -30,7 +31,7 @@ public interface Evented {
 	 * @param fn the callback function
 	 * @return the L class
 	 */
-	public  L once(String type, Function fn);
+	public  L once(String type, EventCallback fn);
 
 	/**
 	 *  Removes a listener

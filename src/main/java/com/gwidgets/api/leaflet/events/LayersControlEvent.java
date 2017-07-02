@@ -16,15 +16,19 @@ package com.gwidgets.api.leaflet.events;
 
 import com.gwidgets.api.leaflet.Layer;
 
+import jsinterop.annotations.JsProperty;
+import jsinterop.annotations.JsType;
+
 
 /**
  * The Class LayerControlEvent.
  * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
  */
+@JsType(isNative=true, name="Object", namespace=jsinterop.annotations.JsPackage.GLOBAL)
 public class LayersControlEvent extends Event {
 	
 
-	protected LayersControlEvent() {
+	private LayersControlEvent() {
 		
 	}
 
@@ -33,17 +37,15 @@ public class LayersControlEvent extends Event {
 	 *
 	 * @return the layer
 	 */
-	public final native Layer getLayer() /*-{
-		return this.layer;
-	}-*/;
+	@JsProperty
+	public final native Layer getLayer();
 
 	/**
 	 * Gets the name of the layer that was added or removed.
 	 *
 	 * @return the name
 	 */
-	public final native String getName() /*-{
-		return this.name;
-	}-*/;
+	@JsProperty
+	public final native String getName();
 
 }

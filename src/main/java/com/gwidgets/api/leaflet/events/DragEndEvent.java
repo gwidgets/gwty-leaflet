@@ -14,15 +14,18 @@
  */
 package com.gwidgets.api.leaflet.events;
 
+import jsinterop.annotations.JsProperty;
+import jsinterop.annotations.JsType;
 
 /**
  * The Class DragEndEvent.
  * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
  */
+@JsType(isNative=true, name="Object", namespace=jsinterop.annotations.JsPackage.GLOBAL)
 public class DragEndEvent extends Event {
 
 	
-	protected DragEndEvent() {
+	private DragEndEvent() {
 
 	}
 
@@ -31,8 +34,8 @@ public class DragEndEvent extends Event {
 	 *
 	 * @return the distance
 	 */
-	public final native double getDistance()/*-{
-		return this.distance;
-	}-*/;
+	@JsProperty
+	public final native double getDistance();
+
 
 }

@@ -17,15 +17,19 @@ package com.gwidgets.api.leaflet.events;
 import com.gwidgets.api.leaflet.Point;
 import com.gwidgets.api.leaflet.elemental.HTMLElement;
 
+import jsinterop.annotations.JsProperty;
+import jsinterop.annotations.JsType;
+
 
 /**
  * The Class TileErrorEvent.
  * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
  */
+@JsType(isNative=true, name="Object", namespace=jsinterop.annotations.JsPackage.GLOBAL)
 public class TileErrorEvent extends Event {
 
 
-	protected TileErrorEvent() {
+	private TileErrorEvent() {
 		
 	}
 
@@ -34,17 +38,16 @@ public class TileErrorEvent extends Event {
 	 *
 	 * @return the tile
 	 */
-	public final native HTMLElement getTile()/*-{
-		return this.tile;
-	}-*/;
+   @JsProperty
+	public final native HTMLElement getTile();
+
 
 	/**
 	 * Point object with tile's x, y, and z (zoom level) coordinates. 
 	 *
 	 * @return the coords
 	 */
-	public final native Point getCoords() /*-{
-		return this.coords;
-	}-*/;
+	@JsProperty
+	public final native Point getCoords();
 
 }

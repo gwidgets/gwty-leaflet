@@ -18,52 +18,51 @@ import com.gwidgets.api.leaflet.LatLng;
 import com.gwidgets.api.leaflet.Point;
 import com.gwidgets.api.leaflet.elemental.DOMMouseEvent;
 
+import jsinterop.annotations.JsProperty;
+import jsinterop.annotations.JsType;
+
 
 /**
  * The Class MouseEvent.
  * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
  */
-
+@JsType(isNative=true, name="Object", namespace=jsinterop.annotations.JsPackage.GLOBAL)
 public class MouseEvent extends Event {
 	
    
-    protected MouseEvent(){}
+    private MouseEvent(){}
 
 	/**
 	 * Gets the geographical point where the mouse event occurred.
 	 *
 	 * @return the latlng
 	 */
-	public final native LatLng getLatlng() /*-{
-		return this.latlng;
-	}-*/;
+    @JsProperty
+	public final native LatLng getLatlng();
 
 	/**
 	 * Gets the pixel coordinates of the point where the mouse event occurred relative to the map layer.
 	 *
 	 * @return the layer point
 	 */
-	public final native Point getLayerPoint() /*-{
-		return this.layerPoint;
-	}-*/;
+    @JsProperty
+	public final native Point getLayerPoint();
 
 	/**
 	 * Gets the pixel coordinates of the point where the mouse event occurred relative to the map container.
 	 *
 	 * @return the container point
 	 */
-	public final native Point getContainerPoint() /*-{
-		return this.containerPoint;
-	}-*/;
+    @JsProperty
+	public final native Point getContainerPoint();
 
 	/**
 	 * Gets the original DOM mouse event fired by the browser.
 	 *
 	 * @return the original event
 	 */
-	public final native DOMMouseEvent getOriginalEvent() /*-{
-		return this.originalEvent;
-	}-*/;
+    @JsProperty
+	public final native DOMMouseEvent getOriginalEvent();
 
 
 }

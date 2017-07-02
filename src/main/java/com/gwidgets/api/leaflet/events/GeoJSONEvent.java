@@ -16,14 +16,18 @@ package com.gwidgets.api.leaflet.events;
 
 import com.gwidgets.api.leaflet.Layer;
 
+import jsinterop.annotations.JsProperty;
+import jsinterop.annotations.JsType;
+
 /**
  * The Class GeoJSONEvent.
  * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
  */
+@JsType(isNative=true, name="Object", namespace=jsinterop.annotations.JsPackage.GLOBAL)
 public class GeoJSONEvent extends Event {
 
 
-	protected GeoJSONEvent() {
+	private GeoJSONEvent() {
 
 	}
 
@@ -32,9 +36,8 @@ public class GeoJSONEvent extends Event {
 	 *
 	 * @return the layer
 	 */
-	public final native Layer getLayer() /*-{
-		return this.layer;
-	}-*/;
+	@JsProperty
+	public final native Layer getLayer();
 
 
 	/**
@@ -42,26 +45,23 @@ public class GeoJSONEvent extends Event {
 	 *
 	 * @return the properties
 	 */
-	public final native Object getProperties() /*-{
-		return this.properties;
-	}-*/;
+	@JsProperty
+	public final native Object getProperties();
 
 	/**
 	 * Gets the GeoJSON geometry type of the feature.
 	 *
 	 * @return the geometry type
 	 */
-	public final native String getGeometryType() /*-{
-		return this.geometryType;
-	}-*/;
+	@JsProperty
+	public final native String getGeometryType();
 
 	/**
 	 * Gets the GeoJSON ID of the feature (if present).
 	 *
 	 * @return the id
 	 */
-	public final native String getId() /*-{
-		return this.id;
-	}-*/;
+	@JsProperty
+	public final native String getId();
 
 }

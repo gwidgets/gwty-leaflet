@@ -16,6 +16,9 @@ package com.gwidgets.api.leaflet.events;
 
 import com.gwidgets.api.leaflet.Tooltip;
 
+import jsinterop.annotations.JsProperty;
+import jsinterop.annotations.JsType;
+
 
 
 // TODO: Auto-generated Javadoc
@@ -23,12 +26,13 @@ import com.gwidgets.api.leaflet.Tooltip;
  * The Class TooltipEvent.
  * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
  */
+@JsType(isNative=true, name="Object", namespace=jsinterop.annotations.JsPackage.GLOBAL)
 public class TooltipEvent extends Event {
 	
 	/**
 	 * Instantiates a new tooltip event.
 	 */
-	protected TooltipEvent() {}
+	private TooltipEvent() {}
 
 
 	/**
@@ -36,9 +40,8 @@ public class TooltipEvent extends Event {
 	 *
 	 * @return the popup
 	 */
-	public final native Tooltip getTooltip() /*-{
-		return this.tooltip;
-	}-*/;
+	@JsProperty
+	public final native Tooltip getTooltip();
 
 
 }
