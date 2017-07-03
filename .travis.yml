@@ -3,5 +3,5 @@ jdk:
   - oraclejdk8
 
 after_success:
-  - mvn -s autoDeploy/settings.xml deploy
+  - mvn -s autoDeploy/settings.xml deploy -Dmaven.test.skip=true
 
