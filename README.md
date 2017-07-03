@@ -1,4 +1,6 @@
 [![Build Status](https://travis-ci.org/gwidgets/gwty-leaflet.svg?branch=master)](https://travis-ci.org/gwidgets/gwty-leaflet)
+
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.gwidgets/gwty-leaflet/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.gwidgets/gwty-leaflet)
 ## Overview
 
 gwty-leaflet is wrapper for the famous maps javascript library [Leaflet](http://leafletjs.com/). gwty-leaflet is based on JsInterop and allows using Leaflet from your GWT application exactly the same way as from a javascript script with a slight advantage: static typing. It was partially generated automatically from Leaflet docs.
@@ -381,6 +383,7 @@ baselayerchange, overlayadd, overlayremove, layeradd, layerremove, zoomlevelscha
 
 ## GWT version:
 
-As of the 0.5 version, gwty-leaflet is compiled using GWT 2.8.0. 
+the 0.5 version is compiled using GWT 2.8.0. 
+the current 1.0-SNAPSHOT version is compiled using GWT 2.8.1.
 
 
