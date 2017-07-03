@@ -16,7 +16,6 @@ package com.gwidgets.api.leaflet.events;
 
 import com.gwidgets.api.leaflet.LatLng;
 import com.gwidgets.api.leaflet.Point;
-import com.gwidgets.api.leaflet.elemental.DOMMouseEvent;
 
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -62,7 +61,7 @@ public class MouseEvent extends Event {
 	 * @return the original event
 	 */
     @JsProperty
-	public final native DOMMouseEvent getOriginalEvent();
+	public final native elemental2.dom.MouseEvent getOriginalEvent();
 
 
 }

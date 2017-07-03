@@ -1,5 +1,7 @@
 package com.gwidgets.api.leaflet;
 
+import com.gwidgets.api.leaflet.options.TileLayerWMSOptions;
+
 /**
  *  Copyright 2016 G-Widgets
  *  Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,8 +18,6 @@ package com.gwidgets.api.leaflet;
  */
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsType;
-
-import com.gwidgets.api.leaflet.options.TileLayerWMSOptions;
 
 /**
  * Used to display WMS services as tile layers on the map. 

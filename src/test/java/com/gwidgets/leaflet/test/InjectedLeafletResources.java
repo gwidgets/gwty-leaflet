@@ -1,28 +1,27 @@
 package com.gwidgets.leaflet.test;
 
-import com.gwidgets.api.leaflet.elemental.Document;
-import com.gwidgets.api.leaflet.elemental.Function;
-import com.gwidgets.api.leaflet.elemental.HTMLLinkElement;
-import com.gwidgets.api.leaflet.elemental.HTMLScriptElement;
 
+import elemental2.dom.DomGlobal;
+import elemental2.dom.Element.OnloadCallbackFn;
+import elemental2.dom.HTMLLinkElement;
+import elemental2.dom.HTMLScriptElement;
 
 public class InjectedLeafletResources {
 	
-	
-	
-	public static void whenReady(Function function){
+
+public static void whenReady(OnloadCallbackFn function){
 		
-		HTMLScriptElement leafletScript = (HTMLScriptElement) Document.createElement("script");
-		leafletScript.src="https://unpkg.com/leaflet@1.0.0/dist/leaflet.js";
+		HTMLScriptElement leafletScript = (HTMLScriptElement) DomGlobal.document.createElement("script");
+		leafletScript.src="http://unpkg.com/leaflet@1.0.0/dist/leaflet.js";
 		leafletScript.type="text/javascript";
 		
-		HTMLLinkElement leafletStyle = (HTMLLinkElement) Document.createElement("link");
-		leafletStyle.href="https://unpkg.com/leaflet@1.0.0/dist/leaflet.css";
+		HTMLLinkElement leafletStyle = (HTMLLinkElement) DomGlobal.document.createElement("link");
+		leafletStyle.href="http://unpkg.com/leaflet@1.0.0/dist/leaflet.css";
 		leafletStyle.rel="stylesheet";
 		
 		
-		Document.getHead().appendChild(leafletScript);
-		Document.getHead().appendChild(leafletStyle);
+		DomGlobal.document.head.appendChild(leafletScript);
+		DomGlobal.document.head.appendChild(leafletStyle);
 		
 		leafletScript.onload = function;
 

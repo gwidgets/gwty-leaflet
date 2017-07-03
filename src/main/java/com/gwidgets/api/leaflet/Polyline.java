@@ -16,11 +16,10 @@ package com.gwidgets.api.leaflet;
  */
 import com.google.gwt.core.client.JavaScriptObject;
 import com.gwidgets.api.leaflet.elemental.EventCallback;
-import com.gwidgets.api.leaflet.elemental.Function;
-import com.gwidgets.api.leaflet.elemental.HTMLElement;
 import com.gwidgets.api.leaflet.options.PopupOptions;
 import com.gwidgets.api.leaflet.options.TooltipOptions;
 
+import elemental2.dom.HTMLElement;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsType;
 

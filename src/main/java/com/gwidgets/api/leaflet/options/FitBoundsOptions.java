@@ -14,14 +14,14 @@
  */
 package com.gwidgets.api.leaflet.options;
 
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
-
 import static jsinterop.annotations.JsPackage.GLOBAL;
 
 import com.gwidgets.api.leaflet.L;
 import com.gwidgets.api.leaflet.Point;
+
+import jsinterop.annotations.JsOverlay;
+import jsinterop.annotations.JsProperty;
+import jsinterop.annotations.JsType;
 
 
 /**

@@ -1,18 +1,15 @@
 package com.gwidgets.leaflet.test;
 
-import com.google.gwt.core.client.JavaScriptObject;
 import com.gwidgets.api.leaflet.L;
 import com.gwidgets.api.leaflet.LatLng;
 import com.gwidgets.api.leaflet.Point;
 import com.gwidgets.api.leaflet.Projection;
-import com.gwidgets.api.leaflet.elemental.Function;
 
 public class ProjectionTest extends GwtyLeafletTestCase {
 	
 	
 	public void testProjection(){
-	InjectedLeafletResources.whenReady(new Function(){
-		public JavaScriptObject call(JavaScriptObject event) {
+	InjectedLeafletResources.whenReady((e) -> {
 			
 			  Projection projection = L.Projection.LonLat;
 			  
@@ -26,7 +23,6 @@ public class ProjectionTest extends GwtyLeafletTestCase {
 			   
 				
 				return null;
-		}
 	});
 }
 

@@ -14,9 +14,9 @@
  */
 package com.gwidgets.api.leaflet.events;
 
-import com.google.gwt.core.client.JavaScriptObject;
-import com.gwidgets.api.leaflet.elemental.HTMLElement;
 
+
+import elemental2.dom.HTMLElement;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 

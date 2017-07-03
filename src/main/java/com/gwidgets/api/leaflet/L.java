@@ -1,7 +1,6 @@
 package com.gwidgets.api.leaflet;
 
 import com.google.gwt.core.client.JavaScriptObject;
-import com.gwidgets.api.leaflet.elemental.HTMLElement;
 import com.gwidgets.api.leaflet.options.CircleOptions;
 import com.gwidgets.api.leaflet.options.ControlAttributionOptions;
 import com.gwidgets.api.leaflet.options.ControlLayersOptions;
@@ -23,6 +22,7 @@ import com.gwidgets.api.leaflet.options.TileLayerOptions;
 import com.gwidgets.api.leaflet.options.TileLayerWMSOptions;
 import com.gwidgets.api.leaflet.options.TooltipOptions;
 
+import elemental2.dom.HTMLElement;
 import jsinterop.annotations.JsConstructor;
 
 /**
@@ -451,11 +451,11 @@ Note that points you pass when creating a polygon shouldn't have an additional l
 		@JsProperty
 		public static com.gwidgets.api.leaflet.Projection LonLat;
 		
-		/** Elliptical Mercator projection — more complex than Spherical Mercator. Takes into account that Earth is a geoid, not a perfect sphere. Used by the EPSG:3395 CRS. */
+		/** Elliptical Mercator projection more complex than Spherical Mercator. Takes into account that Earth is a geoid, not a perfect sphere. Used by the EPSG:3395 CRS. */
 		@JsProperty
 		public static com.gwidgets.api.leaflet.Projection Mercator;
 
-		/** 	Spherical Mercator projection — the most common projection for online maps, used by almost all free and commercial tile providers. Assumes that Earth is a sphere. Used by the EPSG:3857 CRS. */
+		/** 	Spherical Mercator projection the most common projection for online maps, used by almost all free and commercial tile providers. Assumes that Earth is a sphere. Used by the EPSG:3857 CRS. */
 		@JsProperty
 		public static com.gwidgets.api.leaflet.Projection SphericalMercator;
 				

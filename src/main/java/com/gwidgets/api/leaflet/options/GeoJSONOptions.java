@@ -14,15 +14,15 @@
  */
 package com.gwidgets.api.leaflet.options;
 
-import jsinterop.annotations.JsType;
-
 import static jsinterop.annotations.JsPackage.GLOBAL;
 
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
-import com.gwidgets.api.leaflet.Layer;
 import com.gwidgets.api.leaflet.LatLng;
-import com.gwidgets.api.leaflet.elemental.Function;
+import com.gwidgets.api.leaflet.Layer;
+
+import elemental2.core.Function;
+import jsinterop.annotations.JsType;
 
 /**
  * The Interface GeoJSONOptions.

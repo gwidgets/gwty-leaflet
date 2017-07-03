@@ -1,5 +1,7 @@
 package com.gwidgets.api.leaflet;
 
+import elemental2.dom.HTMLElement;
+
 /**
  *  Copyright 2016 G-Widgets
  *  Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,7 +16,7 @@ package com.gwidgets.api.leaflet;
  * See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-import com.gwidgets.api.leaflet.elemental.HTMLElement;
+//import com.gwidgets.api.leaflet.elemental.HTMLElement;
 
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;

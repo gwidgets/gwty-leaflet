@@ -41,12 +41,22 @@
       <version>${gwtVersion}</version>
       <scope>provided</scope>
     </dependency>
-    <dependency>
+     <dependency>
        <groupId>com.google.gwt</groupId>
         <artifactId>gwt-dev</artifactId>
         <version>${gwtVersion}</version>
-      <scope>provided</scope>
-        </dependency>
+      <scope>test</scope>
+        </dependency> 
+        		<dependency>
+			<groupId>com.google.elemental2</groupId>
+			<artifactId>elemental2-core</artifactId>
+			<version>1.0.0-beta-1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.elemental2</groupId>
+			<artifactId>elemental2-dom</artifactId>
+			<version>1.0.0-beta-1</version>
+		</dependency>
       <dependency>
 		<groupId>junit</groupId>
 		<artifactId>junit</artifactId>

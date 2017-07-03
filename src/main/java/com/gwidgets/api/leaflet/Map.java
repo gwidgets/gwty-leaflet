@@ -2,8 +2,6 @@ package com.gwidgets.api.leaflet;
 
 import com.google.gwt.core.client.JavaScriptObject;
 import com.gwidgets.api.leaflet.elemental.EventCallback;
-import com.gwidgets.api.leaflet.elemental.Function;
-import com.gwidgets.api.leaflet.elemental.HTMLElement;
 import com.gwidgets.api.leaflet.events.MouseEvent;
 import com.gwidgets.api.leaflet.options.FitBoundsOptions;
 import com.gwidgets.api.leaflet.options.LocateOptions;
@@ -12,6 +10,8 @@ import com.gwidgets.api.leaflet.options.PopupOptions;
 import com.gwidgets.api.leaflet.options.ZoomOptions;
 import com.gwidgets.api.leaflet.options.ZoomPanOptions;
 
+import elemental2.core.Function;
+import elemental2.dom.HTMLElement;
 /**
  *  Copyright 2016 G-Widgets
  *  Licensed under the Apache License, Version 2.0 (the "License");

@@ -1,29 +1,30 @@
 package com.gwidgets.api.leaflet.utils;
 
 import com.google.gwt.core.client.GWT;
-import com.gwidgets.api.leaflet.elemental.Document;
-import com.gwidgets.api.leaflet.elemental.Function;
-import com.gwidgets.api.leaflet.elemental.HTMLLinkElement;
-import com.gwidgets.api.leaflet.elemental.HTMLScriptElement;
+
+import elemental2.dom.DomGlobal;
+import elemental2.dom.Element.OnloadCallbackFn;
+import elemental2.dom.HTMLLinkElement;
+import elemental2.dom.HTMLScriptElement;
 
 
 public class LeafletResources {
 	
 	
 	
-	public static void whenReady(Function function){
+	public static void whenReady(OnloadCallbackFn function){
 		
-		HTMLScriptElement leafletScript = (HTMLScriptElement) Document.createElement("script");
+		HTMLScriptElement leafletScript = (HTMLScriptElement) DomGlobal.document.createElement("script");
 		leafletScript.src=GWT.getModuleName()+"/leaflet/leaflet.js";
 		leafletScript.type="text/javascript";
 		
-		HTMLLinkElement leafletStyle = (HTMLLinkElement) Document.createElement("link");
+		HTMLLinkElement leafletStyle = (HTMLLinkElement) DomGlobal.document.createElement("link");
 		leafletStyle.href=GWT.getModuleName()+"/leaflet/leaflet.css";
 		leafletStyle.rel="stylesheet";
 		
 		
-		Document.getHead().appendChild(leafletScript);
-		Document.getHead().appendChild(leafletStyle);
+		DomGlobal.document.head.appendChild(leafletScript);
+		DomGlobal.document.head.appendChild(leafletStyle);
 		
 		leafletScript.onload = function;
 

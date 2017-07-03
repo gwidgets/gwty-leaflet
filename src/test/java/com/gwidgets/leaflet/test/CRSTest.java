@@ -1,18 +1,16 @@
 package com.gwidgets.leaflet.test;
 
-import com.google.gwt.core.client.JavaScriptObject;
 import com.gwidgets.api.leaflet.CRS;
 import com.gwidgets.api.leaflet.L;
 import com.gwidgets.api.leaflet.LatLng;
 import com.gwidgets.api.leaflet.Point;
-import com.gwidgets.api.leaflet.elemental.Function;
+
 
 public class CRSTest extends GwtyLeafletTestCase {
 	
 	
 	public void testMapLoadEvent() {
-		InjectedLeafletResources.whenReady(new Function() {
-			public JavaScriptObject call(JavaScriptObject event) {
+		InjectedLeafletResources.whenReady((e) -> {
 				CRS myCRS = L.CRS.EPSG3857;
 				
 				Point p = myCRS.project(L.latLng(52.12, 42.15));
@@ -30,7 +28,7 @@ public class CRSTest extends GwtyLeafletTestCase {
 				
 				return null;
 			}
-		});
+          );
 	}
 
 }

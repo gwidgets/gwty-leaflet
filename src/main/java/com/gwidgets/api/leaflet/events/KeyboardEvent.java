@@ -14,7 +14,7 @@
  */
 package com.gwidgets.api.leaflet.events;
 
-import com.gwidgets.api.leaflet.elemental.DOMKeyboardEvent;
+//import com.gwidgets.api.leaflet.elemental.DOMKeyboardEvent;
 
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -37,6 +37,6 @@ public class KeyboardEvent extends Event {
 	 * @return the popup
 	 */
 	@JsProperty
-	public final native DOMKeyboardEvent getOriginalEvent();
+	public final native elemental2.dom.KeyboardEvent getOriginalEvent();
 
 }

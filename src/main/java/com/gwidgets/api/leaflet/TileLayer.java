@@ -1,7 +1,6 @@
 package com.gwidgets.api.leaflet;
 
-import com.gwidgets.api.leaflet.elemental.HTMLElement;
-
+import elemental2.dom.HTMLElement;
 /**
  *  Copyright 2016 G-Widgets
  *  Licensed under the Apache License, Version 2.0 (the "License");

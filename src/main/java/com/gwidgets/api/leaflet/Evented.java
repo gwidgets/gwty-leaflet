@@ -1,7 +1,6 @@
 package com.gwidgets.api.leaflet;
 
 import com.gwidgets.api.leaflet.elemental.EventCallback;
-import com.gwidgets.api.leaflet.elemental.Function;
 
 import jsinterop.annotations.JsType;
 

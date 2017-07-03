@@ -14,10 +14,11 @@ package com.gwidgets.api.leaflet;
  * See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-import com.gwidgets.api.leaflet.elemental.HTMLElement;
+
 import com.gwidgets.api.leaflet.options.PopupOptions;
 import com.gwidgets.api.leaflet.options.TooltipOptions;
 
+import elemental2.dom.HTMLElement;
 import jsinterop.annotations.JsType;
 
 /**

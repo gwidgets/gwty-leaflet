@@ -1,23 +1,21 @@
 package com.gwidgets.leaflet.test;
 
-import com.google.gwt.core.client.JavaScriptObject;
 import com.gwidgets.api.leaflet.L;
 import com.gwidgets.api.leaflet.Map;
 import com.gwidgets.api.leaflet.Marker;
-import com.gwidgets.api.leaflet.elemental.Document;
-import com.gwidgets.api.leaflet.elemental.Function;
-import com.gwidgets.api.leaflet.elemental.HTMLElement;
 import com.gwidgets.api.leaflet.options.MarkerOptions;
+
+import elemental2.dom.DomGlobal;
+import elemental2.dom.HTMLElement;
 
 public class MarkerTest extends GwtyLeafletTestCase{
 	
 	
 	public void testMarkeradd(){
-		InjectedLeafletResources.whenReady(new Function(){
-			public JavaScriptObject call(JavaScriptObject event) {
-				 HTMLElement div = Document.createElement("div");
+		InjectedLeafletResources.whenReady((e) -> {
+				 HTMLElement div = (HTMLElement) DomGlobal.document.createElement("div");
 				    div.id = "test6";
-				    Document.getBody().appendChild(div);
+				    DomGlobal.document.body.appendChild(div);
 				   
 					Map map = L.map("test6", null);
 					MarkerOptions mkOptions = new MarkerOptions.Builder().build();
@@ -31,7 +29,6 @@ public class MarkerTest extends GwtyLeafletTestCase{
 					assertEquals(marker.getLatLng().lng, 13.40);
 					
 					return null;
-			}
 		});
 	}
 

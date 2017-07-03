@@ -1,12 +1,11 @@
 package com.gwidgets.leaflet.test;
 
-import com.google.gwt.core.client.JavaScriptObject;
 import com.gwidgets.api.leaflet.L;
 import com.gwidgets.api.leaflet.Map;
-import com.gwidgets.api.leaflet.elemental.Document;
-import com.gwidgets.api.leaflet.elemental.Function;
-import com.gwidgets.api.leaflet.elemental.HTMLElement;
 import com.gwidgets.api.leaflet.options.MapOptions;
+
+import elemental2.dom.DomGlobal;
+import elemental2.dom.HTMLElement;
 
 public class MapTest extends GwtyLeafletTestCase {
 	
@@ -14,38 +13,33 @@ public class MapTest extends GwtyLeafletTestCase {
 	
 	public void testMapCreateWithId(){
 		
-		InjectedLeafletResources.whenReady(new Function(){
-			public JavaScriptObject call(JavaScriptObject event) {
-			    HTMLElement div = Document.createElement("div");
+		InjectedLeafletResources.whenReady((e) -> {
+			    HTMLElement div = (HTMLElement) DomGlobal.document.createElement("div");
 			    div.id = "test";
-			    Document.getBody().appendChild(div);
+			    DomGlobal.document.body.appendChild(div);
 			    
 				Map map = L.map("test", null);
 				assertNotNull(map);
 				return null;
-			}
 		});
 	}
 	
 	
 	
 	public void testMapCreateWithHTMLElement(){
-		InjectedLeafletResources.whenReady(new Function(){
-			public JavaScriptObject call(JavaScriptObject event) {
-				HTMLElement mapContainer = Document.createElement("div");
+		InjectedLeafletResources.whenReady((e) -> {
+				HTMLElement mapContainer = (HTMLElement) DomGlobal.document.createElement("div");
 	            Map map = L.map(mapContainer, null);
 				assertNotNull(map);
 				return null;
-			}
 		});
 	}
 	
 	public void testMapRemove(){
-		InjectedLeafletResources.whenReady(new Function(){
-			public JavaScriptObject call(JavaScriptObject event) {
-				 HTMLElement div = Document.createElement("div");
+		InjectedLeafletResources.whenReady((e) -> {
+				 HTMLElement div = (HTMLElement) DomGlobal.document.createElement("div");
 				    div.id = "test5";
-				    Document.getBody().appendChild(div);
+				    DomGlobal.document.body.appendChild(div);
 				      MapOptions options = new MapOptions.Builder(L.latLng(52.51, 13.40), 12.0, 7.0).maxZoom(20.0).build();
 					Map map = L.map("test5", options);
 
@@ -54,17 +48,15 @@ public class MapTest extends GwtyLeafletTestCase {
 				
 					
 					return null;
-			}
 		});
 	}
 	
 	
 	public void testMapView(){
-		InjectedLeafletResources.whenReady(new Function(){
-			public JavaScriptObject call(JavaScriptObject event) {
-				     HTMLElement div = Document.createElement("div");
+		InjectedLeafletResources.whenReady((e) -> {
+				     HTMLElement div = (HTMLElement) DomGlobal.document.createElement("div");
 				    div.id = "test2";
-				    Document.getBody().appendChild(div);
+				    DomGlobal.document.body.appendChild(div);
 				    
 					Map map = L.map("test2", null);
 					map.setView(L.latLng(52.51, 13.40), 12.0, null);
@@ -72,19 +64,15 @@ public class MapTest extends GwtyLeafletTestCase {
 					assertEquals(map.getCenter().lat, 52.51);
 					assertEquals(map.getCenter().lng, 13.40);
 					
-					
-					
 					return null;
-			}
 		});
 	}
 	
 	public void testMapZoom(){
-		InjectedLeafletResources.whenReady(new Function(){
-			public JavaScriptObject call(JavaScriptObject event) {
-				 HTMLElement div = Document.createElement("div");
+		InjectedLeafletResources.whenReady((e) -> {
+				 HTMLElement div = (HTMLElement) DomGlobal.document.createElement("div");
 				    div.id = "test3";
-				    Document.getBody().appendChild(div);
+				    DomGlobal.document.body.appendChild(div);
 				      MapOptions options = new MapOptions.Builder(L.latLng(52.51, 13.40), 12.0, 7.0).dragging(true).maxZoom(20.0).build();
 					Map map = L.map("test3", options);
 					
@@ -94,22 +82,18 @@ public class MapTest extends GwtyLeafletTestCase {
      				assertEquals(String.valueOf(map.getMaxZoom()), "20");
      				
      				//Zoom In method has weird behavior *** Fails
-     				
-     				
      				map.zoomOut(5.0, null);
      				assertEquals("7", map.getZoom().toString());
 					
 					return null;
-			}
 		});
 	}
 	
 	  public void testMapPan(){
-		InjectedLeafletResources.whenReady(new Function(){
-			public JavaScriptObject call(JavaScriptObject event) {
-				 HTMLElement div = Document.createElement("div");
+		InjectedLeafletResources.whenReady((e) -> {
+				 HTMLElement div = (HTMLElement) DomGlobal.document.createElement("div");
 				    div.id = "test4";
-				    Document.getBody().appendChild(div);
+				    DomGlobal.document.body.appendChild(div);
 				      MapOptions options = new MapOptions.Builder(L.latLng(52.51, 13.40), 12.0, 7.0).maxZoom(20.0).build();
 					Map map = L.map("test4", options);
 
@@ -118,11 +102,7 @@ public class MapTest extends GwtyLeafletTestCase {
 					assertEquals(map.getCenter().lat, 51.51);
 					assertEquals(map.getCenter().lng, 13.80);
 					
-					
-				
-					
 					return null;
-			}
 		});
 	}
 }

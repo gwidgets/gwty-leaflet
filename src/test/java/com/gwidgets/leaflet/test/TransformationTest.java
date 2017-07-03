@@ -1,10 +1,8 @@
 package com.gwidgets.leaflet.test;
 
-import com.google.gwt.core.client.JavaScriptObject;
 import com.gwidgets.api.leaflet.L;
-import com.gwidgets.api.leaflet.Point;
 import com.gwidgets.api.leaflet.L.Transformation;
-import com.gwidgets.api.leaflet.elemental.Function;
+import com.gwidgets.api.leaflet.Point;
 
 public class TransformationTest extends GwtyLeafletTestCase {
 	
@@ -12,8 +10,7 @@ public class TransformationTest extends GwtyLeafletTestCase {
 	/******* test fails for equal method *********/
 	
 	public void testTransformation(){
-		InjectedLeafletResources.whenReady(new Function(){
-			public JavaScriptObject call(JavaScriptObject event) {
+		InjectedLeafletResources.whenReady((e) -> {
 				
 				  Transformation trans = new L.Transformation(1, 3, 5, 7);
 				   assertNotNull(trans);
@@ -28,7 +25,6 @@ public class TransformationTest extends GwtyLeafletTestCase {
 				   
 
 					return null;
-			}
 		});
 	}
 

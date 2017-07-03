@@ -16,7 +16,6 @@ package com.gwidgets.api.leaflet.options;
 
 import static jsinterop.annotations.JsPackage.GLOBAL;
 
-
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
