@@ -15,7 +15,7 @@ package com.gwidgets.api.leaflet;
  *  limitations under the License.
  */
 import com.google.gwt.core.client.JavaScriptObject;
-import com.gwidgets.api.leaflet.elemental.EventCallback;
+import com.gwidgets.api.leaflet.events.EventCallback;
 import com.gwidgets.api.leaflet.options.PopupOptions;
 import com.gwidgets.api.leaflet.options.TooltipOptions;
 

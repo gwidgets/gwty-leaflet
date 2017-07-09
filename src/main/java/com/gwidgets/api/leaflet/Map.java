@@ -1,7 +1,7 @@
 package com.gwidgets.api.leaflet;
 
 import com.google.gwt.core.client.JavaScriptObject;
-import com.gwidgets.api.leaflet.elemental.EventCallback;
+import com.gwidgets.api.leaflet.events.EventCallback;
 import com.gwidgets.api.leaflet.events.MouseEvent;
 import com.gwidgets.api.leaflet.options.FitBoundsOptions;
 import com.gwidgets.api.leaflet.options.LocateOptions;

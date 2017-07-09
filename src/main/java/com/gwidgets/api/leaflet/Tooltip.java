@@ -14,7 +14,7 @@
  */
 package com.gwidgets.api.leaflet;
 
-import com.gwidgets.api.leaflet.elemental.EventCallback;
+import com.gwidgets.api.leaflet.events.EventCallback;
 import com.gwidgets.api.leaflet.options.PopupOptions;
 import com.gwidgets.api.leaflet.options.TooltipOptions;
 

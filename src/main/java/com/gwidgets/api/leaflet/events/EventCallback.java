@@ -1,6 +1,4 @@
-package com.gwidgets.api.leaflet.elemental;
-
-import com.gwidgets.api.leaflet.events.Event;
+package com.gwidgets.api.leaflet.events;
 
 import jsinterop.annotations.JsFunction;
 

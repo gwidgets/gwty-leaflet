@@ -1,8 +1,8 @@
 package com.gwidgets.api.leaflet;
 
 
-import com.gwidgets.api.leaflet.elemental.SVGElement;
 
+import elemental2.svg.SVGElement;
 import jsinterop.annotations.JsType;
 
 @JsType(isNative = true)
