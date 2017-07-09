@@ -381,6 +381,10 @@ baselayerchange, overlayadd, overlayremove, layeradd, layerremove, zoomlevelscha
 - version 0.5: https://gwidgets.github.io/gwty-leaflet/javadoc/0.5/doc/
 - version 0.4: https://gwidgets.github.io/gwty-leaflet/javadoc/0.5/doc/
 
+## Elemental 2:
+
+The current 1.0-SNAPSHOT makes use of Elemental 2 beta version, instead of local javascript wrapped Elements(under .elemental package). The .elemental package has been removed as it is not needed anymore. 
+
 ## GWT version:
 
 the 0.5 version is compiled using GWT 2.8.0. 
