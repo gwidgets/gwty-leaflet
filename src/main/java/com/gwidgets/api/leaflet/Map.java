@@ -531,6 +531,22 @@ public class Map implements Evented {
 	 */
 	@JsMethod
 	public native HTMLElement getContainer();
+	
+	/**
+	 * Creates a new map pane with the given name if it doesn't exist already, then returns it. The pane is created as a children of container, or as a children of the main map pane if not set.
+	 *
+	 * @return the container
+	 */
+	@JsMethod
+	public native HTMLElement createPane(String name);
+	
+	/**
+	 * Creates a new map pane with the given name if it doesn't exist already, then returns it. The pane is created as a children of container, or as a children of the main map pane if not set.
+	 *
+	 * @return the container
+	 */
+	@JsMethod
+	public native HTMLElement createPane(String name, HTMLElement container);
 
 	/**
 	 * Returns an object with different map panes (to render overlays in).
