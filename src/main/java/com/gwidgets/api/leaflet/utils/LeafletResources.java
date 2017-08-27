@@ -8,14 +8,14 @@ import elemental2.dom.HTMLLinkElement;
 import elemental2.dom.HTMLScriptElement;
 
 
-public class LeafletResources {
-	
-	
-	
-	public static void whenReady(OnloadCallbackFn function){
-		
+public class LeafletResources {	
+	public static void whenReady(boolean debug, OnloadCallbackFn function){
 		HTMLScriptElement leafletScript = (HTMLScriptElement) DomGlobal.document.createElement("script");
-		leafletScript.src=GWT.getModuleName()+"/leaflet/leaflet.js";
+		if (debug) {
+			leafletScript.src = GWT.getModuleName() + "/leaflet/leaflet-src.js";
+		} else {
+			leafletScript.src = GWT.getModuleName() + "/leaflet/leaflet.js";
+		}
 		leafletScript.type="text/javascript";
 		
 		HTMLLinkElement leafletStyle = (HTMLLinkElement) DomGlobal.document.createElement("link");
@@ -27,7 +27,5 @@ public class LeafletResources {
 		DomGlobal.document.head.appendChild(leafletStyle);
 		
 		leafletScript.onload = function;
-
 	}
-
 }
