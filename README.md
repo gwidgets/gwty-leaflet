@@ -59,7 +59,7 @@ As in any JsInterop wrapper, you need to refer to the Javascript files from your
 Starting from the version 0.5, a new feature has been added to allow adding leaflet resource files dynamically from the code instead of including them manually in the .html: 
 
 ```java
-LeafletResources.whenReady(
+LeafletResources.whenReady(false, 
         e -> 
                  {
       MapOptions options = new MapOptions.Builder(L.latLng(52.51, 13.40), 12.0, 12.0).dragging(false).build();
@@ -69,6 +69,7 @@ LeafletResources.whenReady(
      return null;
     });
 ```
+If the debug flag is set to false, Leaflet minified .js file will be injected, if set to true the unminified version will injected(leaflet-src.js).  
 
 This will automatically inject the leaflet .js and .css, and execute the code inside when they are loaded. 
 
