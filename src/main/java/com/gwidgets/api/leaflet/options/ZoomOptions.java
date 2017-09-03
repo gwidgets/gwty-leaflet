@@ -35,7 +35,7 @@ public class ZoomOptions {
 	}
 
 	@JsProperty
-	private Boolean animate;
+	private boolean animate;
 	
 	
 	/**
@@ -44,7 +44,7 @@ public class ZoomOptions {
 	 * default true
 	 * @return the animate
 	 */
-	@JsOverlay public final Boolean getAnimate() {
+	@JsOverlay public final boolean getAnimate() {
 		return this.animate;
 	}
 
@@ -56,7 +56,7 @@ public class ZoomOptions {
 		
 		
 		
-		private Boolean animate = true;
+		private Boolean animate;
 
 		/**
 		 * Instantiates a new builder.
@@ -87,7 +87,8 @@ public class ZoomOptions {
 		 */
 		public ZoomOptions build(){
 			ZoomOptions options = new ZoomOptions();
-			options.animate = animate;
+			if(this.animate != null)
+			options.animate = this.animate;
 			
 			return options;
 		}

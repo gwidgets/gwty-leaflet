@@ -52,7 +52,7 @@ public class FitBoundsOptions {
 	/*****************************************
 	********************************************/
 	@JsProperty
-    private Boolean animate;
+    private boolean animate;
 	/**********************************************
 	*********************************************/
     
@@ -72,7 +72,7 @@ public class FitBoundsOptions {
     /*****************************************
 	********************************************/
 	@JsProperty
-    private Boolean noMoveStart;
+    private boolean noMoveStart;
 	/**********************************************
 	*********************************************/
     
@@ -118,7 +118,7 @@ public class FitBoundsOptions {
 	}
 
 	@JsOverlay
-	public final Boolean getAnimate() {
+	public final boolean getAnimate() {
 		return this.animate;
 	}
 
@@ -133,7 +133,7 @@ public class FitBoundsOptions {
 	}
 
 	@JsOverlay
-	public final Boolean getNoMoveStart() {
+	public final boolean getNoMoveStart() {
 		return this.noMoveStart;
 	}
 
@@ -142,21 +142,21 @@ public class FitBoundsOptions {
 	 */
 	public static class Builder {
 
-		private Point paddingTopLeft = L.point(0, 0, true);
+		private Point paddingTopLeft;
 
-		private Point paddingBottomRight = L.point(0, 0, true);
+		private Point paddingBottomRight;
 
-		private Point padding = L.point(0, 0, true);
+		private Point padding;
 
-		private double maxZoom;
+		private Double maxZoom;
 		
 	    private Boolean animate;
 
-	    private double duration = 0.25;
+	    private Double duration;
 
-	    private double easeLinearity = 0.25;
+	    private Double easeLinearity;
 
-	    private Boolean noMoveStart = false;
+	    private Boolean noMoveStart;
 
 		/**
 		 * Instantiates a new builder.
@@ -212,16 +212,16 @@ public class FitBoundsOptions {
 		 * @param maxZoom the max zoom
 		 * @return the builder
 		 */
-		public Builder maxZoom(double maxZoom) {
+		public Builder maxZoom(Double maxZoom) {
 			this.maxZoom = maxZoom;
 			return this;
 		}
 		
 		public Builder animate(Boolean animate){this.animate = animate; return this;}
 
-	    public Builder duration(double duration){this.duration = duration; return this;}
+	    public Builder duration(Double duration){this.duration = duration; return this;}
 
-	    public Builder easeLinearity(double easeLinearity){this.easeLinearity = easeLinearity; return this;}
+	    public Builder easeLinearity(Double easeLinearity){this.easeLinearity = easeLinearity; return this;}
 
 	    public Builder noMoveStart(Boolean noMoveStart){this.noMoveStart = noMoveStart; return this;}
 
@@ -232,19 +232,24 @@ public class FitBoundsOptions {
 		 */
 		public FitBoundsOptions build() {
 			FitBoundsOptions options = new FitBoundsOptions();
+			if(this.paddingTopLeft != null)
 			options.paddingTopLeft = this.paddingTopLeft;
+			if(this.paddingBottomRight != null)
 			options.paddingBottomRight = this.paddingBottomRight;
+			if(this.padding != null)
 			options.padding = this.padding;
+			if(this.maxZoom != null)
 			options.maxZoom = this.maxZoom;
+			if(this.animate != null)
 		    options.animate = this.animate;
+			if(this.duration != null)
 		    options.duration = this.duration;
+			if(this.easeLinearity != null)
 		    options.easeLinearity = this.easeLinearity;
+			if(this.noMoveStart != null)
 		    options.noMoveStart = this.noMoveStart;
 
 			return options;
-
 		}
-
 	}
-
 }

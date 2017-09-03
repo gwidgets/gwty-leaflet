@@ -31,7 +31,7 @@ import jsinterop.annotations.JsType;
 public class PathOptions {
 
 	@JsProperty
-	protected Boolean stroke;
+	protected boolean stroke;
 
 	@JsProperty
 	protected String color;
@@ -43,7 +43,7 @@ public class PathOptions {
 	protected double opacity;
 
 	@JsProperty
-	protected Boolean fill;
+	protected boolean fill;
 
 	@JsProperty
 	protected String fillColor;
@@ -92,7 +92,7 @@ public class PathOptions {
     /*****************************************
 	********************************************/
     @JsProperty
-    protected Boolean interactive;
+    protected boolean interactive;
 	/**********************************************
 	*********************************************/
 
@@ -104,7 +104,7 @@ public class PathOptions {
 	 * @return the stroke
 	 */
 	@JsOverlay
-	public final Boolean getStroke() {
+	public final boolean getStroke() {
 		return this.stroke;
 	}
 
@@ -149,7 +149,7 @@ public class PathOptions {
 	 * @return the fill
 	 */
 	@JsOverlay
-	public final Boolean getFill() {
+	public final boolean getFill() {
 		return this.fill;
 	}
 
@@ -274,7 +274,7 @@ public class PathOptions {
 	}
 
 	@JsOverlay
-	public final Boolean getInteractive() {
+	public final boolean getInteractive() {
 		return this.interactive;
 	}
 
@@ -283,41 +283,41 @@ public class PathOptions {
 	 */
 	public static class Builder {
 
-		private Boolean stroke = true;
+		private Boolean stroke;
 
-		private String color = "#03f";
+		private String color;
 
-		private double weight = 5;
+		private Double weight;
 
-		private double opacity = 0.5;
+		private Double opacity;
 
-		private Boolean fill = true;
+		private Boolean fill;
 
-		private String fillColor = "#03f";
+		private String fillColor;
 
-		private double fillOpacity = 0.2;
+		private Double fillOpacity;
 
-		private String fillRule = "evenodd";
+		private String fillRule;
 
-		private String dashArray = null;
+		private String dashArray;
 
-		private String lineCap = null;
+		private String lineCap;
 
-		private String lineJoin = null;
+		private String lineJoin;
 
-		private String pointerEvents = null;
+		private String pointerEvents;
 
-		private String className = "";
+		private String className;
 		
 	    private String dashOffset;
 
 		private Renderer renderer;
 
-	    private String pane = "overlayPane"; 
+	    private String pane; 
 
 	    private String attribution;
 
-	    private Boolean interactive = true;
+	    private Boolean interactive;
 
 		/**
 		 * Instantiates a new builder.
@@ -361,7 +361,7 @@ public class PathOptions {
 		 *            the weight
 		 * @return the builder
 		 */
-		public Builder weight(double weight) {
+		public Builder weight(Double weight) {
 			this.weight = weight;
 			return this;
 		}
@@ -374,7 +374,7 @@ public class PathOptions {
 		 *            the opacity
 		 * @return the builder
 		 */
-		public Builder opacity(double opacity) {
+		public Builder opacity(Double opacity) {
 			this.opacity = opacity;
 			return this;
 		}
@@ -414,7 +414,7 @@ public class PathOptions {
 		 *            the fill opacity
 		 * @return the builder
 		 */
-		public Builder fillOpacity(double fillOpacity) {
+		public Builder fillOpacity(Double fillOpacity) {
 			this.fillOpacity = fillOpacity;
 			return this;
 		}
@@ -525,23 +525,41 @@ public class PathOptions {
 		 */
 		public PathOptions build() {
 			PathOptions options = new PathOptions();
+			if(this.stroke != null)
 			options.stroke = this.stroke;
+			if(this.color != null)
 			options.color = this.color;
+			if(this.opacity != null)
 			options.opacity = this.opacity;
+			if(this.weight != null)
 			options.weight = this.weight;
+			if(this.fill != null)
 			options.fill = this.fill;
+			if(this.fillColor != null)
 			options.fillColor = this.fillColor;
+			if(this.fillOpacity != null)
 			options.fillOpacity = this.fillOpacity;
+			if(this.fillRule != null)
 			options.fillRule = this.fillRule;
+			if(this.dashArray != null)
 			options.dashArray = this.dashArray;
+			if(this.lineCap != null)
 			options.lineCap = this.lineCap;
+			if(this.lineJoin != null)
 			options.lineJoin = this.lineJoin;
+			if(this.pointerEvents != null)
 			options.pointerEvents = this.pointerEvents;
+			if(this.className != null)
 			options.className = this.className;
+			if(this.dashOffset != null)
 			options.dashOffset = this.dashOffset;
+			if(this.renderer != null)
 			options.renderer = this.renderer;
+			if(this.pane != null)
 		    options.pane = this.pane;
+			if(this.attribution != null)
 		    options.attribution = this.attribution;
+			if(this.interactive != null)
 		    options.interactive = this.interactive;
 
 			return options;

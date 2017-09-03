@@ -39,13 +39,13 @@ public class MarkerOptions {
 	private  Icon icon;
 
 	@JsProperty
-	private  Boolean clickable;
+	private  boolean clickable;
 
 	@JsProperty
-	private  Boolean draggable;
+	private  boolean draggable;
 
 	@JsProperty
-	private  Boolean keyboard;
+	private  boolean keyboard;
 
 	@JsProperty
 	private  String title;
@@ -60,7 +60,7 @@ public class MarkerOptions {
 	private  double opacity;
 
 	@JsProperty
-	private  Boolean riseOnHover;
+	private  boolean riseOnHover;
 
 	@JsProperty
 	private  double riseOffset;
@@ -69,7 +69,7 @@ public class MarkerOptions {
 	/*****************************************
 	********************************************/
 	@JsProperty
-    private Boolean interactive;
+    private boolean interactive;
 	/**********************************************
 	*********************************************/
 	
@@ -100,7 +100,7 @@ public class MarkerOptions {
 	 * default true
 	 * @return the clickable
 	 */
-	@JsOverlay public final Boolean getClickable() {
+	@JsOverlay public final boolean getClickable() {
 		return this.clickable;
 	}
 
@@ -111,7 +111,7 @@ public class MarkerOptions {
 	 * default false
 	 * @return the draggable
 	 */
-	@JsOverlay public final Boolean getDraggable() {
+	@JsOverlay public final boolean getDraggable() {
 		return this.draggable;
 	}
 
@@ -122,7 +122,7 @@ public class MarkerOptions {
 	 * default true
 	 * @return the keyboard
 	 */
-	@JsOverlay public final Boolean getKeyboard() {
+	@JsOverlay public final boolean getKeyboard() {
 		return this.keyboard;
 	}
 
@@ -176,7 +176,7 @@ public class MarkerOptions {
 	 * default false
 	 * @return the rise on hover
 	 */
-	@JsOverlay public final Boolean getRiseOnHover() {
+	@JsOverlay public final boolean getRiseOnHover() {
 		return this.riseOnHover;
 	}
 
@@ -202,7 +202,7 @@ public class MarkerOptions {
 	}
 
 
-	@JsOverlay public final Boolean getInteractive() {
+	@JsOverlay public final boolean getInteractive() {
 		return this.interactive;
 	}
 
@@ -212,32 +212,31 @@ public class MarkerOptions {
 	 */
 	public static class Builder{
 		
-        private Icon icon = null;
+        private Icon icon;
 		
-		private Boolean clickable = true;
+		private Boolean clickable;
 		
-		private Boolean draggable = false;
+		private Boolean draggable;
 		
-		private Boolean keyboard = true;
+		private Boolean keyboard;
 		
-		private String title = "";
+		private String title;
 		
-		private String alt = "";
+		private String alt;
 		
-		private double zIndexOffset = 0;
+		private Double zIndexOffset;
 		
-		private double opacity = 1.0;
+		private Double opacity;
 		
-		private Boolean riseOnHover = false;
+		private Boolean riseOnHover;
 		
-		private double riseOffset = 250;
+		private Double riseOffset;
 		
-		private Boolean interactive = true;
+		private Boolean interactive;
 		
-		private String pane = "markerPane";
+		private String pane;
 		
-		private String attribution;
-		
+		private String attribution;		
 		
 		/**
 		 * Instantiates a new builder.
@@ -246,7 +245,6 @@ public class MarkerOptions {
 			
 			
 		}
-		
 
 		/**
 		 * Icon class to use for rendering the marker. See Icon documentation for details on how to customize the marker icon. Set to new L.Icon.Default() by default
@@ -313,7 +311,7 @@ public class MarkerOptions {
 		 * @param zIndexOffset the z index offset
 		 * @return the builder
 		 */
-		public Builder zIndexOffset(double zIndexOffset){this.zIndexOffset = zIndexOffset; return this;}
+		public Builder zIndexOffset(Double zIndexOffset){this.zIndexOffset = zIndexOffset; return this;}
 
 		
 		/**
@@ -323,7 +321,7 @@ public class MarkerOptions {
 		 * @param opacity the opacity
 		 * @return the builder
 		 */
-		public Builder opacity(double opacity){this.opacity = opacity; return this;}
+		public Builder opacity(Double opacity){this.opacity = opacity; return this;}
 
 		
 		/**
@@ -343,7 +341,7 @@ public class MarkerOptions {
 		 * @param riseOffset the rise offset
 		 * @return the builder
 		 */
-		public Builder riseOffset(double riseOffset){this.riseOffset = riseOffset; return this;}
+		public Builder riseOffset(Double riseOffset){this.riseOffset = riseOffset; return this;}
 		
 	   
 		public Builder pane(String pane){this.pane = pane; return this;}
@@ -351,8 +349,6 @@ public class MarkerOptions {
 	    public Builder attribution(String attribution){this.attribution = attribution; return this;}
 	    
 	    public Builder interactive(Boolean interactive){this.interactive = interactive; return this;}
-		
-		
 		/**
 		 * Builds the MarkerOptions new instace
 		 *
@@ -361,26 +357,34 @@ public class MarkerOptions {
 		public MarkerOptions build(){
 			
 			MarkerOptions options = new MarkerOptions();
+			if(this.icon != null)
 			options.icon = this.icon;
+			if(this.clickable != null)
 			options.clickable = this.clickable;
+			if(this.draggable != null)
 			options.draggable = this.draggable;
+			if(this.keyboard != null)
 			options.keyboard = this.keyboard;
+			if(this.title != null)
 			options.title = this.title;
+			if(this.alt != null)
 			options.alt = this.alt;
+			if(this.zIndexOffset != null)
 			options.zIndexOffset = this.zIndexOffset;
+			if(this.opacity != null)
 			options.opacity = this.opacity;
+			if(this.riseOnHover != null)
 			options.riseOnHover = this.riseOnHover;
+			if(this.riseOffset != null)
 			options.riseOffset = this.riseOffset;
+			if(this.interactive != null)
 			options.interactive = this.interactive;
+			if(this.pane != null)
 			options.pane = this.pane;
+			if(this.attribution != null)
 			options.attribution = this.attribution;
-			
 			
 			return options;
 		}
-		
-		
-		
 	}
-
 }

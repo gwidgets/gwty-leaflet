@@ -55,7 +55,7 @@ public class ControlOptions {
 	public static class Builder {
 		
 	
-		private String position = "topleft";
+		private String position;
 
 		
 		public Builder() {
@@ -84,15 +84,11 @@ public class ControlOptions {
 		 */
 		public ControlOptions build(){
 			ControlOptions options = new ControlOptions();
-			options.position = position;
+			if(this.position != null)
+			options.position = this.position;
 			
 			return options;
 			
 		}
-
 	}
-
-
-	
-
 }

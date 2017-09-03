@@ -54,7 +54,7 @@ public class PathTest extends GwtyLeafletTestCase {
 				CircleOptions circleOptions = new CircleOptions.Builder()
 	                    .fillColor("#b35d20")
 	                    .color("#f54e02")
-	                    .radius(500)
+	                    .radius(500.0)
 	                     .build();
 				
 				Circle circ = L.circle(L.latLng(52.51, 13.37), circleOptions);

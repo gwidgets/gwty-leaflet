@@ -43,21 +43,19 @@ public class RendererOptions {
 	public static class Builder{
 		
 	
-		private double padding = 0.1;
+		private Double padding;
 		
-		private String pane = "overlayPane";
+		private String pane;
 		
 		private String attribution;
 		
 		
 		public Builder(){
 			
-			
-			
+					
 		}
-		
-		
-		public Builder padding(double padding){
+			
+		public Builder padding(Double padding){
 			this.padding = padding;
 			return this;
 		}
@@ -71,17 +69,14 @@ public class RendererOptions {
 		
 		public RendererOptions build(){
 			RendererOptions rendererOptions = new RendererOptions();
+			if(this.padding != null)
 			rendererOptions.padding = this.padding;
+			if(this.pane != null)
 			rendererOptions.pane = this.pane;
+			if(this.attribution != null)
 			rendererOptions.attribution = this.attribution;
 			
 			return rendererOptions;
-		}
-		
+		}	
 	}
-	
-	
-	
-	
-
 }

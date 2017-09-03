@@ -104,15 +104,15 @@ public class ControlZoomOptions {
 
 	public static class Builder {
 
-		private String position = "topleft";
+		private String position;
 
-		private String zoomInText = "+";
+		private String zoomInText;
 
-		private String zoomOutText = "-";
+		private String zoomOutText;
 
-		private String zoomInTitle = "Zoom in";
+		private String zoomInTitle;
 
-		private String zoomOutTitle = "Zoom out";
+		private String zoomOutTitle;
 
 		public Builder() {
 
@@ -196,15 +196,17 @@ public class ControlZoomOptions {
 		 */
 		public ControlZoomOptions build() {
 			ControlZoomOptions options = new ControlZoomOptions();
+			if(this.position != null)
 			options.position = this.position;
+			if(this.zoomInText != null)
 			options.zoomInText = this.zoomInText;
+			if(this.zoomOutText != null)
 			options.zoomOutText = this.zoomOutText;
+			if(this.zoomInTitle != null)
 			options.zoomInTitle = this.zoomInTitle;
+			if(this.zoomOutTitle != null)
 			options.zoomOutTitle = this.zoomOutTitle;
 			return options;
-
 		}
-
 	}
-
 }

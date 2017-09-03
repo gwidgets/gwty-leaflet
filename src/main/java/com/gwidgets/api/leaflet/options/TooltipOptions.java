@@ -15,8 +15,6 @@
 package com.gwidgets.api.leaflet.options;
 
 import static jsinterop.annotations.JsPackage.GLOBAL;
-
-import com.gwidgets.api.leaflet.L;
 import com.gwidgets.api.leaflet.Point;
 
 import jsinterop.annotations.JsOverlay;
@@ -37,16 +35,16 @@ public class TooltipOptions {
 	private  Point  offset;	
 
     @JsProperty
-	private Boolean permanent;	
+	private boolean permanent;	
 
     @JsProperty
 	private String direction;	
 
     @JsProperty
-	private Boolean sticky;	
+	private boolean sticky;	
 
     @JsProperty
-	private Boolean interactive;	
+	private boolean interactive;	
 
     @JsProperty
 	private double opacity;	
@@ -93,7 +91,7 @@ public class TooltipOptions {
 	/** Whether to open the tooltip permanently or only on mouseover.
 		 */
 	@JsOverlay
-	public final Boolean getPermanent() {
+	public final boolean getPermanent() {
 		return this.permanent;
 	}
 
@@ -111,7 +109,7 @@ public class TooltipOptions {
 	/** If true, the tooltip will follow the mouse instead of being fixed at the feature center.
 		 */
 	@JsOverlay
-	public final Boolean getSticky() {
+	public final boolean getSticky() {
 		return this.sticky;
 	}
 
@@ -120,7 +118,7 @@ public class TooltipOptions {
 	/** If true, the tooltip will listen to the feature events.
 		 */
 	@JsOverlay
-	public final Boolean getInteractive() {
+	public final boolean getInteractive() {
 		return this.interactive;
 	}
 
@@ -154,19 +152,19 @@ public class TooltipOptions {
 
 	public static class Builder{
 		
-		private String pane	= "tooltipPane";
+		private String pane;
 	
-		private  Point  offset = L.point(0, 0, false);
+		private  Point  offset;
 
-		private  Boolean permanent = false;	
+		private  Boolean permanent;	
 
-		private  String direction = "auto";	
+		private  String direction;	
 
-		private  Boolean sticky = false;	
+		private  Boolean sticky;	
 
-		private  Boolean interactive = false;	
+		private  Boolean interactive;	
 
-		private  double opacity	= 0.9;	
+		private  Double opacity;	
 		
 		private String className;
 
@@ -216,7 +214,7 @@ public class TooltipOptions {
 		/** Tooltip container opacity.
 		* @return Builder
 			 */
-		public Builder opacity(double opacity){this.opacity = opacity; return this;}
+		public Builder opacity(Double opacity){this.opacity = opacity; return this;}
 		
 		public Builder className(String className){this.className = className; return this;}
 		
@@ -225,21 +223,26 @@ public class TooltipOptions {
 		
 		public TooltipOptions build(){
 			TooltipOptions toolTipOptions = new TooltipOptions();
-			toolTipOptions.pane = this.pane; 
+			if(this.pane != null)
+			toolTipOptions.pane = this.pane;
+			if(this.offset != null)
 			toolTipOptions.offset = this.offset;
+			if(this.direction != null)
 			toolTipOptions.direction = this.direction;
+			if(this.permanent != null)
 			toolTipOptions.permanent = this.permanent;
+			if(this.sticky != null)
 			toolTipOptions.sticky = this.sticky;
+			if(this.interactive != null)
 			toolTipOptions.interactive = this.interactive;
+			if(this.opacity != null)
 			toolTipOptions.opacity = this.opacity;
+			if(this.attribution != null)
 			toolTipOptions.attribution = this.attribution;
+			if(this.className != null)
 			toolTipOptions.className = this.className;
 			
 			return toolTipOptions;
 		}
-		
-		
-		
 	}
-
 }

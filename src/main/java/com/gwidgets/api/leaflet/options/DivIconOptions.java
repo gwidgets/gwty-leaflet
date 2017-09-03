@@ -16,7 +16,6 @@ package com.gwidgets.api.leaflet.options;
 
 import static jsinterop.annotations.JsPackage.GLOBAL;
 
-import com.gwidgets.api.leaflet.L;
 import com.gwidgets.api.leaflet.Point;
 
 import jsinterop.annotations.JsOverlay;
@@ -208,11 +207,11 @@ public class DivIconOptions {
 		
 		private Point popUpAnchor;
 
-		private String className = "leaflet-div-icon";
+		private String className;
 
-		private String html = "";
+		private String html;
 		
-		 private Point bgPos = L.point(0, 0, true);
+		 private Point bgPos;
 		    
 		    
 	     private String iconUrl;
@@ -233,7 +232,7 @@ public class DivIconOptions {
 	    private Point shadowAnchor;
 
 	    
-	    private String pane = "overlayPane";
+	    private String pane;
 
 	    
 	    private String attribution;
@@ -314,26 +313,36 @@ public class DivIconOptions {
 		public DivIconOptions build(){
 			
 			DivIconOptions options = new DivIconOptions();
+			if(this.iconSize != null)
 			options.iconSize = this.iconSize;
+			if(this.iconAnchor != null)
 			options.iconAnchor = this.iconAnchor;
+			if(this.popUpAnchor != null)
 			options.popUpAnchor = this.popUpAnchor;
+			if(this.className != null)
 			options.className = this.className;
+			if(this.html != null)
 			options.html = this.html;
+			if(this.iconUrl != null)
 			options.iconUrl = this.iconUrl;
+			if(this.bgPos != null)
 		    options.bgPos = this.bgPos;
+			if(this.iconRetinaUrl != null)
 		    options.iconRetinaUrl = this.iconRetinaUrl;
+			if(this.shadowUrl != null)
 		    options.shadowUrl = this.shadowUrl;
+			if(this.shadowRetinaUrl != null)
 		    options.shadowRetinaUrl = this.shadowRetinaUrl;
+			if(this.shadowSize != null)
 		    options.shadowSize = this.shadowSize;
+			if(this.shadowAnchor != null)
 		    options.shadowAnchor = this.shadowAnchor;
+			if(this.pane != null)
 		    options.pane = this.pane;
+			if(this.attribution != null)
 		    options.attribution = this.attribution;
-			
-			
+					
 			return options;
-			
-			
 		}
-
 	}
 }

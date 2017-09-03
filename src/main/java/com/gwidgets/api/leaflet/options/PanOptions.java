@@ -41,7 +41,7 @@ public class PanOptions {
 	private  double easeLinearity;
 	
 	@JsProperty
-	private  Boolean noMoveStart;
+	private  boolean noMoveStart;
 	
 	
 
@@ -77,7 +77,7 @@ public class PanOptions {
 	 * default false
 	 * @return the no move start
 	 */
-	@JsOverlay public final Boolean getNoMoveStart() {
+	@JsOverlay public final boolean getNoMoveStart() {
 		return this.noMoveStart;
 	}
 
@@ -88,13 +88,11 @@ public class PanOptions {
 	 * The Class Builder.
 	 */
 	public static class Builder {
-		
+		private  Double duration;
 		 
-		private  double duration = 0.25;
+		private  Double easeLinearity;
 		 
-		private  double easeLinearity = 0.25;
-		 
-		private  Boolean noMoveStart = false;
+		private  Boolean noMoveStart;
 
 		/**
 		 * Instantiates a new builder.
@@ -111,7 +109,7 @@ public class PanOptions {
 		 * @param duration the duration
 		 * @return the builder
 		 */
-		public  Builder duration(double duration){this.duration = duration; return this;}
+		public  Builder duration(Double duration){this.duration = duration; return this;}
 		 
 		/**
 		 * The curvature factor of panning animation easing (third parameter of the Cubic Bezier curve). 1.0 means linear animation, the less the more bowed the curve.
@@ -120,7 +118,7 @@ public class PanOptions {
 		 * @param easeLinearity the ease linearity
 		 * @return the builder
 		 */
-		public  Builder easeLinearity(double easeLinearity){this.easeLinearity = easeLinearity; return this;}
+		public  Builder easeLinearity(Double easeLinearity){this.easeLinearity = easeLinearity; return this;}
 		 
 		/**
 		 * If true, panning won't fire movestart event on start (used internally for panning inertia).
@@ -139,13 +137,14 @@ public class PanOptions {
 		 */
 		public PanOptions build(){
 			PanOptions options = new PanOptions();
+			if(this.duration != null)
 			options.duration = this.duration;
+			if(this.easeLinearity != null)
 			options.easeLinearity = this.easeLinearity;
+			if(this.noMoveStart != null)
 			options.noMoveStart = this.noMoveStart;
 			
 			return options;
 		}
-
 	}
-
 }

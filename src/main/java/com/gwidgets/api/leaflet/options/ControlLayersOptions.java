@@ -37,10 +37,10 @@ public class ControlLayersOptions {
 	private String position;
 
 	@JsProperty
-	private Boolean collapsed;
+	private boolean collapsed;
 
 	@JsProperty
-	private Boolean autoZIndex;
+	private boolean autoZIndex;
 	
 	
 	/**
@@ -61,7 +61,7 @@ public class ControlLayersOptions {
 	 * default true
 	 * @return the collapsed
 	 */
-	@JsOverlay public final Boolean getCollapsed() {
+	@JsOverlay public final boolean getCollapsed() {
 		return this.collapsed;
 	}
 
@@ -72,7 +72,7 @@ public class ControlLayersOptions {
 	 * default true
 	 * @return the auto Z index
 	 */
-	@JsOverlay public final Boolean getAutoZIndex() {
+	@JsOverlay public final boolean getAutoZIndex() {
 		return this.autoZIndex;
 	}
 
@@ -83,11 +83,11 @@ public class ControlLayersOptions {
 	public static class Builder {
 		
 
-		private String position = "topright";
+		private String position;
 
-		private Boolean collapsed = true;
+		private Boolean collapsed;
 
-		private Boolean autoZIndex = true;
+		private Boolean autoZIndex;
 		
 		
 		public Builder(){
@@ -134,8 +134,11 @@ public class ControlLayersOptions {
 		public ControlLayersOptions build(){
 			
 			ControlLayersOptions options = new ControlLayersOptions();
+			if(this.position != null)
 			options.position = this.position;
+			if(this.collapsed != null)
 			options.collapsed = this.collapsed;
+			if(this.autoZIndex != null)
 			options.autoZIndex = this.autoZIndex;
 			
 			return options;

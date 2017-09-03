@@ -66,9 +66,9 @@ public class ControlAttributionOptions {
 	public static class Builder{
 		
 
-		private String position = "bottomright";
+		private String position;
 
-		private String prefix = "Powered by Leaflet";
+		private String prefix;
 		
 		/**
 		 * Instantiates a new builder.
@@ -114,12 +114,12 @@ public class ControlAttributionOptions {
 		public ControlAttributionOptions build(){
 			
 			ControlAttributionOptions options = new ControlAttributionOptions();
+			if(this.position != null)
 			options.position = this.position;
+			if(this.prefix != null)
 			options.prefix = this.prefix;
 			
 			return options;
 		}
-		
 	}
-
 }

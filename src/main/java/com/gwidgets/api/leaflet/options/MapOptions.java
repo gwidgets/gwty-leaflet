@@ -33,18 +33,14 @@ import jsinterop.annotations.JsType;
  */
 @JsType(isNative=true, namespace=GLOBAL, name="Object")
 public class MapOptions {
-
-
 	private MapOptions() {
 
 	}
-	
-	
 	/*****************************************
 	********************************************/
 	
 	@JsProperty
-	private Boolean preferCanvas;
+	private boolean preferCanvas;
 	
 	/**********************************************
 	*********************************************/
@@ -55,16 +51,16 @@ public class MapOptions {
 	private LatLng center;
 	
 	@JsProperty
-	private Double zoom;
+	private double zoom;
 	
 	@JsProperty
 	private Layer[] layers;
 	
 	@JsProperty
-	private Double minZoom;
+	private double minZoom;
 	
 	@JsProperty
-	private Double maxZoom;
+	private double maxZoom;
 	
 	@JsProperty
 	private LatLngBounds maxBounds;
@@ -80,13 +76,13 @@ public class MapOptions {
 
 	// Interaction Options
 	@JsProperty
-	private Boolean dragging;
+	private boolean dragging;
 	
 	@JsProperty
-	private Boolean touchZoom;
+	private boolean touchZoom;
 	
 	@JsProperty
-	private Boolean scrollWheelZoom;
+	private boolean scrollWheelZoom;
 	
 	/*****************************************
 	********************************************/
@@ -103,27 +99,27 @@ public class MapOptions {
 	*********************************************/
 	
 	@JsProperty
-	private Boolean doubleClickZoom;
+	private boolean doubleClickZoom;
 	
 	@JsProperty
-	private Boolean boxZoom;
+	private boolean boxZoom;
 	
 	@JsProperty
-	private Boolean tap;
+	private boolean tap;
 	
 	@JsProperty
 	private double tapTolerance;
 	
 	@JsProperty
-	private Boolean trackResize;
+	private boolean trackResize;
 	
 	
 	
 	@JsProperty
-	private Boolean closePopupOnClick;
+	private boolean closePopupOnClick;
 	
 	@JsProperty
-	private Boolean bounceAtZoomLimits;
+	private boolean bounceAtZoomLimits;
 	
 	/*****************************************
 	********************************************/
@@ -142,7 +138,7 @@ public class MapOptions {
 
 	// Keyboard Navigation Options
 	@JsProperty
-	private Boolean keyboard;
+	private boolean keyboard;
 	
 	@JsProperty
 	private double keyboardPanDelta;
@@ -150,7 +146,7 @@ public class MapOptions {
 
 	// Panning Inertia Options
 	@JsProperty
-	private Boolean inertia;
+	private boolean inertia;
 	
 	@JsProperty
 	private double inertiaDeceleration;
@@ -160,7 +156,7 @@ public class MapOptions {
 	
 	
 	@JsProperty
-	private Boolean worldCopyJump;
+	private boolean worldCopyJump;
 	
 	/*****************************************
 	********************************************/
@@ -171,23 +167,23 @@ public class MapOptions {
 
 	// Control options
 	@JsProperty
-	private Boolean zoomControl;
+	private boolean zoomControl;
 	
 	@JsProperty
-	private Boolean attributionControl;
+	private boolean attributionControl;
 
 	// Animation options
 	@JsProperty
-	private Boolean fadeAnimation;
+	private boolean fadeAnimation;
 	
 	@JsProperty
-	private Boolean zoomAnimation;
+	private boolean zoomAnimation;
 	
 	@JsProperty
 	private double zoomAnimationThreshold;
 	
 	@JsProperty
-	private Boolean markerZoomAnimation;
+	private boolean markerZoomAnimation;
 	
 	/*****************************************
 	********************************************/
@@ -216,7 +212,7 @@ public class MapOptions {
 	 * @return the zoom
 	 */
 	@JsOverlay
-	public final Double getZoom() {
+	public final double getZoom() {
 		return this.zoom;
 	}
 
@@ -237,7 +233,7 @@ public class MapOptions {
 	 * default 0
 	 * @return the min zoom
 	 */
-	@JsOverlay public final Double getMinZoom() {
+	@JsOverlay public final double getMinZoom() {
 		return this.minZoom;
 	}
 
@@ -247,7 +243,7 @@ public class MapOptions {
 	 * default 0
 	 * @return the max zoom
 	 */
-	@JsOverlay public final Double getMaxZoom() {
+	@JsOverlay public final double getMaxZoom() {
 		return this.maxZoom;
 	}
 
@@ -269,7 +265,7 @@ public class MapOptions {
 	 * default true
 	 * @return the dragging
 	 */
-	@JsOverlay public final Boolean getDragging() {
+	@JsOverlay public final boolean getDragging() {
 		return this.dragging;
 	}
 
@@ -281,7 +277,7 @@ public class MapOptions {
 	 *
 	 * @return the touch zoom
 	 */
-	@JsOverlay public final Boolean getTouchZoom() {
+	@JsOverlay public final boolean getTouchZoom() {
 		return this.touchZoom;
 	}
 
@@ -292,7 +288,7 @@ public class MapOptions {
 	 * default true
 	 * @return the scroll wheel zoom
 	 */
-	@JsOverlay public final Boolean getScrollWheelZoom() {
+	@JsOverlay public final boolean getScrollWheelZoom() {
 		return this.scrollWheelZoom;
 	}
 
@@ -303,7 +299,7 @@ public class MapOptions {
 	 * default true
 	 * @return the double click zoom
 	 */
-	@JsOverlay public final Boolean getDoubleClickZoom() {
+	@JsOverlay public final boolean getDoubleClickZoom() {
 		return this.doubleClickZoom;
 	}
 
@@ -313,7 +309,7 @@ public class MapOptions {
 	 * default true
 	 * @return the box zoom
 	 */
-	@JsOverlay public final Boolean getBoxZoom() {
+	@JsOverlay public final boolean getBoxZoom() {
 		return this.boxZoom;
 	}
 
@@ -323,7 +319,7 @@ public class MapOptions {
 	 * default true
 	 * @return the tap
 	 */
-	@JsOverlay public final Boolean getTap() {
+	@JsOverlay public final boolean getTap() {
 		return this.tap;
 	}
 
@@ -344,7 +340,7 @@ public class MapOptions {
 	 * default true
 	 * @return the track resize
 	 */
-	@JsOverlay public final Boolean getTrackResize() {
+	@JsOverlay public final boolean getTrackResize() {
 		return this.trackResize;
 	}
 
@@ -354,7 +350,7 @@ public class MapOptions {
 	 * default false
 	 * @return the world copy jump
 	 */
-	@JsOverlay public final Boolean getWorldCopyJump() {
+	@JsOverlay public final boolean getWorldCopyJump() {
 		return this.worldCopyJump;
 	}
 
@@ -364,7 +360,7 @@ public class MapOptions {
 	 * default true
 	 * @return the close popup on click
 	 */
-	@JsOverlay public final Boolean getClosePopupOnClick() {
+	@JsOverlay public final boolean getClosePopupOnClick() {
 		return this.closePopupOnClick;
 	}
 	
@@ -374,7 +370,7 @@ public class MapOptions {
 	 * default true
 	 * @return the close popup on click
 	 */
-	@JsOverlay public final Boolean getBounceAtZoomLimits() {
+	@JsOverlay public final boolean getBounceAtZoomLimits() {
 		return this.bounceAtZoomLimits;
 	}
 
@@ -384,7 +380,7 @@ public class MapOptions {
 	 *  default true
 	 * @return the keyboard
 	 */
-	@JsOverlay public final Boolean getKeyboard() {
+	@JsOverlay public final boolean getKeyboard() {
 		return this.keyboard;
 	}
 
@@ -406,7 +402,7 @@ public class MapOptions {
 	 * default true
 	 * @return the inertia
 	 */
-	@JsOverlay public final Boolean getInertia() {
+	@JsOverlay public final boolean getInertia() {
 		return this.inertia;
 	}
 
@@ -438,7 +434,7 @@ public class MapOptions {
 	 *
 	 * @return the zoom control
 	 */
-	@JsOverlay public final Boolean getZoomControl() {
+	@JsOverlay public final boolean getZoomControl() {
 		return this.zoomControl;
 	}
 
@@ -448,7 +444,7 @@ public class MapOptions {
 	 * default true
 	 * @return the attribution control
 	 */
-	@JsOverlay public final Boolean getAttributionControl() {
+	@JsOverlay public final boolean getAttributionControl() {
 		return this.attributionControl;
 	}
 
@@ -458,7 +454,7 @@ public class MapOptions {
 	 * default true
 	 * @return the fade animation
 	 */
-	@JsOverlay public final Boolean getFadeAnimation() {
+	@JsOverlay public final boolean getFadeAnimation() {
 		return this.fadeAnimation;
 	}
 
@@ -469,7 +465,7 @@ public class MapOptions {
 	 * default true
 	 * @return the zoom animation
 	 */
-	@JsOverlay public final Boolean getZoomAnimation() {
+	@JsOverlay public final boolean getZoomAnimation() {
 		return this.zoomAnimation;
 	}
 
@@ -489,11 +485,11 @@ public class MapOptions {
 	 * default true
 	 * @return the marker zoom animation
 	 */
-	@JsOverlay public final Boolean getMarkerZoomAnimation() {
+	@JsOverlay public final boolean getMarkerZoomAnimation() {
 		return this.markerZoomAnimation;
 	}
 
-	@JsOverlay public final Boolean getPreferCanvas() {
+	@JsOverlay public final boolean getPreferCanvas() {
 		return this.preferCanvas;
 	}
 
@@ -535,13 +531,13 @@ public class MapOptions {
 	public static class Builder {
 
 
-		LatLng center = null;
+		LatLng center;
 
 
-		Double zoom = 0.0;
+		Double zoom;
 
 
-		Double minZoom = 0.0;
+		Double minZoom;
 
 		/**
 		 * Instantiates a new MapOtions builder.
@@ -558,74 +554,73 @@ public class MapOptions {
 		}
 
 		
-		Layer[] layers = null;
+		Layer[] layers;
 
-		Double maxZoom = 0.0;
+		Double maxZoom;
 
-		LatLngBounds maxBounds = null;
+		LatLngBounds maxBounds;
 
-		Boolean dragging = true;
+		Boolean dragging;
 
-		Boolean touchZoom = true;
+		Boolean touchZoom;
 
-		Boolean scrollWheelZoom = true;
+		Boolean scrollWheelZoom;
 
-		Boolean doubleClickZoom = true;
+		Boolean doubleClickZoom;
 
-		Boolean boxZoom = true;
+		Boolean boxZoom;
 
-		Boolean tap = true;
+		Boolean tap;
 
-		double tapTolerance = 15;
+		Double tapTolerance;
 
-		Boolean trackResize = true;
+		Boolean trackResize;
 
-		Boolean worldCopyJump = false;
+		Boolean worldCopyJump;
 
-		Boolean closePopupOnClick = true;
+		Boolean closePopupOnClick;
 		
-		Boolean bounceAtZoomLimits = true;
+		Boolean bounceAtZoomLimits;
 
-		Boolean keyboard = true;
+		Boolean keyboard;
 
-		double keyboardPanDelta = 80;
+		Double keyboardPanDelta;
 
+		Boolean inertia;
 
-		Boolean inertia = true;
+		Double inertiaDeceleration;
 
-		double inertiaDeceleration = 3000;
+		Double inertiaMaxSpeed;
 
-		double inertiaMaxSpeed = 1500;
+		Double inertiaThreshold;
 
-		double inertiaThreshold = 32;
+		Boolean zoomControl;
 
-		Boolean zoomControl = true;
+		Boolean attributionControl;
 
-		Boolean attributionControl = true;
+		Boolean fadeAnimation;
 
-		Boolean fadeAnimation = true;
+		Boolean zoomAnimation;
 
-		Boolean zoomAnimation = true;
+		Double zoomAnimationThreshold;
 
-		double zoomAnimationThreshold = 4;
-
-		Boolean markerZoomAnimation = true;
+		Boolean markerZoomAnimation;
 		
-		Boolean preferCanvas = false;
+		Boolean preferCanvas;
 		
 	    Renderer renderer;
 
-	    double wheelDebounceTime = 40;
+	    Double wheelDebounceTime;
 
-	    double wheelPxPerZoomLevel = 60;
+	    Double wheelPxPerZoomLevel;
 
-	    double zoomSnap = 1;
+	    Double zoomSnap;
 
-	    double zoomDelta = 1; 
+	    Double zoomDelta; 
 
-	    double maxBoundsViscosity = 0.0;
+	    Double maxBoundsViscosity;
 
-	    double transform3DLimit = Math.pow(2, 23);
+	    Double transform3DLimit;
 
 		/**
 		 * Layers that will be added to the map initially.
@@ -1035,84 +1030,79 @@ public class MapOptions {
 		public MapOptions build() {
 
 			MapOptions options = new MapOptions();
-			
+			if(this.center != null)
 			options.center = this.center;
-			
+			if(this.zoom != null)
 			options.zoom = this.zoom;
-			
+			if(this.minZoom != null)
 			options.minZoom = this.minZoom;
-
+			if(this.layers != null)
 			options.layers = this.layers;
-
+			if(this.maxZoom != null)
 			options.maxZoom = this.maxZoom;
-
+			if(this.maxBounds != null)
 			options.maxBounds = this.maxBounds;
-
+			if(this.dragging != null)
 			options.dragging = this.dragging;
-
+			if(this.touchZoom != null)
 			options.touchZoom = this.touchZoom;
-
+			if(this.scrollWheelZoom != null)
 			options.scrollWheelZoom = this.scrollWheelZoom;
-
+			if(this.doubleClickZoom != null)
 			options.doubleClickZoom = this.doubleClickZoom;
-
+			if(this.boxZoom != null)
 			options.boxZoom = this.boxZoom;
-
+			if(this.tap != null)
 			options.tap = this.tap;
-
+			if(this.tapTolerance != null)
 			options.tapTolerance = this.tapTolerance;
-
+			if(this.trackResize != null)
 			options.trackResize = this.trackResize;
-
+			if(this.worldCopyJump != null)
 			options.worldCopyJump = this.worldCopyJump;
-
+			if(this.closePopupOnClick != null)
 			options.closePopupOnClick = this.closePopupOnClick;
-			
+			if(this.bounceAtZoomLimits != null)
 			options.bounceAtZoomLimits = this.bounceAtZoomLimits;
-
+			if(this.keyboard != null)
 			options.keyboard = this.keyboard;
-
+			if(this.keyboardPanDelta != null)
 			options.keyboardPanDelta = this.keyboardPanDelta;
-
+			if(this.inertia != null)
 			options.inertia = this.inertia;
-
+			if(this.inertiaDeceleration != null)
 			options.inertiaDeceleration = this.inertiaDeceleration;
-
+			if(this.inertiaMaxSpeed != null)
 			options.inertiaMaxSpeed = this.inertiaMaxSpeed;
-
+			if(this.zoomControl != null)
 			options.zoomControl = this.zoomControl;
-
+			if(this.attributionControl != null)
 			options.attributionControl = this.attributionControl;
-
+			if(this.fadeAnimation != null)
 			options.fadeAnimation = this.fadeAnimation;
-
+			if(this.zoomAnimation != null)
 			options.zoomAnimation = this.zoomAnimation;
-
+			if(this.zoomAnimationThreshold != null)
 			options.zoomAnimationThreshold = this.zoomAnimationThreshold;
-
+			if(this.markerZoomAnimation != null)
 			options.markerZoomAnimation = this.markerZoomAnimation;
-			
+			if(this.preferCanvas != null)
 			 options.preferCanvas = this.preferCanvas;
-				
+			if(this.renderer != null)
 		     options.renderer = this.renderer;
-
+			if(this.wheelDebounceTime != null)
 		     options.wheelDebounceTime = this.wheelDebounceTime;
-
+			if(this.wheelPxPerZoomLevel != null)
 		     options.wheelPxPerZoomLevel = this.wheelPxPerZoomLevel;
-
+			if(this.zoomSnap != null)
 		     options.zoomSnap = this.zoomSnap;
-
+			if(this.zoomDelta != null)
 		     options.zoomDelta = this.zoomDelta; 
-
+			if(this.maxBoundsViscosity != null)
 		    options.maxBoundsViscosity = this.maxBoundsViscosity;
-
+			if(this.transform3DLimit != null)
 		    options.transform3DLimit = this.transform3DLimit;
-
 			return options;
 		}
-		
-		
-
 	}
-
 }

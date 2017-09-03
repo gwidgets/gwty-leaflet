@@ -15,9 +15,9 @@ public class GridLayerOptions {
 
 	private double opacity;	
 
-	private Boolean updateWhenIdle;	
+	private boolean updateWhenIdle;	
 
-	private Boolean	updateWhenZooming;
+	private boolean	updateWhenZooming;
 
 	private double updateInterval;
 
@@ -31,7 +31,7 @@ public class GridLayerOptions {
 
 	private double maxZoom;
 
-	private Boolean	noWrap;	
+	private boolean	noWrap;	
 
 	private String pane;
 
@@ -41,39 +41,25 @@ public class GridLayerOptions {
 	
 	private GridLayerOptions(){
 		
-		
-		
 	}
-	
-	
-	
 	
 	@JsOverlay
 	public final double getTileSize() {
 		return this.tileSize;
 	}
 
-
-
-
 	@JsOverlay
 	public final double getOpacity() {
 		return this.opacity;
 	}
 
-
-
-
 	@JsOverlay
-	public final Boolean getUpdateWhenIdle() {
+	public final boolean getUpdateWhenIdle() {
 		return this.updateWhenIdle;
 	}
 
-
-
-
 	@JsOverlay
-	public final Boolean getUpdateWhenZooming() {
+	public final boolean getUpdateWhenZooming() {
 		return this.updateWhenZooming;
 	}
 
@@ -110,7 +96,7 @@ public class GridLayerOptions {
 	}
 
 	@JsOverlay
-	public final Boolean getNoWrap() {
+	public final boolean getNoWrap() {
 		return this.noWrap;
 	}
 
@@ -129,66 +115,60 @@ public class GridLayerOptions {
 		return this.keepBuffer;
 	}
 
-
-
-
-
 	public static class Builder{
 		
-		private double tileSize = 256;	
+		private Double tileSize;	
 
-		private double opacity	= 1.0;	
+		private Double opacity;	
 
-		private Boolean updateWhenIdle = false;	
+		private Boolean updateWhenIdle;	
 
-		private Boolean	updateWhenZooming =	true;
+		private Boolean	updateWhenZooming;
 
-		private double updateInterval = 200;
+		private Double updateInterval;
 
-		private String	attribution	= null;	
+		private String	attribution;	
 		
-		private double zIndex = 1;	
+		private Double zIndex;	
 
-		private LatLngBounds bounds = null;
+		private LatLngBounds bounds;
 
-		private double minZoom = 0;	
+		private Double minZoom;	
 
-		private double maxZoom;
+		private Double maxZoom;
 
-		private Boolean	noWrap = false;	
+		private Boolean	noWrap;	
 
-		private String pane = "tilePane";
+		private String pane;
 
-		private String className  = "";	
+		private String className;	
 
-		private double keepBuffer =  2;	
-		
+		private Double keepBuffer;			
 		
 		public Builder(){
 			
 			
 		}
 		
-		
-		    public Builder tileSize(double tileSize){this.tileSize = tileSize; return this;}	
+		    public Builder tileSize(Double tileSize){this.tileSize = tileSize; return this;}	
 
-			public Builder opacity(double opacity){this.opacity = opacity; return this;}	
+			public Builder opacity(Double opacity){this.opacity = opacity; return this;}	
 
 			public Builder updateWhenIdle(Boolean updateWhenIdle){this.updateWhenIdle = updateWhenIdle; return this;}
 
 			public Builder updateWhenZooming(Boolean updateWhenZooming){this.updateWhenZooming = updateWhenZooming; return this;}
 
-			public Builder updateInterval(double updateInterval){this.updateInterval = updateInterval; return this;}
+			public Builder updateInterval(Double updateInterval){this.updateInterval = updateInterval; return this;}
 
 			public Builder attribution(String attribution){this.attribution = attribution; return this;}
 			
-			public Builder zIndex(double zIndex){this.zIndex = zIndex; return this;}	
+			public Builder zIndex(Double zIndex){this.zIndex = zIndex; return this;}	
 
 			public Builder bounds(LatLngBounds bounds){this.bounds = bounds; return this;}
 
-			public Builder minZoom(double minZoom){this.minZoom = minZoom; return this;}
+			public Builder minZoom(Double minZoom){this.minZoom = minZoom; return this;}
 
-			public Builder maxZoom(double maxZoom){this.maxZoom = maxZoom; return this;}
+			public Builder maxZoom(Double maxZoom){this.maxZoom = maxZoom; return this;}
 
 			public Builder noWrap(Boolean noWrap){this.noWrap = noWrap; return this;}	
 
@@ -196,35 +176,40 @@ public class GridLayerOptions {
 
 			public Builder className(String className){this.className = className; return this;}
 
-			public Builder keepBuffer(double keepBuffer){this.keepBuffer = keepBuffer; return this;}
-			
-			
+			public Builder keepBuffer(Double keepBuffer){this.keepBuffer = keepBuffer; return this;}
 			
 			public GridLayerOptions build(){
 				GridLayerOptions options = new GridLayerOptions();
+				if(this.tileSize != null)
 				options.tileSize = this.tileSize;
+				if(this.opacity != null)
 				options.opacity = this.opacity;
+				if(this.updateWhenIdle != null)
 				options.updateWhenIdle = this.updateWhenIdle;
+				if(this.updateWhenZooming != null)
 				options.updateWhenZooming = this.updateWhenZooming;
+				if(this.updateInterval != null)
 				options.updateInterval = this.updateInterval;
+				if(this.attribution != null)
 				options.attribution = this.attribution;
+				if(this.zIndex != null)
 				options.zIndex = this.zIndex;
+				if(this.bounds != null)
 				options.bounds = this.bounds;
+				if(this.minZoom != null)
 				options.minZoom = this.minZoom;
+				if(this.maxZoom != null)
 				options.maxZoom = this.maxZoom;
+				if(this.noWrap != null)
 				options.noWrap = this.noWrap;
+				if(this.pane != null)
 				options.pane = this.pane;
+				if(this.className != null)
 				options.className = this.className;
+				if(this.keepBuffer != null)
 				options.keepBuffer = this.keepBuffer;
 				
-				
-				return options;
-				
-				
-				
+				return options;				
 			}
-		
 	}
-	
-
 }

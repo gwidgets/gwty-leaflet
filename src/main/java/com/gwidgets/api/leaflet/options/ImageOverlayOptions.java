@@ -30,7 +30,6 @@ import jsinterop.annotations.JsType;
 @JsType(isNative=true, namespace=GLOBAL, name="Object")
 public class ImageOverlayOptions {
 	
-	
 	private ImageOverlayOptions() {
 		
 	}
@@ -50,13 +49,13 @@ public class ImageOverlayOptions {
     /*****************************************
 	********************************************/
 	@JsProperty
-    private Boolean interactive;
+    private boolean interactive;
 	/**********************************************
 	*********************************************/
 	/*****************************************
 	********************************************/
 	@JsProperty
-    private Boolean crossOrigin;
+    private boolean crossOrigin;
 	/**********************************************
 	*********************************************/
     /*****************************************
@@ -65,8 +64,6 @@ public class ImageOverlayOptions {
     private String pane;
 	/**********************************************
 	*********************************************/
-	
-	
 	
 	/**
 	 * Gets The opacity of the image overlay.
@@ -77,8 +74,6 @@ public class ImageOverlayOptions {
 		return this.opacity;
 	}
 
-
-
 	/**
 	 * Gets The attribution text of the image overlay. empty by default
 	 *
@@ -88,40 +83,30 @@ public class ImageOverlayOptions {
 		return this.attribution;
 	}
 
-
-
 	@JsOverlay  public final String getAlt() {
 		return this.alt;
 	}
 
-
-
-	@JsOverlay  public final Boolean getInteractive() {
+	@JsOverlay  public final boolean getInteractive() {
 		return this.interactive;
 	}
 
-
-
-	@JsOverlay  public final Boolean getCrossOrigin() {
+	@JsOverlay  public final boolean getCrossOrigin() {
 		return this.crossOrigin;
 	}
-
-
 
 	@JsOverlay  public final String getPane() {
 		return this.pane;
 	}
-
-
 
 	/**
 	 * The Class Builder.
 	 */
 	public static class Builder {
 		
-		private double opacity = 1.0;
+		private Double opacity;
 		
-		private String attribution = "";
+		private String attribution;
 		
 		private String alt;
 
@@ -145,7 +130,7 @@ public class ImageOverlayOptions {
 		 * @param opacity the opacity
 		 * @return the builder
 		 */
-		public Builder opacity(double opacity){
+		public Builder opacity(Double opacity){
 			this.opacity = opacity;
 			return this;
 		}
@@ -178,16 +163,20 @@ public class ImageOverlayOptions {
 		 */
 		public ImageOverlayOptions build(){
 			ImageOverlayOptions options = new ImageOverlayOptions();
+			if(this.opacity != null)
 			options.opacity = this.opacity;
+			if(this.attribution != null)
 			options.attribution = this.attribution;
+			if(this.alt != null)
 		    options.alt = this.alt;
+			if(this.interactive != null)
 		    options.interactive = this.interactive;
+			if(this.crossOrigin != null)
 		    options.crossOrigin = this.crossOrigin;
+			if(this.pane != null)
 		    options.pane = this.pane;
 		
 			return options;
 		}
-
 	}
-
 }

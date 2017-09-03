@@ -33,7 +33,7 @@ public class ZoomPanOptions {
 	}
 
 	@JsProperty
-	private Boolean reset;
+	private boolean reset;
 
 	@JsProperty
 	private PanOptions pan;
@@ -42,7 +42,7 @@ public class ZoomPanOptions {
 	private ZoomOptions zoom;
 
 	@JsProperty
-	private Boolean animate;
+	private boolean animate;
 
 	/**
 	 * Gets whether the map view will be completely reset (without any
@@ -52,7 +52,7 @@ public class ZoomPanOptions {
 	 * @return the reset
 	 */
 	@JsOverlay
-	public final Boolean getReset() {
+	public final boolean getReset() {
 		return this.reset;
 	}
 
@@ -84,7 +84,7 @@ public class ZoomPanOptions {
 	 * @return the animate
 	 */
 	@JsOverlay
-	public final Boolean getAnimate() {
+	public final boolean getAnimate() {
 		return this.animate;
 	}
 
@@ -97,10 +97,10 @@ public class ZoomPanOptions {
 		private Boolean reset = false;
 
 		/** The pan. */
-		private PanOptions pan = null;
+		private PanOptions pan;
 
 		/** The zoom. */
-		private ZoomOptions zoom = null;
+		private ZoomOptions zoom;
 
 		/** The animate. */
 		private Boolean animate = true;
@@ -167,15 +167,16 @@ public class ZoomPanOptions {
 		 */
 		public ZoomPanOptions build() {
 			ZoomPanOptions options = new ZoomPanOptions();
+			if(this.animate != null)
 			options.animate = this.animate;
+			if(this.pan != null)
 			options.pan = this.pan;
+			if(this.zoom != null)
 			options.zoom = this.zoom;
+			if(this.reset != null)
 			options.reset = this.reset;
 
 			return options;
-
 		}
-
 	}
-
 }

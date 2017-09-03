@@ -30,14 +30,11 @@ import jsinterop.annotations.JsType;
  */
 @JsType(isNative=true, namespace=GLOBAL, name="Object")
 public class IconOptions {
-	
 
 	private IconOptions(){
 		
 		
 	}
-
-
    	    @JsProperty
 		private String iconUrl;
 
@@ -218,9 +215,9 @@ public class IconOptions {
 
 		private Point popupAnchor;
 
-		private String className = "";
+		private String className;
 		
-	    private String pane = "overlayPane";
+	    private String pane;
 
 	    
 	    private String attribution;
@@ -326,24 +323,32 @@ public class IconOptions {
 		 */
 		public IconOptions build(){
 			IconOptions options = new IconOptions();
-			options.iconUrl = iconUrl;
+			if(this.iconUrl != null)
+			options.iconUrl = this.iconUrl;
+			if(this.iconRetinaUrl != null)
 			options.iconRetinaUrl = this.iconRetinaUrl;
+			if(this.iconSize != null)
 			options.iconSize = this.iconSize;
+			if(this.iconAnchor != null)
 			options.iconAnchor = this.iconAnchor;
+			if(this.shadowUrl != null)
 			options.shadowUrl = this.shadowUrl;
+			if(this.shadowRetinaUrl != null)
 			options.shadowRetinaUrl = this.shadowRetinaUrl;
+			if(this.shadowSize != null)
 			options.shadowSize = this.shadowSize;
+			if(this.shadowAnchor != null)
 			options.shadowAnchor = this.shadowAnchor;
+			if(this.popupAnchor != null)
 			options.popupAnchor = this.popupAnchor;
+			if(this.className != null)
 			options.className = this.className;
+			if(this.pane != null)
 			options.pane = this.pane;
+			if(this.attribution != null)
 			options.attribution = this.attribution;
 			
-			return options;
-			
-			
+			return options;	
 		}
-
 	}
-
 }

@@ -33,10 +33,10 @@ public class LocateOptions {
 	}
 
 	@JsProperty
-	private Boolean watch;
+	private boolean watch;
 
 	@JsProperty
-	private Boolean setView;
+	private boolean setView;
 
 	@JsProperty
 	private double maxZoom;
@@ -48,7 +48,7 @@ public class LocateOptions {
 	private double maximumAge;
 
 	@JsProperty
-	private Boolean enableHighAccuracy;
+	private boolean enableHighAccuracy;
 
 	/**
 	 * Gets whether continuous watching of location changes (instead of
@@ -58,7 +58,7 @@ public class LocateOptions {
 	 * @return the watch
 	 */
 	@JsOverlay
-	public final Boolean getWatch() {
+	public final boolean getWatch() {
 		return this.watch;
 	}
 
@@ -71,7 +71,7 @@ public class LocateOptions {
 	 * @return the sets the view
 	 */
 	@JsOverlay
-	public final Boolean getSetView() {
+	public final boolean getSetView() {
 		return this.setView;
 	}
 
@@ -121,7 +121,7 @@ public class LocateOptions {
 	 * @return the enable high accuracy
 	 */
 	@JsOverlay
-	public final Boolean getEnableHighAccuracy() {
+	public final boolean getEnableHighAccuracy() {
 		return this.enableHighAccuracy;
 	}
 
@@ -130,17 +130,17 @@ public class LocateOptions {
 	 */
 	public static class Builder {
 
-		private Boolean watch = false;
+		private Boolean watch;
 
-		private Boolean setView = false;
+		private Boolean setView;
 
-		private double maxZoom = Double.POSITIVE_INFINITY;
+		private Double maxZoom;
 
-		private double timeout = 10000;
+		private Double timeout;
 
-		private double maximumAge = 0;
+		private Double maximumAge;
 
-		private Boolean enableHighAccuracy = false;
+		private Boolean enableHighAccuracy;
 
 		/**
 		 * Instantiates a new builder.
@@ -243,19 +243,21 @@ public class LocateOptions {
 		 * @return the locate options
 		 */
 		public LocateOptions build() {
-
 			LocateOptions options = new LocateOptions();
+			if(this.watch != null)
 			options.watch = this.watch;
+			if(this.setView != null)
 			options.setView = this.setView;
+			if(this.maxZoom != null)
 			options.maxZoom = this.maxZoom;
+			if(this.timeout != null)
 			options.timeout = this.timeout;
+			if(this.maximumAge != null)
 			options.maximumAge = this.maximumAge;
+			if(this.enableHighAccuracy != null)
 			options.enableHighAccuracy = this.enableHighAccuracy;
 
 			return options;
-
 		}
-
 	}
-
 }

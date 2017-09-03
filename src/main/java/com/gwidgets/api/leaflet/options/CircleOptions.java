@@ -10,14 +10,9 @@ import jsinterop.annotations.JsType;
 @JsType(isNative = true, namespace = GLOBAL, name = "Object")
 public class CircleOptions extends PathOptions {
 	
-	protected CircleOptions(){
-		
-		
-	}
+	protected CircleOptions(){}
 	
 	private double radius;
-	
-	
 	/**
 	 * Returns the current radius of a circle. Units are in meters.
 	 *
@@ -28,48 +23,45 @@ public class CircleOptions extends PathOptions {
 		return this.radius;
 	}
 
-
-
-
 	public static class Builder {
 
-		private Boolean stroke = true;
+		private Boolean stroke;
 
-		private String color = "#03f";
+		private String color;
 
-		private double weight = 5;
+		private Double weight;
 
-		private double opacity = 0.5;
+		private Double opacity;
 
-		private Boolean fill = true;
+		private Boolean fill;
 
-		private String fillColor = "#03f";
+		private String fillColor;
 
-		private double fillOpacity = 0.2;
+		private Double fillOpacity;
 
-		private String fillRule = "evenodd";
+		private String fillRule;
 
-		private String dashArray = null;
+		private String dashArray;
 
-		private String lineCap = null;
+		private String lineCap;
 
-		private String lineJoin = null;
+		private String lineJoin;
 
-		private String pointerEvents = null;
+		private String pointerEvents;
 
-		private String className = "";
+		private String className;
 		
 	    private String dashOffset;
 
 		private Renderer renderer;
 
-	    private String pane = "overlayPane"; 
+	    private String pane; 
 
 	    private String attribution;
 
-	    private Boolean interactive = true;
+	    private Boolean interactive;
 	    
-	    private double radius = 10;
+	    private Double radius;
 
 		/**
 		 * Instantiates a new builder.
@@ -113,7 +105,7 @@ public class CircleOptions extends PathOptions {
 		 *            the weight
 		 * @return the builder
 		 */
-		public Builder weight(double weight) {
+		public Builder weight(Double weight) {
 			this.weight = weight;
 			return this;
 		}
@@ -126,7 +118,7 @@ public class CircleOptions extends PathOptions {
 		 *            the opacity
 		 * @return the builder
 		 */
-		public Builder opacity(double opacity) {
+		public Builder opacity(Double opacity) {
 			this.opacity = opacity;
 			return this;
 		}
@@ -166,7 +158,7 @@ public class CircleOptions extends PathOptions {
 		 *            the fill opacity
 		 * @return the builder
 		 */
-		public Builder fillOpacity(double fillOpacity) {
+		public Builder fillOpacity(Double fillOpacity) {
 			this.fillOpacity = fillOpacity;
 			return this;
 		}
@@ -270,7 +262,7 @@ public class CircleOptions extends PathOptions {
 
 	    public Builder interactive(Boolean interactive){this.interactive = interactive; return this;}
 	    
-	    public Builder radius(double radius){this.radius = radius;return this;}
+	    public Builder radius(Double radius){this.radius = radius;return this;}
 
 		/**
 		 * Builds the PathOptions new instance
@@ -279,30 +271,46 @@ public class CircleOptions extends PathOptions {
 		 */
 		public CircleOptions build(){
 			CircleOptions options = new CircleOptions();
+			if(this.stroke != null)
 			options.stroke = this.stroke;
+			if(this.color != null)
 			options.color = this.color;
+			if(this.opacity != null)
 			options.opacity = this.opacity;
+			if(this.weight != null)
 			options.weight = this.weight;
+			if(this.fill != null)
 			options.fill = this.fill;
+			if(this.fillColor != null)
 			options.fillColor = this.fillColor;
+			if(this.fillOpacity != null)
 			options.fillOpacity = this.fillOpacity;
+			if(this.fillRule != null)
 			options.fillRule = this.fillRule;
+			if(this.dashArray != null)
 			options.dashArray = this.dashArray;
+			if(this.lineCap != null)
 			options.lineCap = this.lineCap;
+			if(this.lineJoin != null)
 			options.lineJoin = this.lineJoin;
+			if(this.pointerEvents != null)
 			options.pointerEvents = this.pointerEvents;
+			if(this.className != null)
 			options.className = this.className;
+			if(this.dashOffset != null)
 			options.dashOffset = this.dashOffset;
+			if(this.renderer != null)
 			options.renderer = this.renderer;
+			if(this.pane != null)
 		    options.pane = this.pane;
+			if(this.attribution != null)
 		    options.attribution = this.attribution;
+			if(this.interactive != null)
 		    options.interactive = this.interactive;
+			if(this.radius != null)
 		    options.radius = this.radius;
-
+			
 			return options;
-
 		}
-
 	}
-
 }

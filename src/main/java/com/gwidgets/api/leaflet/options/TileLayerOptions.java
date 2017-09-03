@@ -37,11 +37,11 @@ public class TileLayerOptions {
 
 	
 	@JsProperty
-	private double minZoom;
+	private int minZoom;
 
 
 	@JsProperty
-	private double maxZoom;
+	private int maxZoom;
 
 	@JsProperty
 	private double maxNativeZoom;
@@ -54,7 +54,7 @@ public class TileLayerOptions {
 	*********************************************/
 
 	@JsProperty
-	private double tileSize;
+	private int tileSize;
 
 	@JsProperty
 	private String[] subdomains;
@@ -66,43 +66,43 @@ public class TileLayerOptions {
 	private String attribution;
 
 	@JsProperty
-	private Boolean tms;
+	private boolean tms;
 
 
 	@JsProperty
-	private Boolean noWrap;
+	private boolean noWrap;
 
 	@JsProperty
-	private double zoomOffset;
+	private int zoomOffset;
 
 	@JsProperty
-	private Boolean zoomReverse;
+	private boolean zoomReverse;
 
 	@JsProperty
 	private double opacity;
 
 	@JsProperty
-	private double zIndex;
+	private int zIndex;
 
 	@JsProperty
-	private Boolean updateWhenIdle;
+	private boolean updateWhenIdle;
 	
 	/*****************************************
 	********************************************/
 	 @JsProperty
-     private Boolean updateWhenZooming;
+     private boolean updateWhenZooming;
 	/**********************************************
 	*********************************************/
 	 
 	 /*****************************************
 	********************************************/
 	 @JsProperty
-     private Boolean updateInterval;
+     private boolean updateInterval;
 	/**********************************************
 	*********************************************/
 
 	@JsProperty
-	private Boolean detectRetina;
+	private boolean detectRetina;
 
 
 	@JsProperty
@@ -111,7 +111,7 @@ public class TileLayerOptions {
 	/*****************************************
 	********************************************/
 	@JsProperty
-    private Boolean crossOrigin;
+    private boolean crossOrigin;
 	/**********************************************
 	*********************************************/
 	
@@ -132,7 +132,7 @@ public class TileLayerOptions {
 	/*****************************************
 	********************************************/
 	@JsProperty
-    private double keepBuffer;
+    private int keepBuffer;
 	/**********************************************
 	*********************************************/
 	
@@ -143,7 +143,7 @@ public class TileLayerOptions {
 	 * default 0
 	 * @return the min zoom
 	 */
-	@JsOverlay public final double getMinZoom() {
+	@JsOverlay public final int getMinZoom() {
 		return this.minZoom;
 	}
 
@@ -153,7 +153,7 @@ public class TileLayerOptions {
 	 * default 18
 	 * @return the max zoom
 	 */
-	@JsOverlay public final double getMaxZoom() {
+	@JsOverlay public final int getMaxZoom() {
 		return this.maxZoom;
 	}
 
@@ -173,7 +173,7 @@ public class TileLayerOptions {
 	 * default 256
 	 * @return the tile size
 	 */
-	@JsOverlay public final double getTileSize() {
+	@JsOverlay public final int getTileSize() {
 		return this.tileSize;
 	}
 
@@ -213,7 +213,7 @@ public class TileLayerOptions {
 	 * default false
 	 * @return the tms
 	 */
-	@JsOverlay public final Boolean getTms() {
+	@JsOverlay public final boolean getTms() {
 		return this.tms;
 	}
 
@@ -224,7 +224,7 @@ public class TileLayerOptions {
 	 * default false
 	 * @return the no wrap
 	 */
-	@JsOverlay public final Boolean getNoWrap() {
+	@JsOverlay public final boolean getNoWrap() {
 		return this.noWrap;
 	}
 
@@ -234,7 +234,7 @@ public class TileLayerOptions {
 	 * default 0
 	 * @return the zoom offset
 	 */
-	@JsOverlay public final double getZoomOffset() {
+	@JsOverlay public final int getZoomOffset() {
 		return this.zoomOffset;
 	}
 
@@ -244,7 +244,7 @@ public class TileLayerOptions {
 	 * default false
 	 * @return the zoom reverse
 	 */
-	@JsOverlay public final Boolean getZoomReverse() {
+	@JsOverlay public final boolean getZoomReverse() {
 		return this.zoomReverse;
 	}
 
@@ -264,7 +264,7 @@ public class TileLayerOptions {
 	 * default null
 	 * @return the z index
 	 */
-	@JsOverlay public final double getzIndex() {
+	@JsOverlay public final int getzIndex() {
 		return this.zIndex;
 	}
 
@@ -275,7 +275,7 @@ public class TileLayerOptions {
 	 * default true
 	 * @return the update when idle
 	 */
-	@JsOverlay public final Boolean getUpdateWhenIdle() {
+	@JsOverlay public final boolean getUpdateWhenIdle() {
 		return this.updateWhenIdle;
 	}
 
@@ -285,7 +285,7 @@ public class TileLayerOptions {
 	 * default false
 	 * @return the detect retina
 	 */
-	@JsOverlay public final Boolean getDetectRetina() {
+	@JsOverlay public final boolean getDetectRetina() {
 		return this.detectRetina;
 	}
 
@@ -308,19 +308,19 @@ public class TileLayerOptions {
 
 
 
-	@JsOverlay public final Boolean getUpdateWhenZooming() {
+	@JsOverlay public final boolean getUpdateWhenZooming() {
 		return this.updateWhenZooming;
 	}
 
 
 
-	@JsOverlay public final Boolean getUpdateInterval() {
+	@JsOverlay public final boolean getUpdateInterval() {
 		return this.updateInterval;
 	}
 
 
 
-	@JsOverlay public final Boolean getCrossOrigin() {
+	@JsOverlay public final boolean getCrossOrigin() {
 		return this.crossOrigin;
 	}
 
@@ -338,7 +338,7 @@ public class TileLayerOptions {
 
 
 
-	@JsOverlay public final double getKeepBuffer() {
+	@JsOverlay public final int getKeepBuffer() {
 		return this.keepBuffer;
 	}
 
@@ -346,37 +346,37 @@ public class TileLayerOptions {
 
 	public static class Builder {
 
-		private double minZoom = 0;
+		private Integer minZoom;
 
-		private double maxZoom = 18;
+		private Integer maxZoom;
 
-		private double maxNativeZoom;
+		private Double maxNativeZoom;
 
-		private double tileSize = 256;
+		private Integer tileSize;
 
-		private String[] subdomains = { "abc" };
+		private String[] subdomains;
 
-		private String errorTileUrl = "";
+		private String errorTileUrl;
 
-		private String attribution = "";
+		private String attribution;
 
-		private Boolean tms = false;
+		private Boolean tms;
 
-		private Boolean noWrap = false;
+		private Boolean noWrap;
 
-		private double zoomOffset = 0;
+		private Integer zoomOffset;
 
-		private Boolean zoomReverse = false;
+		private Boolean zoomReverse;
 
-		private double opacity = 1.0;
+		private Double opacity;
 
-		private double zIndex;
+		private Integer zIndex;
 
-		private Boolean updateWhenIdle = false;
+		private Boolean updateWhenIdle;
 
-		private Boolean detectRetina = false;
+		private Boolean detectRetina;
 
-		private LatLngBounds bounds = null;
+		private LatLngBounds bounds;
 		
 	    private Boolean crossOrigin;
 		
@@ -384,13 +384,13 @@ public class TileLayerOptions {
 		
 	    private String className;
 
-	    private double keepBuffer;
+	    private Integer keepBuffer;
 
 	    private Boolean updateWhenZooming;	 
 		 
 	    private Boolean updateInterval;
 
-	    private double minNativeZoom;
+	    private Double minNativeZoom;
 
 
 		public Builder() {
@@ -404,7 +404,7 @@ public class TileLayerOptions {
 		 * @param minZoom the min zoom
 		 * @return the builder
 		 */
-		public Builder minZoom(double minZoom) {
+		public Builder minZoom(Integer minZoom) {
 			this.minZoom = minZoom;
 			return this;
 		}
@@ -416,7 +416,7 @@ public class TileLayerOptions {
 		 * @param maxZoom the max zoom
 		 * @return the builder
 		 */
-		public Builder maxZoom(double maxZoom) {
+		public Builder maxZoom(Integer maxZoom) {
 			this.maxZoom = maxZoom;
 			return this;
 		}
@@ -428,7 +428,7 @@ public class TileLayerOptions {
 		 * @param maxNativeZoom the max native zoom
 		 * @return the builder
 		 */
-		public Builder maxNativeZoom(double maxNativeZoom) {
+		public Builder maxNativeZoom(Double maxNativeZoom) {
 			this.maxNativeZoom = maxNativeZoom;
 			return this;
 		}
@@ -440,7 +440,7 @@ public class TileLayerOptions {
 		 * @param tileSize the tile size
 		 * @return the builder
 		 */
-		public Builder tileSize(double tileSize) {
+		public Builder tileSize(Integer tileSize) {
 			this.tileSize = tileSize;
 			return this;
 		}
@@ -512,7 +512,7 @@ public class TileLayerOptions {
 		 * @param zoomOffset the zoom offset
 		 * @return the builder
 		 */
-		public Builder zoomOffset(double zoomOffset) {
+		public Builder zoomOffset(Integer zoomOffset) {
 			this.zoomOffset = zoomOffset;
 			return this;
 		}
@@ -536,7 +536,7 @@ public class TileLayerOptions {
 		 * @param opacity the opacity
 		 * @return the builder
 		 */
-		public Builder opacity(double opacity) {
+		public Builder opacity(Double opacity) {
 			this.opacity = opacity;
 			return this;
 		}
@@ -548,7 +548,7 @@ public class TileLayerOptions {
 		 * @param zIndex the z index
 		 * @return the builder
 		 */
-		public Builder zIndex(double zIndex) {
+		public Builder zIndex(Integer zIndex) {
 			this.zIndex = zIndex;
 			return this;
 		}
@@ -593,7 +593,7 @@ public class TileLayerOptions {
 		
 		public Builder crossOrigin(Boolean crossOrigin){this.crossOrigin = crossOrigin; return this;}
 
-	    public Builder keepBuffer(double keepBuffer){this.keepBuffer = keepBuffer; return this;}
+	    public Builder keepBuffer(Integer keepBuffer){this.keepBuffer = keepBuffer; return this;}
 
 	    public Builder className(String className){this.className = className; return this;}
 
@@ -603,7 +603,7 @@ public class TileLayerOptions {
 
 	    public Builder updateInterval(Boolean updateInterval){this.updateInterval = updateInterval; return this;}
 
-	    public Builder minNativeZoom(double minNativeZoom){this.minNativeZoom = minNativeZoom; return this;}
+	    public Builder minNativeZoom(Double minNativeZoom){this.minNativeZoom = minNativeZoom; return this;}
 		
 		/**
 		 * Builds the TileLayerOptions new instance
@@ -611,30 +611,53 @@ public class TileLayerOptions {
 		 * @return the tile layer options
 		 */
 		public TileLayerOptions build(){
-			
+			//the ifs statement are for preventing the creation of undefined attributes => mimicking original Leaflet behavior
 			TileLayerOptions options = new TileLayerOptions();
-			options.minZoom = this.minZoom;
+			if(this.minZoom != null)
+			 options.minZoom = this.minZoom;
+			if(this.maxZoom != null)
 			options.maxZoom = this.maxZoom;
+			if(this.maxNativeZoom != null)
 			options.maxNativeZoom = this.maxNativeZoom;
+			if(this.tileSize != null)
 			options.tileSize = this.tileSize;
+			if(this.subdomains != null)
 			options.subdomains = this.subdomains;
+			if(this.errorTileUrl != null)
 			options.errorTileUrl = this.errorTileUrl;
+			if(this.attribution != null)
 			options.attribution = this.attribution;
+			if(this.tms != null)
 			options.tms = this.tms;
+			if(this.noWrap != null)
 			options.noWrap = this.noWrap;
+			if(this.zoomOffset != null)
 			options.zoomOffset = this.zoomOffset;
+			if(this.zoomReverse != null)
 			options.zoomReverse = this.zoomReverse;
+			if(this.opacity != null)
 			options.opacity = this.opacity;
+			if(this.zIndex != null)
 			options.zIndex = this.zIndex;
+			if(this.updateWhenIdle != null)
 			options.updateWhenIdle = this.updateWhenIdle;
+			if(this.detectRetina != null)
 			options.detectRetina = this.detectRetina;
+			if(this.bounds != null)
 			options.bounds = this.bounds;
+			if(this.crossOrigin != null)
 			options.crossOrigin = this.crossOrigin;
+			if(this.pane != null)
 			options.pane = this.pane;
+			if(this.className != null)
 			options.className = this.className;
+			if(this.keepBuffer != null)
 			options.keepBuffer = this.keepBuffer;
+			if(this.updateWhenZooming != null)
 			options.updateWhenZooming = this.updateWhenZooming;	 
+			if(this.updateInterval != null)
 			options.updateInterval = this.updateInterval;
+			if(this.minNativeZoom != null)
 			options.minNativeZoom = this.minNativeZoom;
 			
 			return options;

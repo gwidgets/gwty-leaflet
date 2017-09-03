@@ -16,6 +16,9 @@ package com.gwidgets.api.leaflet.options;
 
 import static jsinterop.annotations.JsPackage.GLOBAL;
 
+import com.gwidgets.api.leaflet.Renderer;
+import com.gwidgets.api.leaflet.options.CircleOptions.Builder;
+
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -36,7 +39,7 @@ public class PolylineOptions extends PathOptions {
 	private double smoothFactor;
 
 	@JsProperty
-	private Boolean noClip;
+	private boolean noClip;
 
 	/**
 	 * Gets How much to simplify the polyline on each zoom level. More means
@@ -58,7 +61,7 @@ public class PolylineOptions extends PathOptions {
 	 * @return the no clip
 	 */
 	@JsOverlay
-	public final Boolean getNoClip() {
+	public final boolean getNoClip() {
 		return this.noClip;
 	}
 
@@ -70,7 +73,7 @@ public class PolylineOptions extends PathOptions {
 	 * @return the stroke
 	 */
 	@JsOverlay
-	public final Boolean getStroke_() {
+	public final boolean getStroke_() {
 		return this.stroke;
 	}
 
@@ -115,7 +118,7 @@ public class PolylineOptions extends PathOptions {
 	 * @return the fill
 	 */
 	@JsOverlay
-	public final Boolean getFill_() {
+	public final boolean getFill_() {
 		return this.fill;
 	}
 
@@ -224,35 +227,45 @@ public class PolylineOptions extends PathOptions {
 	 */
 	public static class Builder {
 
-		private Boolean stroke = true;
+		private Boolean stroke;
 
-		private String color = "#03f";
+		private String color;
 
-		private double weight = 5;
+		private Double weight;
 
-		private double opacity = 0.5;
+		private Double opacity;
 
-		private Boolean fill = true;
+		private Boolean fill;
 
-		private String fillColor = "#03f";
+		private String fillColor;
 
-		private double fillOpacity = 0.2;
+		private Double fillOpacity;
 
-		private String fillRule = "evenodd";
+		private String fillRule;
 
-		private String dashArray = null;
+		private String dashArray;
 
-		private String lineCap = null;
+		private String lineCap;
 
-		private String lineJoin = null;
+		private String lineJoin;
 
-		private String pointerEvents = null;
+		private String pointerEvents;
 
-		private String className = "";
+		private String className;
+		
+	    private String dashOffset;
 
-		private double smoothFactor = 1.0;
+		private Renderer renderer;
 
-		private Boolean noClip = false;
+	    private String pane; 
+
+	    private String attribution;
+
+	    private Boolean interactive;
+
+		private Double smoothFactor;
+
+		private Boolean noClip;
 
 
 		public Builder() {
@@ -267,7 +280,7 @@ public class PolylineOptions extends PathOptions {
 		 *            the smooth factor
 		 * @return the builder
 		 */
-		public Builder smoothFactor(double smoothFactor) {
+		public Builder smoothFactor(Double smoothFactor) {
 			this.smoothFactor = smoothFactor;
 			return this;
 		}
@@ -320,7 +333,7 @@ public class PolylineOptions extends PathOptions {
 		 *            the weight
 		 * @return the builder
 		 */
-		public Builder weight(double weight) {
+		public Builder weight(Double weight) {
 			this.weight = weight;
 			return this;
 		}
@@ -333,7 +346,7 @@ public class PolylineOptions extends PathOptions {
 		 *            the opacity
 		 * @return the builder
 		 */
-		public Builder opacity(double opacity) {
+		public Builder opacity(Double opacity) {
 			this.opacity = opacity;
 			return this;
 		}
@@ -373,7 +386,7 @@ public class PolylineOptions extends PathOptions {
 		 *            the fill opacity
 		 * @return the builder
 		 */
-		public Builder fillOpacity(double fillOpacity) {
+		public Builder fillOpacity(Double fillOpacity) {
 			this.fillOpacity = fillOpacity;
 			return this;
 		}
@@ -465,6 +478,16 @@ public class PolylineOptions extends PathOptions {
 			this.className = className;
 			return this;
 		}
+		
+		public Builder dashOffset(String dashOffset){this.dashOffset = dashOffset; return this;}
+
+	    public Builder renderer(Renderer renderer){this.renderer = renderer; return this;}
+
+	    public Builder attribution(String attribution){this.attribution = attribution; return this;}
+
+	    public Builder pane(String pane){this.pane = pane; return this;}
+
+	    public Builder interactive(Boolean interactive){this.interactive = interactive; return this;}
 
 		/**
 		 * Builds the PolylineOptions new instance
@@ -472,26 +495,48 @@ public class PolylineOptions extends PathOptions {
 		 * @return the polyline options
 		 */
 		public PolylineOptions build() {
-			PolylineOptions options = new PolylineOptions();
-			options.smoothFactor = this.smoothFactor;
-			options.noClip = this.noClip;
-			options.stroke = this.stroke;
-			options.color = this.color;
-			options.weight = this.weight;
-			options.opacity = this.opacity;
-			options.fill = this.fill;
-			options.fillColor = this.fillColor;
-			options.fillOpacity = this.fillOpacity;
-			options.fillRule = this.fillRule;
-			options.dashArray = this.dashArray;
-			options.lineCap = this.lineCap;
-			options.lineJoin = this.lineJoin;
-			options.pointerEvents = this.pointerEvents;
-			options.className = this.className;
-
+			    PolylineOptions options = new PolylineOptions();
+			    if(this.smoothFactor != null)
+			    options.smoothFactor = this.smoothFactor;
+			    if(this.noClip != null)
+			    options.noClip = this.noClip;
+			    if(this.stroke != null)
+				options.stroke = this.stroke;
+				if(this.color != null)
+				options.color = this.color;
+				if(this.opacity != null)
+				options.opacity = this.opacity;
+				if(this.weight != null)
+				options.weight = this.weight;
+				if(this.fill != null)
+				options.fill = this.fill;
+				if(this.fillColor != null)
+				options.fillColor = this.fillColor;
+				if(this.fillOpacity != null)
+				options.fillOpacity = this.fillOpacity;
+				if(this.fillRule != null)
+				options.fillRule = this.fillRule;
+				if(this.dashArray != null)
+				options.dashArray = this.dashArray;
+				if(this.lineCap != null)
+				options.lineCap = this.lineCap;
+				if(this.lineJoin != null)
+				options.lineJoin = this.lineJoin;
+				if(this.pointerEvents != null)
+				options.pointerEvents = this.pointerEvents;
+				if(this.className != null)
+				options.className = this.className;
+				if(this.dashOffset != null)
+				options.dashOffset = this.dashOffset;
+				if(this.renderer != null)
+				options.renderer = this.renderer;
+				if(this.pane != null)
+			    options.pane = this.pane;
+				if(this.attribution != null)
+			    options.attribution = this.attribution;
+				if(this.interactive != null)
+			    options.interactive = this.interactive;
 			return options;
 		}
-
 	}
-
 }

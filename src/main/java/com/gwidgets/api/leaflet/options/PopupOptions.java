@@ -29,7 +29,6 @@ import jsinterop.annotations.JsType;
  */
 @JsType(isNative=true, namespace=GLOBAL, name="Object")
 public class PopupOptions {
-	
 
 	private PopupOptions() {
 		
@@ -45,13 +44,13 @@ public class PopupOptions {
 	private double maxHeight;
 
 	@JsProperty
-	private Boolean autoPan;
+	private boolean autoPan;
 
 	@JsProperty
-	private Boolean keepInView;
+	private boolean keepInView;
 
 	@JsProperty
-	private Boolean closeButton;
+	private boolean closeButton;
 
 	@JsProperty
 	private Point offset;
@@ -67,7 +66,7 @@ public class PopupOptions {
 
 
 	@JsProperty
-	private Boolean autoClose;
+	private boolean autoClose;
 	
 	@JsProperty
 	private String className;
@@ -121,7 +120,7 @@ public class PopupOptions {
 	 *
 	 * @return the auto pan
 	 */
-	@JsOverlay public final Boolean getAutoPan() {
+	@JsOverlay public final boolean getAutoPan() {
 		return this.autoPan;
 	}
 
@@ -132,7 +131,7 @@ public class PopupOptions {
 	 *
 	 * @return the keep in view
 	 */
-	@JsOverlay public final Boolean getKeepInView() {
+	@JsOverlay public final boolean getKeepInView() {
 		return this.keepInView;
 	}
 
@@ -143,7 +142,7 @@ public class PopupOptions {
 	 *
 	 * @return the close button
 	 */
-	@JsOverlay public final Boolean getCloseButton() {
+	@JsOverlay public final boolean getCloseButton() {
 		return this.closeButton;
 	}
 
@@ -198,7 +197,7 @@ public class PopupOptions {
 	 *
 	 * @return the close on click
 	 */
-	@JsOverlay public final Boolean getAutoClose() {
+	@JsOverlay public final boolean getAutoClose() {
 		return this.autoClose;
 	}
 
@@ -230,40 +229,40 @@ public class PopupOptions {
 	 */
 	public static class Builder {
 		
-		private double maxWidth = 300;
+		private Double maxWidth;
 
 		
-		private double minWidth = 50;
+		private Double minWidth;
 
 		
-		private double maxHeight;
+		private Double maxHeight;
 
 		
-		private Boolean autoPan = true;
+		private Boolean autoPan;
 
 		
-		private Boolean keepInView = false;
+		private Boolean keepInView;
 
 		
-		private Boolean closeButton = true;
+		private Boolean closeButton;
 
 		
-		private Point offset = L.point(0, 7, true);
+		private Point offset;
 		
 
-		private Point autoPanPaddingTopLeft = null;
+		private Point autoPanPaddingTopLeft;
 		
 
-		private Point autoPanPaddingBottomRight = null;
+		private Point autoPanPaddingBottomRight;
 
-		private Point autoPanPadding = L.point(5, 5, true);
+		private Point autoPanPadding;
 
-		private Boolean autoClose = null;
+		private Boolean autoClose;
 		
-		private String className = "";
+		private String className;
 		
 		   
-	    private String pane = "popupPane";
+	    private String pane;
 
 	    
 	    private String attribution;
@@ -280,7 +279,7 @@ public class PopupOptions {
 		 * @param maxWidth the max width
 		 * @return the builder
 		 */
-		public Builder maxWidth(double maxWidth){this.maxHeight = maxWidth;return this;}
+		public Builder maxWidth(Double maxWidth){this.maxHeight = maxWidth;return this;}
 
 		
 		/**
@@ -289,7 +288,7 @@ public class PopupOptions {
 		 * @param minWidth the min width
 		 * @return the builder
 		 */
-		public Builder minWidth(double minWidth){this.minWidth = minWidth; return this;}
+		public Builder minWidth(Double minWidth){this.minWidth = minWidth; return this;}
 
 		
 		/**
@@ -298,7 +297,7 @@ public class PopupOptions {
 		 * @param maxHeight the max height
 		 * @return the builder
 		 */
-		public Builder maxHeight(double maxHeight){this.maxHeight = maxHeight; return this;}
+		public Builder maxHeight(Double maxHeight){this.maxHeight = maxHeight; return this;}
 
 		
 		/**
@@ -393,26 +392,36 @@ public class PopupOptions {
 		 */
 		public PopupOptions build(){
 			PopupOptions options = new PopupOptions();
+			if(this.maxWidth != null)
 			options.maxWidth = this.maxWidth;
+			if(this.minWidth != null)
 			options.minWidth = this.minWidth;
+			if(this.maxHeight != null)
 			options.maxHeight = this.maxHeight;
+			if(this.autoPan != null)
 			options.autoPan = this.autoPan;
+			if(this.keepInView != null)
 			options.keepInView = this.keepInView;
+			if(this.closeButton != null)
 			options.closeButton = this.closeButton;
+			if(this.offset != null)
 			options.offset = this.offset;
+			if(this.autoPanPaddingTopLeft != null)
 			options.autoPanPaddingTopLeft = this.autoPanPaddingTopLeft;
+			if(this.autoPanPaddingBottomRight != null)
 			options.autoPanPaddingBottomRight = this.autoPanPaddingBottomRight;
+			if(this.autoPanPadding != null)
 			options.autoPanPadding = this.autoPanPadding;
+			if(this.autoClose != null)
 			options.autoClose = this.autoClose;
+			if(this.className != null)
 			options.className = this.className;
+			if(this.pane != null)
 			options.pane = this.pane;
+			if(this.attribution != null)
 			options.attribution = this.attribution;
 			
-			
-			return options;
-			
+			return options;	
 		}
-
 	}
-
 }

@@ -27,12 +27,10 @@ import jsinterop.annotations.JsType;
  */
 @JsType(isNative = true, namespace = GLOBAL, name = "Object")
 public class ControlScaleOptions {
-
 	
 	private ControlScaleOptions() {
 
 	}
-
 
 	@JsProperty
 	private String position;
@@ -41,13 +39,13 @@ public class ControlScaleOptions {
 	private double maxWidth;
 
 	@JsProperty
-	private Boolean metric;
+	private boolean metric;
 
 	@JsProperty
-	private Boolean imperial;
+	private boolean imperial;
 
 	@JsProperty
-	private Boolean updateWhenIdle;
+	private boolean updateWhenIdle;
 
 	/**
 	 * Gets the position of the control (one of the map corners)
@@ -78,7 +76,7 @@ public class ControlScaleOptions {
 	 * @return the metric
 	 */
 	@JsOverlay
-	public final Boolean getMetric() {
+	public final boolean getMetric() {
 		return this.metric;
 	}
 
@@ -89,7 +87,7 @@ public class ControlScaleOptions {
 	 * @return the imperial
 	 */
 	@JsOverlay
-	public final Boolean getImperial() {
+	public final boolean getImperial() {
 		return this.imperial;
 	}
 
@@ -100,7 +98,7 @@ public class ControlScaleOptions {
 	 * @return the update when idle
 	 */
 	@JsOverlay
-	public final Boolean getUpdateWhenIdle() {
+	public final boolean getUpdateWhenIdle() {
 		return this.updateWhenIdle;
 	}
 
@@ -109,15 +107,15 @@ public class ControlScaleOptions {
 	 */
 	public static class Builder {
 
-		private String position = "bottomleft";
+		private String position;
 
-		private double maxWidth = 100;
+		private Double maxWidth;
 
-		private Boolean metric = true;
+		private Boolean metric;
 
-		private Boolean imperial = true;
+		private Boolean imperial;
 
-		private Boolean updateWhenIdle = false;
+		private Boolean updateWhenIdle;
 
 		/**
 		 * Instantiates a new builder.
@@ -146,7 +144,7 @@ public class ControlScaleOptions {
 		 * @param maxWidth the max width
 		 * @return the builder
 		 */
-		public Builder maxWidth(double maxWidth) {
+		public Builder maxWidth(Double maxWidth) {
 			this.maxWidth = maxWidth;
 			return this;
 		}
@@ -194,16 +192,18 @@ public class ControlScaleOptions {
 		 */
 		public ControlScaleOptions build() {
 			ControlScaleOptions options = new ControlScaleOptions();
+			if(this.position != null)
 			options.position = this.position;
-			options.maxWidth = maxWidth;
-			options.metric = metric;
-			options.imperial = imperial;
-			options.updateWhenIdle = updateWhenIdle;
+			if(this.maxWidth != null)
+			options.maxWidth = this.maxWidth;
+			if(this.metric != null)
+			options.metric = this.metric;
+			if(this.imperial != null)
+			options.imperial = this.imperial;
+			if(this.updateWhenIdle != null)
+			options.updateWhenIdle = this.updateWhenIdle;
 
 			return options;
-
 		}
-
 	}
-
 }
