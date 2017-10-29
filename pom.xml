@@ -7,7 +7,7 @@
 	<packaging>gwt-lib</packaging>
 
 	<properties>
-		<gwtVersion>2.8.1</gwtVersion>
+		<gwtVersion>2.8.2</gwtVersion>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<maven.compiler.source>1.8</maven.compiler.source>
 	</properties>
