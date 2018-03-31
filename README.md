@@ -42,8 +42,8 @@ Also, do not forget to include gwty-leaflet in your .gwt.xml module definition f
 ```
 ## Versions
 
-- 1.0-SNAPSHOT: current version, under development
-- 0.5: latest stable version, compatible with leaflet 1.0 and 1.0.1
+- 1.0: latest stable version, compatible with leaflet 1.0 and 1.0.1, uses Elemental 2
+- 0.5: compatible with leaflet 1.0
 - 0.4: compatible with leaflet 0.7
 
 
@@ -379,8 +379,9 @@ baselayerchange, overlayadd, overlayremove, layeradd, layerremove, zoomlevelscha
 
 ## Javadoc :
 
+- version 1.0: https://gwidgets.github.io/gwty-leaflet/javadoc/1.0/doc/
 - version 0.5: https://gwidgets.github.io/gwty-leaflet/javadoc/0.5/doc/
-- version 0.4: https://gwidgets.github.io/gwty-leaflet/javadoc/0.5/doc/
+- version 0.4: https://gwidgets.github.io/gwty-leaflet/javadoc/0.4/doc/
 
 ## Elemental 2:
 
@@ -389,6 +390,4 @@ The current 1.0-SNAPSHOT makes use of Elemental 2 beta version, instead of local
 ## GWT version:
 
 the 0.5 version is compiled using GWT 2.8.0. 
-the current 1.0-SNAPSHOT version is compiled using GWT 2.8.1.
-
-
+the 1.0 version is compiled using GWT 2.8.2.
