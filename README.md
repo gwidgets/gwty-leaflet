@@ -385,7 +385,7 @@ baselayerchange, overlayadd, overlayremove, layeradd, layerremove, zoomlevelscha
 
 ## Elemental 2:
 
-The current 1.0-SNAPSHOT makes use of Elemental 2 beta version, instead of local javascript wrapped Elements(under .elemental package). The .elemental package has been removed as it is not needed anymore. 
+The 1.0 version makes use of Elemental 2, instead of local javascript wrapped Elements(under .elemental package). The .elemental package has been removed as it is not needed anymore.
 
 ## GWT version:
 
