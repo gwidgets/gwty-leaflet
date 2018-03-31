@@ -379,9 +379,9 @@ baselayerchange, overlayadd, overlayremove, layeradd, layerremove, zoomlevelscha
 
 ## Javadoc :
 
-- version 1.0: https://gwidgets.github.io/gwty-leaflet/javadoc/1.0/doc/
+- version 1.0: https://gwidgets.github.io/gwty-leaflet/javadoc/1.0/
 - version 0.5: https://gwidgets.github.io/gwty-leaflet/javadoc/0.5/doc/
-- version 0.4: https://gwidgets.github.io/gwty-leaflet/javadoc/0.4/doc/
+- version 0.4: https://gwidgets.github.io/gwty-leaflet/javadoc/0.4/
 
 ## Elemental 2:
 
