@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.gwidgets</groupId>
 	<artifactId>gwty-leaflet</artifactId>
-	<version>1.0</version>
+	<version>1.1</version>
 	<packaging>gwt-lib</packaging>
 
 	<properties>
@@ -82,7 +82,7 @@
 			<plugin>
 				<groupId>net.ltgt.gwt.maven</groupId>
 				<artifactId>gwt-maven-plugin</artifactId>
-				<version>1.0-rc-6</version>
+				<version>1.0.0</version>
 				<extensions>true</extensions>
 				<configuration>
 					<moduleName>com.gwidgets.api.GwtyLeaflet</moduleName>
