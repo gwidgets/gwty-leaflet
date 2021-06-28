@@ -3,10 +3,13 @@ package com.gwidgets.api.leaflet;
 import com.gwidgets.api.leaflet.events.EventCallback;
 import com.gwidgets.api.leaflet.options.PopupOptions;
 import com.gwidgets.api.leaflet.options.TooltipOptions;
+import com.gwidgets.api.leaflet.utils.JsFn;
 
+import elemental2.core.JsObject;
 import elemental2.dom.HTMLElement;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsType;
+import jsinterop.base.JsForEachCallbackFn;
 
 @JsType(isNative=true)
 public class GridLayer implements Layer, Evented{
@@ -78,10 +81,9 @@ public class GridLayer implements Layer, Evented{
 		 */
 	@JsMethod
 	public native Point getTileSize();
-	
-	
-	//looking for a solution
-	//public  HTMLElement createTile(Object coords, Function done);
+
+	@JsMethod
+	public native HTMLElement createTile(JsObject coords, JsFn doneCallback);
 	
 	
 	/**

@@ -1,9 +1,5 @@
 package com.gwidgets.api.leaflet;
 
-import com.google.gwt.core.client.JavaScriptObject;
-import com.google.gwt.core.client.JsArray;
-
-import elemental2.core.Function;
 /**
  *  Copyright 2016 G-Widgets
  *  Licensed under the Apache License, Version 2.0 (the "License");
@@ -18,6 +14,9 @@ import elemental2.core.Function;
  * See the License for the specific language governing permissions and
  *  limitations under the License.
  */
+import com.gwidgets.api.leaflet.options.GeoJSONOptions;
+
+import elemental2.core.JsObject;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsType;
 
@@ -41,7 +40,7 @@ public class GeoJSON extends FeatureGroup {
 	 * @return the L class
 	 */
 	@JsMethod
-	public native L addData(JavaScriptObject data);
+	public native L addData(JsObject data);
 
 	/**
 	 * Changes styles of GeoJSON vector layers with the given style function.
@@ -50,7 +49,7 @@ public class GeoJSON extends FeatureGroup {
 	 * @return the L class
 	 */
 	@JsMethod
-	public native L setStyle(Function style);
+	public native L setStyle(GeoJSONOptions.StyleFunction style);
 
 	/**
 	 * Resets the given vector layer's style to the original GeoJSON style, useful for resetting style after hover events.
@@ -69,8 +68,8 @@ public class GeoJSON extends FeatureGroup {
 	 * @return the layer
 	 */
 	@JsMethod
-	public native static Layer geometryToLayer(JavaScriptObject featureData,
-			Function pointToLayer);
+	public native static Layer geometryToLayer(JsObject featureData,
+			GeoJSONOptions.PointToLayerFunction pointToLayer);
 
 	/**
 	 * Creates a LatLng object from an array of 2 numbers (latitude, longitude) used in GeoJSON for points. If reverse is set to true, the numbers will be interpreted as (longitude, latitude).
@@ -90,8 +89,8 @@ public class GeoJSON extends FeatureGroup {
 	 * @return js array of coordinates
 	 */
 	@JsMethod
-	public native static JsArray<JavaScriptObject> coordsToLatlngs(JsArray<JavaScriptObject> coords, double levelsDeep,
-			Function coordsToLatlngs);
+	public native static JsObject[] coordsToLatlngs(JsObject[]  coords, double levelsDeep,
+			GeoJSONOptions.CoordsToLatLngFunction coordsToLatlngs);
 	
 	
 	/**
@@ -101,7 +100,7 @@ public class GeoJSON extends FeatureGroup {
 	 * @return the js array
 	 */
 	@JsMethod
-    public native JsArray<JavaScriptObject> latLngToCoords(LatLng latlng);
+    public native JsObject[]  latLngToCoords(LatLng latlng);
 
 
 /**
@@ -113,7 +112,7 @@ public class GeoJSON extends FeatureGroup {
  * @return the js array
  */
 	@JsMethod
-  public native JsArray<JavaScriptObject> latLngsToCoords(JsArray<JavaScriptObject> latlngs, double levelsDeep, Boolean closed); 
+  public native JsObject[] latLngsToCoords(JsObject[] latlngs, double levelsDeep, Boolean closed);
 
 
  /**
@@ -123,7 +122,7 @@ public class GeoJSON extends FeatureGroup {
  * @return the java script object
  */
 	@JsMethod
-  public native JavaScriptObject asFeature(JavaScriptObject geojson);
+  public native JsObject asFeature(JsObject geojson);
 	
 	
 	

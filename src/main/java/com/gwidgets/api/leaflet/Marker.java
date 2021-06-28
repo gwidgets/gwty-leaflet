@@ -1,10 +1,10 @@
 package com.gwidgets.api.leaflet;
 
-import com.google.gwt.core.client.JavaScriptObject;
 import com.gwidgets.api.leaflet.events.EventCallback;
 import com.gwidgets.api.leaflet.options.PopupOptions;
 import com.gwidgets.api.leaflet.options.TooltipOptions;
 
+import elemental2.core.JsObject;
 import elemental2.dom.HTMLElement;
 /**
  *  Copyright 2016 G-Widgets
@@ -136,7 +136,7 @@ public class Marker implements Layer, Evented {
 	 * @return the object
 	 */
 	@JsMethod
-	public native JavaScriptObject toGeoJSON();
+	public native JsObject toGeoJSON();
 	
 	
 	// Events 

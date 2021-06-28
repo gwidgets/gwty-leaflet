@@ -1,6 +1,5 @@
 package com.gwidgets.api.leaflet;
 
-import com.google.gwt.core.client.JavaScriptObject;
 import com.gwidgets.api.leaflet.events.EventCallback;
 import com.gwidgets.api.leaflet.events.MouseEvent;
 import com.gwidgets.api.leaflet.options.FitBoundsOptions;
@@ -9,8 +8,9 @@ import com.gwidgets.api.leaflet.options.PanOptions;
 import com.gwidgets.api.leaflet.options.PopupOptions;
 import com.gwidgets.api.leaflet.options.ZoomOptions;
 import com.gwidgets.api.leaflet.options.ZoomPanOptions;
+import com.gwidgets.api.leaflet.utils.JsFn;
 
-import elemental2.core.Function;
+import elemental2.core.JsObject;
 import elemental2.dom.HTMLElement;
 /**
  *  Copyright 2016 G-Widgets
@@ -26,6 +26,7 @@ import elemental2.dom.HTMLElement;
  * See the License for the specific language governing permissions and
  *  limitations under the License.
  */
+import jsinterop.annotations.JsFunction;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -357,7 +358,7 @@ public class Map implements Evented {
 	 * @return true/false
 	 */
 	@JsMethod
-	public native Boolean eachLayer(Function action, JavaScriptObject context);
+	public native Boolean eachLayer(EachLayerFunction action, JsObject context);
 
 	/**
 	 * Opens the specified popup while closing the previously opened (to make sure only one is opened at one time for usability).
@@ -564,7 +565,7 @@ public class Map implements Evented {
 	 * @return the L class
 	 */
 	@JsMethod
-	public native L whenReady(Function fn, Object context);
+	public native L whenReady(JsFn fn, Object context);
 
 	// Events 
 		/* (non-Javadoc)
@@ -625,6 +626,13 @@ public class Map implements Evented {
 		 * @see com.gwidgets.api.leaflet.Evented#removeEventParent(com.gwidgets.api.leaflet.Evented)
 		 */
 		public native L removeEventParent(Evented obj);
+
+	@JsFunction
+	public interface EachLayerFunction {
+
+		void apply(Layer layer);
+
+	}
 
 
 }
