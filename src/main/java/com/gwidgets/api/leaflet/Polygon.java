@@ -1,7 +1,5 @@
 package com.gwidgets.api.leaflet;
 
-import com.google.gwt.core.client.JavaScriptObject;
-
 /**
  *  Copyright 2016 G-Widgets
  *  Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,6 +14,7 @@ import com.google.gwt.core.client.JavaScriptObject;
  * See the License for the specific language governing permissions and
  *  limitations under the License.
  */
+import elemental2.core.JsObject;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsType;
 
@@ -38,6 +37,6 @@ public class Polygon extends Polyline {
 	 * @see com.gwidgets.api.leaflet.Polyline#toGeoJSON()
 	 */
 	@JsMethod
-	public native JavaScriptObject toGeoJSON();
+	public native JsObject toGeoJSON();
 
 }

@@ -24,47 +24,34 @@ import jsinterop.annotations.JsType;
 
 /**
  * The Class ImageOverlayOptions.
- * 
+ *
  * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
  */
 @JsType(isNative=true, namespace=GLOBAL, name="Object")
 public class ImageOverlayOptions {
-	
+
 	private ImageOverlayOptions() {
-		
+
 	}
 
 	@JsProperty
 	private double opacity;
-	
+
 	@JsProperty
 	private String attribution;
-	
-	/*****************************************
-	********************************************/
+
 	@JsProperty
-    private String alt;
-	/**********************************************
-	*********************************************/
-    /*****************************************
-	********************************************/
+	private String alt;
+
 	@JsProperty
-    private boolean interactive;
-	/**********************************************
-	*********************************************/
-	/*****************************************
-	********************************************/
+	private boolean interactive;
+
 	@JsProperty
-    private boolean crossOrigin;
-	/**********************************************
-	*********************************************/
-    /*****************************************
-	********************************************/
+	private boolean crossOrigin;
+
 	@JsProperty
-    private String pane;
-	/**********************************************
-	*********************************************/
-	
+	private String pane;
+
 	/**
 	 * Gets The opacity of the image overlay.
 	 *
@@ -103,11 +90,11 @@ public class ImageOverlayOptions {
 	 * The Class Builder.
 	 */
 	public static class Builder {
-		
+
 		private Double opacity;
-		
+
 		private String attribution;
-		
+
 		private String alt;
 
 		private Boolean interactive;
@@ -122,7 +109,7 @@ public class ImageOverlayOptions {
 		public Builder() {
 
 		}
-		
+
 		/**
 		 * The opacity of the image overlay.
 		 * </br>
@@ -134,7 +121,7 @@ public class ImageOverlayOptions {
 			this.opacity = opacity;
 			return this;
 		}
-		
+
 		/**
 		 * The attribution text of the image overlay.
 		 *</br>
@@ -146,16 +133,16 @@ public class ImageOverlayOptions {
 			this.attribution = attribution;
 			return this;
 		}
-		
+
 
 		public Builder alt(String alt){this.alt = alt; return this;}
 
-	    public Builder interactive(Boolean interactive){this.interactive = interactive; return this;}
+		public Builder interactive(Boolean interactive){this.interactive = interactive; return this;}
 
-	    public Builder crossOrigin(Boolean crossOrigin){this.crossOrigin = crossOrigin; return this;}
+		public Builder crossOrigin(Boolean crossOrigin){this.crossOrigin = crossOrigin; return this;}
 
-	    public Builder pane(String pane){this.pane = pane; return this;}
-		
+		public Builder pane(String pane){this.pane = pane; return this;}
+
 		/**
 		 * Builds the ImageOverlayOptions instance
 		 *
@@ -164,18 +151,18 @@ public class ImageOverlayOptions {
 		public ImageOverlayOptions build(){
 			ImageOverlayOptions options = new ImageOverlayOptions();
 			if(this.opacity != null)
-			options.opacity = this.opacity;
+				options.opacity = this.opacity;
 			if(this.attribution != null)
-			options.attribution = this.attribution;
+				options.attribution = this.attribution;
 			if(this.alt != null)
-		    options.alt = this.alt;
+				options.alt = this.alt;
 			if(this.interactive != null)
-		    options.interactive = this.interactive;
+				options.interactive = this.interactive;
 			if(this.crossOrigin != null)
-		    options.crossOrigin = this.crossOrigin;
+				options.crossOrigin = this.crossOrigin;
 			if(this.pane != null)
-		    options.pane = this.pane;
-		
+				options.pane = this.pane;
+
 			return options;
 		}
 	}

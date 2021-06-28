@@ -1,11 +1,11 @@
 package com.gwidgets.api.leaflet;
 
-import com.google.gwt.core.client.JavaScriptObject;
 import com.gwidgets.api.leaflet.events.EventCallback;
 import com.gwidgets.api.leaflet.options.PopupOptions;
 import com.gwidgets.api.leaflet.options.TooltipOptions;
 
 import elemental2.core.Function;
+import elemental2.core.JsObject;
 import elemental2.dom.HTMLElement;
 /**
  *  Copyright 2016 G-Widgets
@@ -102,7 +102,7 @@ public class LayerGroup implements Layer, Evented {
 	 * @return the l
 	 */
 	@JsMethod
-	public native L eachLayer(Function fn, JavaScriptObject context);
+	public native L eachLayer(Function fn, JsObject context);
 
 	/**
 	 * Returns a GeoJSON representation of the layer group (GeoJSON FeatureCollection).
@@ -110,7 +110,7 @@ public class LayerGroup implements Layer, Evented {
 	 * @return the object
 	 */
 	@JsMethod
-	public native JavaScriptObject toGeoJSON();
+	public native JsObject toGeoJSON();
 	
 	
 	/**

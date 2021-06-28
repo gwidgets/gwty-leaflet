@@ -14,11 +14,11 @@ package com.gwidgets.api.leaflet;
  * See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-import com.google.gwt.core.client.JavaScriptObject;
 import com.gwidgets.api.leaflet.events.EventCallback;
 import com.gwidgets.api.leaflet.options.PopupOptions;
 import com.gwidgets.api.leaflet.options.TooltipOptions;
 
+import elemental2.core.JsObject;
 import elemental2.dom.HTMLElement;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsType;
@@ -82,7 +82,7 @@ public class CircleMarker extends Path implements Layer, Evented{
 	 * @return the object
 	 */
 	@JsMethod
-	public native JavaScriptObject toGeoJSON();
+	public native JsObject toGeoJSON();
 	
 	
 	/* (non-Javadoc)

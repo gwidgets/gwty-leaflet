@@ -1,6 +1,5 @@
 package com.gwidgets.api.leaflet;
 
-import com.google.gwt.core.client.JavaScriptObject;
 import com.gwidgets.api.leaflet.options.CircleOptions;
 import com.gwidgets.api.leaflet.options.ControlAttributionOptions;
 import com.gwidgets.api.leaflet.options.ControlLayersOptions;
@@ -22,6 +21,7 @@ import com.gwidgets.api.leaflet.options.TileLayerOptions;
 import com.gwidgets.api.leaflet.options.TileLayerWMSOptions;
 import com.gwidgets.api.leaflet.options.TooltipOptions;
 
+import elemental2.core.JsObject;
 import elemental2.dom.HTMLElement;
 import jsinterop.annotations.JsConstructor;
 
@@ -200,7 +200,7 @@ Note that points you pass when creating a polygon shouldn't have an additional l
 	 * @param options the GeoJSON options
 	 * @return a new GeoJSON object
 	 */
-	public static native GeoJSON geoJSON(JavaScriptObject geojson, GeoJSONOptions options);
+	public static native GeoJSON geoJSON(JsObject geojson, GeoJSONOptions options);
 
 	/**
 	 * Represents a geographical point with a certain latitude and longitude.
@@ -363,8 +363,8 @@ Note that points you pass when creating a polygon shouldn't have an additional l
         	 * @return a new Layers object
         	 */
         	@JsMethod
-	        public static native Layers layers(JavaScriptObject baseLayers,
-	                JavaScriptObject overlays, ControlLayersOptions options);
+	        public static native Layers layers(JsObject baseLayers,
+			        JsObject overlays, ControlLayersOptions options);
 
 	        /**
         	 * A simple scale control that shows the scale of the current center of screen in metric (m/km) and imperial (mi/ft) systems. Extends Control.
