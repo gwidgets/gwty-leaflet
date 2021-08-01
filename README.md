@@ -42,6 +42,7 @@ Also, do not forget to include gwty-leaflet in your .gwt.xml module definition f
 ```
 ## Versions
 
+- 1.1 (exceptional): fixes a number of shortcomings and issues related mainly related to GeoJSON (checkout release [page](https://github.com/gwidgets/gwty-leaflet/releases/tag/1.1) for more details)
 - 1.0: latest stable version, compatible with leaflet 1.0 and 1.0.1, uses Elemental 2
 - 0.5: compatible with leaflet 1.0
 - 0.4: compatible with leaflet 0.7
