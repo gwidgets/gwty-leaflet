@@ -23,16 +23,21 @@ import jsinterop.annotations.JsType;
 
 /**
  * The Class KeyboardEvent.
+ *
  * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
+ * @version $Id: $Id
  */
 @JsType(isNative=true, name="Object", namespace=jsinterop.annotations.JsPackage.GLOBAL)
 public class KeyboardEvent extends Event {
 	
 
+	/**
+	 * <p>Constructor for KeyboardEvent.</p>
+	 */
 	protected KeyboardEvent() {}
 
 	/**
-	 * The original Dom KeyboardEvent that triggered this Leaflet event. 
+	 * The original Dom KeyboardEvent that triggered this Leaflet event.
 	 *
 	 * @return the popup
 	 */

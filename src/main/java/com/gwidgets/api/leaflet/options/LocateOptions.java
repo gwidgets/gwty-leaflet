@@ -52,7 +52,7 @@ public class LocateOptions {
 
 	/**
 	 * Gets whether continuous watching of location changes (instead of
-	 * detecting it once) using W3C watchPosition method is set. </br>
+	 * detecting it once) using W3C watchPosition method is set.
 	 * default false
 	 *
 	 * @return the watch
@@ -65,7 +65,7 @@ public class LocateOptions {
 	/**
 	 * Gets whether If true, automatically sets the map view to the user
 	 * location with respect to detection accuracy, or to world view if
-	 * geolocation failed. </br>
+	 * geolocation failed.
 	 * default false
 	 * 
 	 * @return the sets the view
@@ -77,7 +77,7 @@ public class LocateOptions {
 
 	/**
 	 * Gets the maximum zoom for automatic view setting when using `setView`
-	 * option. </br>
+	 * option.
 	 * default infinity
 	 * 
 	 * @return the max zoom locate
@@ -89,7 +89,7 @@ public class LocateOptions {
 
 	/**
 	 * Gets the number of milliseconds to wait for a response from geolocation
-	 * before firing a locationerror event. </br>
+	 * before firing a locationerror event.
 	 * default 10000
 	 * 
 	 * @return the timeout
@@ -102,7 +102,7 @@ public class LocateOptions {
 	/**
 	 * Gets the maximum age of detected location. If less than this amount of
 	 * milliseconds passed since last geolocation response, locate will return a
-	 * cached location. </br>
+	 * cached location.
 	 * default 0
 	 * 
 	 * @return the maximum age
@@ -115,7 +115,7 @@ public class LocateOptions {
 	/**
 	 * Gets whether high accuracy is enabled, see description in
 	 * <a href="http://dev.w3.org/geo/api/spec-source.html#high-accuracy">the
-	 * W3C spec </a>. </br>
+	 * W3C spec </a>.
 	 * default false
 	 * 
 	 * @return the enable high accuracy
@@ -152,7 +152,7 @@ public class LocateOptions {
 		/**
 		 * If true, starts continuous watching of location changes (instead of
 		 * detecting it once) using W3C watchPosition method. You can later stop
-		 * watching using map.stopLocate() method. </br>
+		 * watching using map.stopLocate() method.
 		 * default false
 		 * 
 		 * @param watch
@@ -167,7 +167,7 @@ public class LocateOptions {
 		/**
 		 * If true, automatically sets the map view to the user location with
 		 * respect to detection accuracy, or to world view if geolocation
-		 * failed. </br>
+		 * failed.
 		 * default false
 		 * 
 		 * @param setView
@@ -181,10 +181,10 @@ public class LocateOptions {
 
 		/**
 		 * The maximum zoom for automatic view setting when using `setView`
-		 * option. </br>
+		 * option.
 		 * default infinity
 		 * 
-		 * @param maxZoomLocate
+		 * @param maxZoom
 		 *            the max zoom locate
 		 * @return the builder
 		 */
@@ -195,7 +195,7 @@ public class LocateOptions {
 
 		/**
 		 * Number of milliseconds to wait for a response from geolocation before
-		 * firing a locationerror event.Timeout. </br>
+		 * firing a locationerror event.Timeout.
 		 * default 10000
 		 * 
 		 * @param timeout
@@ -210,7 +210,7 @@ public class LocateOptions {
 		/**
 		 * Maximum age of detected location. If less than this amount of
 		 * milliseconds passed since last geolocation response, locate will
-		 * return a cached location. </br>
+		 * return a cached location.
 		 * default 0
 		 * 
 		 * @param maximumAge
@@ -225,7 +225,7 @@ public class LocateOptions {
 		/**
 		 * Gets whether high accuracy is enabled, see description in <a href=
 		 * "http://dev.w3.org/geo/api/spec-source.html#high-accuracy">the W3C
-		 * spec </a>. </br>
+		 * spec </a>.
 		 * default false
 		 * 
 		 * @param enableHighAccuracy
@@ -238,7 +238,7 @@ public class LocateOptions {
 		}
 
 		/**
-		 * Builds the LocateOptions new instance </br>
+		 * Builds the LocateOptions new instance
 		 * 
 		 * @return the locate options
 		 */

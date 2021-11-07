@@ -35,7 +35,9 @@ import jsinterop.annotations.JsType;
 // TODO: Auto-generated Javadoc
 /**
  * The central class of the API. it is used to create a map on a page and manipulate it.
+ *
  * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
+ * @version $Id: $Id
  */
 @JsType(isNative = true)
 public class Map implements Evented {
@@ -92,7 +94,7 @@ public class Map implements Evented {
 	 * @param options the map options
 	 * @return the L class
 	 */
-	
+
 	@JsMethod
 	public native L setView(LatLng center, double zoom, ZoomPanOptions options);
 	
@@ -217,7 +219,7 @@ public class Map implements Evented {
 	public native L setMaxBounds(LatLngBounds bounds, ZoomPanOptions options);
 
 	/**
-	 * Tries to locate the user using the Geolocation API, firing a locationfound event with location data on success or a locationerror event on failure, and optionally sets the map view to the user's location with respect to detection accuracy (or to the world view if geolocation failed). 
+	 * Tries to locate the user using the Geolocation API, firing a locationfound event with location data on success or a locationerror event on failure, and optionally sets the map view to the user's location with respect to detection accuracy (or to the world view if geolocation failed).
 	 *
 	 * @param options the locateOptions
 	 * @return the l
@@ -248,7 +250,7 @@ public class Map implements Evented {
 	 *
 	 * @return the center
 	 */
-	
+
 	@JsMethod
 	public native LatLng getCenter();
 
@@ -326,7 +328,7 @@ public class Map implements Evented {
 	 * @param insertAtTheBottom the insert at the bottom flag
 	 * @return the L class
 	 */
-	
+
 	@JsMethod
 	public native L addLayer(Layer layer, Boolean insertAtTheBottom);
 
@@ -393,7 +395,7 @@ public class Map implements Evented {
 			PopupOptions options);
 
 	/**
-	 * Closes the popup previously opened with openPopup 
+	 * Closes the popup previously opened with openPopup
 	 *
 	 * @param popup the popup
 	 * @return the L class
@@ -427,7 +429,7 @@ public class Map implements Evented {
 	 * @param latlng the latlng
 	 * @return the point
 	 */
-	
+
 	@JsMethod
 	public native Point latLngToLayerPoint(LatLng latlng);
 
@@ -537,6 +539,7 @@ public class Map implements Evented {
 	 * Creates a new map pane with the given name if it doesn't exist already, then returns it. The pane is created as a children of container, or as a children of the main map pane if not set.
 	 *
 	 * @return the container
+	 * @param name a {@link java.lang.String} object
 	 */
 	@JsMethod
 	public native HTMLElement createPane(String name);
@@ -545,6 +548,8 @@ public class Map implements Evented {
 	 * Creates a new map pane with the given name if it doesn't exist already, then returns it. The pane is created as a children of container, or as a children of the main map pane if not set.
 	 *
 	 * @return the container
+	 * @param name a {@link java.lang.String} object
+	 * @param container a {@link elemental2.dom.HTMLElement} object
 	 */
 	@JsMethod
 	public native HTMLElement createPane(String name, HTMLElement container);
@@ -571,23 +576,36 @@ public class Map implements Evented {
 		/* (non-Javadoc)
 		 * @see com.gwidgets.api.leaflet.Evented#clearAllEventListeners()
 		 */
+		/**
+		 * <p>clearAllEventListeners.</p>
+		 *
+		 * @return a {@link com.gwidgets.api.leaflet.L} object
+		 */
 		public native L clearAllEventListeners();
 
 
 		/* (non-Javadoc)
 		 * @see com.gwidgets.api.leaflet.Evented#on(java.lang.String, com.gwidgets.api.leaflet.elemental.Function)
 		 */
+		/** {@inheritDoc} */
 		public native L on(String type, EventCallback fn);
 
 
 		/* (non-Javadoc)
 		 * @see com.gwidgets.api.leaflet.Evented#once(java.lang.String, com.gwidgets.api.leaflet.elemental.Function)
 		 */
+		/** {@inheritDoc} */
 		public  native L once(String type, EventCallback fn);
 
 		
 		/* (non-Javadoc)
 		 * @see com.gwidgets.api.leaflet.Evented#off(java.lang.String)
+		 */
+		/**
+		 * <p>off.</p>
+		 *
+		 * @param type a {@link java.lang.String} object
+		 * @return a {@link com.gwidgets.api.leaflet.L} object
 		 */
 		public native L off(String type);
 		
@@ -595,11 +613,22 @@ public class Map implements Evented {
 		/* (non-Javadoc)
 		 * @see com.gwidgets.api.leaflet.Evented#off(java.lang.String[])
 		 */
+		/**
+		 * <p>off.</p>
+		 *
+		 * @param type an array of {@link java.lang.String} objects
+		 * @return a {@link com.gwidgets.api.leaflet.L} object
+		 */
 		public native L off(String[] type);
 		
 		
 		/* (non-Javadoc)
 		 * @see com.gwidgets.api.leaflet.Evented#off()
+		 */
+		/**
+		 * <p>off.</p>
+		 *
+		 * @return a {@link com.gwidgets.api.leaflet.L} object
 		 */
 		public native L off();
 
@@ -607,24 +636,28 @@ public class Map implements Evented {
 		/* (non-Javadoc)
 		 * @see com.gwidgets.api.leaflet.Evented#fire(java.lang.String)
 		 */
+		/** {@inheritDoc} */
 		public native L fire(String type);
 		
 		
 		/* (non-Javadoc)
 		 * @see com.gwidgets.api.leaflet.Evented#listens(java.lang.String)
 		 */
+		/** {@inheritDoc} */
 		public native Boolean listens(String type);
 
 
 		/* (non-Javadoc)
 		 * @see com.gwidgets.api.leaflet.Evented#addEventParent(com.gwidgets.api.leaflet.Evented)
 		 */
+		/** {@inheritDoc} */
 		public native L addEventParent(Evented obj); 
 
 
 		/* (non-Javadoc)
 		 * @see com.gwidgets.api.leaflet.Evented#removeEventParent(com.gwidgets.api.leaflet.Evented)
 		 */
+		/** {@inheritDoc} */
 		public native L removeEventParent(Evented obj);
 
 	@JsFunction

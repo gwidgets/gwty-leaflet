@@ -72,7 +72,7 @@ public class CircleOptions extends PathOptions {
 
 		/**
 		 * Whether to draw stroke along the path. Set it to false to disable
-		 * borders on polygons or circles. </br>
+		 * borders on polygons or circles.
 		 * default true
 		 * 
 		 * @param stroke
@@ -85,7 +85,7 @@ public class CircleOptions extends PathOptions {
 		}
 
 		/**
-		 * Stroke color. </br>
+		 * Stroke color.
 		 * default "#03f"
 		 * 
 		 * @param color
@@ -98,7 +98,7 @@ public class CircleOptions extends PathOptions {
 		}
 
 		/**
-		 * Stroke width in pixels. </br>
+		 * Stroke width in pixels.
 		 * default 5
 		 * 
 		 * @param weight
@@ -111,7 +111,7 @@ public class CircleOptions extends PathOptions {
 		}
 
 		/**
-		 * Stroke opacity. </br>
+		 * Stroke opacity.
 		 * default 0.5
 		 * 
 		 * @param opacity
@@ -125,7 +125,7 @@ public class CircleOptions extends PathOptions {
 
 		/**
 		 * Whether to fill the path with color. Set it to false to disable
-		 * filling on polygons or circles. </br>
+		 * filling on polygons or circles.
 		 * default true
 		 * 
 		 * @param fill
@@ -138,7 +138,7 @@ public class CircleOptions extends PathOptions {
 		}
 
 		/**
-		 * Fill color. </br>
+		 * Fill color.
 		 * default "#03f"
 		 * 
 		 * @param fillColor
@@ -151,7 +151,7 @@ public class CircleOptions extends PathOptions {
 		}
 
 		/**
-		 * Fill opacity. </br>
+		 * Fill opacity.
 		 * default 0.2
 		 * 
 		 * @param fillOpacity
@@ -167,7 +167,7 @@ public class CircleOptions extends PathOptions {
 		 * A string that defines how the inside of a shape is determined. See
 		 * <a href=
 		 * "https://developer.mozilla.org/docs/Web/SVG/Attribute/fill-rule">
-		 * docs </a> for more info </br>
+		 * docs </a> for more info
 		 * 
 		 * @param fillRule
 		 *            the fill rule
@@ -182,7 +182,7 @@ public class CircleOptions extends PathOptions {
 		 * A string that defines the stroke <a href=
 		 * "https://developer.mozilla.org/en/SVG/Attribute/stroke-dasharray">
 		 * dash pattern</a>. Doesn't work on canvas-powered layers (e.g. Android
-		 * 2). </br>
+		 * 2).
 		 * default "evenodd"
 		 * 
 		 * @param dashArray
@@ -197,7 +197,7 @@ public class CircleOptions extends PathOptions {
 		/**
 		 * A string that defines <a href=
 		 * "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linecap">
-		 * shape </a> to be used at the end of the stroke. </br>
+		 * shape </a> to be used at the end of the stroke.
 		 * default null
 		 * 
 		 * @param lineCap
@@ -212,7 +212,7 @@ public class CircleOptions extends PathOptions {
 		/**
 		 * A string that defines <a href=
 		 * "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linejoin">
-		 * shape to be used</a> at the corners of the stroke. </br>
+		 * shape to be used</a> at the corners of the stroke.
 		 * default null
 		 * 
 		 * @param lineJoin
@@ -227,7 +227,7 @@ public class CircleOptions extends PathOptions {
 
 		/**
 		 * Sets the pointer-events attribute on the path if SVG backend is used.
-		 * </br>
+		 *
 		 * default null
 		 * 
 		 * @param pointerEvents
@@ -240,7 +240,7 @@ public class CircleOptions extends PathOptions {
 		}
 
 		/**
-		 * Custom class name set on an element. </br>
+		 * Custom class name set on an element.
 		 * default empty string
 		 * 
 		 * @param className

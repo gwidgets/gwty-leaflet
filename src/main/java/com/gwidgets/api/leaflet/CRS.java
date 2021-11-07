@@ -19,7 +19,9 @@ import jsinterop.annotations.JsType;
 
 /**
  * Defines coordinate reference systems for projecting geographical points into pixel (screen) coordinates and back (and to coordinates in other units for WMS services).
+ *
  * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
+ * @version $Id: $Id
  */
 @JsType(isNative = true)
 public abstract class CRS {
@@ -111,8 +113,8 @@ public abstract class CRS {
 	/**
 	 * Returns the distance between two geographical coordinates.
 	 *
-	 * @param latlng1 
-	 * @param latlng2 
+	 * @param latlng1 a {@link com.gwidgets.api.leaflet.LatLng} object
+	 * @param latlng2 a {@link com.gwidgets.api.leaflet.LatLng} object
 	 * @return the distance
 	 */
 	@JsMethod
@@ -121,7 +123,7 @@ public abstract class CRS {
 	/**
 	 * Returns a LatLng where lat and lng has been wrapped according to the CRS's wrapLat and wrapLng properties, if they are outside the CRS's bounds.
 	 *
-	 * @param latlng
+	 * @param latlng a {@link com.gwidgets.api.leaflet.LatLng} object
 	 * @return the LatLng
 	 */
 	@JsMethod

@@ -3,7 +3,6 @@ package com.gwidgets.api.leaflet.options;
 import com.gwidgets.api.leaflet.LatLng;
 import com.gwidgets.api.leaflet.Layer;
 import com.gwidgets.api.leaflet.Marker;
-import com.gwidgets.api.leaflet.utils.JsFn;
 
 import elemental2.core.JsObject;
 import jsinterop.annotations.JsFunction;
@@ -49,10 +48,6 @@ public class GeoJSONOptions {
 
   /**
    * Function that will be used for creating layers for GeoJSON points (if not specified, simple markers will be created).
-   *
-   * @param featureData the feature data
-   * @param latlng the latlng
-   * @return the function
    */
   @JsProperty
   public PointToLayerFunction pointToLayer;
@@ -60,8 +55,6 @@ public class GeoJSONOptions {
   /**
    * Function that will be used to get style options for vector layers created for GeoJSON features.
    *
-   * @param featureData the feature data
-   * @return the function
    */
   @JsProperty
   public StyleFunction style;
@@ -69,28 +62,18 @@ public class GeoJSONOptions {
   /**
    * Function that will be called on each created feature layer. Useful for attaching events and popups to features.
    *
-   * @param featureData the feature data
-   * @param layer the layer
-   * @return the function
    */
   @JsProperty
   public OnEachFeatureFunction onEachFeature;
 
   /**
    * Function that will be used to decide whether to show a feature or not.
-   *
-   * @param featureData the feature data
-   * @param layer the layer
-   * @return the function
    */
   @JsProperty
   public FilterFunction filter;
 
   /**
    * Function that will be used for converting GeoJSON coordinates to LatLng points (if not specified, coords will be assumed to be WGS84 standard [longitude, latitude] values in degrees).
-   *
-   * @param coords the coords
-   * @return the function
    */
   @JsProperty
   public CoordsToLatLngFunction coordsToLatLng;
@@ -98,6 +81,12 @@ public class GeoJSONOptions {
   @JsFunction
   public interface PointToLayerFunction {
 
+    /**
+     * Function that will be used for creating layers for GeoJSON points (if not specified, simple markers will be created).
+     *
+     * @param feature data
+     * @param latLng the latlng
+     */
     Marker apply(JsObject feature, LatLng latLng);
 
   }
@@ -105,27 +94,51 @@ public class GeoJSONOptions {
   @JsFunction
   public interface StyleFunction {
 
-    JsObject apply(JsObject feature);
+    /**
+     * Function that will be used to get style options for vector layers created for GeoJSON features.
+     *
+     * @param featureData the feature data
+     * @return the function
+     */
+    JsObject apply(JsObject featureData);
 
   }
 
   @JsFunction
   public interface OnEachFeatureFunction {
 
-    JsObject apply(JsObject feature, Layer layer);
+    /**
+     * Function that will be called on each created feature layer. Useful for attaching events and popups to features.
+     *
+     * @param featureData the feature data
+     * @param layer the layer
+     */
+    JsObject apply(JsObject featureData, Layer layer);
 
   }
 
   @JsFunction
   public interface FilterFunction {
-
+    /**
+     * Function that will be used to decide whether to show a feature or not.
+     *
+     * @param feature the feature data
+     * @param layer the layer
+     */
     JsObject apply(JsObject feature, Layer layer);
 
   }
 
   @JsFunction
   public interface CoordsToLatLngFunction {
-    LatLng apply(JsObject feature, Layer layer);
+
+    /**
+     * Function that will be used for converting GeoJSON coordinates to LatLng points (if not specified, coords will be assumed to be WGS84 standard [longitude, latitude] values in degrees).
+     *
+     * @param coords the coords
+     * @param layer layer
+     */
+    LatLng apply(JsObject coords, Layer layer);
   }
 
 }

@@ -40,7 +40,7 @@ public class ControlOptions {
 	
 	/**
 	 * Gets The initial position of the control (one of the map corners).
-	 * </br>
+	 *
 	 * default "topright"
 	 * @return the position
 	 */
@@ -64,9 +64,9 @@ public class ControlOptions {
 		
 		/**
 		 * The initial position of the control (one of the map corners).
-		 * </br> 
+		 *
 		 * default "topright"
-		 * </br> 
+		 *
 		 * possible values: "topleft", "topright", "bottomleft", "bottomright" 
 		 * @param position the position
 		 * @return the builder

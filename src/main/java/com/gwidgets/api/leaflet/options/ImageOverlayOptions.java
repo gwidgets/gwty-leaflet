@@ -112,7 +112,7 @@ public class ImageOverlayOptions {
 
 		/**
 		 * The opacity of the image overlay.
-		 * </br>
+		 *
 		 * default 1.0
 		 * @param opacity the opacity
 		 * @return the builder
@@ -124,7 +124,7 @@ public class ImageOverlayOptions {
 
 		/**
 		 * The attribution text of the image overlay.
-		 *</br>
+		 *
 		 * default empty
 		 * @param attribution the attribution
 		 * @return the builder

@@ -46,7 +46,7 @@ public class ZoomPanOptions {
 
 	/**
 	 * Gets whether the map view will be completely reset (without any
-	 * animations). </br>
+	 * animations).
 	 * default false
 	 * 
 	 * @return the reset
@@ -78,7 +78,7 @@ public class ZoomPanOptions {
 
 	/**
 	 * An equivalent of passing animate to both zoom and pan options (see below)
-	 * </br>
+	 *
 	 * default true
 	 * 
 	 * @return the animate

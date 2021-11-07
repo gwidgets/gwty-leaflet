@@ -47,7 +47,7 @@ public class PanOptions {
 
 	/**
 	 * Gets the duration of animated panning.
-	 * </br>
+	 *
 	 * default 0.25
 	 * @return the duration
 	 */
@@ -60,7 +60,7 @@ public class PanOptions {
 
 	/**
 	 * Gets The curvature factor of panning animation easing (third parameter of the Cubic Bezier curve). 1.0 means linear animation, the less the more bowed the curve.
-	 * </br>
+	 *
 	 * default 0.25
 	 * @return the ease linearity
 	 */
@@ -73,7 +73,7 @@ public class PanOptions {
 
 	/**
 	 * Gets whether If true, panning won't fire movestart event on start (used internally for panning inertia).
-	 * </br>
+	 *
 	 * default false
 	 * @return the no move start
 	 */
@@ -104,7 +104,7 @@ public class PanOptions {
 		 
 		/**
 		 * Duration of animated panning.
-		 * </br>
+		 *
 		 * default 0.25
 		 * @param duration the duration
 		 * @return the builder
@@ -113,7 +113,7 @@ public class PanOptions {
 		 
 		/**
 		 * The curvature factor of panning animation easing (third parameter of the Cubic Bezier curve). 1.0 means linear animation, the less the more bowed the curve.
-		 * </br>
+		 *
 		 * default 0.25
 		 * @param easeLinearity the ease linearity
 		 * @return the builder
@@ -122,7 +122,7 @@ public class PanOptions {
 		 
 		/**
 		 * If true, panning won't fire movestart event on start (used internally for panning inertia).
-		 * </br>
+		 *
 		 * default false
 		 * @param noMoveStart the no move start
 		 * @return the builder

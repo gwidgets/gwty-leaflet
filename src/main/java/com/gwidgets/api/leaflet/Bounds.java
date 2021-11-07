@@ -20,8 +20,9 @@ import jsinterop.annotations.JsType;
 
 /**
  * Represents a rectangular area in pixel coordinates.
- * 
+ *
  * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
+ * @version $Id: $Id
  */
 @JsType(isNative = true)
 public class Bounds {
@@ -60,8 +61,8 @@ public class Bounds {
 	/**
 	 * Returns true if the rectangle contains the given point.
 	 *
-	 * @param the point
 	 * @return true/false
+	 * @param point a {@link com.gwidgets.api.leaflet.Point} object
 	 */
 	@JsMethod
 	public native Boolean contains(Point point);

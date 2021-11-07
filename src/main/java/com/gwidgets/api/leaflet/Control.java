@@ -26,7 +26,9 @@ import jsinterop.annotations.JsType;
  *       // or
  *  map.addControl(control);}
  *</pre>
+ *
  *@author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
+ * @version $Id: $Id
  */
 @JsType(isNative = true)
 public class Control {
@@ -34,12 +36,15 @@ public class Control {
 	
 
 
+	/**
+	 * <p>Constructor for Control.</p>
+	 */
 	protected Control() {
 		
 	}
 
 	/**
-	 * Sets the position of the control. 
+	 * Sets the position of the control.
 	 *
 	 * @param position the position
 	 * @return the L class
@@ -68,6 +73,7 @@ public class Control {
 	 * Removes the control from the map.
 	 *
 	 * @return the L class
+	 * @param map a {@link com.gwidgets.api.leaflet.Map} object
 	 */
 	@JsMethod
 	public native L remove(Map map);

@@ -6,6 +6,12 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * <p>RendererOptions class.</p>
+ *
+ * @author zakaria
+ * @version $Id: $Id
+ */
 @JsType(isNative=true, namespace=GLOBAL, name="Object")
 public class RendererOptions {
 	
@@ -24,16 +30,31 @@ public class RendererOptions {
 		
 	}
 
+	/**
+	 * <p>Getter for the field <code>padding</code>.</p>
+	 *
+	 * @return a double
+	 */
 	@JsOverlay
 	public final double getPadding() {
 		return this.padding;
 	}
 
+	/**
+	 * <p>Getter for the field <code>pane</code>.</p>
+	 *
+	 * @return a {@link java.lang.String} object
+	 */
 	@JsOverlay
 	public final String getPane() {
 		return this.pane;
 	}
 	
+	/**
+	 * <p>Getter for the field <code>attribution</code>.</p>
+	 *
+	 * @return a {@link java.lang.String} object
+	 */
 	@JsOverlay 
 	public final String getAttribution() {
 		return this.attribution;

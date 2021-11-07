@@ -18,11 +18,16 @@ import jsinterop.annotations.JsType;
 
 /**
  * A simple scale control that shows the scale of the current center of screen in metric (m/km) and imperial (mi/ft) systems. Extends Control.
+ *
  * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
+ * @version $Id: $Id
  */
 @JsType(isNative = true)
 public class Scale extends Control{
 
+	/**
+	 * <p>Constructor for Scale.</p>
+	 */
 	protected Scale() {
 		super();
 		

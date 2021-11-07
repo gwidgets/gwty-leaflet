@@ -20,8 +20,9 @@ import jsinterop.annotations.JsType;
 
 /**
  * The attribution control allows you to display attribution data in a small text box on a map. It is put on the map by default unless you set its attributionControl option to false, and it fetches attribution texts from layers with getAttribution method automatically.
- * 
+ *
  * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
+ * @version $Id: $Id
  */
 @JsType(isNative = true)
 public class Attribution extends Control{

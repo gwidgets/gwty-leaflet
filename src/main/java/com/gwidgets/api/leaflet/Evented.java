@@ -4,6 +4,12 @@ import com.gwidgets.api.leaflet.events.EventCallback;
 
 import jsinterop.annotations.JsType;
 
+/**
+ * <p>Evented interface.</p>
+ *
+ * @author zakaria
+ * @version $Id: $Id
+ */
 @JsType(isNative = true)
 public interface Evented {
 
@@ -51,7 +57,6 @@ public interface Evented {
 	/**
 	 *  Removes all listener
 	 *
-	 * @param type the type
 	 * @return the L class
 	 */
 	public L off();
@@ -65,23 +70,30 @@ public interface Evented {
 	public L fire(String type);
 	
 	
-	/** Returns true if a particular event type has any listeners attached to it.
-	* @return true if there is listener, false otherwise
-		 */
+	/**
+	 * Returns true if a particular event type has any listeners attached to it.
+	 *
+	 * @return true if there is listener, false otherwise
+	 * @param type a {@link java.lang.String} object
+	 */
 	public Boolean listens(String type);
 
 
-	/** Adds an event parent - an Evented that will receive propagated events
-	* @param the parent object that will receive the propagated events
-	* @return the L class
-		 */
+	/**
+	 * Adds an event parent - an Evented that will receive propagated events
+	 *
+	 * @return the L class
+	 * @param obj a {@link com.gwidgets.api.leaflet.Evented} object
+	 */
 	public L addEventParent(Evented obj); 
 
 
-	/** Removes an event parent, so it will stop receiving propagated events
-	* @param the parent object that be removed
-	* @return the L class
-		 */
+	/**
+	 * Removes an event parent, so it will stop receiving propagated events
+	 *
+	 * @return the L class
+	 * @param obj a {@link com.gwidgets.api.leaflet.Evented} object
+	 */
 	public L removeEventParent(Evented obj);
 	
 	

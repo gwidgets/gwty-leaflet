@@ -25,8 +25,9 @@ import jsinterop.annotations.JsType;
 
 /**
  * The Class DivIconOptions.
- * 
+ *
  * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
+ * @version $Id: $Id
  */
 @JsType(isNative=true, namespace=GLOBAL, name="Object")
 public class DivIconOptions {
@@ -149,46 +150,91 @@ public class DivIconOptions {
 	}
 
 
+	/**
+	 * <p>Getter for the field <code>bgPos</code>.</p>
+	 *
+	 * @return a {@link com.gwidgets.api.leaflet.Point} object
+	 */
 	@JsOverlay public final Point getBgPos() {
 		return this.bgPos;
 	}
 
 
+	/**
+	 * <p>Getter for the field <code>iconUrl</code>.</p>
+	 *
+	 * @return a {@link java.lang.String} object
+	 */
 	@JsOverlay public final String getIconUrl() {
 		return this.iconUrl;
 	}
 
 
+	/**
+	 * <p>Getter for the field <code>iconRetinaUrl</code>.</p>
+	 *
+	 * @return a {@link java.lang.String} object
+	 */
 	@JsOverlay public final String getIconRetinaUrl() {
 		return this.iconRetinaUrl;
 	}
 
 
+	/**
+	 * <p>Getter for the field <code>shadowUrl</code>.</p>
+	 *
+	 * @return a {@link java.lang.String} object
+	 */
 	@JsOverlay public final String getShadowUrl() {
 		return this.shadowUrl;
 	}
 
 
+	/**
+	 * <p>Getter for the field <code>shadowRetinaUrl</code>.</p>
+	 *
+	 * @return a {@link java.lang.String} object
+	 */
 	@JsOverlay public final String getShadowRetinaUrl() {
 		return this.shadowRetinaUrl;
 	}
 
 
+	/**
+	 * <p>Getter for the field <code>shadowSize</code>.</p>
+	 *
+	 * @return a {@link com.gwidgets.api.leaflet.Point} object
+	 */
 	@JsOverlay public final Point getShadowSize() {
 		return this.shadowSize;
 	}
 
 
+	/**
+	 * <p>Getter for the field <code>shadowAnchor</code>.</p>
+	 *
+	 * @return a {@link com.gwidgets.api.leaflet.Point} object
+	 */
 	@JsOverlay public final Point getShadowAnchor() {
 		return this.shadowAnchor;
 	}
 
 
+	/**
+	 * <p>Getter for the field <code>pane</code>.</p>
+	 *
+	 * @return a {@link java.lang.String} object
+	 */
 	@JsOverlay public final String getPane() {
 		return this.pane;
 	}
 
 
+	/**
+	 * <p>Getter for the field <code>attribution</code>.</p>
+	 *
+	 * @return a {@link java.lang.String} object
+	 */
 	@JsOverlay public final String getAttribution() {
 		return this.attribution;
 	}

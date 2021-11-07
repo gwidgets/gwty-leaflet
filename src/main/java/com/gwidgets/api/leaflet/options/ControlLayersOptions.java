@@ -45,7 +45,7 @@ public class ControlLayersOptions {
 	
 	/**
 	 * Gets the position of the control (one of the map corners).
-	 * </br>
+	 *
 	 * default "topright"
 	 * 
 	 * @return the position
@@ -57,7 +57,7 @@ public class ControlLayersOptions {
 
 	/**
 	 * Gets whether the control will be collapsed into an icon and expanded on mouse hover or touch.
-	 * </br>
+	 *
 	 * default true
 	 * @return the collapsed
 	 */
@@ -68,7 +68,7 @@ public class ControlLayersOptions {
 
 	/**
 	 * Gets whether the control will assign zIndexes in increasing order to all of its layers so that the order is preserved when switching them on/off.
-	 * </br>
+	 *
 	 * default true
 	 * @return the auto Z index
 	 */
@@ -97,9 +97,9 @@ public class ControlLayersOptions {
 		
 		/**
 		 * The position of the control (one of the map corners).
-		 * </br>
+		 *
 		 * default "topright"
-		 * </br>
+		 *
 		 * possible values: "topleft", "topright", "bottomleft", "bottomright" 
 		 * @param position the position
 		 * @return the builder
@@ -108,7 +108,7 @@ public class ControlLayersOptions {
 
 		/**
 		 * If true, the control will be collapsed into an icon and expanded on mouse hover or touch.
-		 * </br>
+		 *
 		 * default true
 		 * @param collapsed the collapsed
 		 * @return the builder
@@ -117,7 +117,7 @@ public class ControlLayersOptions {
 
 		/**
 		 * If true, the control will assign zIndexes in increasing order to all of its layers so that the order is preserved when switching them on/off.
-		 * </br>
+		 *
 		 * default true
 		 * @param autoZIndex the auto Z index
 		 * @return the builder

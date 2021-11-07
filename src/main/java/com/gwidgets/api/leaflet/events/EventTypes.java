@@ -14,6 +14,12 @@
  */
 package com.gwidgets.api.leaflet.events;
 
+/**
+ * <p>EventTypes class.</p>
+ *
+ * @author zakaria
+ * @version $Id: $Id
+ */
 public class EventTypes {
 
 	private EventTypes() {

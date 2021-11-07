@@ -20,7 +20,9 @@ import jsinterop.annotations.JsType;
 
 /**
  * An object with methods for projecting geographical coordinates of the world onto a flat surface (and back).
+ *
  * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
+ * @version $Id: $Id
  */
 @JsType(isNative = true)
 public class Projection {

@@ -167,7 +167,7 @@ public class FitBoundsOptions {
 
 		/**
 		 * Sets the amount of padding in the top left corner of a map container that shouldn't be accounted for when setting the view to fit bounds. Useful if you have some control overlays on the map like a sidebar and you don't want them to obscure objects you're zooming to.
-		 * </br>
+		 *
 		 * default [0, 0]
 		 * 
 		 * @param paddingTopLeft the padding top left
@@ -180,7 +180,7 @@ public class FitBoundsOptions {
 
 		/**
 		 * The same for bottom right corner of the map.
-		 * </br>
+		 *
 		 * default [0, 0]
 		 * 
 		 * @param paddingBottomRight the padding bottom right
@@ -193,7 +193,7 @@ public class FitBoundsOptions {
 
 		/**
 		 * Equivalent of setting both top left and bottom right padding to the same value.
-		 * </br>
+		 *
 		 * default [0, 0]
 		 * 
 		 * @param padding the padding
@@ -206,7 +206,7 @@ public class FitBoundsOptions {
 
 		/**
 		 * The maximum possible zoom to use.
-		 * </br>
+		 *
 		 * default null
 		 * 
 		 * @param maxZoom the max zoom

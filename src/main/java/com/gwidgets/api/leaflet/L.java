@@ -50,10 +50,11 @@ import jsinterop.annotations.JsType;
 // TODO: Auto-generated Javadoc
 /**
  * The Master class of leaflet. All leaflet classes should be created through this class.
- *  This class transcribes factory methods from the Javascript version. 
+ *  This class transcribes factory methods from the Javascript version.
  *  It powers the OOP facilities of Leaflet.
- * 
+ *
  * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
+ * @version $Id: $Id
  */
 @JsType(isNative = true, namespace = JsPackage.GLOBAL)
 public class L {
@@ -69,7 +70,7 @@ public class L {
 	/**
 	 * The central class of the API — it is used to create a map on a page and manipulate it.
 	 *
-	 * @param id the id of the element 
+	 * @param id the id of the element
 	 * @param options map options
 	 * @return a new Map object
 	 */
@@ -136,8 +137,8 @@ public class L {
 
 	/**
 	 * A class for drawing polygon overlays on a map. Extends Polyline. Use Map.addLayer() to add it to the map.
-
-Note that points you pass when creating a polygon shouldn't have an additional last point equal to the first one — it's better to filter out such points.
+	 *
+	 *Note that points you pass when creating a polygon shouldn't have an additional last point equal to the first one — it's better to filter out such points.
 	 *
 	 * @param latlngs the latlngs array
 	 * @param options the Polygon options
@@ -163,7 +164,7 @@ Note that points you pass when creating a polygon shouldn't have an additional l
 	 * @param latlng the latlng of the circle on the map
 	 * @param options the Circle options
 	 * @return a new Circle object
-	 */	
+	 */
 	public static native Circle circle(LatLng latlng,  
 			CircleOptions options);
 
@@ -215,7 +216,7 @@ Note that points you pass when creating a polygon shouldn't have an additional l
 	 * Represents a rectangular geographical area on a map.
 	 *
 	 * @param southWest the south west point
-	 * @param northEast the north east point 
+	 * @param northEast the north east point
 	 * @return a new LatLngBounds object
 	 */
 	public static native LatLngBounds latLngBounds(LatLng southWest,
@@ -260,8 +261,8 @@ Note that points you pass when creating a polygon shouldn't have an additional l
 	 * The base class for all Leaflet controls. Implements IControl interface. You can add controls to the map like this:
 	 *<pre>
 	 *{@code control.addTo(map);
-     *       // or
-     *  map.addControl(control);}
+	 *       // or
+	 *  map.addControl(control);}
 	 *</pre>
 	 *
 	 * @param options the Control options
@@ -286,7 +287,6 @@ Note that points you pass when creating a polygon shouldn't have an additional l
 	/**
 	 * A constant that represents the Leaflet version in use.
 	 *
-	 * @return the version
 	 */
 	@JsProperty
 	public static String version;

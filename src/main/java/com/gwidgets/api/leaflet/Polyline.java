@@ -26,13 +26,18 @@ import jsinterop.annotations.JsType;
 // TODO: Auto-generated Javadoc
 /**
  * A class for drawing polyline overlays on a map. Extends Path. Use addLayer of the class Map to add it to the map.
+ *
  * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
+ * @version $Id: $Id
  */
 @JsType(isNative = true)
 public class Polyline extends Path implements Layer, Evented {
 	
 	
 
+	/**
+	 * <p>Constructor for Polyline.</p>
+	 */
 	protected Polyline() {
 		
 	}
@@ -78,6 +83,11 @@ public class Polyline extends Path implements Layer, Evented {
 	/* (non-Javadoc)
 	 * @see com.gwidgets.api.leaflet.Path#getBounds()
 	 */
+	/**
+	 * <p>getBounds.</p>
+	 *
+	 * @return a {@link com.gwidgets.api.leaflet.LatLngBounds} object
+	 */
 	@JsMethod
 	public native LatLngBounds getBounds();
 
@@ -92,6 +102,7 @@ public class Polyline extends Path implements Layer, Evented {
 	/* (non-Javadoc)
 	 * @see com.gwidgets.api.leaflet.Layer#bindPopup(com.gwidgets.api.leaflet.elemental.HTMLElement, com.gwidgets.api.leaflet.options.PopupOptions)
 	 */
+	/** {@inheritDoc} */
 	@JsMethod
 	public native L bindPopup(HTMLElement content, PopupOptions options);	
 
@@ -99,12 +110,18 @@ public class Polyline extends Path implements Layer, Evented {
 	/* (non-Javadoc)
 	 * @see com.gwidgets.api.leaflet.Layer#bindPopup(java.lang.String, com.gwidgets.api.leaflet.options.PopupOptions)
 	 */
+	/** {@inheritDoc} */
 	@JsMethod
 	public native L bindPopup(String id, PopupOptions options);
 
 
 	/* (non-Javadoc)
 	 * @see com.gwidgets.api.leaflet.Layer#unbindPopup()
+	 */
+	/**
+	 * <p>unbindPopup.</p>
+	 *
+	 * @return a {@link com.gwidgets.api.leaflet.L} object
 	 */
 	@JsMethod
 	public native L unbindPopup();
@@ -114,12 +131,18 @@ public class Polyline extends Path implements Layer, Evented {
 	/* (non-Javadoc)
 	 * @see com.gwidgets.api.leaflet.Layer#openPopup(com.gwidgets.api.leaflet.LatLng)
 	 */
+	/** {@inheritDoc} */
 	@JsMethod
 	public native L openPopup(LatLng latlng);
 
 
 	/* (non-Javadoc)
 	 * @see com.gwidgets.api.leaflet.Layer#closePopup()
+	 */
+	/**
+	 * <p>closePopup.</p>
+	 *
+	 * @return a {@link com.gwidgets.api.leaflet.L} object
 	 */
 	@JsMethod
 	public native L closePopup();
@@ -128,12 +151,22 @@ public class Polyline extends Path implements Layer, Evented {
 	/* (non-Javadoc)
 	 * @see com.gwidgets.api.leaflet.Layer#togglePopup()
 	 */
+	/**
+	 * <p>togglePopup.</p>
+	 *
+	 * @return a {@link com.gwidgets.api.leaflet.L} object
+	 */
 	@JsMethod
 	public native L togglePopup();
 
 
 	/* (non-Javadoc)
 	 * @see com.gwidgets.api.leaflet.Layer#isPopupOpen()
+	 */
+	/**
+	 * <p>isPopupOpen.</p>
+	 *
+	 * @return a boolean
 	 */
 	@JsMethod
 	public native boolean isPopupOpen();
@@ -142,12 +175,19 @@ public class Polyline extends Path implements Layer, Evented {
 	/* (non-Javadoc)
 	 * @see com.gwidgets.api.leaflet.Layer#setPopupContent(java.lang.String)
 	 */
+	/** {@inheritDoc} */
 	@JsMethod
 	public native L setPopupContent(String content);	
 
 
 	/* (non-Javadoc)
 	 * @see com.gwidgets.api.leaflet.Layer#setPopupContent(com.gwidgets.api.leaflet.elemental.HTMLElement)
+	 */
+	/**
+	 * <p>setPopupContent.</p>
+	 *
+	 * @param content a {@link elemental2.dom.HTMLElement} object
+	 * @return a {@link com.gwidgets.api.leaflet.L} object
 	 */
 	@JsMethod
 	public native L setPopupContent(HTMLElement content);	
@@ -156,12 +196,23 @@ public class Polyline extends Path implements Layer, Evented {
 	/* (non-Javadoc)
 	 * @see com.gwidgets.api.leaflet.Layer#setPopupContent(com.gwidgets.api.leaflet.Popup)
 	 */
+	/**
+	 * <p>setPopupContent.</p>
+	 *
+	 * @param content a {@link com.gwidgets.api.leaflet.Popup} object
+	 * @return a {@link com.gwidgets.api.leaflet.L} object
+	 */
 	@JsMethod
 	public native L setPopupContent(Popup content);	
 
 
 	/* (non-Javadoc)
 	 * @see com.gwidgets.api.leaflet.Layer#getPopup()
+	 */
+	/**
+	 * <p>getPopup.</p>
+	 *
+	 * @return a {@link com.gwidgets.api.leaflet.Popup} object
 	 */
 	@JsMethod
 	public native Popup getPopup();	
@@ -170,23 +221,31 @@ public class Polyline extends Path implements Layer, Evented {
 	/* (non-Javadoc)
 	 * @see com.gwidgets.api.leaflet.Layer#bindTooltip(java.lang.String, com.gwidgets.api.leaflet.options.TooltipOptions)
 	 */
+	/** {@inheritDoc} */
 	public native L bindTooltip(String content, TooltipOptions options);	
 
 
 	/* (non-Javadoc)
 	 * @see com.gwidgets.api.leaflet.Layer#bindTooltip(com.gwidgets.api.leaflet.elemental.HTMLElement, com.gwidgets.api.leaflet.options.TooltipOptions)
 	 */
+	/** {@inheritDoc} */
 	public native L bindTooltip(HTMLElement content, TooltipOptions options);
 
 
 	/* (non-Javadoc)
 	 * @see com.gwidgets.api.leaflet.Layer#bindTooltip(com.gwidgets.api.leaflet.Tooltip, com.gwidgets.api.leaflet.options.TooltipOptions)
 	 */
+	/** {@inheritDoc} */
 	public native L bindTooltip(Tooltip content, TooltipOptions options);	
 
 
 	/* (non-Javadoc)
 	 * @see com.gwidgets.api.leaflet.Layer#unbindTooltip()
+	 */
+	/**
+	 * <p>unbindTooltip.</p>
+	 *
+	 * @return a {@link com.gwidgets.api.leaflet.L} object
 	 */
 	public native L unbindTooltip();	
 
@@ -194,37 +253,66 @@ public class Polyline extends Path implements Layer, Evented {
 	/* (non-Javadoc)
 	 * @see com.gwidgets.api.leaflet.Layer#openTooltip(com.gwidgets.api.leaflet.LatLng)
 	 */
+	/** {@inheritDoc} */
 	public native L openTooltip(LatLng latlng);	
 
 
 	/* (non-Javadoc)
 	 * @see com.gwidgets.api.leaflet.Layer#closeTooltip()
 	 */
+	/**
+	 * <p>closeTooltip.</p>
+	 *
+	 * @return a {@link com.gwidgets.api.leaflet.L} object
+	 */
 	public native L closeTooltip();	
 
 	/* (non-Javadoc)
 	 * @see com.gwidgets.api.leaflet.Layer#toggleTooltip()
+	 */
+	/**
+	 * <p>toggleTooltip.</p>
+	 *
+	 * @return a {@link com.gwidgets.api.leaflet.L} object
 	 */
 	public native L toggleTooltip();	
 
 	/* (non-Javadoc)
 	 * @see com.gwidgets.api.leaflet.Layer#isTooltipOpen()
 	 */
+	/**
+	 * <p>isTooltipOpen.</p>
+	 *
+	 * @return a boolean
+	 */
 	public native boolean isTooltipOpen();	
 
 	/* (non-Javadoc)
 	 * @see com.gwidgets.api.leaflet.Layer#setTooltipContent(java.lang.String)
+	 */
+	/**
+	 * <p>setTooltipContent.</p>
+	 *
+	 * @param content a {@link java.lang.String} object
+	 * @return a {@link com.gwidgets.api.leaflet.L} object
 	 */
 	public native L setTooltipContent(String content);	
 
 	/* (non-Javadoc)
 	 * @see com.gwidgets.api.leaflet.Layer#setTooltipContent(com.gwidgets.api.leaflet.elemental.HTMLElement)
 	 */
+	/** {@inheritDoc} */
 	public native L setTooltipContent(HTMLElement content);
 
 
 	/* (non-Javadoc)
 	 * @see com.gwidgets.api.leaflet.Layer#setTooltipContent(com.gwidgets.api.leaflet.Tooltip)
+	 */
+	/**
+	 * <p>setTooltipContent.</p>
+	 *
+	 * @param content a {@link com.gwidgets.api.leaflet.Tooltip} object
+	 * @return a {@link com.gwidgets.api.leaflet.L} object
 	 */
 	public native L setTooltipContent(Tooltip content);	
 
@@ -232,33 +320,51 @@ public class Polyline extends Path implements Layer, Evented {
 	/* (non-Javadoc)
 	 * @see com.gwidgets.api.leaflet.Layer#getTooltip()
 	 */
+	/**
+	 * <p>getTooltip.</p>
+	 *
+	 * @return a {@link com.gwidgets.api.leaflet.Tooltip} object
+	 */
 	public native Tooltip getTooltip();	
 
 	/* (non-Javadoc)
 	 * @see com.gwidgets.api.leaflet.Layer#addTo(com.gwidgets.api.leaflet.Map)
 	 */
+	/** {@inheritDoc} */
 	public native L addTo(Map map);
 
 
 	/* (non-Javadoc)
 	 * @see com.gwidgets.api.leaflet.Layer#remove()
 	 */
+	/**
+	 * <p>remove.</p>
+	 *
+	 * @return a {@link com.gwidgets.api.leaflet.L} object
+	 */
 	public native L remove();		
 
 	/* (non-Javadoc)
 	 * @see com.gwidgets.api.leaflet.Layer#removeFrom(com.gwidgets.api.leaflet.Map)
 	 */
+	/** {@inheritDoc} */
 	public native L removeFrom(Map map);	
 
 
 	/* (non-Javadoc)
 	 * @see com.gwidgets.api.leaflet.Layer#getPane(java.lang.String)
 	 */
+	/** {@inheritDoc} */
 	public native HTMLElement getPane(String name);
 	
 	// Events 
 		/* (non-Javadoc)
 		 * @see com.gwidgets.api.leaflet.Evented#clearAllEventListeners()
+		 */
+		/**
+		 * <p>clearAllEventListeners.</p>
+		 *
+		 * @return a {@link com.gwidgets.api.leaflet.L} object
 		 */
 		public native L clearAllEventListeners();
 
@@ -266,17 +372,25 @@ public class Polyline extends Path implements Layer, Evented {
 		/* (non-Javadoc)
 		 * @see com.gwidgets.api.leaflet.Evented#on(java.lang.String, com.gwidgets.api.leaflet.elemental.Function)
 		 */
+		/** {@inheritDoc} */
 		public native L on(String type, EventCallback fn);
 
 
 		/* (non-Javadoc)
 		 * @see com.gwidgets.api.leaflet.Evented#once(java.lang.String, com.gwidgets.api.leaflet.elemental.Function)
 		 */
+		/** {@inheritDoc} */
 		public  native L once(String type, EventCallback fn);
 
 		
 		/* (non-Javadoc)
 		 * @see com.gwidgets.api.leaflet.Evented#off(java.lang.String)
+		 */
+		/**
+		 * <p>off.</p>
+		 *
+		 * @param type a {@link java.lang.String} object
+		 * @return a {@link com.gwidgets.api.leaflet.L} object
 		 */
 		public native L off(String type);
 		
@@ -284,11 +398,22 @@ public class Polyline extends Path implements Layer, Evented {
 		/* (non-Javadoc)
 		 * @see com.gwidgets.api.leaflet.Evented#off(java.lang.String[])
 		 */
+		/**
+		 * <p>off.</p>
+		 *
+		 * @param type an array of {@link java.lang.String} objects
+		 * @return a {@link com.gwidgets.api.leaflet.L} object
+		 */
 		public native L off(String[] type);
 		
 		
 		/* (non-Javadoc)
 		 * @see com.gwidgets.api.leaflet.Evented#off()
+		 */
+		/**
+		 * <p>off.</p>
+		 *
+		 * @return a {@link com.gwidgets.api.leaflet.L} object
 		 */
 		public native L off();
 
@@ -296,24 +421,28 @@ public class Polyline extends Path implements Layer, Evented {
 		/* (non-Javadoc)
 		 * @see com.gwidgets.api.leaflet.Evented#fire(java.lang.String)
 		 */
+		/** {@inheritDoc} */
 		public native L fire(String type);
 		
 		
 		/* (non-Javadoc)
 		 * @see com.gwidgets.api.leaflet.Evented#listens(java.lang.String)
 		 */
+		/** {@inheritDoc} */
 		public native Boolean listens(String type);
 
 
 		/* (non-Javadoc)
 		 * @see com.gwidgets.api.leaflet.Evented#addEventParent(com.gwidgets.api.leaflet.Evented)
 		 */
+		/** {@inheritDoc} */
 		public native L addEventParent(Evented obj); 
 
 
 		/* (non-Javadoc)
 		 * @see com.gwidgets.api.leaflet.Evented#removeEventParent(com.gwidgets.api.leaflet.Evented)
 		 */
+		/** {@inheritDoc} */
 		public native L removeEventParent(Evented obj);
 
 }

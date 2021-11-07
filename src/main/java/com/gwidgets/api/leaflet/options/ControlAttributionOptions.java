@@ -42,7 +42,7 @@ public class ControlAttributionOptions {
 	
 	/**
 	 * Gets the position of the control (one of the map corners). See class constants for possible values
-	 * </br>
+	 *
 	 *default "bottomright"
 	 * @return the position
 	 */
@@ -52,7 +52,7 @@ public class ControlAttributionOptions {
 
 	/**
 	 * Gets the prefix: The HTML text shown before the attributions. Pass false to disable.
-	 * </br>
+	 *
 	 * default "lealflet"
 	 * @return the prefix
 	 */
@@ -81,9 +81,9 @@ public class ControlAttributionOptions {
 		
 		/**
 		 * The position of the control (one of the map corners).
-		 * </br>
+		 *
 		 * default "bottomright"
-		 * </br>
+		 *
 		 * possible values: "topleft", "topright", "bottomleft", "bottomright"
 		 *
 		 * @param position the position
@@ -96,7 +96,7 @@ public class ControlAttributionOptions {
 		
 		/**
 		 * The HTML text shown before the attributions. Pass false to disable.
-		 * </br>
+		 *
 		 * default "Leaflet"
 		 * @param prefix the prefix
 		 * @return the builder

@@ -25,7 +25,9 @@ import jsinterop.annotations.JsType;
 
 /**
  * The Class PopupOptions.
+ *
  * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
+ * @version $Id: $Id
  */
 @JsType(isNative=true, namespace=GLOBAL, name="Object")
 public class PopupOptions {
@@ -213,11 +215,21 @@ public class PopupOptions {
 	}
 	
 	
+	/**
+	 * <p>Getter for the field <code>pane</code>.</p>
+	 *
+	 * @return a {@link java.lang.String} object
+	 */
 	@JsOverlay public final String getPane() {
 		return this.pane;
 	}
 
 
+	/**
+	 * <p>Getter for the field <code>attribution</code>.</p>
+	 *
+	 * @return a {@link java.lang.String} object
+	 */
 	@JsOverlay public final String getAttribution() {
 		return this.attribution;
 	}
@@ -366,7 +378,7 @@ public class PopupOptions {
 		/**
 		 * Set it to false if you want to override the default behavior of the popup closing when user clicks the map (set globally by the Map closePopupOnClick option).
 		 *
-		 * @param closeOnClick the close on click
+		 * @param autoClose the close on click
 		 * @return the builder
 		 */
 		public Builder autoClose(Boolean autoClose){this.autoClose = autoClose; return this;}

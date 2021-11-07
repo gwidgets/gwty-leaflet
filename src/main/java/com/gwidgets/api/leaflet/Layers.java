@@ -6,7 +6,9 @@ import jsinterop.annotations.JsType;
 
 /**
  * The layers control gives users the ability to switch between different base layers and switch overlays on/off
+ *
  * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
+ * @version $Id: $Id
  */
 @JsType(isNative = true)
 public class Layers extends Control{
@@ -53,7 +55,6 @@ public class Layers extends Control{
 	/**
 	 * Collapse the control container if expanded.
 	 *
-	 * @param layer the layer
 	 * @return the l
 	 */
 	@JsMethod

@@ -8,7 +8,19 @@ import elemental2.dom.HTMLLinkElement;
 import elemental2.dom.HTMLScriptElement;
 
 
+/**
+ * <p>LeafletResources class.</p>
+ *
+ * @author zakaria
+ * @version $Id: $Id
+ */
 public class LeafletResources {
+	/**
+	 * <p>whenReady.</p>
+	 *
+	 * @param debug a boolean
+	 * @param function a {@link elemental2.dom.Element.OnloadFn} object
+	 */
 	public static void whenReady(boolean debug, Element.OnloadFn function){
 		HTMLScriptElement leafletScript = (HTMLScriptElement) DomGlobal.document.createElement("script");
 		if (debug) {

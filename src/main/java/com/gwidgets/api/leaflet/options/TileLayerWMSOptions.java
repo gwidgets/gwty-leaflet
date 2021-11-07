@@ -164,7 +164,7 @@ public class TileLayerWMSOptions {
 	*********************************************/
 
 	/**
-	 * Gets the Comma-separated WMS layers. </br>
+	 * Gets the Comma-separated WMS layers.
 	 * 
 	 * @return the layers
 	 */
@@ -174,7 +174,7 @@ public class TileLayerWMSOptions {
 	}
 
 	/**
-	 * Gets the Comma-separated list of WMS styles. </br>
+	 * Gets the Comma-separated list of WMS styles.
 	 * 
 	 * @return the styles
 	 */
@@ -184,7 +184,7 @@ public class TileLayerWMSOptions {
 	}
 
 	/**
-	 * Gets the WMS image format. </br>
+	 * Gets the WMS image format.
 	 * default 'image/jpeg'
 	 * 
 	 * @return the format
@@ -195,7 +195,7 @@ public class TileLayerWMSOptions {
 	}
 
 	/**
-	 * Gets whether the WMS service will return images with transparency. </br>
+	 * Gets whether the WMS service will return images with transparency.
 	 * default false
 	 * 
 	 * @return the transparent
@@ -206,7 +206,7 @@ public class TileLayerWMSOptions {
 	}
 
 	/**
-	 * Gets of the WMS service to use. </br>
+	 * Gets of the WMS service to use.
 	 * default '1.1.1'
 	 * 
 	 * @return the version
@@ -219,7 +219,7 @@ public class TileLayerWMSOptions {
 	/**
 	 * Gets the Coordinate Reference System to use for the WMS requests,
 	 * defaults to map CRS. Don't change this if you're not sure what it means.
-	 * </br>
+	 *
 	 * 
 	 * @return the crs
 	 */
@@ -418,7 +418,7 @@ public class TileLayerWMSOptions {
 		}
 
 		/**
-		 * Comma-separated list of WMS styles. </br>
+		 * Comma-separated list of WMS styles.
 		 * 
 		 * @param styles
 		 *            the styles
@@ -431,7 +431,7 @@ public class TileLayerWMSOptions {
 
 		/**
 		 * WMS image format (use 'image/png' for layers with transparency).
-		 * </br>
+		 *
 		 * default 'image/jpeg'
 		 * 
 		 * @param format
@@ -444,7 +444,7 @@ public class TileLayerWMSOptions {
 		}
 
 		/**
-		 * If true, the WMS service will return images with transparency. </br>
+		 * If true, the WMS service will return images with transparency.
 		 * default false
 		 * 
 		 * @param transparent
@@ -457,7 +457,7 @@ public class TileLayerWMSOptions {
 		}
 
 		/**
-		 * Version of the WMS service to use. </br>
+		 * Version of the WMS service to use.
 		 * default "1.1.1"
 		 * 
 		 * @param version
@@ -471,7 +471,7 @@ public class TileLayerWMSOptions {
 
 		/**
 		 * Coordinate Reference System to use for the WMS requests, defaults to
-		 * map CRS. Don't change this if you're not sure what it means. </br>
+		 * map CRS. Don't change this if you're not sure what it means.
 		 * 
 		 * @param crs
 		 *            the crs
@@ -484,7 +484,7 @@ public class TileLayerWMSOptions {
 		
 		/**
 		 * Minimum zoom number.
-		 * </br>
+		 *
 		 * default 0
 		 * @param minZoom the min zoom
 		 * @return the builder
@@ -496,7 +496,7 @@ public class TileLayerWMSOptions {
 
 		/**
 		 * Maximum zoom number.
-		 * </br>
+		 *
 		 * default 18
 		 * @param maxZoom the max zoom
 		 * @return the builder
@@ -508,7 +508,7 @@ public class TileLayerWMSOptions {
 
 		/**
 		 * Maximum zoom number the tiles source has available. If it is specified, the tiles on all zoom levels higher than maxNativeZoom will be loaded from maxNativeZoom level and auto-scaled.
-		 * </br>
+		 *
 		 * default null
 		 * @param maxNativeZoom the max native zoom
 		 * @return the builder
@@ -520,7 +520,7 @@ public class TileLayerWMSOptions {
 
 		/**
 		 * Tile size (width and height in pixels, assuming tiles are square).
-		 * </br>
+		 *
 		 * default 256
 		 * @param tileSize the tile size
 		 * @return the builder
@@ -532,7 +532,7 @@ public class TileLayerWMSOptions {
 
 		/**
 		 * Subdomains of the tile service. Can be passed in the form of one string (where each letter is a subdomain name) or an array of strings.
-		 * </br>
+		 *
 		 * default {"abc"}
 		 * @param subdomains the subdomains
 		 * @return the builder
@@ -544,7 +544,7 @@ public class TileLayerWMSOptions {
 
 		/**
 		 * URL to the tile image to show in place of the tile that failed to load.
-		 * </br>
+		 *
 		 * default ""
 		 * @param errorTileUrl the error tile url
 		 * @return the builder
@@ -556,7 +556,7 @@ public class TileLayerWMSOptions {
 
 		/**
 		 * the string used by the attribution control, describes the layer data.
-		 * </br>
+		 *
 		 * default ""
 		 * @param attribution the attribution
 		 * @return the builder
@@ -568,7 +568,7 @@ public class TileLayerWMSOptions {
 
 		/**
 		 * If true, inverses Y axis numbering for tiles (turn this on for TMS services).
-		 * </br>
+		 *
 		 * default true
 		 * @param tms the tms
 		 * @return the builder
@@ -592,7 +592,7 @@ public class TileLayerWMSOptions {
 
 		/**
 		 * The zoom number used in tile URLs will be offset with this value.
-		 * </br>
+		 *
 		 * default 0
 		 * @param zoomOffset the zoom offset
 		 * @return the builder
@@ -604,7 +604,7 @@ public class TileLayerWMSOptions {
 
 		/**
 		 * If set to true, the zoom number used in tile URLs will be reversed (maxZoom - zoom instead of zoom).
-		 * </br>
+		 *
 		 * default false
 		 * @param zoomReverse the zoom reverse
 		 * @return the builder
@@ -616,7 +616,7 @@ public class TileLayerWMSOptions {
 
 		/**
 		 * The opacity of the tile layer.
-		 * </br>
+		 *
 		 * default 1.0
 		 * @param opacity the opacity
 		 * @return the builder
@@ -628,7 +628,7 @@ public class TileLayerWMSOptions {
 
 		/**
 		 * The explicit zIndex of the tile layer. Not set by default.
-		 * </br>
+		 *
 		 * default null
 		 * @param zIndex the z index
 		 * @return the builder
@@ -641,7 +641,7 @@ public class TileLayerWMSOptions {
 
 		/**
 		 * If false, new tiles are loaded during panning, otherwise only after it (for better performance). true by default on mobile WebKit, otherwise false.
-		 * </br>
+		 *
 		 * default true
 		 * @param updateWhenIdle the update when idle
 		 * @return the builder
@@ -653,7 +653,7 @@ public class TileLayerWMSOptions {
 
 		/**
 		 * If true and user is on a retina display, it will request four tiles of half the specified size and a bigger zoom level in place of one to utilize the high resolution.
-		 * </br>
+		 *
 		 * default false
 		 * @param detectRetina the detect retina
 		 * @return the builder
@@ -666,7 +666,7 @@ public class TileLayerWMSOptions {
 
 		/**
 		 * When this option is set, the TileLayer only loads tiles that are in the given geographical bounds.
-		 * </br>
+		 *
 		 * default null
 		 * @param bounds the bounds
 		 * @return the builder

@@ -21,7 +21,9 @@ import jsinterop.annotations.JsType;
 
 /**
  * Represents a geographical point with a certain latitude and longitude.
+ *
  * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
+ * @version $Id: $Id
  */
 @JsType(isNative = true)
 public class LatLng {
@@ -44,19 +46,19 @@ public class LatLng {
 	
 	
 	
-    /**
-     * Instantiates a new lat lng.
-     *
-     * @param lat the lat
-     * @param lng the lng
-     */
+	/**
+	 * Instantiates a new lat lng.
+	 *
+	 * @param lat the lat
+	 * @param lng the lng
+	 */
     @JsConstructor
 	public LatLng(double lat, double lng) {
 	
 	}
 
 	/**
-	 * Returns the distance (in meters) to the given LatLng calculated using the Haversine formula. 
+	 * Returns the distance (in meters) to the given LatLng calculated using the Haversine formula.
 	 *
 	 * @param otherLatlng the other latlng
 	 * @return the distance (in meters)
@@ -75,6 +77,11 @@ public class LatLng {
 
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
+	 */
+	/**
+	 * <p>toString.</p>
+	 *
+	 * @return a {@link java.lang.String} object
 	 */
 	@JsMethod
 	public native String toString();

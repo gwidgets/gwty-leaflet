@@ -22,7 +22,9 @@ import jsinterop.annotations.JsType;
 
 /**
  * Extended layerGroup that also has mouse events (propagated from members of the group) and a shared bindPopup method.
+ *
  * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
+ * @version $Id: $Id
  */
 @JsType(isNative = true)
 public class FeatureGroup extends LayerGroup {
@@ -30,6 +32,9 @@ public class FeatureGroup extends LayerGroup {
 	
 
 
+	/**
+	 * <p>Constructor for FeatureGroup.</p>
+	 */
 	protected FeatureGroup() {
 		
 	}

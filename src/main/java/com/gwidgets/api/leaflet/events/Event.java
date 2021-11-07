@@ -24,12 +24,17 @@ import jsinterop.annotations.JsType;
 
 /**
  * The base event object. All other event objects contain these properties too.
+ *
  * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
+ * @version $Id: $Id
  */
 @JsType(isNative=true, name="Object", namespace=jsinterop.annotations.JsPackage.GLOBAL)
 public class Event  {
 	
 	
+	/**
+	 * <p>Constructor for Event.</p>
+	 */
 	public Event(){
 		
 		

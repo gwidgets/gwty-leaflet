@@ -23,6 +23,7 @@ import jsinterop.annotations.JsType;
  * Used to load and display tile layers on the map,.
  *
  * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
+ * @version $Id: $Id
  */
 @JsType(isNative = true)
 public class TileLayer extends GridLayer{
@@ -31,6 +32,9 @@ public class TileLayer extends GridLayer{
 	
 	
 
+	/**
+	 * <p>Constructor for TileLayer.</p>
+	 */
 	protected TileLayer() {
 		
 		

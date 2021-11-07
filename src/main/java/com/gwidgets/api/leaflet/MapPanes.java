@@ -24,7 +24,9 @@ import jsinterop.annotations.JsType;
 
 /**
  * An object literal (returned by map.getPanes) that contains different map panes that you can use to put your custom overlays in. The difference is mostly in zIndex order that such overlays get.
+ *
  * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
+ * @version $Id: $Id
  */
 @JsType
 public class MapPanes {

@@ -24,8 +24,9 @@ import jsinterop.annotations.JsType;
 
 /**
  * The Class PathOptions.
- * 
+ *
  * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
+ * @version $Id: $Id
  */
 @JsType(isNative = true, namespace = GLOBAL, name = "Object")
 public class PathOptions {
@@ -98,7 +99,7 @@ public class PathOptions {
 
 	/**
 	 * Gets Whether to draw stroke along the path. Set it to false to disable
-	 * borders on polygons or circles. </br>
+	 * borders on polygons or circles.
 	 * default true
 	 * 
 	 * @return the stroke
@@ -109,7 +110,7 @@ public class PathOptions {
 	}
 
 	/**
-	 * Gets the Stroke color. </br>
+	 * Gets the Stroke color.
 	 * default "#03f"
 	 * 
 	 * @return the color
@@ -120,7 +121,7 @@ public class PathOptions {
 	}
 
 	/**
-	 * Gets the Stroke width in pixels. </br>
+	 * Gets the Stroke width in pixels.
 	 * default 5
 	 * 
 	 * @return the weight
@@ -131,7 +132,7 @@ public class PathOptions {
 	}
 
 	/**
-	 * Gets the Stroke opacity. </br>
+	 * Gets the Stroke opacity.
 	 * default 0.5
 	 * 
 	 * @return the opacity
@@ -143,7 +144,7 @@ public class PathOptions {
 
 	/**
 	 * Gets Whether to fill the path with color. Set it to false to disable
-	 * filling on polygons or circles. </br>
+	 * filling on polygons or circles.
 	 * default true
 	 * 
 	 * @return the fill
@@ -154,9 +155,9 @@ public class PathOptions {
 	}
 
 	/**
-	 * Gets the fill color. </br>
+	 * Gets the fill color.
 	 * default "#03f"
-	 * 
+	 *
 	 * @return the fill color
 	 */
 	@JsOverlay
@@ -165,7 +166,7 @@ public class PathOptions {
 	}
 
 	/**
-	 * Gets the fill opacity. </br>
+	 * Gets the fill opacity.
 	 * default 0.2
 	 * 
 	 * @return the fill opacity
@@ -178,7 +179,7 @@ public class PathOptions {
 	/**
 	 * Gets the string that defines how the inside of a shape is determined. See
 	 * <a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/fill-rule">
-	 * docs </a> for more info </br>
+	 * docs </a> for more info
 	 * default "evenodd"
 	 * 
 	 * @return the fill rule
@@ -192,7 +193,7 @@ public class PathOptions {
 	 * Gets the string that defines the stroke <a href=
 	 * "https://developer.mozilla.org/en/SVG/Attribute/stroke-dasharray"> dash
 	 * pattern</a>. Doesn't work on canvas-powered layers (e.g. Android 2).
-	 * </br>
+	 *
 	 * default null
 	 * 
 	 * @return the dash array
@@ -205,7 +206,7 @@ public class PathOptions {
 	/**
 	 * Gets the string that defines <a href=
 	 * "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linecap">
-	 * shape </a> to be used at the end of the stroke. </br>
+	 * shape </a> to be used at the end of the stroke.
 	 * default null
 	 * 
 	 * @return the line cap
@@ -218,7 +219,7 @@ public class PathOptions {
 	/**
 	 * Gets the string that defines <a href=
 	 * "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linejoin">
-	 * shape to be used</a> at the corners of the stroke. </br>
+	 * shape to be used</a> at the corners of the stroke.
 	 * default null
 	 * 
 	 * @return the line join
@@ -231,7 +232,7 @@ public class PathOptions {
 
 	/**
 	 * Gets the pointer-events attribute on the path if SVG backend is used.
-	 * </br>
+	 *
 	 * default null
 	 * 
 	 * @return the pointer events
@@ -242,7 +243,7 @@ public class PathOptions {
 	}
 
 	/**
-	 * Gets the custom class name set on an element. </br>
+	 * Gets the custom class name set on an element.
 	 * default empty string
 	 * 
 	 * @return the class name
@@ -252,27 +253,52 @@ public class PathOptions {
 		return this.className;
 	}
 
+	/**
+	 * <p>Getter for the field <code>dashOffset</code>.</p>
+	 *
+	 * @return a {@link java.lang.String} object
+	 */
 	@JsOverlay
 	public final String getDashOffset() {
 		return this.dashOffset;
 	}
 
+	/**
+	 * <p>Getter for the field <code>renderer</code>.</p>
+	 *
+	 * @return a {@link com.gwidgets.api.leaflet.Renderer} object
+	 */
 	@JsOverlay
 	public final Renderer getRenderer() {
 		return this.renderer;
 	}
 	
 	
+	/**
+	 * <p>Getter for the field <code>pane</code>.</p>
+	 *
+	 * @return a {@link java.lang.String} object
+	 */
 	@JsOverlay
 	public final String getPane() {
 		return this.pane;
 	}
 
+	/**
+	 * <p>Getter for the field <code>attribution</code>.</p>
+	 *
+	 * @return a {@link java.lang.String} object
+	 */
 	@JsOverlay
 	public final String getAttribution() {
 		return this.attribution;
 	}
 
+	/**
+	 * <p>Getter for the field <code>interactive</code>.</p>
+	 *
+	 * @return a boolean
+	 */
 	@JsOverlay
 	public final boolean getInteractive() {
 		return this.interactive;
@@ -328,7 +354,7 @@ public class PathOptions {
 
 		/**
 		 * Whether to draw stroke along the path. Set it to false to disable
-		 * borders on polygons or circles. </br>
+		 * borders on polygons or circles.
 		 * default true
 		 * 
 		 * @param stroke
@@ -341,7 +367,7 @@ public class PathOptions {
 		}
 
 		/**
-		 * Stroke color. </br>
+		 * Stroke color.
 		 * default "#03f"
 		 * 
 		 * @param color
@@ -354,7 +380,7 @@ public class PathOptions {
 		}
 
 		/**
-		 * Stroke width in pixels. </br>
+		 * Stroke width in pixels.
 		 * default 5
 		 * 
 		 * @param weight
@@ -367,7 +393,7 @@ public class PathOptions {
 		}
 
 		/**
-		 * Stroke opacity. </br>
+		 * Stroke opacity.
 		 * default 0.5
 		 * 
 		 * @param opacity
@@ -381,7 +407,7 @@ public class PathOptions {
 
 		/**
 		 * Whether to fill the path with color. Set it to false to disable
-		 * filling on polygons or circles. </br>
+		 * filling on polygons or circles.
 		 * default true
 		 * 
 		 * @param fill
@@ -394,7 +420,7 @@ public class PathOptions {
 		}
 
 		/**
-		 * Fill color. </br>
+		 * Fill color.
 		 * default "#03f"
 		 * 
 		 * @param fillColor
@@ -407,7 +433,7 @@ public class PathOptions {
 		}
 
 		/**
-		 * Fill opacity. </br>
+		 * Fill opacity.
 		 * default 0.2
 		 * 
 		 * @param fillOpacity
@@ -423,7 +449,7 @@ public class PathOptions {
 		 * A string that defines how the inside of a shape is determined. See
 		 * <a href=
 		 * "https://developer.mozilla.org/docs/Web/SVG/Attribute/fill-rule">
-		 * docs </a> for more info </br>
+		 * docs </a> for more info
 		 * 
 		 * @param fillRule
 		 *            the fill rule
@@ -438,7 +464,7 @@ public class PathOptions {
 		 * A string that defines the stroke <a href=
 		 * "https://developer.mozilla.org/en/SVG/Attribute/stroke-dasharray">
 		 * dash pattern</a>. Doesn't work on canvas-powered layers (e.g. Android
-		 * 2). </br>
+		 * 2).
 		 * default "evenodd"
 		 * 
 		 * @param dashArray
@@ -453,7 +479,7 @@ public class PathOptions {
 		/**
 		 * A string that defines <a href=
 		 * "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linecap">
-		 * shape </a> to be used at the end of the stroke. </br>
+		 * shape </a> to be used at the end of the stroke.
 		 * default null
 		 * 
 		 * @param lineCap
@@ -468,7 +494,7 @@ public class PathOptions {
 		/**
 		 * A string that defines <a href=
 		 * "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linejoin">
-		 * shape to be used</a> at the corners of the stroke. </br>
+		 * shape to be used</a> at the corners of the stroke.
 		 * default null
 		 * 
 		 * @param lineJoin
@@ -483,7 +509,7 @@ public class PathOptions {
 
 		/**
 		 * Sets the pointer-events attribute on the path if SVG backend is used.
-		 * </br>
+		 *
 		 * default null
 		 * 
 		 * @param pointerEvents
@@ -496,7 +522,7 @@ public class PathOptions {
 		}
 
 		/**
-		 * Custom class name set on an element. </br>
+		 * Custom class name set on an element.
 		 * default empty string
 		 * 
 		 * @param className

@@ -18,11 +18,16 @@ import jsinterop.annotations.JsType;
 
 /**
  * Represents a lightweight icon for markers that uses a simple div element instead of an image.
+ *
  * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
+ * @version $Id: $Id
  */
 @JsType(isNative = true)
 public class DivIcon extends Icon{
 
+	/**
+	 * <p>Constructor for DivIcon.</p>
+	 */
 	protected DivIcon() {
 		super();
 		

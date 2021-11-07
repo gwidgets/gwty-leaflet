@@ -23,7 +23,9 @@ import jsinterop.annotations.JsType;
 
 /**
  * The Class TooltipOptions.
+ *
  * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
+ * @version $Id: $Id
  */
 @JsType(isNative=true, namespace=GLOBAL, name="Object")
 public class TooltipOptions {
@@ -71,9 +73,11 @@ public class TooltipOptions {
 	
 	
 	
-	/** Returns the popup bound to this layer.
-	* 
-		 */
+	/**
+	 * Returns the popup bound to this layer.
+	 *
+	 * @return a {@link java.lang.String} object
+	 */
 	@JsOverlay
 	public final String getPane() {
 		return this.pane;
@@ -81,23 +85,32 @@ public class TooltipOptions {
 
 
 
-	/** Optional offset of the tooltip position.
-		 */
+	/**
+	 * Optional offset of the tooltip position.
+	 *
+	 * @return a {@link com.gwidgets.api.leaflet.Point} object
+	 */
 	@JsOverlay
 	public final Point getOffset() {
 		return this.offset;
 	}
 
-	/** Whether to open the tooltip permanently or only on mouseover.
-		 */
+	/**
+	 * Whether to open the tooltip permanently or only on mouseover.
+	 *
+	 * @return a boolean
+	 */
 	@JsOverlay
 	public final boolean getPermanent() {
 		return this.permanent;
 	}
 
 
-	/** Direction where to open the tooltip. Possible values are: right, left, top, bottom, center, auto. auto will dynamicaly switch between right and left according to the tooltip position on the map.
-		 */
+	/**
+	 * Direction where to open the tooltip. Possible values are: right, left, top, bottom, center, auto. auto will dynamicaly switch between right and left according to the tooltip position on the map.
+	 *
+	 * @return a {@link java.lang.String} object
+	 */
 	@JsOverlay
 	public final String getDirection() {
 		return this.direction;
@@ -106,8 +119,11 @@ public class TooltipOptions {
 
 
 
-	/** If true, the tooltip will follow the mouse instead of being fixed at the feature center.
-		 */
+	/**
+	 * If true, the tooltip will follow the mouse instead of being fixed at the feature center.
+	 *
+	 * @return a boolean
+	 */
 	@JsOverlay
 	public final boolean getSticky() {
 		return this.sticky;
@@ -115,8 +131,11 @@ public class TooltipOptions {
 
 
 
-	/** If true, the tooltip will listen to the feature events.
-		 */
+	/**
+	 * If true, the tooltip will listen to the feature events.
+	 *
+	 * @return a boolean
+	 */
 	@JsOverlay
 	public final boolean getInteractive() {
 		return this.interactive;
@@ -124,8 +143,11 @@ public class TooltipOptions {
 
 
 
-	/** Tooltip container opacity.
-		 */
+	/**
+	 * Tooltip container opacity.
+	 *
+	 * @return a double
+	 */
 	@JsOverlay
 	public final double getOpacity() {
 		return this.opacity;
@@ -135,12 +157,22 @@ public class TooltipOptions {
 
 
 
+	/**
+	 * <p>Getter for the field <code>className</code>.</p>
+	 *
+	 * @return a {@link java.lang.String} object
+	 */
 	@JsOverlay
 	public final String getClassName() {
 		return this.className;
 	}
 
 
+	/**
+	 * <p>Getter for the field <code>attribution</code>.</p>
+	 *
+	 * @return a {@link java.lang.String} object
+	 */
 	@JsOverlay
 	public final String getAttribution() {
 		return this.attribution;

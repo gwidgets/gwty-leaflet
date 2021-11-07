@@ -196,7 +196,7 @@ public class MapOptions {
 
 	/**
 	 * Gets the Initial geographical center of the map.
-	 * </br>
+	 *
 	 * default null
 	 * @return the center
 	 */
@@ -207,7 +207,7 @@ public class MapOptions {
 
 	/**
 	 * Gets Initial map zoom.
-	 * </br>
+	 *
 	 * default 0
 	 * @return the zoom
 	 */
@@ -219,7 +219,7 @@ public class MapOptions {
 	
     /**
      * Gets the Layers that will be added to the map initially.
-     * </br>
+     *
      * default null
      * @return the layers
      */
@@ -229,7 +229,7 @@ public class MapOptions {
 
 	/**
 	 * Gets Minimum zoom level of the map. Overrides any minZoom set on map layers.
-	 * </br>
+	 *
 	 * default 0
 	 * @return the min zoom
 	 */
@@ -239,7 +239,7 @@ public class MapOptions {
 
 	/**
 	 * Gets Maximum zoom level of the map. This overrides any maxZoom set on map layers.
-	 * </br>
+	 *
 	 * default 0
 	 * @return the max zoom
 	 */
@@ -249,7 +249,7 @@ public class MapOptions {
 
 	/**
 	 * Gets the bounds that restricts the view if the option is set
-	 * </br>
+	 *
 	 * 
 	 * default null
 	 * @return the max bounds
@@ -260,7 +260,7 @@ public class MapOptions {
 
 	/**
 	 * Gets Whether the map be draggable with mouse/touch or not.
-	 * </br>
+	 *
 	 * 
 	 * default true
 	 * @return the dragging
@@ -271,7 +271,7 @@ public class MapOptions {
 
 	/**
 	 * Gets Whether the map can be zoomed by touch-dragging with two fingers.
-	 * </br>
+	 *
 	 * 
 	 * default true
 	 *
@@ -283,7 +283,7 @@ public class MapOptions {
 
 	/**
 	 * Gets Whether the map can be zoomed by using the mouse wheel. If passed 'center', it will zoom to the center of the view regardless of where the mouse was.
-	 * </br>
+	 *
 	 *
 	 * default true
 	 * @return the scroll wheel zoom
@@ -294,7 +294,7 @@ public class MapOptions {
 
 	/**
 	 * Gets Whether the map can be zoomed in by double clicking on it and zoomed out by double clicking while holding shift. If passed 'center', double-click zoom will zoom to the center of the view regardless of where the mouse was.
-	 * </br>
+	 *
 	 *
 	 * default true
 	 * @return the double click zoom
@@ -305,7 +305,7 @@ public class MapOptions {
 
 	/**
 	 * Gets Whether the map can be zoomed to a rectangular area specified by dragging the mouse while pressing shift.
-	 * </br>
+	 *
 	 * default true
 	 * @return the box zoom
 	 */
@@ -315,7 +315,7 @@ public class MapOptions {
 
 	/**
 	 * Gets  mobile hacks for supporting instant taps (fixing 200ms click delay on iOS/Android) and touch holds (fired as contextmenu events).
-	 * </br>
+	 *
 	 * default true
 	 * @return the tap
 	 */
@@ -325,7 +325,7 @@ public class MapOptions {
 
 	/**
 	 * Gets The max number of pixels a user can shift his finger during touch for it to be considered a valid tap.
-	 * </br>
+	 *
 	 * default 15
 	 *
 	 * @return the tap tolerance
@@ -336,7 +336,7 @@ public class MapOptions {
 
 	/**
 	 * Gets Whether the map automatically handles browser window resize to update itself.
-	 * </br>
+	 *
 	 * default true
 	 * @return the track resize
 	 */
@@ -346,7 +346,7 @@ public class MapOptions {
 
 	/**
 	 * With this option enabled, the map tracks when you pan to another "copy" of the world and seamlessly jumps to the original one so that all overlays like markers and vector layers are still visible.
-	 * </br>
+	 *
 	 * default false
 	 * @return the world copy jump
 	 */
@@ -356,7 +356,7 @@ public class MapOptions {
 
 	/**
 	 * Gets whether the popups close when user clicks the map.
-	 * </br>
+	 *
 	 * default true
 	 * @return the close popup on click
 	 */
@@ -366,7 +366,7 @@ public class MapOptions {
 	
 	/**
 	 * Gets whether the map zooms beyond min/max zoom and then bounce back when pinch-zooming.
-	 * </br>
+	 *
 	 * default true
 	 * @return the close popup on click
 	 */
@@ -376,7 +376,7 @@ public class MapOptions {
 
 	/**
 	 * Gets whether the map id focusable and allows users to navigate the map with keyboard arrows and +/- keys.
-	 *  </br>
+	 *
 	 *  default true
 	 * @return the keyboard
 	 */
@@ -386,7 +386,7 @@ public class MapOptions {
 
 	/**
 	 * Gets Amount of pixels to pan when pressing an arrow key.
-	 * </br>
+	 *
 	 * default 80
 	 *
 	 * @return the keyboard pan offset
@@ -398,7 +398,7 @@ public class MapOptions {
 
 	/**
 	 * Gets whether the panning of the map will have an inertia effect where the map builds momentum while dragging and continues moving in the same direction for some time. Feels especially nice on touch devices.
-	 * </br>
+	 *
 	 * default true
 	 * @return the inertia
 	 */
@@ -408,7 +408,7 @@ public class MapOptions {
 
 	/**
 	 * Gets the rate with which the inertial movement slows down, in pixels/second2.
-	 * </br>
+	 *
 	 * default 3000
 	 * @return the inertia deceleration
 	 */
@@ -418,7 +418,7 @@ public class MapOptions {
 
 	/**
 	 * Gets the Max speed of the inertial movement, in pixels/second.
-	 * </br>
+	 *
 	 * default 1500
 	 * @return the inertia max speed
 	 */
@@ -429,7 +429,7 @@ public class MapOptions {
 
 	/**
 	 * Gets Whether the zoom control is added to the map by default.
-	 *  </br>
+	 *
 	 *  default true
 	 *
 	 * @return the zoom control
@@ -440,7 +440,7 @@ public class MapOptions {
 
 	/**
 	 * Gets Whether the attribution control is added to the map by default.
-	 * </br>
+	 *
 	 * default true
 	 * @return the attribution control
 	 */
@@ -450,7 +450,7 @@ public class MapOptions {
 
 	/**
 	 * Gets Whether the tile fade animation is enabled. By default it's enabled in all browsers that support CSS3 Transitions except Android.
-	 * </br>
+	 *
 	 * default true
 	 * @return the fade animation
 	 */
@@ -460,7 +460,7 @@ public class MapOptions {
 
 	/**
 	 * Gets Whether the tile zoom animation is enabled. By default it's enabled in all browsers that support CSS3 Transitions except Android.
-	 * </br>
+	 *
 	 * 
 	 * default true
 	 * @return the zoom animation
@@ -471,7 +471,7 @@ public class MapOptions {
 
 	/**
 	 * Gets the value that will disable zoom animation if exceeded  
-	 * </br>
+	 *
 	 * default 4
 	 * @return the zoom animation threshold
 	 */
@@ -481,7 +481,7 @@ public class MapOptions {
 
 	/**
 	 * Gets Whether markers animate their zoom with the zoom animation, if disabled they will disappear for the length of the animation. By default it's enabled in all browsers that support CSS3 Transitions except Android.
-	 * </br>
+	 *
 	 * default true
 	 * @return the marker zoom animation
 	 */
@@ -780,7 +780,7 @@ public class MapOptions {
 		 * Set it to false if you don't want the map to zoom beyond min/max zoom and then bounce back when pinch-zooming.
 		 *
 		 * default true
-		 * @param closePopupOnClick true or false
+		 * @param bounceAtZoomLimits true or false
 		 * @return the builder
 		 */
 		public Builder bounceAtZoomLimits(Boolean bounceAtZoomLimits) {
@@ -804,7 +804,7 @@ public class MapOptions {
 		 * Amount of pixels to pan when pressing an arrow key.
 		 *
 		 * default 80
-		 * @param keyboardPanOffset the keyboard pan offset
+		 * @param keyboardPanDelta the keyboard pan offset
 		 * @return the builder
 		 */
 		public Builder keyboardPanDelta(double keyboardPanDelta) {

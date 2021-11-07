@@ -23,7 +23,9 @@ import jsinterop.annotations.JsType;
 
 /**
  * An abstract class that contains options and constants shared between vector overlays (Polygon, Polyline, Circle). Do not use it directly.
+ *
  * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
+ * @version $Id: $Id
  */
 @JsType(isNative = true)
 public abstract class Path {
@@ -122,7 +124,7 @@ public abstract class Path {
 	/**
 	 * Brings the layer to the bottom of all path layers.
 	 *
-	 * @return the L class 
+	 * @return the L class
 	 */
 	@JsMethod
 	public  native L bringToBack();

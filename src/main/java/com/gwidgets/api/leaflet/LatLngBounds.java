@@ -20,7 +20,9 @@ import jsinterop.annotations.JsType;
 
 /**
  * Represents a rectangular geographical area on a map.
+ *
  * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
+ * @version $Id: $Id
  */
 @JsType(isNative = true)
 public class LatLngBounds {

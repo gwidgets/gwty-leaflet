@@ -19,7 +19,9 @@ import jsinterop.annotations.JsType;
 
 /**
  * An interface implemented by interaction handlers.
+ *
  * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
+ * @version $Id: $Id
  */
 @JsType(isNative = true)
 public interface Handler {

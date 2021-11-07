@@ -20,8 +20,10 @@ import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsType;
 
 /**
- * Used to display WMS services as tile layers on the map. 
+ * Used to display WMS services as tile layers on the map.
+ *
  * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
+ * @version $Id: $Id
  */
 @JsType(isNative = true)
 public class WMS extends TileLayer{

@@ -48,7 +48,7 @@ public class ControlZoomOptions {
 	private String zoomOutTitle;
 
 	/**
-	 * Gets the position of the control (one of the map corners). </br>
+	 * Gets the position of the control (one of the map corners).
 	 * default "topleft"
 	 * 
 	 * @return the position
@@ -59,7 +59,7 @@ public class ControlZoomOptions {
 	}
 
 	/**
-	 * Gets The text set on the zoom in button. </br>
+	 * Gets The text set on the zoom in button.
 	 * default "+"
 	 * 
 	 * @return the zoomInText
@@ -70,7 +70,7 @@ public class ControlZoomOptions {
 	}
 
 	/**
-	 * Gets The text set on the zoom out button. </br>
+	 * Gets The text set on the zoom out button.
 	 * default "-"
 	 * 
 	 * @return the zoomOutText
@@ -81,7 +81,7 @@ public class ControlZoomOptions {
 	}
 
 	/**
-	 * Gets The title set on the zoom in button. </br>
+	 * Gets The title set on the zoom in button.
 	 * default "Zoom in"
 	 * 
 	 * @return the zoomInTitle
@@ -92,7 +92,7 @@ public class ControlZoomOptions {
 	}
 
 	/**
-	 * Gets The title set on the zoom out button. </br>
+	 * Gets The title set on the zoom out button.
 	 * default "Zoom out"
 	 * 
 	 * @return the zoomOutTitle
@@ -119,8 +119,8 @@ public class ControlZoomOptions {
 		}
 
 		/**
-		 * The position of the control (one of the map corners). </br>
-		 * default "topleft" </br>
+		 * The position of the control (one of the map corners).
+		 * default "topleft"
 		 * possible values: "topleft", "topright", "bottomleft", "bottomright"
 		 * 
 		 * @param position
@@ -134,7 +134,7 @@ public class ControlZoomOptions {
 		}
 
 		/**
-		 * The text set on the zoom in button. </br>
+		 * The text set on the zoom in button.
 		 * default "+"
 		 * 
 		 * @param zoomInText
@@ -148,7 +148,7 @@ public class ControlZoomOptions {
 		}
 
 		/**
-		 * The text set on the zoom out button. </br>
+		 * The text set on the zoom out button.
 		 * default "-"
 		 * 
 		 * @param zoomOutText
@@ -162,7 +162,7 @@ public class ControlZoomOptions {
 		}
 
 		/**
-		 * The title set on the zoom in button. </br>
+		 * The title set on the zoom in button.
 		 * default "Zoom in"
 		 * 
 		 * @param zoomInTitle
@@ -176,7 +176,7 @@ public class ControlZoomOptions {
 		}
 
 		/**
-		 * The title set on the zoom out button. </br>
+		 * The title set on the zoom out button.
 		 * default "Zoom out"
 		 * 
 		 * @param zoomOutTitle

@@ -19,7 +19,9 @@ import jsinterop.annotations.JsType;
 
 /**
  * The Class DragEndEvent.
+ *
  * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
+ * @version $Id: $Id
  */
 @JsType(isNative=true, name="Object", namespace=jsinterop.annotations.JsPackage.GLOBAL)
 public class DragEndEvent extends Event {

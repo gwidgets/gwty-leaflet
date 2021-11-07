@@ -49,7 +49,7 @@ public class ControlScaleOptions {
 
 	/**
 	 * Gets the position of the control (one of the map corners)
-	 * </br>
+	 *
 	 * default "bottomleft"
 	 * @return the position
 	 */
@@ -60,7 +60,7 @@ public class ControlScaleOptions {
 
 	/**
 	 * Gets Maximum width of the control in pixels. The width is set dynamically to show round values (e.g. 100, 200, 500).
-	 * </br>
+	 *
 	 * default 100
 	 * @return the max width
 	 */
@@ -71,7 +71,7 @@ public class ControlScaleOptions {
 
 	/**
 	 * Gets Whether to show the metric scale line (m/km).
-	 * </br>
+	 *
 	 *  default true
 	 * @return the metric
 	 */
@@ -82,7 +82,7 @@ public class ControlScaleOptions {
 
 	/**
 	 * Gets Whether to show the imperial scale line (mi/ft).
-	 * </br>
+	 *
 	 * default true
 	 * @return the imperial
 	 */
@@ -93,7 +93,7 @@ public class ControlScaleOptions {
 
 	/**
 	 * Gets whether the control is updated on moveend, otherwise it's always up-to-date (updated on move).
-	 * </br>
+	 *
 	 * default false
 	 * @return the update when idle
 	 */
@@ -126,9 +126,9 @@ public class ControlScaleOptions {
 
 		/**
 		 * The position of the control (one of the map corners
-		 * </br>
+		 *
 		 * possible values: "topleft", "topright", "bottomleft", "bottomright" 
-		 * </br>
+		 *
 		 * @param position the position
 		 * @return the builder
 		 */
@@ -139,7 +139,7 @@ public class ControlScaleOptions {
 
 		/**
 		 * Maximum width of the control in pixels. The width is set dynamically to show round values (e.g. 100, 200, 500).
-		 * </br>
+		 *
 		 * default 100
 		 * @param maxWidth the max width
 		 * @return the builder
@@ -151,7 +151,7 @@ public class ControlScaleOptions {
 
 		/**
 		 * Whether to show the metric scale line (m/km).
-		 * </br>
+		 *
 		 * default true
 		 * @param metric the metric
 		 * @return the builder
@@ -163,7 +163,7 @@ public class ControlScaleOptions {
 
 		/**
 		 * Whether to show the imperial scale line (mi/ft).
-		 * </br>
+		 *
 		 * default true
 		 * @param imperial the imperial
 		 * @return the builder
@@ -175,7 +175,7 @@ public class ControlScaleOptions {
 
 		/**
 		 * If true, the control is updated on moveend, otherwise it's always up-to-date (updated on move).
-		 * </br>
+		 *
 		 * default false
 		 * @param updateWhenIdle the update when idle
 		 * @return the builder

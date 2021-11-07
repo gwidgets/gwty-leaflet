@@ -139,7 +139,7 @@ public class TileLayerOptions {
 
 	/**
 	 * Gets the min zoom.
-	 * </br>
+	 *
 	 * default 0
 	 * @return the min zoom
 	 */
@@ -149,7 +149,7 @@ public class TileLayerOptions {
 
 	/**
 	 * Gets the max zoom.
-	 * </br>
+	 *
 	 * default 18
 	 * @return the max zoom
 	 */
@@ -159,7 +159,7 @@ public class TileLayerOptions {
 
 	/**
 	 * Gets the Maximum zoom number the tiles source has available. If it is specified, the tiles on all zoom levels higher than maxNativeZoom will be loaded from maxNativeZoom level and auto-scaled.
-	 * </br>
+	 *
 	 * default null
 	 * @return the max native zoom
 	 */
@@ -169,7 +169,7 @@ public class TileLayerOptions {
 
 	/**
 	 * Gets the Tile size (width and height in pixels, assuming tiles are square).
-	 * </br>
+	 *
 	 * default 256
 	 * @return the tile size
 	 */
@@ -179,7 +179,7 @@ public class TileLayerOptions {
 
 	/**
 	 * Gets the Subdomains of the tile service. Can be passed in the form of one string (where each letter is a subdomain name) or an array of strings.
-	 * </br>
+	 *
 	 * default 'abc'
 	 * @return the subdomains
 	 */
@@ -189,7 +189,7 @@ public class TileLayerOptions {
 
 	/**
 	 * Gets the URL to the tile image to show in place of the tile that failed to load.
-	 * </br>
+	 *
 	 * default ""
 	 * @return the error tile url
 	 */
@@ -199,7 +199,7 @@ public class TileLayerOptions {
 
 	/**
 	 * Gets the string used by the attribution control, describes the layer data.
-	 * </br>
+	 *
 	 * default ""
 	 * @return the attribution
 	 */
@@ -209,7 +209,7 @@ public class TileLayerOptions {
 
 	/**
 	 * Gets whether If true, inverses Y axis numbering for tiles (turn this on for TMS services).
-	 * </br>
+	 *
 	 * default false
 	 * @return the tms
 	 */
@@ -220,7 +220,7 @@ public class TileLayerOptions {
 
 	/**
 	 * Gets whether the tiles just won't load outside the world width (-180 to 180 longitude) instead of repeating.
-	 * </br>
+	 *
 	 * default false
 	 * @return the no wrap
 	 */
@@ -230,7 +230,7 @@ public class TileLayerOptions {
 
 	/**
 	 * Gets The zoom number used in tile URLs will be offset with this value.
-	 * </br>
+	 *
 	 * default 0
 	 * @return the zoom offset
 	 */
@@ -240,7 +240,7 @@ public class TileLayerOptions {
 
 	/**
 	 * Gets the zoom number used in tile URLs will be reversed (maxZoom - zoom instead of zoom).
-	 * </br>
+	 *
 	 * default false
 	 * @return the zoom reverse
 	 */
@@ -250,7 +250,7 @@ public class TileLayerOptions {
 
 	/**
 	 * Gets the opacity of the tile layer. 
-	 * </br>
+	 *
 	 * default 1.0
 	 * @return the opacity
 	 */
@@ -260,7 +260,7 @@ public class TileLayerOptions {
 
 	/**
 	 * Gets The explicit zIndex of the tile layer. Not set by default.
-	 * </br>
+	 *
 	 * default null
 	 * @return the z index
 	 */
@@ -271,7 +271,7 @@ public class TileLayerOptions {
 
 	/**
 	 * Gets whether the new tiles are loaded during panning, otherwise only after it (for better performance). true by default on mobile WebKit, otherwise false.
-	 * </br>
+	 *
 	 * default true
 	 * @return the update when idle
 	 */
@@ -281,7 +281,7 @@ public class TileLayerOptions {
 
 	/**
 	 * Gets the detect retina option is set
-	 * </br>
+	 *
 	 * default false
 	 * @return the detect retina
 	 */
@@ -292,7 +292,7 @@ public class TileLayerOptions {
 
 	/**
 	 * Gets whether the TileLayer only loads tiles that are in the given geographical bounds.
-	 * </br>
+	 *
 	 * default null
 	 * @return the bounds
 	 */
@@ -399,7 +399,7 @@ public class TileLayerOptions {
 
 		/**
 		 * Minimum zoom number.
-		 * </br>
+		 *
 		 * default 0
 		 * @param minZoom the min zoom
 		 * @return the builder
@@ -411,7 +411,7 @@ public class TileLayerOptions {
 
 		/**
 		 * Maximum zoom double.
-		 * </br>
+		 *
 		 * default 18
 		 * @param maxZoom the max zoom
 		 * @return the builder
@@ -423,7 +423,7 @@ public class TileLayerOptions {
 
 		/**
 		 * Maximum zoom number the tiles source has available. If it is specified, the tiles on all zoom levels higher than maxNativeZoom will be loaded from maxNativeZoom level and auto-scaled.
-		 * </br>
+		 *
 		 * default null
 		 * @param maxNativeZoom the max native zoom
 		 * @return the builder
@@ -435,7 +435,7 @@ public class TileLayerOptions {
 
 		/**
 		 * Tile size (width and height in pixels, assuming tiles are square).
-		 * </br>
+		 *
 		 * default 256
 		 * @param tileSize the tile size
 		 * @return the builder
@@ -447,7 +447,7 @@ public class TileLayerOptions {
 
 		/**
 		 * Subdomains of the tile service. Can be passed in the form of one string (where each letter is a subdomain name) or an array of strings.
-		 * </br>
+		 *
 		 * default {"abc"}
 		 * @param subdomains the subdomains
 		 * @return the builder
@@ -459,7 +459,7 @@ public class TileLayerOptions {
 
 		/**
 		 * URL to the tile image to show in place of the tile that failed to load.
-		 * </br>
+		 *
 		 * default ""
 		 * @param errorTileUrl the error tile url
 		 * @return the builder
@@ -471,7 +471,7 @@ public class TileLayerOptions {
 
 		/**
 		 *the string used by the attribution control, describes the layer data.
-		 * </br>
+		 *
 		 * default ""
 		 * @param attribution the attribution
 		 * @return the builder
@@ -483,7 +483,7 @@ public class TileLayerOptions {
 
 		/**
 		 * If true, inverses Y axis numbering for tiles (turn this on for TMS services).
-		 * </br>
+		 *
 		 * default true
 		 * @param tms the tms
 		 * @return the builder
@@ -507,7 +507,7 @@ public class TileLayerOptions {
 
 		/**
 		 * The zoom number used in tile URLs will be offset with this value.
-		 * </br>
+		 *
 		 * default 0
 		 * @param zoomOffset the zoom offset
 		 * @return the builder
@@ -519,7 +519,7 @@ public class TileLayerOptions {
 
 		/**
 		 * If set to true, the zoom number used in tile URLs will be reversed (maxZoom - zoom instead of zoom).
-		 * </br>
+		 *
 		 * default false
 		 * @param zoomReverse the zoom reverse
 		 * @return the builder
@@ -531,7 +531,7 @@ public class TileLayerOptions {
 
 		/**
 		 * The opacity of the tile layer.
-		 * </br>
+		 *
 		 * default 1.0
 		 * @param opacity the opacity
 		 * @return the builder
@@ -543,7 +543,7 @@ public class TileLayerOptions {
 
 		/**
 		 * The explicit zIndex of the tile layer. Not set by default.
-		 * </br>
+		 *
 		 * default null
 		 * @param zIndex the z index
 		 * @return the builder
@@ -556,7 +556,7 @@ public class TileLayerOptions {
 
 		/**
 		 * If false, new tiles are loaded during panning, otherwise only after it (for better performance). true by default on mobile WebKit, otherwise false.
-		 * </br>
+		 *
 		 * default true
 		 * @param updateWhenIdle the update when idle
 		 * @return the builder
@@ -568,7 +568,7 @@ public class TileLayerOptions {
 
 		/**
 		 * If true and user is on a retina display, it will request four tiles of half the specified size and a bigger zoom level in place of one to utilize the high resolution.
-		 * </br>
+		 *
 		 * default false
 		 * @param detectRetina the detect retina
 		 * @return the builder
@@ -581,7 +581,7 @@ public class TileLayerOptions {
 
 		/**
 		 * When this option is set, the TileLayer only loads tiles that are in the given geographical bounds.
-		 * </br>
+		 *
 		 * default null
 		 * @param bounds the bounds
 		 * @return the builder

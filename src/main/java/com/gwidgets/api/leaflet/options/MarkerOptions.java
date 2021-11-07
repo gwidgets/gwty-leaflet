@@ -85,7 +85,7 @@ public class MarkerOptions {
 	
 	/**
 	 * Gets Icon class to use for rendering the marker. Set to new L.Icon.Default() by default.
-	 * </br>
+	 *
 	 * 
 	 * @return the icon
 	 */
@@ -96,7 +96,7 @@ public class MarkerOptions {
 
 	/**
 	 * Gets whether the marker will not emit mouse events and will act as a part of the underlying map
-	 * </br>
+	 *
 	 * default true
 	 * @return the clickable
 	 */
@@ -107,7 +107,7 @@ public class MarkerOptions {
 
 	/**
 	 * Gets Whether the marker is draggable with mouse/touch or not.
-	 * </br>
+	 *
 	 * default false
 	 * @return the draggable
 	 */
@@ -118,7 +118,7 @@ public class MarkerOptions {
 
 	/**
 	 * Gets Whether the marker can be tabbed to with a keyboard and clicked by pressing enter.
-	 * </br>
+	 *
 	 * default true
 	 * @return the keyboard
 	 */
@@ -129,7 +129,7 @@ public class MarkerOptions {
 
 	/**
 	 * Gets Text for the browser tooltip that appear on marker hover (no tooltip by default).
-	 * </br>
+	 *
 	 * 
 	 * @return the title
 	 */
@@ -139,7 +139,7 @@ public class MarkerOptions {
 	
 	/**
 	 * Gets the text for the alt attribute of the icon image (useful for accessibility).
-	 * </br>
+	 *
 	 * 
 	 * @return the title
 	 */
@@ -150,7 +150,7 @@ public class MarkerOptions {
 
 	/**
 	 * Gets z index offset
-	 * </br>
+	 *
 	 * default 0
 	 * @return the z index offset
 	 */
@@ -161,7 +161,7 @@ public class MarkerOptions {
 
 	/**
 	 * Gets The opacity of the marker.
-	 * </br>
+	 *
 	 * default 1.0
 	 * @return the opacity
 	 */
@@ -172,7 +172,7 @@ public class MarkerOptions {
 
 	/**
 	 * Gets whether the marker will get on top of others when you hover the mouse over it.
-	 * </br>
+	 *
 	 * default false
 	 * @return the rise on hover
 	 */
@@ -183,7 +183,7 @@ public class MarkerOptions {
 
 	/**
 	 * Gets The z-index offset used for the riseOnHover feature.
-	 * </br>
+	 *
 	 * default 250
 	 * @return the rise offset
 	 */
@@ -248,7 +248,7 @@ public class MarkerOptions {
 
 		/**
 		 * Icon class to use for rendering the marker. See Icon documentation for details on how to customize the marker icon. Set to new L.Icon.Default() by default
-		 * </br>
+		 *
 		 * 
 		 * @param icon the icon
 		 * @return the builder
@@ -258,7 +258,7 @@ public class MarkerOptions {
 		
 		/**
 		 * If false, the marker will not emit mouse events and will act as a part of the underlying map.
-		 * </br>
+		 *
 		 * default true
 		 * @param clickable the clickable
 		 * @return the builder
@@ -268,7 +268,7 @@ public class MarkerOptions {
 		
 		/**
 		 * Whether the marker is draggable with mouse/touch or not.
-		 * </br>
+		 *
 		 * default false
 		 * @param draggable the draggable
 		 * @return the builder
@@ -278,7 +278,7 @@ public class MarkerOptions {
 		
 		/**
 		 * Whether the marker can be tabbed to with a keyboard and clicked by pressing enter.
-		 * </br>
+		 *
 		 * default true
 		 * @param keyboard the keyboard
 		 * @return the builder
@@ -288,7 +288,7 @@ public class MarkerOptions {
 		
 		/**
 		 * Text for the browser tooltip that appear on marker hover (no tooltip by default).
-		 * </br>
+		 *
 		 * 
 		 * @param title the title
 		 * @return the builder
@@ -297,7 +297,7 @@ public class MarkerOptions {
 		
 		/**
 		 * Text for the alt attribute of the icon image (useful for accessibility).
-		 * </br>
+		 *
 		 * @param alt the alt
 		 * @return the builder
 		 */
@@ -306,7 +306,7 @@ public class MarkerOptions {
 		
 		/**
 		 * By default, zIndex for the marker image is set automatically based on its latitude. Use this option if you want to put the marker on top of all others (or below), specifying a high value like 1000 (or high negative value, respectively).
-		 * </br>
+		 *
 		 * default 0 
 		 * @param zIndexOffset the z index offset
 		 * @return the builder
@@ -316,7 +316,7 @@ public class MarkerOptions {
 		
 		/**
 		 * The opacity of the marker.
-		 * </br>
+		 *
 		 * default 1.0
 		 * @param opacity the opacity
 		 * @return the builder
@@ -326,7 +326,7 @@ public class MarkerOptions {
 		
 		/**
 		 * If true, the marker will get on top of others when you hover the mouse over it.
-		 * </br>
+		 *
 		 * default false
 		 * @param riseOnHover the rise on hover
 		 * @return the builder
@@ -336,7 +336,7 @@ public class MarkerOptions {
 		
 		/**
 		 * The z-index offset used for the riseOnHover feature.
-		 * </br>
+		 *
 		 * default 250
 		 * @param riseOffset the rise offset
 		 * @return the builder

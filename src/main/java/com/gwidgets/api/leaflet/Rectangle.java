@@ -20,7 +20,9 @@ import jsinterop.annotations.JsType;
 
 /**
  * A class for drawing rectangle overlays on a map. Extends Polygon.
- * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a> 
+ *
+ * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
+ * @version $Id: $Id
  */
 @JsType(isNative = true)
 public class Rectangle extends Polygon{
@@ -34,7 +36,7 @@ public class Rectangle extends Polygon{
 	/**
 	 * Redraws the rectangle with the passed bounds.
 	 *
-	 * @param bounds 
+	 * @param bounds a {@link com.gwidgets.api.leaflet.LatLngBounds} object
 	 * @return the L class
 	 */
 	@JsMethod

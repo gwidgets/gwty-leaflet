@@ -7,6 +7,12 @@ import com.gwidgets.api.leaflet.LatLngBounds;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsType;
 
+/**
+ * <p>GridLayerOptions class.</p>
+ *
+ * @author zakaria
+ * @version $Id: $Id
+ */
 @JsType(isNative=true, namespace=GLOBAL, name="Object")
 public class GridLayerOptions {
 	
@@ -43,73 +49,143 @@ public class GridLayerOptions {
 		
 	}
 	
+	/**
+	 * <p>Getter for the field <code>tileSize</code>.</p>
+	 *
+	 * @return a double
+	 */
 	@JsOverlay
 	public final double getTileSize() {
 		return this.tileSize;
 	}
 
+	/**
+	 * <p>Getter for the field <code>opacity</code>.</p>
+	 *
+	 * @return a double
+	 */
 	@JsOverlay
 	public final double getOpacity() {
 		return this.opacity;
 	}
 
+	/**
+	 * <p>Getter for the field <code>updateWhenIdle</code>.</p>
+	 *
+	 * @return a boolean
+	 */
 	@JsOverlay
 	public final boolean getUpdateWhenIdle() {
 		return this.updateWhenIdle;
 	}
 
+	/**
+	 * <p>Getter for the field <code>updateWhenZooming</code>.</p>
+	 *
+	 * @return a boolean
+	 */
 	@JsOverlay
 	public final boolean getUpdateWhenZooming() {
 		return this.updateWhenZooming;
 	}
 
 	
+	/**
+	 * <p>Getter for the field <code>updateInterval</code>.</p>
+	 *
+	 * @return a double
+	 */
 	@JsOverlay
 	public final double getUpdateInterval() {
 		return this.updateInterval;
 	}
 
+	/**
+	 * <p>Getter for the field <code>attribution</code>.</p>
+	 *
+	 * @return a {@link java.lang.String} object
+	 */
 	@JsOverlay
 	public final String getAttribution() {
 		return this.attribution;
 	}
 
+	/**
+	 * <p>Getter for the field <code>zIndex</code>.</p>
+	 *
+	 * @return a double
+	 */
 	@JsOverlay
 	public final double getzIndex() {
 		return this.zIndex;
 	}
 
 
+	/**
+	 * <p>Getter for the field <code>bounds</code>.</p>
+	 *
+	 * @return a {@link com.gwidgets.api.leaflet.LatLngBounds} object
+	 */
 	@JsOverlay
 	public final LatLngBounds getBounds() {
 		return this.bounds;
 	}
 
+	/**
+	 * <p>Getter for the field <code>minZoom</code>.</p>
+	 *
+	 * @return a double
+	 */
 	@JsOverlay
 	public final double getMinZoom() {
 		return this.minZoom;
 	}
 
+	/**
+	 * <p>Getter for the field <code>maxZoom</code>.</p>
+	 *
+	 * @return a double
+	 */
 	@JsOverlay
 	public final double getMaxZoom() {
 		return this.maxZoom;
 	}
 
+	/**
+	 * <p>Getter for the field <code>noWrap</code>.</p>
+	 *
+	 * @return a boolean
+	 */
 	@JsOverlay
 	public final boolean getNoWrap() {
 		return this.noWrap;
 	}
 
+	/**
+	 * <p>Getter for the field <code>pane</code>.</p>
+	 *
+	 * @return a {@link java.lang.String} object
+	 */
 	@JsOverlay
 	public final String getPane() {
 		return this.pane;
 	}
 
+	/**
+	 * <p>Getter for the field <code>className</code>.</p>
+	 *
+	 * @return a {@link java.lang.String} object
+	 */
 	@JsOverlay
 	public final String getClassName() {
 		return this.className;
 	}
 
+	/**
+	 * <p>Getter for the field <code>keepBuffer</code>.</p>
+	 *
+	 * @return a double
+	 */
 	@JsOverlay
 	public final double getKeepBuffer() {
 		return this.keepBuffer;

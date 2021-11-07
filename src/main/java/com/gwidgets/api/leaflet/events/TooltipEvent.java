@@ -24,7 +24,9 @@ import jsinterop.annotations.JsType;
 // TODO: Auto-generated Javadoc
 /**
  * The Class TooltipEvent.
+ *
  * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
+ * @version $Id: $Id
  */
 @JsType(isNative=true, name="Object", namespace=jsinterop.annotations.JsPackage.GLOBAL)
 public class TooltipEvent extends Event {

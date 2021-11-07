@@ -23,7 +23,9 @@ import jsinterop.annotations.JsType;
 
 /**
  * The Class TileErrorEvent.
+ *
  * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
+ * @version $Id: $Id
  */
 @JsType(isNative=true, name="Object", namespace=jsinterop.annotations.JsPackage.GLOBAL)
 public class TileErrorEvent extends Event {
@@ -43,7 +45,7 @@ public class TileErrorEvent extends Event {
 
 
 	/**
-	 * Point object with tile's x, y, and z (zoom level) coordinates. 
+	 * Point object with tile's x, y, and z (zoom level) coordinates.
 	 *
 	 * @return the coords
 	 */

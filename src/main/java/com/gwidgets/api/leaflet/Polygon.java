@@ -22,19 +22,29 @@ import jsinterop.annotations.JsType;
 /**
  * A class for drawing polygon overlays on a map. Extends Polyline. Use addLayer method of map to add it to the map.
  * Note that points you pass when creating a polygon shouldn't have an additional last point equal to the first one — it's better to filter out such points.
+ *
  * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
+ * @version $Id: $Id
  */
 @JsType(isNative = true)
 public class Polygon extends Polyline {
 	
 	
 
+	/**
+	 * <p>Constructor for Polygon.</p>
+	 */
 	protected Polygon() {
 		 super();
 	}
 
 	/* (non-Javadoc)
 	 * @see com.gwidgets.api.leaflet.Polyline#toGeoJSON()
+	 */
+	/**
+	 * <p>toGeoJSON.</p>
+	 *
+	 * @return a {@link elemental2.core.JsObject} object
 	 */
 	@JsMethod
 	public native JsObject toGeoJSON();

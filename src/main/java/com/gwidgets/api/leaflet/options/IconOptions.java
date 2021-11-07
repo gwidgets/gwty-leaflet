@@ -25,8 +25,9 @@ import jsinterop.annotations.JsType;
 
 /**
  * The Class IconOptions.
- * 
+ *
  * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
+ * @version $Id: $Id
  */
 @JsType(isNative=true, namespace=GLOBAL, name="Object")
 public class IconOptions {
@@ -77,7 +78,7 @@ public class IconOptions {
 	
 	
 		/**
-		 * Gets  the URL to the icon image 
+		 * Gets  the URL to the icon image
 		 *
 		 * @return the icon url
 		 */
@@ -175,11 +176,21 @@ public class IconOptions {
 			return this.className;
 		}
 		
+		/**
+		 * <p>Getter for the field <code>pane</code>.</p>
+		 *
+		 * @return a {@link java.lang.String} object
+		 */
 		@JsOverlay public final String getPane() {
 			return this.pane;
 		}
 
 
+		/**
+		 * <p>Getter for the field <code>attribution</code>.</p>
+		 *
+		 * @return a {@link java.lang.String} object
+		 */
 		@JsOverlay public final String getAttribution() {
 			return this.attribution;
 		}

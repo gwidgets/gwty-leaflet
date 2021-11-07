@@ -33,8 +33,8 @@ public interface Layer {
 	/**
 	 * Binds a popup to the layer with the passed content and sets up the neccessary event listeners.
 	 *
-	 * @param HTMLElement the element on which to binds the pop up
-	 * @param PopupOptions the popup options
+	 * @param content the element on which to binds the pop up
+	 * @param options the popup options
 	 * @return the L class
 	 */
 
@@ -42,8 +42,8 @@ public  L bindPopup(HTMLElement content, PopupOptions options);
 
 /*** Binds a popup to the layer with the passed content and sets up the neccessary event listeners.
 	 *
-	 * @param String the id of the element
-	 * @param PopupOptions the popup options
+	 * @param id the id of the element
+	 * @param options the popup options
 	 * @return the L class
 	 */
 
@@ -60,7 +60,7 @@ public  L unbindPopup();
 
 /*** Opens the bound popup at the specificed latlng or at the default popup anchor if no latlng is passed.
 	 *
-	 * @param LatLng the latlng where to open the pop up
+	 * @param latlng the latlng where to open the pop up
 	 * @return the L class
 	 */
 
@@ -90,14 +90,14 @@ public  L togglePopup();
 public  boolean isPopupOpen();
 
 /*** Sets the content of the popup bound to this layer.
-** @param String content of the popup as a String
+** @param content content of the popup as a String
 * @return the L class
 	 */
 
 public  L setPopupContent(String content);	
 
 /*** Sets the content of the popup bound to this layer.
-** @param HTMLElement content of the popup as a HTMLElement
+** @param content content of the popup as a HTMLElement
 * @return the L class
 	 */
 
@@ -105,7 +105,7 @@ public  L setPopupContent(HTMLElement content);
 
 
 /*** Sets the content of the popup bound to this layer.
-** @param HTMLElement content of the popup as a Popup Object
+** @param content content of the popup as a Popup Object
 * @return the L class
 	 */
 
@@ -121,8 +121,8 @@ public  Popup getPopup();
 /**
  * Binds a tooltip to the layer with the passed *content and sets up the neccessary event listeners. If a Function is passed it will receive the layer as the first argument and should return a String or HTMLElement.
  *
- * @param String the tooltip content as a string
- * @param TooltipOptions the options object of this tooltip
+ * @param content the tooltip content as a string
+ * @param options the options object of this tooltip
  * @return the L class
  */
 
@@ -131,8 +131,8 @@ public  L bindTooltip(String content, TooltipOptions options);
 /**
  * Binds a tooltip to the layer with the passed *content and sets up the neccessary event listeners. If a Function is passed it will receive the layer as the first argument and should return a String or HTMLElement.
  *
- * @param HTMLElement the tooltip content as a HTMLElement object
- * @param TooltipOptions the options object of this tooltip
+ * @param content the tooltip content as a HTMLElement object
+ * @param options the options object of this tooltip
  * @return the L class
  */
 
@@ -141,8 +141,8 @@ public  L bindTooltip(HTMLElement content, TooltipOptions options);
 /**
  * Binds a tooltip to the layer with the passed content and sets up the neccessary event listeners. If a Function is passed it will receive the layer as the first argument and should return a String or HTMLElement.
  *
- * @param HTMLElement the tooltip content as a ToolTip object
- * @param TooltipOptions the options object of this tooltip
+ * @param content the tooltip content as a ToolTip object
+ * @param options the options object of this tooltip
  * @return the L class
  */
 
@@ -161,7 +161,7 @@ public  L unbindTooltip();
 /**
  * Opens the bound tooltip at the specificed latlng or at the default tooltip anchor if no latlng is passed.
  *
- * @param LatLng the latlng where the tooltip is opened
+ * @param latlng the latlng where the tooltip is opened
  * @return the L class
  */
 
@@ -195,7 +195,7 @@ public  boolean isTooltipOpen();
 /**
  * Sets the content of the tooltip bound to this layer.
  *
- * @param String the content of the tooltip as a string
+ * @param content the content of the tooltip as a string
  * @return the L class
  */
 
@@ -204,7 +204,7 @@ public  L setTooltipContent(String content);
 /**
  * Sets the content of the tooltip bound to this layer.
  *
- * @param HTMLElement the content of the tooltip as a HTMLELement object
+ * @param content the content of the tooltip as a HTMLELement object
  * @return the L class
  */
 
@@ -214,7 +214,7 @@ public  L setTooltipContent(HTMLElement content);
 /**
  * Sets the content of the tooltip bound to this layer.
  *
- * @param Tooltip the content of the tooltip as a Tooltip object
+ * @param content the content of the tooltip as a Tooltip object
  * @return the L class
  */
 
@@ -230,7 +230,7 @@ public  L setTooltipContent(Tooltip content);
 public  Tooltip getTooltip();	
 
 /** Adds the tooltip to the given map
-* @param Map the map object to which to add this toolltip
+* @param map the map object to which to add this toolltip
 * @return the L class
 	 */
 
@@ -244,14 +244,14 @@ public  L remove();
 
 
 /** Removes the tooltip from the given map
-* @param Map the map object from which to remove this toolltip
+* @param map the map object from which to remove this toolltip
 * @return the L class
 	 */
 public  L removeFrom(Map map);	
 
 
 /** Returns the HTMLElement representing the named pane on the map. If name is omitted, returns the pane for this layer.
-* @param Map the map object from which to remove this toolltip
+* @param name the map object from which to remove this toolltip
 * @return HTMLElement the element
 	 */
 public  HTMLElement getPane(String name);

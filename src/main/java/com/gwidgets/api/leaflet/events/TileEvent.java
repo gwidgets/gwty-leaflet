@@ -24,7 +24,9 @@ import jsinterop.annotations.JsType;
 
 /**
  * The Class TileEvent.
+ *
  * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
+ * @version $Id: $Id
  */
 @JsType(isNative=true, name="Object", namespace=jsinterop.annotations.JsPackage.GLOBAL)
 public class TileEvent extends Event {
@@ -42,7 +44,7 @@ public class TileEvent extends Event {
 	public final native HTMLElement getTile();
 
 	/**
-	 * Point object with tile's x, y, and z (zoom level) coordinates. 
+	 * Point object with tile's x, y, and z (zoom level) coordinates.
 	 *
 	 * @return the coords
 	 */

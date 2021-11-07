@@ -22,7 +22,9 @@ import jsinterop.annotations.JsType;
 
 /**
  * The Class LayerEvent.
+ *
  * @author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
+ * @version $Id: $Id
  */
 @JsType(isNative=true, name="Object", namespace=jsinterop.annotations.JsPackage.GLOBAL)
 public class LayerEvent extends Event {

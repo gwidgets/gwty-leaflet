@@ -7,7 +7,9 @@ import jsinterop.annotations.JsType;
 // TODO: Auto-generated Javadoc
 /**
  *Represents a point with x and y coordinates in pixels.
+ *
  *@author <a href="mailto:zakaria.amine88@gmail.com">Zakaria Amine</a>
+ * @version $Id: $Id
  */
 @JsType(isNative = true)
 public class Point {
@@ -73,6 +75,11 @@ public class Point {
 	/* (non-Javadoc)
 	 * @see java.lang.Object#clone()
 	 */
+	/**
+	 * <p>clone.</p>
+	 *
+	 * @return a {@link com.gwidgets.api.leaflet.Point} object
+	 */
 	@JsMethod
 	public native Point clone();
 
@@ -87,6 +94,7 @@ public class Point {
 	
 	/**
 	 * Returns a copy of the current point with floored coordinates (rounded down).
+	 *
 	 * @return the point
 	 */
 	@JsMethod
@@ -114,6 +122,11 @@ public class Point {
 
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
+	 */
+	/**
+	 * <p>toString.</p>
+	 *
+	 * @return a {@link java.lang.String} object
 	 */
 	@JsMethod
 	public native String toString();
