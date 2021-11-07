@@ -4,7 +4,6 @@ import com.gwidgets.api.leaflet.events.EventCallback;
 import com.gwidgets.api.leaflet.options.PopupOptions;
 import com.gwidgets.api.leaflet.options.TooltipOptions;
 
-import elemental2.core.Function;
 import elemental2.core.JsObject;
 import elemental2.dom.HTMLElement;
 /**
@@ -21,7 +20,9 @@ import elemental2.dom.HTMLElement;
  * See the License for the specific language governing permissions and
  *  limitations under the License.
  */
+import jsinterop.annotations.JsFunction;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 
@@ -32,6 +33,12 @@ import jsinterop.annotations.JsType;
 @JsType(isNative = true)
 public class LayerGroup implements Layer, Evented {
 
+
+	/**
+	 * Function that will be called on each created feature layer. Useful for attaching events and popups to features.
+	 */
+	@JsProperty
+	public EachLayerFunction eachLayer;
 
 	/**
 	 * Adds a given layer to the group.
@@ -93,16 +100,6 @@ public class LayerGroup implements Layer, Evented {
 	 */
 	@JsMethod
 	public native L clearLayers();
-
-	/**
-	 * Iterates over the layers of the group, optionally specifying context of the iterator function.
-	 *
-	 * @param fn the action function
-	 * @param context the context
-	 * @return the l
-	 */
-	@JsMethod
-	public native L eachLayer(Function fn, JsObject context);
 
 	/**
 	 * Returns a GeoJSON representation of the layer group (GeoJSON FeatureCollection).
@@ -370,4 +367,8 @@ public class LayerGroup implements Layer, Evented {
 		 */
 		public native L removeEventParent(Evented obj);
 
+	@JsFunction
+	public interface EachLayerFunction {
+		void apply(Layer feature, JsObject context);
+	}
 }
